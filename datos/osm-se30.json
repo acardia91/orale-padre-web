@@ -1,0 +1,7108 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-09-08T08:16:21Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 19783204,
+  "bounds": {
+    "minlat": 37.4023613,
+    "minlon": -5.9482737,
+    "maxlat": 37.4053121,
+    "maxlon": -5.9470917
+  },
+  "nodes": [
+    11920407818,
+    2466452027,
+    1411854752,
+    2466452025,
+    11920407817,
+    494259884
+  ],
+  "geometry": [
+    { "lat": 37.4053121, "lon": -5.9482737 },
+    { "lat": 37.4043185, "lon": -5.9478788 },
+    { "lat": 37.4042600, "lon": -5.9478553 },
+    { "lat": 37.4035641, "lon": -5.9475754 },
+    { "lat": 37.4026603, "lon": -5.9472119 },
+    { "lat": 37.4023613, "lon": -5.9470917 }
+  ],
+  "tags": {
+    "change:lanes": "yes|yes|not_left|yes",
+    "destination:lanes": "Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Sevilla;Sevilla Este;Avenida Montes Sierra",
+    "destination:ref:lanes": "SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|noref",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 19783251,
+  "bounds": {
+    "minlat": 37.3589422,
+    "minlon": -5.9557195,
+    "maxlat": 37.3597604,
+    "maxlon": -5.9547862
+  },
+  "nodes": [
+    206121232,
+    206121288
+  ],
+  "geometry": [
+    { "lat": 37.3597604, "lon": -5.9547862 },
+    { "lat": 37.3589422, "lon": -5.9557195 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Universidad Pablo de Olavide;Utrera",
+    "destination:ref:lanes": "E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|A-376",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 19783259,
+  "bounds": {
+    "minlat": 37.3575133,
+    "minlon": -5.9571457,
+    "maxlat": 37.3584707,
+    "maxlon": -5.9562070
+  },
+  "nodes": [
+    11244218709,
+    206121349,
+    206121350
+  ],
+  "geometry": [
+    { "lat": 37.3584707, "lon": -5.9562070 },
+    { "lat": 37.3583615, "lon": -5.9563185 },
+    { "lat": 37.3575133, "lon": -5.9571457 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19783281,
+  "bounds": {
+    "minlat": 37.3494939,
+    "minlon": -5.9620510,
+    "maxlat": 37.3575133,
+    "maxlon": -5.9571457
+  },
+  "nodes": [
+    206121350,
+    206121593,
+    249683901,
+    206121595,
+    206121596,
+    206121597,
+    206121598,
+    206121599,
+    206121600,
+    206121601,
+    11244218702
+  ],
+  "geometry": [
+    { "lat": 37.3575133, "lon": -5.9571457 },
+    { "lat": 37.3571593, "lon": -5.9574639 },
+    { "lat": 37.3565834, "lon": -5.9579638 },
+    { "lat": 37.3561600, "lon": -5.9582986 },
+    { "lat": 37.3556871, "lon": -5.9586505 },
+    { "lat": 37.3550312, "lon": -5.9590828 },
+    { "lat": 37.3543560, "lon": -5.9594777 },
+    { "lat": 37.3524796, "lon": -5.9603999 },
+    { "lat": 37.3512762, "lon": -5.9610015 },
+    { "lat": 37.3505508, "lon": -5.9613989 },
+    { "lat": 37.3494939, "lon": -5.9620510 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19783394,
+  "bounds": {
+    "minlat": 37.3465895,
+    "minlon": -5.9961070,
+    "maxlat": 37.3515016,
+    "maxlon": -5.9902848
+  },
+  "nodes": [
+    206122281,
+    13375430465,
+    992005640,
+    13375430466,
+    13375478916,
+    992001549,
+    13375478915,
+    206122410
+  ],
+  "geometry": [
+    { "lat": 37.3465895, "lon": -5.9902848 },
+    { "lat": 37.3469679, "lon": -5.9907276 },
+    { "lat": 37.3471612, "lon": -5.9909538 },
+    { "lat": 37.3472391, "lon": -5.9910463 },
+    { "lat": 37.3507660, "lon": -5.9952318 },
+    { "lat": 37.3508863, "lon": -5.9953746 },
+    { "lat": 37.3512077, "lon": -5.9957572 },
+    { "lat": 37.3515016, "lon": -5.9961070 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "5",
+    "lanes:backward": "2",
+    "lanes:both_ways": "1",
+    "lanes:forward": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "no",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19783395,
+  "bounds": {
+    "minlat": 37.3515016,
+    "minlon": -6.0018652,
+    "maxlat": 37.3564227,
+    "maxlon": -5.9961070
+  },
+  "nodes": [
+    206122410,
+    12969310702,
+    206122412,
+    1830618017
+  ],
+  "geometry": [
+    { "lat": 37.3515016, "lon": -5.9961070 },
+    { "lat": 37.3516173, "lon": -5.9961831 },
+    { "lat": 37.3521440, "lon": -5.9967915 },
+    { "lat": 37.3564227, "lon": -6.0018652 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19783997,
+  "bounds": {
+    "minlat": 37.3626636,
+    "minlon": -6.0132360,
+    "maxlat": 37.3660779,
+    "maxlon": -6.0092484
+  },
+  "nodes": [
+    206127430,
+    5535469531,
+    5535469530,
+    206127431,
+    1361355150
+  ],
+  "geometry": [
+    { "lat": 37.3626636, "lon": -6.0092484 },
+    { "lat": 37.3631104, "lon": -6.0097812 },
+    { "lat": 37.3656191, "lon": -6.0127637 },
+    { "lat": 37.3658808, "lon": -6.0130372 },
+    { "lat": 37.3660779, "lon": -6.0132360 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19784048,
+  "bounds": {
+    "minlat": 37.3660779,
+    "minlon": -6.0142702,
+    "maxlat": 37.3700756,
+    "maxlon": -6.0132360
+  },
+  "nodes": [
+    1361355150,
+    206127432,
+    206127433,
+    5535469529,
+    206127597,
+    5535469528,
+    5535469527,
+    5535431240,
+    206127598,
+    5535431239,
+    2178770618,
+    206127599,
+    5535431235,
+    206127600,
+    5535431236,
+    5535431237,
+    206127601,
+    5535431241,
+    5535431238,
+    206127602,
+    5535431242,
+    206127603,
+    5535469526
+  ],
+  "geometry": [
+    { "lat": 37.3660779, "lon": -6.0132360 },
+    { "lat": 37.3662660, "lon": -6.0134090 },
+    { "lat": 37.3664975, "lon": -6.0135902 },
+    { "lat": 37.3666322, "lon": -6.0136848 },
+    { "lat": 37.3667781, "lon": -6.0137768 },
+    { "lat": 37.3669082, "lon": -6.0138521 },
+    { "lat": 37.3670559, "lon": -6.0139279 },
+    { "lat": 37.3671678, "lon": -6.0139786 },
+    { "lat": 37.3673058, "lon": -6.0140381 },
+    { "lat": 37.3674291, "lon": -6.0140788 },
+    { "lat": 37.3675738, "lon": -6.0141309 },
+    { "lat": 37.3679019, "lon": -6.0142122 },
+    { "lat": 37.3681193, "lon": -6.0142447 },
+    { "lat": 37.3683024, "lon": -6.0142618 },
+    { "lat": 37.3684644, "lon": -6.0142702 },
+    { "lat": 37.3686478, "lon": -6.0142683 },
+    { "lat": 37.3688570, "lon": -6.0142530 },
+    { "lat": 37.3689569, "lon": -6.0142360 },
+    { "lat": 37.3691084, "lon": -6.0142145 },
+    { "lat": 37.3692484, "lon": -6.0141847 },
+    { "lat": 37.3693927, "lon": -6.0141489 },
+    { "lat": 37.3696147, "lon": -6.0140826 },
+    { "lat": 37.3700756, "lon": -6.0139595 }
+  ],
+  "tags": {
+    "destination:lanes": "Coria del Río;Huelva;Mérida|Coria del Río;Huelva;Mérida|Sevilla;Los Remedios;Triana;Isla de la Cartuja",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "left|left|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 19784051,
+  "bounds": {
+    "minlat": 37.3722534,
+    "minlon": -6.0237631,
+    "maxlat": 37.3725793,
+    "maxlon": -6.0174367
+  },
+  "nodes": [
+    11978207216,
+    206127637,
+    5218362796,
+    5535431073,
+    206127623,
+    5535431071,
+    5218362797,
+    206127624,
+    5535431070,
+    5535431069,
+    206127625,
+    5535431068,
+    3248086981,
+    5535431067,
+    5535431066,
+    206127634,
+    5535431064
+  ],
+  "geometry": [
+    { "lat": 37.3725793, "lon": -6.0174367 },
+    { "lat": 37.3725236, "lon": -6.0178671 },
+    { "lat": 37.3724357, "lon": -6.0185539 },
+    { "lat": 37.3724035, "lon": -6.0188482 },
+    { "lat": 37.3723709, "lon": -6.0191801 },
+    { "lat": 37.3723456, "lon": -6.0194521 },
+    { "lat": 37.3723148, "lon": -6.0198939 },
+    { "lat": 37.3722698, "lon": -6.0206891 },
+    { "lat": 37.3722606, "lon": -6.0211044 },
+    { "lat": 37.3722534, "lon": -6.0214240 },
+    { "lat": 37.3722540, "lon": -6.0216773 },
+    { "lat": 37.3722553, "lon": -6.0221113 },
+    { "lat": 37.3722646, "lon": -6.0225109 },
+    { "lat": 37.3722715, "lon": -6.0227527 },
+    { "lat": 37.3722824, "lon": -6.0229787 },
+    { "lat": 37.3723047, "lon": -6.0233747 },
+    { "lat": 37.3723359, "lon": -6.0237631 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Reina Sofía",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19784070,
+  "bounds": {
+    "minlat": 37.3724750,
+    "minlon": -6.0262997,
+    "maxlat": 37.3727531,
+    "maxlon": -6.0248689
+  },
+  "nodes": [
+    206127649,
+    12969310674,
+    12969310675,
+    5535431061
+  ],
+  "geometry": [
+    { "lat": 37.3724750, "lon": -6.0248689 },
+    { "lat": 37.3725121, "lon": -6.0249532 },
+    { "lat": 37.3726953, "lon": -6.0260399 },
+    { "lat": 37.3727531, "lon": -6.0262997 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Reina Sofía",
+    "destination": "Huelva;Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19784100,
+  "bounds": {
+    "minlat": 37.3947179,
+    "minlon": -6.0307320,
+    "maxlat": 37.4057269,
+    "maxlon": -6.0253689
+  },
+  "nodes": [
+    7124953566,
+    206127755,
+    5535316914,
+    5535316915,
+    206127756,
+    5535219726,
+    206128221,
+    5535316916,
+    206128222,
+    5535219725,
+    206128223,
+    5535343349,
+    206128224,
+    206128225,
+    5535343350,
+    5535219724,
+    5535343351,
+    206128226,
+    206128227,
+    5535219723,
+    5535219722,
+    206128228,
+    5535219721,
+    5535211019
+  ],
+  "geometry": [
+    { "lat": 37.3947179, "lon": -6.0253689 },
+    { "lat": 37.3948564, "lon": -6.0253765 },
+    { "lat": 37.3951914, "lon": -6.0253882 },
+    { "lat": 37.3954108, "lon": -6.0254046 },
+    { "lat": 37.3956426, "lon": -6.0254258 },
+    { "lat": 37.3959744, "lon": -6.0254653 },
+    { "lat": 37.3963129, "lon": -6.0255119 },
+    { "lat": 37.3965325, "lon": -6.0255548 },
+    { "lat": 37.3968684, "lon": -6.0256253 },
+    { "lat": 37.3971955, "lon": -6.0257075 },
+    { "lat": 37.3975139, "lon": -6.0258005 },
+    { "lat": 37.3977371, "lon": -6.0258651 },
+    { "lat": 37.3981791, "lon": -6.0260171 },
+    { "lat": 37.3988167, "lon": -6.0262662 },
+    { "lat": 37.3992417, "lon": -6.0264594 },
+    { "lat": 37.3994507, "lon": -6.0265538 },
+    { "lat": 37.3998932, "lon": -6.0267768 },
+    { "lat": 37.4001740, "lon": -6.0269238 },
+    { "lat": 37.4009854, "lon": -6.0273934 },
+    { "lat": 37.4014091, "lon": -6.0276550 },
+    { "lat": 37.4021924, "lon": -6.0281663 },
+    { "lat": 37.4027898, "lon": -6.0285841 },
+    { "lat": 37.4037848, "lon": -6.0293041 },
+    { "lat": 37.4057269, "lon": -6.0307320 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19784147,
+  "bounds": {
+    "minlat": 37.4057963,
+    "minlon": -5.9485305,
+    "maxlat": 37.4066270,
+    "maxlon": -5.9482638
+  },
+  "nodes": [
+    206128857,
+    206128415,
+    206128416,
+    206128417
+  ],
+  "geometry": [
+    { "lat": 37.4057963, "lon": -5.9482638 },
+    { "lat": 37.4060067, "lon": -5.9483783 },
+    { "lat": 37.4063493, "lon": -5.9484802 },
+    { "lat": 37.4066270, "lon": -5.9485305 }
+  ],
+  "tags": {
+    "destination": "Sevilla;Avenida Kansas City;Ronda urbana Norte;Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "junction:ref": "0",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 19784483,
+  "bounds": {
+    "minlat": 37.4137026,
+    "minlon": -6.0286747,
+    "maxlat": 37.4137634,
+    "maxlon": -6.0236972
+  },
+  "nodes": [
+    206130892,
+    356354898
+  ],
+  "geometry": [
+    { "lat": 37.4137634, "lon": -6.0286747 },
+    { "lat": 37.4137026, "lon": -6.0236972 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23053958,
+  "bounds": {
+    "minlat": 37.3860088,
+    "minlon": -5.9409984,
+    "maxlat": 37.3869059,
+    "maxlon": -5.9409609
+  },
+  "nodes": [
+    206120726,
+    206120738,
+    206120740,
+    206120742
+  ],
+  "geometry": [
+    { "lat": 37.3869059, "lon": -5.9409984 },
+    { "lat": 37.3866378, "lon": -5.9409656 },
+    { "lat": 37.3862992, "lon": -5.9409609 },
+    { "lat": 37.3860088, "lon": -5.9409814 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23053959,
+  "bounds": {
+    "minlat": 37.3846050,
+    "minlon": -5.9413477,
+    "maxlat": 37.3860088,
+    "maxlon": -5.9409814
+  },
+  "nodes": [
+    206120742,
+    206120797,
+    206120798,
+    206120799,
+    249612721
+  ],
+  "geometry": [
+    { "lat": 37.3860088, "lon": -5.9409814 },
+    { "lat": 37.3857658, "lon": -5.9410055 },
+    { "lat": 37.3853412, "lon": -5.9410758 },
+    { "lat": 37.3849034, "lon": -5.9412131 },
+    { "lat": 37.3846050, "lon": -5.9413477 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125445,
+  "bounds": {
+    "minlat": 37.3993008,
+    "minlon": -5.9453974,
+    "maxlat": 37.3998789,
+    "maxlon": -5.9451993
+  },
+  "nodes": [
+    206120398,
+    206120399,
+    206120400
+  ],
+  "geometry": [
+    { "lat": 37.3998789, "lon": -5.9453974 },
+    { "lat": 37.3996062, "lon": -5.9452871 },
+    { "lat": 37.3993008, "lon": -5.9451993 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125446,
+  "bounds": {
+    "minlat": 37.3915442,
+    "minlon": -5.9451993,
+    "maxlat": 37.3993008,
+    "maxlon": -5.9427629
+  },
+  "nodes": [
+    206120400,
+    206120402,
+    206120403,
+    206120404,
+    206120405,
+    494259876,
+    206120406,
+    206120407,
+    206120717,
+    206120720,
+    2066981128
+  ],
+  "geometry": [
+    { "lat": 37.3993008, "lon": -5.9451993 },
+    { "lat": 37.3989925, "lon": -5.9451581 },
+    { "lat": 37.3985599, "lon": -5.9451381 },
+    { "lat": 37.3979908, "lon": -5.9451365 },
+    { "lat": 37.3976298, "lon": -5.9451000 },
+    { "lat": 37.3972236, "lon": -5.9450287 },
+    { "lat": 37.3970054, "lon": -5.9449441 },
+    { "lat": 37.3960048, "lon": -5.9445627 },
+    { "lat": 37.3946492, "lon": -5.9440131 },
+    { "lat": 37.3923384, "lon": -5.9430729 },
+    { "lat": 37.3915442, "lon": -5.9427629 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125447,
+  "bounds": {
+    "minlat": 37.3999285,
+    "minlon": -5.9467730,
+    "maxlat": 37.4020729,
+    "maxlon": -5.9452455
+  },
+  "nodes": [
+    249679623,
+    249679622,
+    249679621,
+    249679620,
+    249679619,
+    249679618,
+    494259875
+  ],
+  "geometry": [
+    { "lat": 37.3999285, "lon": -5.9452455 },
+    { "lat": 37.4002340, "lon": -5.9454274 },
+    { "lat": 37.4005506, "lon": -5.9456662 },
+    { "lat": 37.4008902, "lon": -5.9459716 },
+    { "lat": 37.4012622, "lon": -5.9463019 },
+    { "lat": 37.4016678, "lon": -5.9465774 },
+    { "lat": 37.4020729, "lon": -5.9467730 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125449,
+  "bounds": {
+    "minlat": 37.3869092,
+    "minlon": -5.9413227,
+    "maxlat": 37.3883908,
+    "maxlon": -5.9407948
+  },
+  "nodes": [
+    249679829,
+    249679831,
+    249679832,
+    249679802
+  ],
+  "geometry": [
+    { "lat": 37.3869092, "lon": -5.9407948 },
+    { "lat": 37.3871274, "lon": -5.9408588 },
+    { "lat": 37.3873569, "lon": -5.9409377 },
+    { "lat": 37.3883908, "lon": -5.9413227 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125489,
+  "bounds": {
+    "minlat": 37.3860391,
+    "minlon": -5.9407948,
+    "maxlat": 37.3869092,
+    "maxlon": -5.9407349
+  },
+  "nodes": [
+    249679826,
+    249679827,
+    249679828,
+    249679829
+  ],
+  "geometry": [
+    { "lat": 37.3860391, "lon": -5.9407621 },
+    { "lat": 37.3863051, "lon": -5.9407349 },
+    { "lat": 37.3865832, "lon": -5.9407442 },
+    { "lat": 37.3869092, "lon": -5.9407948 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "layer": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125491,
+  "bounds": {
+    "minlat": 37.3828141,
+    "minlon": -5.9419898,
+    "maxlat": 37.3831240,
+    "maxlon": -5.9418788
+  },
+  "nodes": [
+    206120801,
+    206120809
+  ],
+  "geometry": [
+    { "lat": 37.3831240, "lon": -5.9418788 },
+    { "lat": 37.3828141, "lon": -5.9419898 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125492,
+  "bounds": {
+    "minlat": 37.3823064,
+    "minlon": -5.9421690,
+    "maxlat": 37.3828141,
+    "maxlon": -5.9419898
+  },
+  "nodes": [
+    206120809,
+    480466680
+  ],
+  "geometry": [
+    { "lat": 37.3828141, "lon": -5.9419898 },
+    { "lat": 37.3823064, "lon": -5.9421690 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125493,
+  "bounds": {
+    "minlat": 37.3830701,
+    "minlon": -5.9417259,
+    "maxlat": 37.3840520,
+    "maxlon": -5.9413731
+  },
+  "nodes": [
+    249679822,
+    249612375
+  ],
+  "geometry": [
+    { "lat": 37.3830701, "lon": -5.9417259 },
+    { "lat": 37.3840520, "lon": -5.9413731 }
+  ],
+  "tags": {
+    "destination:lanes": "Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Sevilla;Mercasevilla;Granada;Málaga",
+    "destination:ref:lanes": "SE-30;A-4;E-803;A-66|SE-30;A-4;E-803;A-66|A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 23125495,
+  "bounds": {
+    "minlat": 37.3827606,
+    "minlon": -5.9418367,
+    "maxlat": 37.3830701,
+    "maxlon": -5.9417259
+  },
+  "nodes": [
+    249679821,
+    249679822
+  ],
+  "geometry": [
+    { "lat": 37.3827606, "lon": -5.9418367 },
+    { "lat": 37.3830701, "lon": -5.9417259 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Sevilla;Mercasevilla;Granada;Málaga",
+    "destination:ref:lanes": "SE-30;A-4;E-803;A-66|SE-30;A-4;E-803;A-66|A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 23125504,
+  "bounds": {
+    "minlat": 37.3659394,
+    "minlon": -5.9452488,
+    "maxlat": 37.3684689,
+    "maxlon": -5.9442667
+  },
+  "nodes": [
+    249679942,
+    249679943,
+    249679944,
+    2210250590,
+    249679945,
+    2210250591,
+    249679946,
+    2210250592,
+    249679947
+  ],
+  "geometry": [
+    { "lat": 37.3659394, "lon": -5.9452488 },
+    { "lat": 37.3663626, "lon": -5.9449233 },
+    { "lat": 37.3666598, "lon": -5.9447268 },
+    { "lat": 37.3668841, "lon": -5.9446115 },
+    { "lat": 37.3671572, "lon": -5.9444895 },
+    { "lat": 37.3673914, "lon": -5.9444103 },
+    { "lat": 37.3676235, "lon": -5.9443512 },
+    { "lat": 37.3680450, "lon": -5.9442901 },
+    { "lat": 37.3684689, "lon": -5.9442667 }
+  ],
+  "tags": {
+    "destination": "Granada;Córdoba;Mérida;Aeropuerto",
+    "destination:int_ref": "E 803",
+    "destination:ref": "SE-30;A-92;A-4;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23125505,
+  "bounds": {
+    "minlat": 37.3588500,
+    "minlon": -5.9555912,
+    "maxlat": 37.3596672,
+    "maxlon": -5.9546540
+  },
+  "nodes": [
+    249680162,
+    249680163
+  ],
+  "geometry": [
+    { "lat": 37.3588500, "lon": -5.9555912 },
+    { "lat": 37.3596672, "lon": -5.9546540 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-92;A-4|SE-30;A-92;A-4|SE-30;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 23125756,
+  "bounds": {
+    "minlat": 37.3567743,
+    "minlon": -5.9576078,
+    "maxlat": 37.3585921,
+    "maxlon": -5.9558903
+  },
+  "nodes": [
+    249680158,
+    2210250585,
+    2210250586,
+    249680161,
+    11244218704
+  ],
+  "geometry": [
+    { "lat": 37.3567743, "lon": -5.9576078 },
+    { "lat": 37.3570680, "lon": -5.9573529 },
+    { "lat": 37.3574123, "lon": -5.9570459 },
+    { "lat": 37.3582780, "lon": -5.9562140 },
+    { "lat": 37.3585921, "lon": -5.9558903 }
+  ],
+  "tags": {
+    "destination:lanes": "Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-92;A-4|SE-30;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188220,
+  "bounds": {
+    "minlat": 37.3445584,
+    "minlon": -5.9665516,
+    "maxlat": 37.3567743,
+    "maxlon": -5.9576078
+  },
+  "nodes": [
+    11177448295,
+    249684196,
+    249684197,
+    249684198,
+    249684199,
+    249684200,
+    249684201,
+    249684202,
+    249684203,
+    249684204,
+    249684205,
+    249680155,
+    249680156,
+    249680157,
+    249680158
+  ],
+  "geometry": [
+    { "lat": 37.3445584, "lon": -5.9665516 },
+    { "lat": 37.3459052, "lon": -5.9650227 },
+    { "lat": 37.3466381, "lon": -5.9642102 },
+    { "lat": 37.3472803, "lon": -5.9635750 },
+    { "lat": 37.3480689, "lon": -5.9628809 },
+    { "lat": 37.3485183, "lon": -5.9625390 },
+    { "lat": 37.3493507, "lon": -5.9619577 },
+    { "lat": 37.3501606, "lon": -5.9614403 },
+    { "lat": 37.3509999, "lon": -5.9609671 },
+    { "lat": 37.3514649, "lon": -5.9607243 },
+    { "lat": 37.3543127, "lon": -5.9593241 },
+    { "lat": 37.3549737, "lon": -5.9589377 },
+    { "lat": 37.3556315, "lon": -5.9585135 },
+    { "lat": 37.3561545, "lon": -5.9581089 },
+    { "lat": 37.3567743, "lon": -5.9576078 }
+  ],
+  "tags": {
+    "destination": "Utrera;Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-376;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 23188221,
+  "bounds": {
+    "minlat": 37.3402328,
+    "minlon": -5.9754521,
+    "maxlat": 37.3405425,
+    "maxlon": -5.9730779
+  },
+  "nodes": [
+    249684825,
+    206121645,
+    249685190,
+    206121646,
+    249685168,
+    206121647,
+    249685296
+  ],
+  "geometry": [
+    { "lat": 37.3405425, "lon": -5.9730779 },
+    { "lat": 37.3404282, "lon": -5.9734550 },
+    { "lat": 37.3403190, "lon": -5.9739528 },
+    { "lat": 37.3402477, "lon": -5.9745555 },
+    { "lat": 37.3402328, "lon": -5.9748116 },
+    { "lat": 37.3402396, "lon": -5.9751888 },
+    { "lat": 37.3402766, "lon": -5.9754521 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188232,
+  "bounds": {
+    "minlat": 37.3420903,
+    "minlon": -5.9856154,
+    "maxlat": 37.3427718,
+    "maxlon": -5.9843342
+  },
+  "nodes": [
+    206122278,
+    11195850643,
+    7142676950,
+    2175220913,
+    13375457946,
+    7142676949
+  ],
+  "geometry": [
+    { "lat": 37.3420903, "lon": -5.9843342 },
+    { "lat": 37.3422476, "lon": -5.9846877 },
+    { "lat": 37.3424145, "lon": -5.9850267 },
+    { "lat": 37.3425353, "lon": -5.9852448 },
+    { "lat": 37.3426643, "lon": -5.9854470 },
+    { "lat": 37.3427718, "lon": -5.9856154 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "destination:ref": "E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 23188233,
+  "bounds": {
+    "minlat": 37.3401245,
+    "minlon": -5.9773521,
+    "maxlat": 37.3404721,
+    "maxlon": -5.9752829
+  },
+  "nodes": [
+    250755598,
+    249684185,
+    10002007034,
+    249685076
+  ],
+  "geometry": [
+    { "lat": 37.3404721, "lon": -5.9773521 },
+    { "lat": 37.3402167, "lon": -5.9759894 },
+    { "lat": 37.3401580, "lon": -5.9756278 },
+    { "lat": 37.3401245, "lon": -5.9752829 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188439,
+  "bounds": {
+    "minlat": 37.3867264,
+    "minlon": -6.0274571,
+    "maxlat": 37.3880927,
+    "maxlon": -6.0266869
+  },
+  "nodes": [
+    244018552,
+    5535391729,
+    244018553,
+    5535391731,
+    244018554,
+    5535391732,
+    244018555
+  ],
+  "geometry": [
+    { "lat": 37.3880927, "lon": -6.0274571 },
+    { "lat": 37.3879394, "lon": -6.0274080 },
+    { "lat": 37.3877369, "lon": -6.0273358 },
+    { "lat": 37.3875193, "lon": -6.0272327 },
+    { "lat": 37.3873130, "lon": -6.0271143 },
+    { "lat": 37.3870282, "lon": -6.0269210 },
+    { "lat": 37.3867264, "lon": -6.0266869 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 23188444,
+  "bounds": {
+    "minlat": 37.3880927,
+    "minlon": -6.0275237,
+    "maxlat": 37.3884425,
+    "maxlon": -6.0274571
+  },
+  "nodes": [
+    244018551,
+    5535391728,
+    244018552
+  ],
+  "geometry": [
+    { "lat": 37.3884425, "lon": -6.0275237 },
+    { "lat": 37.3883084, "lon": -6.0275055 },
+    { "lat": 37.3880927, "lon": -6.0274571 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188447,
+  "bounds": {
+    "minlat": 37.3897474,
+    "minlon": -6.0247673,
+    "maxlat": 37.3902892,
+    "maxlon": -6.0246015
+  },
+  "nodes": [
+    206127747,
+    5535219742,
+    5535219743,
+    206127748
+  ],
+  "geometry": [
+    { "lat": 37.3897474, "lon": -6.0246015 },
+    { "lat": 37.3899691, "lon": -6.0246635 },
+    { "lat": 37.3900599, "lon": -6.0246899 },
+    { "lat": 37.3902892, "lon": -6.0247673 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188448,
+  "bounds": {
+    "minlat": 37.3902892,
+    "minlon": -6.0254804,
+    "maxlat": 37.3924906,
+    "maxlon": -6.0247673
+  },
+  "nodes": [
+    206127748,
+    5535219744,
+    5535219745,
+    206127749,
+    5535219746,
+    206127750,
+    4967609991,
+    5535219734,
+    7160162685,
+    250758468
+  ],
+  "geometry": [
+    { "lat": 37.3902892, "lon": -6.0247673 },
+    { "lat": 37.3905281, "lon": -6.0248809 },
+    { "lat": 37.3907320, "lon": -6.0249763 },
+    { "lat": 37.3909296, "lon": -6.0250743 },
+    { "lat": 37.3912550, "lon": -6.0252172 },
+    { "lat": 37.3914722, "lon": -6.0252955 },
+    { "lat": 37.3917187, "lon": -6.0253667 },
+    { "lat": 37.3919434, "lon": -6.0254184 },
+    { "lat": 37.3921854, "lon": -6.0254568 },
+    { "lat": 37.3924906, "lon": -6.0254804 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188705,
+  "bounds": {
+    "minlat": 37.3741933,
+    "minlon": -6.0275031,
+    "maxlat": 37.3763834,
+    "maxlon": -6.0268419
+  },
+  "nodes": [
+    12071185628,
+    12071185634,
+    12071185626,
+    12071185635,
+    12071185625,
+    12071185633,
+    12071185632,
+    12071185631,
+    12071185630,
+    12071185624,
+    244019416
+  ],
+  "geometry": [
+    { "lat": 37.3763834, "lon": -6.0268419 },
+    { "lat": 37.3759443, "lon": -6.0269411 },
+    { "lat": 37.3756427, "lon": -6.0270095 },
+    { "lat": 37.3753539, "lon": -6.0270926 },
+    { "lat": 37.3751192, "lon": -6.0271607 },
+    { "lat": 37.3748893, "lon": -6.0272415 },
+    { "lat": 37.3746974, "lon": -6.0273112 },
+    { "lat": 37.3745205, "lon": -6.0273756 },
+    { "lat": 37.3743724, "lon": -6.0274319 },
+    { "lat": 37.3742182, "lon": -6.0274932 },
+    { "lat": 37.3741933, "lon": -6.0275031 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|no",
+    "destination:lanes": "Cádiz;Granada;Córdoba|Cádiz;Granada;Córdoba|San Juan Aznalfarache (alto);Mairena del Aljarafe;Coria del Río",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|A-8058",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 23188706,
+  "bounds": {
+    "minlat": 37.3834851,
+    "minlon": -6.0255820,
+    "maxlat": 37.3863135,
+    "maxlon": -6.0254565
+  },
+  "nodes": [
+    206127736,
+    5535219751,
+    206127737,
+    5535219750,
+    206127738,
+    5535219749,
+    5535219748,
+    5535219747,
+    206127739,
+    4967609988
+  ],
+  "geometry": [
+    { "lat": 37.3834851, "lon": -6.0255820 },
+    { "lat": 37.3841425, "lon": -6.0255391 },
+    { "lat": 37.3846213, "lon": -6.0255295 },
+    { "lat": 37.3849331, "lon": -6.0255367 },
+    { "lat": 37.3854007, "lon": -6.0255497 },
+    { "lat": 37.3856863, "lon": -6.0255382 },
+    { "lat": 37.3858250, "lon": -6.0255265 },
+    { "lat": 37.3859794, "lon": -6.0255123 },
+    { "lat": 37.3861367, "lon": -6.0254840 },
+    { "lat": 37.3863135, "lon": -6.0254565 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 23188722,
+  "bounds": {
+    "minlat": 37.4110413,
+    "minlon": -6.0341575,
+    "maxlat": 37.4129979,
+    "maxlon": -6.0338682
+  },
+  "nodes": [
+    250759819,
+    5535076506,
+    250759820,
+    5535076505,
+    261729425,
+    5535076504,
+    250759822,
+    5535076503,
+    5535076502,
+    5535076501,
+    5535076500,
+    250759823
+  ],
+  "geometry": [
+    { "lat": 37.4129979, "lon": -6.0338682 },
+    { "lat": 37.4128563, "lon": -6.0339506 },
+    { "lat": 37.4127126, "lon": -6.0340227 },
+    { "lat": 37.4125700, "lon": -6.0340799 },
+    { "lat": 37.4124516, "lon": -6.0341122 },
+    { "lat": 37.4122880, "lon": -6.0341380 },
+    { "lat": 37.4121553, "lon": -6.0341514 },
+    { "lat": 37.4119947, "lon": -6.0341575 },
+    { "lat": 37.4117242, "lon": -6.0341541 },
+    { "lat": 37.4115686, "lon": -6.0341445 },
+    { "lat": 37.4113997, "lon": -6.0341317 },
+    { "lat": 37.4110413, "lon": -6.0341289 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "70",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 24212530,
+  "bounds": {
+    "minlat": 37.4132103,
+    "minlon": -6.0336963,
+    "maxlat": 37.4139047,
+    "maxlon": -6.0317440
+  },
+  "nodes": [
+    5535076513,
+    5535076515,
+    5535076512,
+    5535076511,
+    250759815,
+    5535076510,
+    250759816,
+    250759817,
+    5535076509,
+    250759818
+  ],
+  "geometry": [
+    { "lat": 37.4139047, "lon": -6.0317440 },
+    { "lat": 37.4138806, "lon": -6.0322627 },
+    { "lat": 37.4138451, "lon": -6.0324738 },
+    { "lat": 37.4137712, "lon": -6.0327527 },
+    { "lat": 37.4137202, "lon": -6.0328900 },
+    { "lat": 37.4136444, "lon": -6.0330664 },
+    { "lat": 37.4135715, "lon": -6.0332022 },
+    { "lat": 37.4134625, "lon": -6.0333785 },
+    { "lat": 37.4133460, "lon": -6.0335312 },
+    { "lat": 37.4132103, "lon": -6.0336963 }
+  ],
+  "tags": {
+    "destination": "Huelva;Cádiz;Málaga;Granada",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through"
+  }
+},
+{
+  "type": "way",
+  "id": 30917600,
+  "bounds": {
+    "minlat": 37.4066270,
+    "minlon": -5.9488114,
+    "maxlat": 37.4077741,
+    "maxlon": -5.9485305
+  },
+  "nodes": [
+    206128417,
+    11920407850,
+    11920407849,
+    206128419,
+    2040594552
+  ],
+  "geometry": [
+    { "lat": 37.4066270, "lon": -5.9485305 },
+    { "lat": 37.4071015, "lon": -5.9485978 },
+    { "lat": 37.4073146, "lon": -5.9486422 },
+    { "lat": 37.4075226, "lon": -5.9487059 },
+    { "lat": 37.4077741, "lon": -5.9488114 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 31437851,
+  "bounds": {
+    "minlat": 37.3714217,
+    "minlon": -6.0244821,
+    "maxlat": 37.3714532,
+    "maxlon": -6.0237504
+  },
+  "nodes": [
+    244018985,
+    1944134967,
+    12969189753
+  ],
+  "geometry": [
+    { "lat": 37.3714532, "lon": -6.0244821 },
+    { "lat": 37.3714251, "lon": -6.0238932 },
+    { "lat": 37.3714217, "lon": -6.0237504 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente Rey Juan Carlos I",
+    "destination:lanes": "Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Sevilla;Los Remedios;Triana;Isla de la Cartuja",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "start_date": "1981",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 31827221,
+  "bounds": {
+    "minlat": 37.4135202,
+    "minlon": -6.0131743,
+    "maxlat": 37.4135659,
+    "maxlon": -6.0081488
+  },
+  "nodes": [
+    206131130,
+    306104985
+  ],
+  "geometry": [
+    { "lat": 37.4135659, "lon": -6.0131743 },
+    { "lat": 37.4135202, "lon": -6.0081488 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente de Itálica",
+    "destination:lanes": "Sevilla;Calle Torneo;Ronda Urbana Norte|Sevilla;Calle Torneo;Ronda Urbana Norte|Córdoba;Estadio olímpico;Polígonos industriales;Aeropuerto",
+    "destination:ref:lanes": "SE-30|SE-30|E-5;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 31827223,
+  "bounds": {
+    "minlat": 37.4135659,
+    "minlon": -6.0236972,
+    "maxlat": 37.4137026,
+    "maxlon": -6.0131743
+  },
+  "nodes": [
+    356354898,
+    206131130
+  ],
+  "geometry": [
+    { "lat": 37.4137026, "lon": -6.0236972 },
+    { "lat": 37.4135659, "lon": -6.0131743 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 31828134,
+  "bounds": {
+    "minlat": 37.4138266,
+    "minlon": -6.0281964,
+    "maxlat": 37.4138833,
+    "maxlon": -6.0236922
+  },
+  "nodes": [
+    356377818,
+    11169497000
+  ],
+  "geometry": [
+    { "lat": 37.4138266, "lon": -6.0236922 },
+    { "lat": 37.4138833, "lon": -6.0281964 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada|Santiponce;Mérida;Venta del Alto",
+    "destination:ref:lanes": "E-1;A-49;E-5;A-4;A-92|E-1;A-49;E-5;A-4;A-92|N-630;A-66;E-803",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 31828139,
+  "bounds": {
+    "minlat": 37.4137613,
+    "minlon": -6.0236922,
+    "maxlat": 37.4138266,
+    "maxlon": -6.0185891
+  },
+  "nodes": [
+    5535125155,
+    5535125154,
+    356377818
+  ],
+  "geometry": [
+    { "lat": 37.4137613, "lon": -6.0185891 },
+    { "lat": 37.4137922, "lon": -6.0210216 },
+    { "lat": 37.4138266, "lon": -6.0236922 }
+  ],
+  "tags": {
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada|Santiponce;Mérida;Venta del Alto",
+    "destination:ref:lanes": "E-1;A-49;E-5;A-4;A-92|E-1;A-49;E-5;A-4;A-92|N-630;A-66;E-803",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 40695361,
+  "bounds": {
+    "minlat": 37.4060254,
+    "minlon": -5.9489083,
+    "maxlat": 37.4068792,
+    "maxlon": -5.9485625
+  },
+  "nodes": [
+    206129607,
+    206120389
+  ],
+  "geometry": [
+    { "lat": 37.4068792, "lon": -5.9489083 },
+    { "lat": 37.4060254, "lon": -5.9485625 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 40695363,
+  "bounds": {
+    "minlat": 37.4073169,
+    "minlon": -5.9491830,
+    "maxlat": 37.4077157,
+    "maxlon": -5.9490560
+  },
+  "nodes": [
+    206129605,
+    206129606
+  ],
+  "geometry": [
+    { "lat": 37.4077157, "lon": -5.9491830 },
+    { "lat": 37.4073169, "lon": -5.9490560 }
+  ],
+  "tags": {
+    "destination": "Granada;Cádiz;Huelva",
+    "destination:int_ref": "E 05;E 01",
+    "destination:ref": "SE-30;A-92;A-4;A-49",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "-1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "tunnel": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 40695364,
+  "bounds": {
+    "minlat": 37.4068792,
+    "minlon": -5.9490560,
+    "maxlat": 37.4073169,
+    "maxlon": -5.9489083
+  },
+  "nodes": [
+    206129606,
+    206129607
+  ],
+  "geometry": [
+    { "lat": 37.4073169, "lon": -5.9490560 },
+    { "lat": 37.4068792, "lon": -5.9489083 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 55787640,
+  "bounds": {
+    "minlat": 37.3667297,
+    "minlon": -6.0152246,
+    "maxlat": 37.3717583,
+    "maxlon": -6.0139642
+  },
+  "nodes": [
+    244018480,
+    5535431104,
+    5535431105,
+    244018481,
+    5535431106,
+    5535431107,
+    244018482,
+    5535431108,
+    3248086958,
+    5535431109,
+    244018483,
+    5535431110,
+    244018484,
+    5535431111,
+    5535431112,
+    244018485,
+    5535431113,
+    5535431114,
+    244018486,
+    5535431115,
+    5535431116,
+    244018487,
+    5535431117,
+    5535431118,
+    5535431119,
+    5535431120,
+    244018488,
+    5535431221,
+    5535431222,
+    3248086879,
+    5535431223,
+    5535431224,
+    244018195,
+    3248086873,
+    244018490,
+    244018491
+  ],
+  "geometry": [
+    { "lat": 37.3717583, "lon": -6.0152246 },
+    { "lat": 37.3717199, "lon": -6.0151215 },
+    { "lat": 37.3716791, "lon": -6.0150219 },
+    { "lat": 37.3716243, "lon": -6.0149061 },
+    { "lat": 37.3715675, "lon": -6.0148017 },
+    { "lat": 37.3715158, "lon": -6.0147230 },
+    { "lat": 37.3714506, "lon": -6.0146330 },
+    { "lat": 37.3713703, "lon": -6.0145395 },
+    { "lat": 37.3712630, "lon": -6.0144305 },
+    { "lat": 37.3711674, "lon": -6.0143555 },
+    { "lat": 37.3710605, "lon": -6.0142806 },
+    { "lat": 37.3709386, "lon": -6.0142143 },
+    { "lat": 37.3707509, "lon": -6.0141387 },
+    { "lat": 37.3706268, "lon": -6.0141097 },
+    { "lat": 37.3705110, "lon": -6.0140937 },
+    { "lat": 37.3703986, "lon": -6.0140877 },
+    { "lat": 37.3702560, "lon": -6.0140980 },
+    { "lat": 37.3701732, "lon": -6.0141160 },
+    { "lat": 37.3700808, "lon": -6.0141355 },
+    { "lat": 37.3699716, "lon": -6.0141642 },
+    { "lat": 37.3697633, "lon": -6.0142229 },
+    { "lat": 37.3694284, "lon": -6.0143151 },
+    { "lat": 37.3693206, "lon": -6.0143414 },
+    { "lat": 37.3692148, "lon": -6.0143638 },
+    { "lat": 37.3691103, "lon": -6.0143881 },
+    { "lat": 37.3689998, "lon": -6.0144086 },
+    { "lat": 37.3688940, "lon": -6.0144208 },
+    { "lat": 37.3687824, "lon": -6.0144317 },
+    { "lat": 37.3686585, "lon": -6.0144375 },
+    { "lat": 37.3684417, "lon": -6.0144419 },
+    { "lat": 37.3681183, "lon": -6.0144221 },
+    { "lat": 37.3680151, "lon": -6.0144088 },
+    { "lat": 37.3675884, "lon": -6.0143407 },
+    { "lat": 37.3674852, "lon": -6.0143098 },
+    { "lat": 37.3672615, "lon": -6.0142317 },
+    { "lat": 37.3667297, "lon": -6.0139642 }
+  ],
+  "tags": {
+    "destination": "E-803;SE-30;E-5 A-4 Cádiz;Puerto;A-92 Granada-Málaga;E-5 A-4 Córdoba;Aeropuerto",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 55787647,
+  "bounds": {
+    "minlat": 37.3726587,
+    "minlon": -6.0168225,
+    "maxlat": 37.3727692,
+    "maxlon": -6.0158137
+  },
+  "nodes": [
+    206127616,
+    5535431079,
+    700762906,
+    206127618
+  ],
+  "geometry": [
+    { "lat": 37.3727692, "lon": -6.0158137 },
+    { "lat": 37.3727558, "lon": -6.0159626 },
+    { "lat": 37.3726934, "lon": -6.0163735 },
+    { "lat": 37.3726587, "lon": -6.0168225 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 55787648,
+  "bounds": {
+    "minlat": 37.3717583,
+    "minlon": -6.0158593,
+    "maxlat": 37.3718631,
+    "maxlon": -6.0152246
+  },
+  "nodes": [
+    244018478,
+    244018479,
+    5535431102,
+    3248086976,
+    5535431103,
+    244018480
+  ],
+  "geometry": [
+    { "lat": 37.3718631, "lon": -6.0158593 },
+    { "lat": 37.3718555, "lon": -6.0157196 },
+    { "lat": 37.3718465, "lon": -6.0156131 },
+    { "lat": 37.3718255, "lon": -6.0154983 },
+    { "lat": 37.3718017, "lon": -6.0153809 },
+    { "lat": 37.3717583, "lon": -6.0152246 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 55787649,
+  "bounds": {
+    "minlat": 37.3717748,
+    "minlon": -6.0166133,
+    "maxlat": 37.3718631,
+    "maxlon": -6.0158593
+  },
+  "nodes": [
+    244018476,
+    5535431101,
+    244018477,
+    5535431100,
+    244018478
+  ],
+  "geometry": [
+    { "lat": 37.3717748, "lon": -6.0166133 },
+    { "lat": 37.3718243, "lon": -6.0163291 },
+    { "lat": 37.3718470, "lon": -6.0161655 },
+    { "lat": 37.3718606, "lon": -6.0160133 },
+    { "lat": 37.3718631, "lon": -6.0158593 }
+  ],
+  "tags": {
+    "destination": "E-803;SE-30;E-5 A-4 Cádiz;Puerto;A-92 Granada-Málaga;E-5 A-4 Córdoba;Aeropuerto",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 56452434,
+  "bounds": {
+    "minlat": 37.3713599,
+    "minlon": -6.0273368,
+    "maxlat": 37.3714583,
+    "maxlon": -6.0255407
+  },
+  "nodes": [
+    244018468,
+    5535475621,
+    244018469,
+    244018470,
+    5535474919,
+    5535474917
+  ],
+  "geometry": [
+    { "lat": 37.3713599, "lon": -6.0273368 },
+    { "lat": 37.3713880, "lon": -6.0271941 },
+    { "lat": 37.3714138, "lon": -6.0267952 },
+    { "lat": 37.3714447, "lon": -6.0263878 },
+    { "lat": 37.3714571, "lon": -6.0260703 },
+    { "lat": 37.3714583, "lon": -6.0255407 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination": "Sevilla;Cádiz;Granada;Málaga;Córdoba",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 56452437,
+  "bounds": {
+    "minlat": 37.3717646,
+    "minlon": -6.0278045,
+    "maxlat": 37.3732993,
+    "maxlon": -6.0268271
+  },
+  "nodes": [
+    244018568,
+    5535469595,
+    244018569,
+    244018570,
+    5535469565,
+    244018571,
+    5535469564,
+    5535469563,
+    244018572,
+    1944134971,
+    244018573,
+    5535469562,
+    244018574
+  ],
+  "geometry": [
+    { "lat": 37.3732993, "lon": -6.0277973 },
+    { "lat": 37.3731487, "lon": -6.0278045 },
+    { "lat": 37.3729938, "lon": -6.0277914 },
+    { "lat": 37.3728717, "lon": -6.0277690 },
+    { "lat": 37.3727252, "lon": -6.0277258 },
+    { "lat": 37.3725637, "lon": -6.0276622 },
+    { "lat": 37.3724173, "lon": -6.0275737 },
+    { "lat": 37.3722814, "lon": -6.0274761 },
+    { "lat": 37.3721862, "lon": -6.0273929 },
+    { "lat": 37.3720520, "lon": -6.0272522 },
+    { "lat": 37.3719402, "lon": -6.0271107 },
+    { "lat": 37.3718547, "lon": -6.0269768 },
+    { "lat": 37.3717646, "lon": -6.0268271 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 66762989,
+  "bounds": {
+    "minlat": 37.4129979,
+    "minlon": -6.0338682,
+    "maxlat": 37.4132103,
+    "maxlon": -6.0336963
+  },
+  "nodes": [
+    250759818,
+    5535076508,
+    5535076507,
+    250759819
+  ],
+  "geometry": [
+    { "lat": 37.4132103, "lon": -6.0336963 },
+    { "lat": 37.4131641, "lon": -6.0337363 },
+    { "lat": 37.4130766, "lon": -6.0338117 },
+    { "lat": 37.4129979, "lon": -6.0338682 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "70",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 81735371,
+  "bounds": {
+    "minlat": 37.3715805,
+    "minlon": -6.0175065,
+    "maxlat": 37.3717748,
+    "maxlon": -6.0166133
+  },
+  "nodes": [
+    244018475,
+    12969310695,
+    244018476
+  ],
+  "geometry": [
+    { "lat": 37.3715805, "lon": -6.0175065 },
+    { "lat": 37.3716433, "lon": -6.0173216 },
+    { "lat": 37.3717748, "lon": -6.0166133 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Rey Juan Carlos I",
+    "destination": "Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto",
+    "destination:ref": "E-803;SE-30;E-5;A-4;A-92;E-5;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 87172978,
+  "bounds": {
+    "minlat": 37.4137634,
+    "minlon": -6.0297025,
+    "maxlat": 37.4137771,
+    "maxlon": -6.0286747
+  },
+  "nodes": [
+    206130891,
+    206130892
+  ],
+  "geometry": [
+    { "lat": 37.4137771, "lon": -6.0297025 },
+    { "lat": 37.4137634, "lon": -6.0286747 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 121677945,
+  "bounds": {
+    "minlat": 37.3723359,
+    "minlon": -6.0248689,
+    "maxlat": 37.3724750,
+    "maxlon": -6.0237631
+  },
+  "nodes": [
+    5535431064,
+    11978207213,
+    11978207215,
+    206127649
+  ],
+  "geometry": [
+    { "lat": 37.3723359, "lon": -6.0237631 },
+    { "lat": 37.3723892, "lon": -6.0243097 },
+    { "lat": 37.3724723, "lon": -6.0248477 },
+    { "lat": 37.3724750, "lon": -6.0248689 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Reina Sofía",
+    "destination:lanes": "San Juan de Aznalfarache (alto);Mairena del Aljarafe;Coria del Río|San Juan de Aznalfarache (alto);Mairena del Aljarafe;Coria del Río|E-803;SE-30;E-1 A-49 Huelva;A-66 Mérida|E-803;SE-30;E-1 A-49 Huelva;A-66 Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "left|left|right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 121677947,
+  "bounds": {
+    "minlat": 37.3727498,
+    "minlon": -6.0158137,
+    "maxlat": 37.3727778,
+    "maxlon": -6.0153239
+  },
+  "nodes": [
+    206127613,
+    5535431082,
+    206127615,
+    5535431081,
+    5535431080,
+    206127616
+  ],
+  "geometry": [
+    { "lat": 37.3727498, "lon": -6.0153239 },
+    { "lat": 37.3727685, "lon": -6.0154817 },
+    { "lat": 37.3727767, "lon": -6.0155986 },
+    { "lat": 37.3727778, "lon": -6.0156902 },
+    { "lat": 37.3727717, "lon": -6.0157879 },
+    { "lat": 37.3727692, "lon": -6.0158137 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 121677951,
+  "bounds": {
+    "minlat": 37.3573603,
+    "minlon": -6.0056292,
+    "maxlat": 37.3596165,
+    "maxlon": -6.0029771
+  },
+  "nodes": [
+    249688664,
+    206122422,
+    206122423,
+    249688988
+  ],
+  "geometry": [
+    { "lat": 37.3573603, "lon": -6.0029771 },
+    { "lat": 37.3581800, "lon": -6.0039488 },
+    { "lat": 37.3588476, "lon": -6.0047399 },
+    { "lat": 37.3596165, "lon": -6.0056292 }
+  ],
+  "tags": {
+    "destination": "Coria del Río;Huelva;Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 121677953,
+  "bounds": {
+    "minlat": 37.3752681,
+    "minlon": -6.0269494,
+    "maxlat": 37.3834851,
+    "maxlon": -6.0255820
+  },
+  "nodes": [
+    12071185637,
+    206127733,
+    5535392015,
+    5535392016,
+    206127734,
+    861815961,
+    5535219760,
+    5535219759,
+    5535219758,
+    5535219757,
+    206127735,
+    5535219756,
+    5535219755,
+    5535219754,
+    5535219753,
+    5535219752,
+    206127736
+  ],
+  "geometry": [
+    { "lat": 37.3752681, "lon": -6.0269494 },
+    { "lat": 37.3759222, "lon": -6.0267763 },
+    { "lat": 37.3761403, "lon": -6.0267232 },
+    { "lat": 37.3763508, "lon": -6.0266818 },
+    { "lat": 37.3766883, "lon": -6.0266266 },
+    { "lat": 37.3773690, "lon": -6.0265137 },
+    { "lat": 37.3782060, "lon": -6.0263841 },
+    { "lat": 37.3788069, "lon": -6.0262938 },
+    { "lat": 37.3792428, "lon": -6.0262273 },
+    { "lat": 37.3800149, "lon": -6.0261086 },
+    { "lat": 37.3805132, "lon": -6.0260310 },
+    { "lat": 37.3809708, "lon": -6.0259626 },
+    { "lat": 37.3812727, "lon": -6.0259136 },
+    { "lat": 37.3817280, "lon": -6.0258471 },
+    { "lat": 37.3824837, "lon": -6.0257342 },
+    { "lat": 37.3832855, "lon": -6.0256118 },
+    { "lat": 37.3834851, "lon": -6.0255820 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 126352411,
+  "bounds": {
+    "minlat": 37.4135185,
+    "minlon": -6.0081488,
+    "maxlat": 37.4135202,
+    "maxlon": -6.0076533
+  },
+  "nodes": [
+    306104985,
+    3730864239
+  ],
+  "geometry": [
+    { "lat": 37.4135202, "lon": -6.0081488 },
+    { "lat": 37.4135185, "lon": -6.0076533 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination": "Sevilla;Calle Torneo;Ronda Urbana Norte",
+    "destination:ref": "SE-30",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "maxweight:hgv": "12",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 126352412,
+  "bounds": {
+    "minlat": 37.4136295,
+    "minlon": -6.0096105,
+    "maxlat": 37.4136463,
+    "maxlon": -6.0080002
+  },
+  "nodes": [
+    356377802,
+    1944135017
+  ],
+  "geometry": [
+    { "lat": 37.4136295, "lon": -6.0080002 },
+    { "lat": 37.4136463, "lon": -6.0096105 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente de Itálica",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 129752914,
+  "bounds": {
+    "minlat": 37.3438322,
+    "minlon": -5.9902848,
+    "maxlat": 37.3465895,
+    "maxlon": -5.9870928
+  },
+  "nodes": [
+    206122281,
+    12969310705,
+    2175220916,
+    13375465748,
+    7140247473
+  ],
+  "geometry": [
+    { "lat": 37.3465895, "lon": -5.9902848 },
+    { "lat": 37.3464517, "lon": -5.9901867 },
+    { "lat": 37.3460110, "lon": -5.9896680 },
+    { "lat": 37.3438918, "lon": -5.9871632 },
+    { "lat": 37.3438322, "lon": -5.9870928 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 172129502,
+  "bounds": {
+    "minlat": 37.3563262,
+    "minlon": -6.0027072,
+    "maxlat": 37.3570054,
+    "maxlon": -6.0019215
+  },
+  "nodes": [
+    1830618015,
+    1830618013
+  ],
+  "geometry": [
+    { "lat": 37.3570054, "lon": -6.0027072 },
+    { "lat": 37.3563262, "lon": -6.0019215 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 172129503,
+  "bounds": {
+    "minlat": 37.3564227,
+    "minlon": -6.0027013,
+    "maxlat": 37.3571237,
+    "maxlon": -6.0018652
+  },
+  "nodes": [
+    1830618017,
+    1830618019
+  ],
+  "geometry": [
+    { "lat": 37.3564227, "lon": -6.0018652 },
+    { "lat": 37.3571237, "lon": -6.0027013 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "destination:lanes": "Coria del Río;Huelva;Mérida|Coria del Río;Huelva;Mérida|Puerto oeste",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 172129504,
+  "bounds": {
+    "minlat": 37.3515016,
+    "minlon": -6.0019215,
+    "maxlat": 37.3563262,
+    "maxlon": -5.9961070
+  },
+  "nodes": [
+    1830618013,
+    992001245,
+    10002007063,
+    12969310703,
+    206122410
+  ],
+  "geometry": [
+    { "lat": 37.3563262, "lon": -6.0019215 },
+    { "lat": 37.3560744, "lon": -6.0016265 },
+    { "lat": 37.3520845, "lon": -5.9968721 },
+    { "lat": 37.3515696, "lon": -5.9962532 },
+    { "lat": 37.3515016, "lon": -5.9961070 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "60",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 183975089,
+  "bounds": {
+    "minlat": 37.3438916,
+    "minlon": -5.9902848,
+    "maxlat": 37.3465895,
+    "maxlon": -5.9870172
+  },
+  "nodes": [
+    2175220914,
+    1944134943,
+    12969310704,
+    206122281
+  ],
+  "geometry": [
+    { "lat": 37.3438916, "lon": -5.9870172 },
+    { "lat": 37.3460618, "lon": -5.9895883 },
+    { "lat": 37.3465031, "lon": -5.9901171 },
+    { "lat": 37.3465895, "lon": -5.9902848 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:alt_name": "Puente del Paquito",
+    "bridge:loc_name": "Puente del Quinto Centenario",
+    "bridge:name": "Puente del Centenario",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "maxweight": "20",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 183975091,
+  "bounds": {
+    "minlat": 37.3947729,
+    "minlon": -6.0308729,
+    "maxlat": 37.4056555,
+    "maxlon": -6.0255298
+  },
+  "nodes": [
+    12073349584,
+    250759854,
+    250759855,
+    250759856,
+    5535343369,
+    250759857,
+    250759858,
+    5535343364,
+    250759859,
+    5535343370,
+    250759860,
+    5535374199,
+    250759861,
+    5535343371,
+    250759806,
+    5535374198,
+    5535343372,
+    5535343373,
+    244018538,
+    5535374197,
+    5535374196,
+    244018539
+  ],
+  "geometry": [
+    { "lat": 37.4056555, "lon": -6.0308729 },
+    { "lat": 37.4036279, "lon": -6.0293751 },
+    { "lat": 37.4020579, "lon": -6.0282625 },
+    { "lat": 37.4011631, "lon": -6.0276818 },
+    { "lat": 37.4005328, "lon": -6.0273075 },
+    { "lat": 37.4003324, "lon": -6.0271946 },
+    { "lat": 37.3998419, "lon": -6.0269286 },
+    { "lat": 37.3993952, "lon": -6.0267024 },
+    { "lat": 37.3988712, "lon": -6.0264533 },
+    { "lat": 37.3984396, "lon": -6.0262812 },
+    { "lat": 37.3980207, "lon": -6.0261270 },
+    { "lat": 37.3976865, "lon": -6.0260151 },
+    { "lat": 37.3972528, "lon": -6.0258881 },
+    { "lat": 37.3968119, "lon": -6.0257750 },
+    { "lat": 37.3965821, "lon": -6.0257322 },
+    { "lat": 37.3963713, "lon": -6.0256909 },
+    { "lat": 37.3962510, "lon": -6.0256673 },
+    { "lat": 37.3959160, "lon": -6.0256197 },
+    { "lat": 37.3955793, "lon": -6.0255812 },
+    { "lat": 37.3954610, "lon": -6.0255722 },
+    { "lat": 37.3952505, "lon": -6.0255548 },
+    { "lat": 37.3947729, "lon": -6.0255298 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 183975092,
+  "bounds": {
+    "minlat": 37.3713262,
+    "minlon": -6.0237504,
+    "maxlat": 37.3715805,
+    "maxlon": -6.0175065
+  },
+  "nodes": [
+    12969189753,
+    3248086964,
+    350691189,
+    5535469552,
+    3248086960,
+    5535469551,
+    244018473,
+    5535469550,
+    3248086963,
+    5535469549,
+    244018474,
+    1944134969,
+    244018475
+  ],
+  "geometry": [
+    { "lat": 37.3714217, "lon": -6.0237504 },
+    { "lat": 37.3714172, "lon": -6.0235636 },
+    { "lat": 37.3713498, "lon": -6.0211972 },
+    { "lat": 37.3713383, "lon": -6.0207957 },
+    { "lat": 37.3713267, "lon": -6.0203732 },
+    { "lat": 37.3713262, "lon": -6.0198957 },
+    { "lat": 37.3713384, "lon": -6.0195576 },
+    { "lat": 37.3713561, "lon": -6.0192249 },
+    { "lat": 37.3713841, "lon": -6.0188715 },
+    { "lat": 37.3714197, "lon": -6.0185621 },
+    { "lat": 37.3714521, "lon": -6.0183411 },
+    { "lat": 37.3714891, "lon": -6.0180788 },
+    { "lat": 37.3715805, "lon": -6.0175065 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Rey Juan Carlos I",
+    "destination:lanes": "Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Cádiz;Puerto;Granada;Málaga;Córdoba;Aeropuerto|Sevilla;Los Remedios;Triana;Isla de la Cartuja|Sevilla;Los Remedios;Triana;Isla de la Cartuja",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92||",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "5",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "start_date": "1981",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 183975093,
+  "bounds": {
+    "minlat": 37.3647008,
+    "minlon": -6.0134116,
+    "maxlat": 37.3660505,
+    "maxlon": -6.0118647
+  },
+  "nodes": [
+    1944134966,
+    244018493,
+    10002007045
+  ],
+  "geometry": [
+    { "lat": 37.3660505, "lon": -6.0134116 },
+    { "lat": 37.3657343, "lon": -6.0130983 },
+    { "lat": 37.3647008, "lon": -6.0118647 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 183975094,
+  "bounds": {
+    "minlat": 37.4136463,
+    "minlon": -6.0131739,
+    "maxlat": 37.4136920,
+    "maxlon": -6.0096105
+  },
+  "nodes": [
+    1944135017,
+    356377773
+  ],
+  "geometry": [
+    { "lat": 37.4136463, "lon": -6.0096105 },
+    { "lat": 37.4136920, "lon": -6.0131739 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente de Itálica",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 193546108,
+  "bounds": {
+    "minlat": 37.4079153,
+    "minlon": -5.9491974,
+    "maxlat": 37.4086220,
+    "maxlon": -5.9489045
+  },
+  "nodes": [
+    9921693348,
+    2431988755,
+    206128420,
+    206128422
+  ],
+  "geometry": [
+    { "lat": 37.4079153, "lon": -5.9489045 },
+    { "lat": 37.4083000, "lon": -5.9491062 },
+    { "lat": 37.4084601, "lon": -5.9491630 },
+    { "lat": 37.4086220, "lon": -5.9491974 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "change:lanes": "yes|not_right|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "70",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 193546109,
+  "bounds": {
+    "minlat": 37.3993311,
+    "minlon": -5.9452455,
+    "maxlat": 37.3999285,
+    "maxlon": -5.9450206
+  },
+  "nodes": [
+    249679625,
+    249679624,
+    249679623
+  ],
+  "geometry": [
+    { "lat": 37.3993311, "lon": -5.9450206 },
+    { "lat": 37.3995659, "lon": -5.9450858 },
+    { "lat": 37.3999285, "lon": -5.9452455 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 194702019,
+  "bounds": {
+    "minlat": 37.3650826,
+    "minlon": -5.9465926,
+    "maxlat": 37.3689264,
+    "maxlon": -5.9444343
+  },
+  "nodes": [
+    206121216,
+    2210250594,
+    2210250593,
+    206121218,
+    206121219,
+    206121220,
+    206121221,
+    206121222,
+    206121223,
+    206121224,
+    249562167
+  ],
+  "geometry": [
+    { "lat": 37.3689264, "lon": -5.9444343 },
+    { "lat": 37.3683678, "lon": -5.9444428 },
+    { "lat": 37.3680709, "lon": -5.9444559 },
+    { "lat": 37.3677704, "lon": -5.9445010 },
+    { "lat": 37.3673763, "lon": -5.9445817 },
+    { "lat": 37.3670163, "lon": -5.9447268 },
+    { "lat": 37.3666635, "lon": -5.9449152 },
+    { "lat": 37.3662225, "lon": -5.9452044 },
+    { "lat": 37.3658387, "lon": -5.9455510 },
+    { "lat": 37.3654881, "lon": -5.9459697 },
+    { "lat": 37.3650826, "lon": -5.9465926 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 194702022,
+  "bounds": {
+    "minlat": 37.3684689,
+    "minlon": -5.9442678,
+    "maxlat": 37.3787988,
+    "maxlon": -5.9432575
+  },
+  "nodes": [
+    249679947,
+    249679949,
+    249679850,
+    3633158273,
+    3633158274,
+    249679851,
+    249679852,
+    249679853,
+    249679854,
+    249679835
+  ],
+  "geometry": [
+    { "lat": 37.3684689, "lon": -5.9442667 },
+    { "lat": 37.3692687, "lon": -5.9442678 },
+    { "lat": 37.3747065, "lon": -5.9442112 },
+    { "lat": 37.3751054, "lon": -5.9442014 },
+    { "lat": 37.3755037, "lon": -5.9441775 },
+    { "lat": 37.3757510, "lon": -5.9441496 },
+    { "lat": 37.3762777, "lon": -5.9440678 },
+    { "lat": 37.3767029, "lon": -5.9439738 },
+    { "lat": 37.3771671, "lon": -5.9438388 },
+    { "lat": 37.3787988, "lon": -5.9432575 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 194702023,
+  "bounds": {
+    "minlat": 37.3787988,
+    "minlon": -5.9432575,
+    "maxlat": 37.3802003,
+    "maxlon": -5.9427546
+  },
+  "nodes": [
+    249679835,
+    701412392
+  ],
+  "geometry": [
+    { "lat": 37.3787988, "lon": -5.9432575 },
+    { "lat": 37.3802003, "lon": -5.9427546 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 194702024,
+  "bounds": {
+    "minlat": 37.3791683,
+    "minlon": -5.9432932,
+    "maxlat": 37.3804097,
+    "maxlon": -5.9428516
+  },
+  "nodes": [
+    206121203,
+    475824519
+  ],
+  "geometry": [
+    { "lat": 37.3804097, "lon": -5.9428516 },
+    { "lat": 37.3791683, "lon": -5.9432932 }
+  ],
+  "tags": {
+    "destination:lanes": "Utrera;Cádiz;Huelva;Puerto|Utrera;Cádiz;Huelva;Puerto|Utrera;Cádiz;Huelva;Puerto|Su Eminencia;Barriada La Plata;Barriada Padre Pío",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 194705056,
+  "bounds": {
+    "minlat": 37.3732993,
+    "minlon": -6.0277973,
+    "maxlat": 37.3741933,
+    "maxlon": -6.0275031
+  },
+  "nodes": [
+    244019416,
+    5535469567,
+    244018566,
+    244018567,
+    5535469566,
+    244018568
+  ],
+  "geometry": [
+    { "lat": 37.3741933, "lon": -6.0275031 },
+    { "lat": 37.3740622, "lon": -6.0275553 },
+    { "lat": 37.3737532, "lon": -6.0276771 },
+    { "lat": 37.3736003, "lon": -6.0277338 },
+    { "lat": 37.3734462, "lon": -6.0277749 },
+    { "lat": 37.3732993, "lon": -6.0277973 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 196358552,
+  "bounds": {
+    "minlat": 37.3883908,
+    "minlon": -5.9446693,
+    "maxlat": 37.3967729,
+    "maxlon": -5.9413227
+  },
+  "nodes": [
+    249679802,
+    499423894,
+    249679664,
+    10008475820,
+    249679665,
+    2066981137,
+    494259879
+  ],
+  "geometry": [
+    { "lat": 37.3883908, "lon": -5.9413227 },
+    { "lat": 37.3894218, "lon": -5.9417299 },
+    { "lat": 37.3906135, "lon": -5.9422086 },
+    { "lat": 37.3926415, "lon": -5.9430260 },
+    { "lat": 37.3939384, "lon": -5.9435487 },
+    { "lat": 37.3957164, "lon": -5.9442700 },
+    { "lat": 37.3967729, "lon": -5.9446693 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 196358553,
+  "bounds": {
+    "minlat": 37.3840520,
+    "minlon": -5.9413731,
+    "maxlat": 37.3860391,
+    "maxlon": -5.9407621
+  },
+  "nodes": [
+    249612375,
+    249679823,
+    249679824,
+    249679825,
+    249679826
+  ],
+  "geometry": [
+    { "lat": 37.3840520, "lon": -5.9413731 },
+    { "lat": 37.3848158, "lon": -5.9411211 },
+    { "lat": 37.3853477, "lon": -5.9409363 },
+    { "lat": 37.3857821, "lon": -5.9408082 },
+    { "lat": 37.3860391, "lon": -5.9407621 }
+  ],
+  "tags": {
+    "destination": "Ronda urbana norte;Córdoba;Mérida;Aeropuerto",
+    "destination:ref": "SE-30;A-4;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 196522319,
+  "bounds": {
+    "minlat": 37.4020729,
+    "minlon": -5.9482638,
+    "maxlat": 37.4057963,
+    "maxlon": -5.9467730
+  },
+  "nodes": [
+    494259875,
+    4056271299,
+    13375408961,
+    992001777,
+    13375408962,
+    206128857
+  ],
+  "geometry": [
+    { "lat": 37.4020729, "lon": -5.9467730 },
+    { "lat": 37.4024018, "lon": -5.9469125 },
+    { "lat": 37.4024801, "lon": -5.9469437 },
+    { "lat": 37.4029162, "lon": -5.9471176 },
+    { "lat": 37.4031182, "lon": -5.9471980 },
+    { "lat": 37.4057963, "lon": -5.9482638 }
+  ],
+  "tags": {
+    "change:lanes": "no|yes|yes|yes",
+    "destination:int_ref:lanes": "||E 05|E 05",
+    "destination:lanes": "Sevilla;Avenida Kansas City;Ronda urbana Norte;Mérida|Sevilla;Avenida Kansas City;Ronda urbana Norte;Mérida|Aeropuerto;Carmona;Córdoba|Aeropuerto;Carmona;Córdoba",
+    "destination:ref:lanes": "E-803;A-66|E-803;A-66|SE-30;A4|SE-30;A4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 196522321,
+  "bounds": {
+    "minlat": 37.3998789,
+    "minlon": -5.9470917,
+    "maxlat": 37.4023613,
+    "maxlon": -5.9453974
+  },
+  "nodes": [
+    494259884,
+    206120393,
+    206120394,
+    206120395,
+    206120396,
+    206120397,
+    206120398
+  ],
+  "geometry": [
+    { "lat": 37.4023613, "lon": -5.9470917 },
+    { "lat": 37.4017202, "lon": -5.9467833 },
+    { "lat": 37.4012190, "lon": -5.9464559 },
+    { "lat": 37.4008144, "lon": -5.9461136 },
+    { "lat": 37.4004559, "lon": -5.9458046 },
+    { "lat": 37.4001944, "lon": -5.9455950 },
+    { "lat": 37.3998789, "lon": -5.9453974 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207328853,
+  "bounds": {
+    "minlat": 37.3577356,
+    "minlon": -6.0050801,
+    "maxlat": 37.3589974,
+    "maxlon": -6.0035682
+  },
+  "nodes": [
+    249688900,
+    206122430
+  ],
+  "geometry": [
+    { "lat": 37.3589974, "lon": -6.0050801 },
+    { "lat": 37.3577356, "lon": -6.0035682 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207328854,
+  "bounds": {
+    "minlat": 37.3589974,
+    "minlon": -6.0081004,
+    "maxlat": 37.3615054,
+    "maxlon": -6.0050801
+  },
+  "nodes": [
+    206122426,
+    13512572246,
+    206122428,
+    249688900
+  ],
+  "geometry": [
+    { "lat": 37.3615054, "lon": -6.0081004 },
+    { "lat": 37.3614086, "lon": -6.0079393 },
+    { "lat": 37.3593565, "lon": -6.0055041 },
+    { "lat": 37.3589974, "lon": -6.0050801 }
+  ],
+  "tags": {
+    "destination": "Cádiz;Granada;Málaga;Córdoba",
+    "destination:ref": "E-5;A-4;A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207328855,
+  "bounds": {
+    "minlat": 37.3570054,
+    "minlon": -6.0035682,
+    "maxlat": 37.3577356,
+    "maxlon": -6.0027072
+  },
+  "nodes": [
+    206122430,
+    206122431,
+    1830618015
+  ],
+  "geometry": [
+    { "lat": 37.3577356, "lon": -6.0035682 },
+    { "lat": 37.3574665, "lon": -6.0032575 },
+    { "lat": 37.3570054, "lon": -6.0027072 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207328856,
+  "bounds": {
+    "minlat": 37.3660505,
+    "minlon": -6.0139642,
+    "maxlat": 37.3667297,
+    "maxlon": -6.0134116
+  },
+  "nodes": [
+    244018491,
+    2175220917,
+    1944134966
+  ],
+  "geometry": [
+    { "lat": 37.3667297, "lon": -6.0139642 },
+    { "lat": 37.3663890, "lon": -6.0137032 },
+    { "lat": 37.3660505, "lon": -6.0134116 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207328857,
+  "bounds": {
+    "minlat": 37.3404721,
+    "minlon": -5.9819961,
+    "maxlat": 37.3413507,
+    "maxlon": -5.9773521
+  },
+  "nodes": [
+    206122538,
+    2175220908,
+    250755598
+  ],
+  "geometry": [
+    { "lat": 37.3413507, "lon": -5.9819961 },
+    { "lat": 37.3408820, "lon": -5.9794983 },
+    { "lat": 37.3404721, "lon": -5.9773521 }
+  ],
+  "tags": {
+    "destination:lanes": "Utrera;Granada;Córdoba;Aeropuerto|Utrera;Granada;Córdoba;Aeropuerto|Sevilla;Avenida La Palmera",
+    "destination:ref:lanes": "SE-30;A-376;A-92;A-4|SE-30;A-376;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 207626769,
+  "bounds": {
+    "minlat": 37.3700756,
+    "minlon": -6.0153239,
+    "maxlat": 37.3727498,
+    "maxlon": -6.0138466
+  },
+  "nodes": [
+    5535469526,
+    5535431089,
+    5535431090,
+    5535431091,
+    5535431092,
+    206127606,
+    5535431087,
+    206127607,
+    2178770619,
+    206127608,
+    5535431086,
+    206127609,
+    5535431085,
+    206127610,
+    5535431084,
+    2178770621,
+    206127611,
+    5535431083,
+    206127612,
+    206127613
+  ],
+  "geometry": [
+    { "lat": 37.3700756, "lon": -6.0139595 },
+    { "lat": 37.3702859, "lon": -6.0139091 },
+    { "lat": 37.3704847, "lon": -6.0138734 },
+    { "lat": 37.3706507, "lon": -6.0138535 },
+    { "lat": 37.3707796, "lon": -6.0138466 },
+    { "lat": 37.3709378, "lon": -6.0138519 },
+    { "lat": 37.3711422, "lon": -6.0138746 },
+    { "lat": 37.3714127, "lon": -6.0139314 },
+    { "lat": 37.3716762, "lon": -6.0140263 },
+    { "lat": 37.3718053, "lon": -6.0140860 },
+    { "lat": 37.3719537, "lon": -6.0141718 },
+    { "lat": 37.3721748, "lon": -6.0143092 },
+    { "lat": 37.3722574, "lon": -6.0143847 },
+    { "lat": 37.3723391, "lon": -6.0144632 },
+    { "lat": 37.3724291, "lon": -6.0145817 },
+    { "lat": 37.3725046, "lon": -6.0146938 },
+    { "lat": 37.3726027, "lon": -6.0148787 },
+    { "lat": 37.3726700, "lon": -6.0150369 },
+    { "lat": 37.3727204, "lon": -6.0151747 },
+    { "lat": 37.3727498, "lon": -6.0153239 }
+  ],
+  "tags": {
+    "destination": "Coria del Río;Huelva;Mérida",
+    "destination:ref": "E-803;SE-30;E-1;A-49;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn": "left"
+  }
+},
+{
+  "type": "way",
+  "id": 208421638,
+  "bounds": {
+    "minlat": 37.3967729,
+    "minlon": -5.9449477,
+    "maxlat": 37.3979764,
+    "maxlon": -5.9446693
+  },
+  "nodes": [
+    494259879,
+    1941502636,
+    11177323180,
+    249679669
+  ],
+  "geometry": [
+    { "lat": 37.3967729, "lon": -5.9446693 },
+    { "lat": 37.3972053, "lon": -5.9448179 },
+    { "lat": 37.3975682, "lon": -5.9449035 },
+    { "lat": 37.3979764, "lon": -5.9449477 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 208421639,
+  "bounds": {
+    "minlat": 37.3979764,
+    "minlon": -5.9450206,
+    "maxlat": 37.3993311,
+    "maxlon": -5.9449477
+  },
+  "nodes": [
+    249679669,
+    249679627,
+    249679626,
+    249679625
+  ],
+  "geometry": [
+    { "lat": 37.3979764, "lon": -5.9449477 },
+    { "lat": 37.3985331, "lon": -5.9449752 },
+    { "lat": 37.3989956, "lon": -5.9449821 },
+    { "lat": 37.3993311, "lon": -5.9450206 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 211012795,
+  "bounds": {
+    "minlat": 37.3597604,
+    "minlon": -5.9547862,
+    "maxlat": 37.3600880,
+    "maxlon": -5.9543946
+  },
+  "nodes": [
+    249680445,
+    206121232
+  ],
+  "geometry": [
+    { "lat": 37.3600880, "lon": -5.9543946 },
+    { "lat": 37.3597604, "lon": -5.9547862 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Universidad Pablo de Olavide;Utrera",
+    "destination:ref:lanes": "E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|A-376",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 211012796,
+  "bounds": {
+    "minlat": 37.3620642,
+    "minlon": -5.9515534,
+    "maxlat": 37.3650826,
+    "maxlon": -5.9465926
+  },
+  "nodes": [
+    249562167,
+    2210250588,
+    12087433066,
+    206121227,
+    12087433067
+  ],
+  "geometry": [
+    { "lat": 37.3650826, "lon": -5.9465926 },
+    { "lat": 37.3645145, "lon": -5.9475216 },
+    { "lat": 37.3639447, "lon": -5.9484729 },
+    { "lat": 37.3634523, "lon": -5.9492818 },
+    { "lat": 37.3620642, "lon": -5.9515534 }
+  ],
+  "tags": {
+    "destination:int_ref:lanes": "E 5;E 1;E 803|E 5;E 1;E 803|E 5|",
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Universidad Pablo de Olavide;Utrera|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-4;A-49;A-66|SE-30;A-4;A-49;A-66|SE-30;A-376|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 211012797,
+  "bounds": {
+    "minlat": 37.3600880,
+    "minlon": -5.9543946,
+    "maxlat": 37.3613115,
+    "maxlon": -5.9527102
+  },
+  "nodes": [
+    2175108195,
+    206121230,
+    206121231,
+    249680445
+  ],
+  "geometry": [
+    { "lat": 37.3613115, "lon": -5.9527102 },
+    { "lat": 37.3610526, "lon": -5.9530830 },
+    { "lat": 37.3603067, "lon": -5.9540902 },
+    { "lat": 37.3600880, "lon": -5.9543946 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 211012798,
+  "bounds": {
+    "minlat": 37.3430521,
+    "minlon": -5.9686301,
+    "maxlat": 37.3494939,
+    "maxlon": -5.9620510
+  },
+  "nodes": [
+    11244218702,
+    206121602,
+    2210250584,
+    206121603,
+    206121604,
+    11244218703,
+    206121605,
+    206121606,
+    206121607,
+    206121608,
+    206121609,
+    249684862
+  ],
+  "geometry": [
+    { "lat": 37.3494939, "lon": -5.9620510 },
+    { "lat": 37.3490354, "lon": -5.9623609 },
+    { "lat": 37.3485839, "lon": -5.9626860 },
+    { "lat": 37.3479049, "lon": -5.9632227 },
+    { "lat": 37.3472214, "lon": -5.9638387 },
+    { "lat": 37.3466773, "lon": -5.9643853 },
+    { "lat": 37.3461327, "lon": -5.9649854 },
+    { "lat": 37.3457793, "lon": -5.9653881 },
+    { "lat": 37.3445122, "lon": -5.9668203 },
+    { "lat": 37.3438406, "lon": -5.9676090 },
+    { "lat": 37.3433970, "lon": -5.9681683 },
+    { "lat": 37.3430521, "lon": -5.9686301 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Sevilla;Avenida La Palmera;Bellavista;Dos Hermanas",
+    "destination:ref:lanes": "E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|N-IV",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 211012799,
+  "bounds": {
+    "minlat": 37.3405425,
+    "minlon": -5.9730779,
+    "maxlat": 37.3430521,
+    "maxlon": -5.9686301
+  },
+  "nodes": [
+    249684862,
+    206121610,
+    206121611,
+    206121612,
+    206121644,
+    249684825
+  ],
+  "geometry": [
+    { "lat": 37.3430521, "lon": -5.9686301 },
+    { "lat": 37.3425003, "lon": -5.9694089 },
+    { "lat": 37.3418395, "lon": -5.9704744 },
+    { "lat": 37.3412215, "lon": -5.9716026 },
+    { "lat": 37.3407341, "lon": -5.9725677 },
+    { "lat": 37.3405425, "lon": -5.9730779 }
+  ],
+  "tags": {
+    "destination": "Cádiz;Huelva;Mérida",
+    "destination:ref": "E-5;SE-30;A-4;E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 257743549,
+  "bounds": {
+    "minlat": 37.4098809,
+    "minlon": -6.0341289,
+    "maxlat": 37.4110413,
+    "maxlon": -6.0338091
+  },
+  "nodes": [
+    250759823,
+    250759835,
+    5535179574,
+    5535179575,
+    250759837,
+    250759838
+  ],
+  "geometry": [
+    { "lat": 37.4110413, "lon": -6.0341289 },
+    { "lat": 37.4109174, "lon": -6.0341067 },
+    { "lat": 37.4108047, "lon": -6.0340886 },
+    { "lat": 37.4105361, "lon": -6.0340275 },
+    { "lat": 37.4102816, "lon": -6.0339597 },
+    { "lat": 37.4098809, "lon": -6.0338091 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "70",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 257743550,
+  "bounds": {
+    "minlat": 37.3924906,
+    "minlon": -6.0254854,
+    "maxlat": 37.3930905,
+    "maxlon": -6.0254804
+  },
+  "nodes": [
+    250758468,
+    5535219735,
+    206127752,
+    206127753
+  ],
+  "geometry": [
+    { "lat": 37.3924906, "lon": -6.0254804 },
+    { "lat": 37.3926275, "lon": -6.0254854 },
+    { "lat": 37.3927311, "lon": -6.0254845 },
+    { "lat": 37.3930905, "lon": -6.0254818 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 257743551,
+  "bounds": {
+    "minlat": 37.3884425,
+    "minlon": -6.0275378,
+    "maxlat": 37.3894350,
+    "maxlon": -6.0274359
+  },
+  "nodes": [
+    244018548,
+    244018549,
+    244018550,
+    5535391726,
+    5535391727,
+    244018551
+  ],
+  "geometry": [
+    { "lat": 37.3894350, "lon": -6.0274359 },
+    { "lat": 37.3891741, "lon": -6.0275001 },
+    { "lat": 37.3889434, "lon": -6.0275316 },
+    { "lat": 37.3887263, "lon": -6.0275378 },
+    { "lat": 37.3885689, "lon": -6.0275328 },
+    { "lat": 37.3884425, "lon": -6.0275237 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311743585,
+  "bounds": {
+    "minlat": 37.4135669,
+    "minlon": -6.0076512,
+    "maxlat": 37.4136102,
+    "maxlon": -6.0046143
+  },
+  "nodes": [
+    356377780,
+    3174628406
+  ],
+  "geometry": [
+    { "lat": 37.4135669, "lon": -6.0046143 },
+    { "lat": 37.4136102, "lon": -6.0076512 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311743590,
+  "bounds": {
+    "minlat": 37.4134845,
+    "minlon": -6.0076533,
+    "maxlat": 37.4135185,
+    "maxlon": -6.0046173
+  },
+  "nodes": [
+    3730864239,
+    206131132
+  ],
+  "geometry": [
+    { "lat": 37.4135185, "lon": -6.0076533 },
+    { "lat": 37.4134845, "lon": -6.0046173 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "maxweight:hgv": "12",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 311743594,
+  "bounds": {
+    "minlat": 37.4136102,
+    "minlon": -6.0080002,
+    "maxlat": 37.4136295,
+    "maxlon": -6.0076512
+  },
+  "nodes": [
+    3174628406,
+    356377802
+  ],
+  "geometry": [
+    { "lat": 37.4136102, "lon": -6.0076512 },
+    { "lat": 37.4136295, "lon": -6.0080002 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 317836957,
+  "bounds": {
+    "minlat": 37.3830869,
+    "minlon": -6.0266869,
+    "maxlat": 37.3867264,
+    "maxlon": -6.0256910
+  },
+  "nodes": [
+    244018555,
+    244018556,
+    5535391733,
+    3241455993,
+    3241455991,
+    5535391734,
+    3241455989,
+    5535391735,
+    5535391736,
+    4976090854,
+    5535391737,
+    5535391738,
+    4976090853,
+    5535391739,
+    5535391740,
+    244018557
+  ],
+  "geometry": [
+    { "lat": 37.3867264, "lon": -6.0266869 },
+    { "lat": 37.3862625, "lon": -6.0263464 },
+    { "lat": 37.3861281, "lon": -6.0262647 },
+    { "lat": 37.3858766, "lon": -6.0261211 },
+    { "lat": 37.3855794, "lon": -6.0259787 },
+    { "lat": 37.3853069, "lon": -6.0258801 },
+    { "lat": 37.3850915, "lon": -6.0258140 },
+    { "lat": 37.3848380, "lon": -6.0257567 },
+    { "lat": 37.3846721, "lon": -6.0257264 },
+    { "lat": 37.3844290, "lon": -6.0257021 },
+    { "lat": 37.3842487, "lon": -6.0256956 },
+    { "lat": 37.3841002, "lon": -6.0256910 },
+    { "lat": 37.3838078, "lon": -6.0257053 },
+    { "lat": 37.3834964, "lon": -6.0257323 },
+    { "lat": 37.3832371, "lon": -6.0257595 },
+    { "lat": 37.3830869, "lon": -6.0257990 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 330962473,
+  "bounds": {
+    "minlat": 37.3889076,
+    "minlon": -5.9423275,
+    "maxlat": 37.3904491,
+    "maxlon": -5.9416827
+  },
+  "nodes": [
+    249625769,
+    206120722,
+    206120723
+  ],
+  "geometry": [
+    { "lat": 37.3904491, "lon": -5.9423275 },
+    { "lat": 37.3899076, "lon": -5.9421089 },
+    { "lat": 37.3889076, "lon": -5.9416827 }
+  ],
+  "tags": {
+    "destination": "Utrera;Cádiz;Huelva;Puerto",
+    "destination:ref": "E-5;SE-30;A-376;A-4;E-1;A-49",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 358391203,
+  "bounds": {
+    "minlat": 37.3689264,
+    "minlon": -5.9444343,
+    "maxlat": 37.3791683,
+    "maxlon": -5.9432932
+  },
+  "nodes": [
+    475824519,
+    3633158275,
+    701412307,
+    206121207,
+    206121208,
+    206121209,
+    206121210,
+    3633158272,
+    206121211,
+    206121216
+  ],
+  "geometry": [
+    { "lat": 37.3791683, "lon": -5.9432932 },
+    { "lat": 37.3779038, "lon": -5.9437514 },
+    { "lat": 37.3775808, "lon": -5.9438725 },
+    { "lat": 37.3769423, "lon": -5.9440686 },
+    { "lat": 37.3765113, "lon": -5.9441905 },
+    { "lat": 37.3758999, "lon": -5.9442989 },
+    { "lat": 37.3754659, "lon": -5.9443405 },
+    { "lat": 37.3750965, "lon": -5.9443637 },
+    { "lat": 37.3747032, "lon": -5.9443736 },
+    { "lat": 37.3689264, "lon": -5.9444343 }
+  ],
+  "tags": {
+    "destination": "Su Eminencia;Barriada La Plata;Barriada Padre Pío",
+    "destination:ref": "E-5;SE-30;A-376;A-4;E-1;A-49",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 358391204,
+  "bounds": {
+    "minlat": 37.3831240,
+    "minlon": -5.9418788,
+    "maxlat": 37.3846050,
+    "maxlon": -5.9413477
+  },
+  "nodes": [
+    249612721,
+    206120801
+  ],
+  "geometry": [
+    { "lat": 37.3846050, "lon": -5.9413477 },
+    { "lat": 37.3831240, "lon": -5.9418788 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 358391205,
+  "bounds": {
+    "minlat": 37.3804097,
+    "minlon": -5.9428516,
+    "maxlat": 37.3823064,
+    "maxlon": -5.9421690
+  },
+  "nodes": [
+    480466680,
+    206121202,
+    206121203
+  ],
+  "geometry": [
+    { "lat": 37.3823064, "lon": -5.9421690 },
+    { "lat": 37.3810757, "lon": -5.9426125 },
+    { "lat": 37.3804097, "lon": -5.9428516 }
+  ],
+  "tags": {
+    "destination": "Utrera;Cádiz;Huelva;Puerto",
+    "destination:ref": "E-5;SE-30;A-376;A-4;E-1;A-49",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 358391206,
+  "bounds": {
+    "minlat": 37.3869059,
+    "minlon": -5.9416827,
+    "maxlat": 37.3889076,
+    "maxlon": -5.9409984
+  },
+  "nodes": [
+    206120723,
+    2874808147,
+    206120724,
+    206120725,
+    206120726
+  ],
+  "geometry": [
+    { "lat": 37.3889076, "lon": -5.9416827 },
+    { "lat": 37.3880514, "lon": -5.9413336 },
+    { "lat": 37.3875080, "lon": -5.9411334 },
+    { "lat": 37.3871284, "lon": -5.9410404 },
+    { "lat": 37.3869059, "lon": -5.9409984 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "2",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 428004007,
+  "bounds": {
+    "minlat": 37.4095077,
+    "minlon": -5.9494181,
+    "maxlat": 37.4100128,
+    "maxlon": -5.9493326
+  },
+  "nodes": [
+    206128434,
+    11920407826
+  ],
+  "geometry": [
+    { "lat": 37.4095077, "lon": -5.9493326 },
+    { "lat": 37.4100128, "lon": -5.9494181 }
+  ],
+  "tags": {
+    "change:lanes": "no|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 428004008,
+  "bounds": {
+    "minlat": 37.4100112,
+    "minlon": -5.9497228,
+    "maxlat": 37.4109994,
+    "maxlon": -5.9495689
+  },
+  "nodes": [
+    11383609629,
+    13076312141
+  ],
+  "geometry": [
+    { "lat": 37.4109994, "lon": -5.9497228 },
+    { "lat": 37.4100112, "lon": -5.9495689 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 507205634,
+  "bounds": {
+    "minlat": 37.3863135,
+    "minlon": -6.0254565,
+    "maxlat": 37.3897474,
+    "maxlon": -6.0245341
+  },
+  "nodes": [
+    4967609988,
+    206127741,
+    4967609987,
+    8207578677,
+    7125000905,
+    206127744,
+    206127745,
+    7125000903,
+    13206926129,
+    206127746,
+    250758019,
+    5535219741,
+    206127747
+  ],
+  "geometry": [
+    { "lat": 37.3863135, "lon": -6.0254565 },
+    { "lat": 37.3866691, "lon": -6.0253412 },
+    { "lat": 37.3870144, "lon": -6.0252151 },
+    { "lat": 37.3871444, "lon": -6.0251539 },
+    { "lat": 37.3878393, "lon": -6.0248557 },
+    { "lat": 37.3881737, "lon": -6.0247055 },
+    { "lat": 37.3885296, "lon": -6.0246035 },
+    { "lat": 37.3887001, "lon": -6.0245714 },
+    { "lat": 37.3889857, "lon": -6.0245392 },
+    { "lat": 37.3892499, "lon": -6.0245341 },
+    { "lat": 37.3894502, "lon": -6.0245466 },
+    { "lat": 37.3895785, "lon": -6.0245698 },
+    { "lat": 37.3897474, "lon": -6.0246015 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 507205636,
+  "bounds": {
+    "minlat": 37.3930905,
+    "minlon": -6.0254818,
+    "maxlat": 37.3940618,
+    "maxlon": -6.0253864
+  },
+  "nodes": [
+    206127753,
+    5535219729,
+    206127754
+  ],
+  "geometry": [
+    { "lat": 37.3930905, "lon": -6.0254818 },
+    { "lat": 37.3933983, "lon": -6.0254439 },
+    { "lat": 37.3940618, "lon": -6.0253864 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 577366806,
+  "bounds": {
+    "minlat": 37.4058772,
+    "minlon": -6.0338091,
+    "maxlat": 37.4098809,
+    "maxlon": -6.0310361
+  },
+  "nodes": [
+    250759838,
+    250759839,
+    5535343367,
+    5535343366,
+    250759840,
+    5535343365,
+    250759841,
+    250759842,
+    5535343368,
+    250759853,
+    12073349586
+  ],
+  "geometry": [
+    { "lat": 37.4098809, "lon": -6.0338091 },
+    { "lat": 37.4095801, "lon": -6.0336483 },
+    { "lat": 37.4093198, "lon": -6.0335092 },
+    { "lat": 37.4091770, "lon": -6.0334283 },
+    { "lat": 37.4089128, "lon": -6.0332603 },
+    { "lat": 37.4087072, "lon": -6.0331258 },
+    { "lat": 37.4084317, "lon": -6.0329275 },
+    { "lat": 37.4079803, "lon": -6.0326074 },
+    { "lat": 37.4073274, "lon": -6.0321031 },
+    { "lat": 37.4063167, "lon": -6.0313628 },
+    { "lat": 37.4058772, "lon": -6.0310361 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 577398505,
+  "bounds": {
+    "minlat": 37.3894350,
+    "minlon": -6.0274359,
+    "maxlat": 37.3901326,
+    "maxlon": -6.0271361
+  },
+  "nodes": [
+    5535362259,
+    244018547,
+    13206926133,
+    244018548
+  ],
+  "geometry": [
+    { "lat": 37.3901326, "lon": -6.0271361 },
+    { "lat": 37.3899296, "lon": -6.0272515 },
+    { "lat": 37.3896335, "lon": -6.0273716 },
+    { "lat": 37.3894350, "lon": -6.0274359 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 577406384,
+  "bounds": {
+    "minlat": 37.3727531,
+    "minlon": -6.0273042,
+    "maxlat": 37.3746018,
+    "maxlon": -6.0262997
+  },
+  "nodes": [
+    5535431061,
+    5535431059,
+    5535484302,
+    206127724,
+    5535431058,
+    5535431057,
+    206127725,
+    206127726,
+    5535431054,
+    5535431053,
+    206127727,
+    3241455984,
+    5535431052,
+    206127728,
+    5535431051,
+    206127729,
+    5535431050,
+    5535431049,
+    5535431048,
+    5535431047,
+    206127731
+  ],
+  "geometry": [
+    { "lat": 37.3727531, "lon": -6.0262997 },
+    { "lat": 37.3727817, "lon": -6.0263797 },
+    { "lat": 37.3728281, "lon": -6.0264861 },
+    { "lat": 37.3728674, "lon": -6.0265751 },
+    { "lat": 37.3729407, "lon": -6.0266943 },
+    { "lat": 37.3730154, "lon": -6.0268012 },
+    { "lat": 37.3730993, "lon": -6.0269044 },
+    { "lat": 37.3732129, "lon": -6.0270132 },
+    { "lat": 37.3732919, "lon": -6.0270764 },
+    { "lat": 37.3733904, "lon": -6.0271432 },
+    { "lat": 37.3734954, "lon": -6.0272022 },
+    { "lat": 37.3736352, "lon": -6.0272517 },
+    { "lat": 37.3737270, "lon": -6.0272768 },
+    { "lat": 37.3738208, "lon": -6.0272921 },
+    { "lat": 37.3739444, "lon": -6.0273042 },
+    { "lat": 37.3740894, "lon": -6.0272942 },
+    { "lat": 37.3741762, "lon": -6.0272839 },
+    { "lat": 37.3742795, "lon": -6.0272614 },
+    { "lat": 37.3743847, "lon": -6.0272263 },
+    { "lat": 37.3744776, "lon": -6.0271958 },
+    { "lat": 37.3746018, "lon": -6.0271583 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 640747569,
+  "bounds": {
+    "minlat": 37.3746018,
+    "minlon": -6.0271583,
+    "maxlat": 37.3747501,
+    "maxlon": -6.0271118
+  },
+  "nodes": [
+    206127731,
+    206127730
+  ],
+  "geometry": [
+    { "lat": 37.3746018, "lon": -6.0271583 },
+    { "lat": 37.3747501, "lon": -6.0271118 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 676726535,
+  "bounds": {
+    "minlat": 37.4118995,
+    "minlon": -6.0321748,
+    "maxlat": 37.4137771,
+    "maxlon": -6.0297025
+  },
+  "nodes": [
+    5535076441,
+    8930425076,
+    5535076442,
+    206130887,
+    5535076443,
+    5535076444,
+    206130888,
+    5535076445,
+    206130889,
+    5535179545,
+    5535076446,
+    5535179546,
+    206130890,
+    5535179547,
+    1013583444,
+    5535179548,
+    206130891
+  ],
+  "geometry": [
+    { "lat": 37.4118995, "lon": -6.0321748 },
+    { "lat": 37.4123794, "lon": -6.0320333 },
+    { "lat": 37.4126954, "lon": -6.0319755 },
+    { "lat": 37.4128334, "lon": -6.0319355 },
+    { "lat": 37.4129738, "lon": -6.0318795 },
+    { "lat": 37.4131163, "lon": -6.0317998 },
+    { "lat": 37.4132308, "lon": -6.0317207 },
+    { "lat": 37.4133449, "lon": -6.0316106 },
+    { "lat": 37.4134346, "lon": -6.0315019 },
+    { "lat": 37.4135147, "lon": -6.0313772 },
+    { "lat": 37.4135819, "lon": -6.0312637 },
+    { "lat": 37.4136354, "lon": -6.0311350 },
+    { "lat": 37.4136889, "lon": -6.0309869 },
+    { "lat": 37.4137323, "lon": -6.0307998 },
+    { "lat": 37.4137591, "lon": -6.0305514 },
+    { "lat": 37.4137668, "lon": -6.0302423 },
+    { "lat": 37.4137771, "lon": -6.0297025 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 762539894,
+  "bounds": {
+    "minlat": 37.3943814,
+    "minlon": -6.0253701,
+    "maxlat": 37.3947179,
+    "maxlon": -6.0253689
+  },
+  "nodes": [
+    5535219727,
+    7124953566
+  ],
+  "geometry": [
+    { "lat": 37.3943814, "lon": -6.0253701 },
+    { "lat": 37.3947179, "lon": -6.0253689 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 762539895,
+  "bounds": {
+    "minlat": 37.3940618,
+    "minlon": -6.0253864,
+    "maxlat": 37.3943814,
+    "maxlon": -6.0253701
+  },
+  "nodes": [
+    206127754,
+    5535219728,
+    5535219727
+  ],
+  "geometry": [
+    { "lat": 37.3940618, "lon": -6.0253864 },
+    { "lat": 37.3942846, "lon": -6.0253733 },
+    { "lat": 37.3943814, "lon": -6.0253701 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 762539896,
+  "bounds": {
+    "minlat": 37.3901326,
+    "minlon": -6.0271361,
+    "maxlat": 37.3927680,
+    "maxlon": -6.0257047
+  },
+  "nodes": [
+    244018542,
+    5535316908,
+    807128425,
+    5535316906,
+    5535316905,
+    244018544,
+    5535316904,
+    244018545,
+    5535316903,
+    7258297090,
+    5535362259
+  ],
+  "geometry": [
+    { "lat": 37.3927680, "lon": -6.0257047 },
+    { "lat": 37.3924078, "lon": -6.0257902 },
+    { "lat": 37.3920176, "lon": -6.0259294 },
+    { "lat": 37.3917196, "lon": -6.0260682 },
+    { "lat": 37.3915072, "lon": -6.0261850 },
+    { "lat": 37.3913586, "lon": -6.0262742 },
+    { "lat": 37.3910815, "lon": -6.0264679 },
+    { "lat": 37.3909554, "lon": -6.0265619 },
+    { "lat": 37.3908286, "lon": -6.0266571 },
+    { "lat": 37.3903108, "lon": -6.0270463 },
+    { "lat": 37.3901326, "lon": -6.0271361 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 762539897,
+  "bounds": {
+    "minlat": 37.3944236,
+    "minlon": -6.0255314,
+    "maxlat": 37.3947729,
+    "maxlon": -6.0255298
+  },
+  "nodes": [
+    244018539,
+    5535316913
+  ],
+  "geometry": [
+    { "lat": 37.3947729, "lon": -6.0255298 },
+    { "lat": 37.3944236, "lon": -6.0255314 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 764290415,
+  "bounds": {
+    "minlat": 37.3429735,
+    "minlon": -5.9870172,
+    "maxlat": 37.3438916,
+    "maxlon": -5.9858881
+  },
+  "nodes": [
+    206122279,
+    13375457947,
+    2175220914
+  ],
+  "geometry": [
+    { "lat": 37.3429735, "lon": -5.9858881 },
+    { "lat": 37.3431076, "lon": -5.9860530 },
+    { "lat": 37.3438916, "lon": -5.9870172 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 764290416,
+  "bounds": {
+    "minlat": 37.3418143,
+    "minlon": -5.9863640,
+    "maxlat": 37.3432164,
+    "maxlon": -5.9839558
+  },
+  "nodes": [
+    206122532,
+    8733978161,
+    10002007044,
+    7140247474,
+    206122533,
+    10002007043,
+    206122534,
+    206122535
+  ],
+  "geometry": [
+    { "lat": 37.3432164, "lon": -5.9863640 },
+    { "lat": 37.3429774, "lon": -5.9860759 },
+    { "lat": 37.3427586, "lon": -5.9857906 },
+    { "lat": 37.3425535, "lon": -5.9854968 },
+    { "lat": 37.3423203, "lon": -5.9850859 },
+    { "lat": 37.3421988, "lon": -5.9848492 },
+    { "lat": 37.3420723, "lon": -5.9845827 },
+    { "lat": 37.3418143, "lon": -5.9839558 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 863551497,
+  "bounds": {
+    "minlat": 37.3927680,
+    "minlon": -6.0257047,
+    "maxlat": 37.3944236,
+    "maxlon": -6.0255314
+  },
+  "nodes": [
+    5535316913,
+    244018540,
+    5535316912,
+    5535316911,
+    244018541,
+    5535316910,
+    5535316909,
+    244018542
+  ],
+  "geometry": [
+    { "lat": 37.3944236, "lon": -6.0255314 },
+    { "lat": 37.3940083, "lon": -6.0255519 },
+    { "lat": 37.3937778, "lon": -6.0255659 },
+    { "lat": 37.3935473, "lon": -6.0255873 },
+    { "lat": 37.3933313, "lon": -6.0256109 },
+    { "lat": 37.3931087, "lon": -6.0256452 },
+    { "lat": 37.3929061, "lon": -6.0256782 },
+    { "lat": 37.3927680, "lon": -6.0257047 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 965349138,
+  "bounds": {
+    "minlat": 37.4117015,
+    "minlon": -6.0322087,
+    "maxlat": 37.4118995,
+    "maxlon": -6.0321748
+  },
+  "nodes": [
+    8930425075,
+    5535076441
+  ],
+  "geometry": [
+    { "lat": 37.4117015, "lon": -6.0322087 },
+    { "lat": 37.4118995, "lon": -6.0321748 }
+  ],
+  "tags": {
+    "destination:int_ref:lanes": "|E-803|E-803|E-5|E-5",
+    "destination:lanes": "Santiponce|Venta del Alto;Mérida|Venta del Alto;Mérida|Isla de la Cartuja;Córdoba|Isla de la Cartuja;Córdoba",
+    "destination:ref:lanes": "N-630|A-66|A-66|A-4|A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "5",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left|through|through|slight_right|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 965349139,
+  "bounds": {
+    "minlat": 37.4110472,
+    "minlon": -6.0323100,
+    "maxlat": 37.4117015,
+    "maxlon": -6.0322087
+  },
+  "nodes": [
+    5534284394,
+    8930425075
+  ],
+  "geometry": [
+    { "lat": 37.4110472, "lon": -6.0323100 },
+    { "lat": 37.4117015, "lon": -6.0322087 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|yes|not_left",
+    "destination:int_ref:lanes": "|E-803|E-803|E-5",
+    "destination:lanes": "Santiponce|Venta del Alto;Mérida|Venta del Alto;Mérida|Isla de la Cartuja;Córdoba",
+    "destination:ref:lanes": "N-630|A-66|A-66|A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 965349141,
+  "bounds": {
+    "minlat": 37.4099258,
+    "minlon": -6.0324588,
+    "maxlat": 37.4110472,
+    "maxlon": -6.0323100
+  },
+  "nodes": [
+    5534284009,
+    5534284394
+  ],
+  "geometry": [
+    { "lat": 37.4099258, "lon": -6.0324588 },
+    { "lat": 37.4110472, "lon": -6.0323100 }
+  ],
+  "tags": {
+    "change:lanes": "yes|yes|not_left|yes",
+    "destination": "Venta del Alto;Mérida",
+    "destination:ref": "A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through;slight_right|slight_right|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1092074157,
+  "bounds": {
+    "minlat": 37.3402766,
+    "minlon": -5.9776142,
+    "maxlat": 37.3406537,
+    "maxlon": -5.9754521
+  },
+  "nodes": [
+    249685296,
+    10894046994,
+    249120488
+  ],
+  "geometry": [
+    { "lat": 37.3402766, "lon": -5.9754521 },
+    { "lat": 37.3404102, "lon": -5.9763403 },
+    { "lat": 37.3406537, "lon": -5.9776142 }
+  ],
+  "tags": {
+    "destination:lanes": "Huelva;Mérida|Huelva;Mérida|Huelva;Mérida|Puerto este;Avenida de la Raza;Cádiz",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100498,
+  "bounds": {
+    "minlat": 37.3404996,
+    "minlon": -5.9728063,
+    "maxlat": 37.3407775,
+    "maxlon": -5.9721941
+  },
+  "nodes": [
+    249684190,
+    11177448297,
+    249684838
+  ],
+  "geometry": [
+    { "lat": 37.3404996, "lon": -5.9728063 },
+    { "lat": 37.3406501, "lon": -5.9724678 },
+    { "lat": 37.3407775, "lon": -5.9721941 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100499,
+  "bounds": {
+    "minlat": 37.3401118,
+    "minlon": -5.9752829,
+    "maxlat": 37.3404996,
+    "maxlon": -5.9728063
+  },
+  "nodes": [
+    249685076,
+    249684186,
+    10002007037,
+    249684187,
+    10002007038,
+    249684188,
+    10002007033,
+    249684189,
+    10002007032,
+    249684190
+  ],
+  "geometry": [
+    { "lat": 37.3401245, "lon": -5.9752829 },
+    { "lat": 37.3401118, "lon": -5.9750410 },
+    { "lat": 37.3401122, "lon": -5.9748620 },
+    { "lat": 37.3401177, "lon": -5.9745480 },
+    { "lat": 37.3401506, "lon": -5.9741861 },
+    { "lat": 37.3401971, "lon": -5.9738777 },
+    { "lat": 37.3402647, "lon": -5.9735584 },
+    { "lat": 37.3403531, "lon": -5.9732404 },
+    { "lat": 37.3404470, "lon": -5.9729509 },
+    { "lat": 37.3404996, "lon": -5.9728063 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100500,
+  "bounds": {
+    "minlat": 37.3413507,
+    "minlon": -5.9839558,
+    "maxlat": 37.3418143,
+    "maxlon": -5.9819961
+  },
+  "nodes": [
+    206122535,
+    206122536,
+    206122538
+  ],
+  "geometry": [
+    { "lat": 37.3418143, "lon": -5.9839558 },
+    { "lat": 37.3415900, "lon": -5.9831865 },
+    { "lat": 37.3413507, "lon": -5.9819961 }
+  ],
+  "tags": {
+    "destination:lanes": "Utrera;Granada;Córdoba;Aeropuerto|Utrera;Granada;Córdoba;Aeropuerto|Sevilla;Avenida La Palmera",
+    "destination:ref:lanes": "SE-30;A-376;A-92;A-4|SE-30;A-376;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100505,
+  "bounds": {
+    "minlat": 37.3615054,
+    "minlon": -6.0118647,
+    "maxlat": 37.3647008,
+    "maxlon": -6.0081004
+  },
+  "nodes": [
+    10002007045,
+    7062706466,
+    206122426
+  ],
+  "geometry": [
+    { "lat": 37.3647008, "lon": -6.0118647 },
+    { "lat": 37.3620984, "lon": -6.0088070 },
+    { "lat": 37.3615054, "lon": -6.0081004 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Granada;Málaga;Córdoba|Cádiz;Granada;Málaga;Córdoba|Cádiz;Granada;Málaga;Córdoba|Puerto de Sevilla;Zal;zona franca|Puerto de Sevilla;Zal;zona franca",
+    "destination:ref:lanes": "E-5;A-4;A-92|E-5;A-4;A-92|E-5;A-4;A-92|E-5;SE-40|E-5;SE-40",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "5",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100507,
+  "bounds": {
+    "minlat": 37.3603834,
+    "minlon": -6.0069135,
+    "maxlat": 37.3606931,
+    "maxlon": -6.0065440
+  },
+  "nodes": [
+    11909927322,
+    11909927321
+  ],
+  "geometry": [
+    { "lat": 37.3603834, "lon": -6.0065440 },
+    { "lat": 37.3606931, "lon": -6.0069135 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|not_left|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1092100508,
+  "bounds": {
+    "minlat": 37.3571237,
+    "minlon": -6.0029771,
+    "maxlat": 37.3573603,
+    "maxlon": -6.0027013
+  },
+  "nodes": [
+    1830618019,
+    249688664
+  ],
+  "geometry": [
+    { "lat": 37.3571237, "lon": -6.0027013 },
+    { "lat": 37.3573603, "lon": -6.0029771 }
+  ],
+  "tags": {
+    "change:lanes": "no|not_right|no",
+    "destination:lanes": "Coria del Río;Huelva;Mérida|Coria del Río;Huelva;Mérida|Puerto oeste",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1092835707,
+  "bounds": {
+    "minlat": 37.3802003,
+    "minlon": -5.9427546,
+    "maxlat": 37.3827606,
+    "maxlon": -5.9418367
+  },
+  "nodes": [
+    701412392,
+    249679821
+  ],
+  "geometry": [
+    { "lat": 37.3802003, "lon": -5.9427546 },
+    { "lat": 37.3827606, "lon": -5.9418367 }
+  ],
+  "tags": {
+    "destination:lanes": "Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Ronda urbana norte;Córdoba;Mérida;Aeropuerto|Sevilla;Mercasevilla;Granada;Málaga",
+    "destination:ref:lanes": "SE-30;A-4;E-803;A-66|SE-30;A-4;E-803;A-66|A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1205200675,
+  "bounds": {
+    "minlat": 37.4138833,
+    "minlon": -6.0286783,
+    "maxlat": 37.4138894,
+    "maxlon": -6.0281964
+  },
+  "nodes": [
+    11169497000,
+    5535076449
+  ],
+  "geometry": [
+    { "lat": 37.4138833, "lon": -6.0281964 },
+    { "lat": 37.4138894, "lon": -6.0286783 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada|Santiponce;Mérida;Venta del Alto",
+    "destination:ref:lanes": "E-1;A-49;E-5;A-4;A-92|E-1;A-49;E-5;A-4;A-92|N-630;A-66;E-803",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1205200676,
+  "bounds": {
+    "minlat": 37.4136920,
+    "minlon": -6.0185891,
+    "maxlat": 37.4137613,
+    "maxlon": -6.0131739
+  },
+  "nodes": [
+    356377773,
+    5535125155
+  ],
+  "geometry": [
+    { "lat": 37.4136920, "lon": -6.0131739 },
+    { "lat": 37.4137613, "lon": -6.0185891 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1205200677,
+  "bounds": {
+    "minlat": 37.4138990,
+    "minlon": -6.0298549,
+    "maxlat": 37.4139043,
+    "maxlon": -6.0294382
+  },
+  "nodes": [
+    11169497002,
+    5535076469
+  ],
+  "geometry": [
+    { "lat": 37.4138990, "lon": -6.0294382 },
+    { "lat": 37.4139043, "lon": -6.0298549 }
+  ],
+  "tags": {
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada|Santiponce",
+    "destination:ref:lanes": "E-1;A-49;E-5;A-4;A-92|E-1;A-49;E-5;A-4;A-92|N-630",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1205200679,
+  "bounds": {
+    "minlat": 37.4138990,
+    "minlon": -6.0317440,
+    "maxlat": 37.4139053,
+    "maxlon": -6.0298549
+  },
+  "nodes": [
+    5535076469,
+    5535076470,
+    250759813,
+    5535076513
+  ],
+  "geometry": [
+    { "lat": 37.4139043, "lon": -6.0298549 },
+    { "lat": 37.4138990, "lon": -6.0306601 },
+    { "lat": 37.4139053, "lon": -6.0315239 },
+    { "lat": 37.4139047, "lon": -6.0317440 }
+  ],
+  "tags": {
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada",
+    "destination:ref": "E-1;A-49;E-5;A-4;A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through"
+  }
+},
+{
+  "type": "way",
+  "id": 1205200680,
+  "bounds": {
+    "minlat": 37.4138894,
+    "minlon": -6.0294382,
+    "maxlat": 37.4138990,
+    "maxlon": -6.0286783
+  },
+  "nodes": [
+    5535076449,
+    11169497002
+  ],
+  "geometry": [
+    { "lat": 37.4138894, "lon": -6.0286783 },
+    { "lat": 37.4138990, "lon": -6.0294382 }
+  ],
+  "tags": {
+    "destination:lanes": "Camas (norte);Huelva;Cádiz;Málaga;Granada|Huelva;Cádiz;Málaga;Granada|Santiponce;Mérida;Venta del Alto",
+    "destination:ref:lanes": "E-1;A-49;E-5;A-4;A-92|E-1;A-49;E-5;A-4;A-92|N-630;A-66;E-803",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left;through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1206225841,
+  "bounds": {
+    "minlat": 37.3437168,
+    "minlon": -5.9675157,
+    "maxlat": 37.3445584,
+    "maxlon": -5.9665516
+  },
+  "nodes": [
+    249684783,
+    11177448295
+  ],
+  "geometry": [
+    { "lat": 37.3437168, "lon": -5.9675157 },
+    { "lat": 37.3445584, "lon": -5.9665516 }
+  ],
+  "tags": {
+    "destination": "Utrera;Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-376;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1206225842,
+  "bounds": {
+    "minlat": 37.3407775,
+    "minlon": -5.9721941,
+    "maxlat": 37.3437168,
+    "maxlon": -5.9675157
+  },
+  "nodes": [
+    249684838,
+    249684191,
+    249684192,
+    249684193,
+    249684194,
+    249684783
+  ],
+  "geometry": [
+    { "lat": 37.3407775, "lon": -5.9721941 },
+    { "lat": 37.3413035, "lon": -5.9712170 },
+    { "lat": 37.3419206, "lon": -5.9701014 },
+    { "lat": 37.3425240, "lon": -5.9691389 },
+    { "lat": 37.3432985, "lon": -5.9680776 },
+    { "lat": 37.3437168, "lon": -5.9675157 }
+  ],
+  "tags": {
+    "destination": "Utrera;Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-376;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1208279846,
+  "bounds": {
+    "minlat": 37.3427718,
+    "minlon": -5.9858881,
+    "maxlat": 37.3429735,
+    "maxlon": -5.9856154
+  },
+  "nodes": [
+    7142676949,
+    206122279
+  ],
+  "geometry": [
+    { "lat": 37.3427718, "lon": -5.9856154 },
+    { "lat": 37.3429735, "lon": -5.9858881 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "destination:ref": "E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1208279847,
+  "bounds": {
+    "minlat": 37.3419099,
+    "minlon": -5.9843342,
+    "maxlat": 37.3420903,
+    "maxlon": -5.9838769
+  },
+  "nodes": [
+    206122277,
+    206122278
+  ],
+  "geometry": [
+    { "lat": 37.3419099, "lon": -5.9838769 },
+    { "lat": 37.3420903, "lon": -5.9843342 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "destination:ref": "E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1208279848,
+  "bounds": {
+    "minlat": 37.3415458,
+    "minlon": -5.9838769,
+    "maxlat": 37.3419099,
+    "maxlon": -5.9823389
+  },
+  "nodes": [
+    4195128233,
+    206122275,
+    206122276,
+    11195850644,
+    206122277
+  ],
+  "geometry": [
+    { "lat": 37.3415458, "lon": -5.9823389 },
+    { "lat": 37.3416100, "lon": -5.9826819 },
+    { "lat": 37.3417025, "lon": -5.9831104 },
+    { "lat": 37.3418072, "lon": -5.9835099 },
+    { "lat": 37.3419099, "lon": -5.9838769 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "destination:ref": "E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1213659836,
+  "bounds": {
+    "minlat": 37.3585921,
+    "minlon": -5.9558903,
+    "maxlat": 37.3588500,
+    "maxlon": -5.9555912
+  },
+  "nodes": [
+    11244218704,
+    249680162
+  ],
+  "geometry": [
+    { "lat": 37.3585921, "lon": -5.9558903 },
+    { "lat": 37.3588500, "lon": -5.9555912 }
+  ],
+  "tags": {
+    "destination:lanes": "Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-92;A-4|SE-30;A-92;A-4|SE-30;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1213659837,
+  "bounds": {
+    "minlat": 37.3596672,
+    "minlon": -5.9546540,
+    "maxlat": 37.3601036,
+    "maxlon": -5.9541347
+  },
+  "nodes": [
+    249680163,
+    11244218705
+  ],
+  "geometry": [
+    { "lat": 37.3596672, "lon": -5.9546540 },
+    { "lat": 37.3601036, "lon": -5.9541347 }
+  ],
+  "tags": {
+    "destination:lanes": "Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Granada;Córdoba;Aeropuerto|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-92;A-4|SE-30;A-92;A-4|SE-30;A-92;A-4|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1213659838,
+  "bounds": {
+    "minlat": 37.3584707,
+    "minlon": -5.9562070,
+    "maxlat": 37.3589422,
+    "maxlon": -5.9557195
+  },
+  "nodes": [
+    206121288,
+    249681015,
+    11244218709
+  ],
+  "geometry": [
+    { "lat": 37.3589422, "lon": -5.9557195 },
+    { "lat": 37.3587531, "lon": -5.9559260 },
+    { "lat": 37.3584707, "lon": -5.9562070 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Universidad Pablo de Olavide;Utrera",
+    "destination:ref:lanes": "E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|E-5;SE-30;A-4;E-1;A-49;E-803;A-66|A-376",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1282503374,
+  "bounds": {
+    "minlat": 37.3432164,
+    "minlon": -5.9870784,
+    "maxlat": 37.3438201,
+    "maxlon": -5.9863640
+  },
+  "nodes": [
+    992000927,
+    13375465749,
+    206122532
+  ],
+  "geometry": [
+    { "lat": 37.3438201, "lon": -5.9870784 },
+    { "lat": 37.3432961, "lon": -5.9864578 },
+    { "lat": 37.3432164, "lon": -5.9863640 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1282503375,
+  "bounds": {
+    "minlat": 37.3438201,
+    "minlon": -5.9870928,
+    "maxlat": 37.3438322,
+    "maxlon": -5.9870784
+  },
+  "nodes": [
+    7140247473,
+    992000927
+  ],
+  "geometry": [
+    { "lat": 37.3438322, "lon": -5.9870928 },
+    { "lat": 37.3438201, "lon": -5.9870784 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1282503379,
+  "bounds": {
+    "minlat": 37.3406537,
+    "minlon": -5.9823389,
+    "maxlat": 37.3415458,
+    "maxlon": -5.9776142
+  },
+  "nodes": [
+    249120488,
+    206121652,
+    4195128233
+  ],
+  "geometry": [
+    { "lat": 37.3406537, "lon": -5.9776142 },
+    { "lat": 37.3411298, "lon": -5.9802140 },
+    { "lat": 37.3415458, "lon": -5.9823389 }
+  ],
+  "tags": {
+    "destination": "Huelva;Mérida",
+    "destination:ref": "E-1;A-49;E-803;A-66",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1283635227,
+  "bounds": {
+    "minlat": 37.3606931,
+    "minlon": -6.0075573,
+    "maxlat": 37.3612329,
+    "maxlon": -6.0069135
+  },
+  "nodes": [
+    11909927321,
+    206122425
+  ],
+  "geometry": [
+    { "lat": 37.3606931, "lon": -6.0069135 },
+    { "lat": 37.3612329, "lon": -6.0075573 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|no",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1283635228,
+  "bounds": {
+    "minlat": 37.3596165,
+    "minlon": -6.0065440,
+    "maxlat": 37.3603834,
+    "maxlon": -6.0056292
+  },
+  "nodes": [
+    249688988,
+    11909927322
+  ],
+  "geometry": [
+    { "lat": 37.3596165, "lon": -6.0056292 },
+    { "lat": 37.3603834, "lon": -6.0065440 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|not_left|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1283635229,
+  "bounds": {
+    "minlat": 37.3612329,
+    "minlon": -6.0092484,
+    "maxlat": 37.3626636,
+    "maxlon": -6.0075573
+  },
+  "nodes": [
+    206122425,
+    206127430
+  ],
+  "geometry": [
+    { "lat": 37.3612329, "lon": -6.0075573 },
+    { "lat": 37.3626636, "lon": -6.0092484 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|no",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948985,
+  "bounds": {
+    "minlat": 37.4082047,
+    "minlon": -5.9493654,
+    "maxlat": 37.4086949,
+    "maxlon": -5.9492850
+  },
+  "nodes": [
+    11920407815,
+    13076312140
+  ],
+  "geometry": [
+    { "lat": 37.4086949, "lon": -5.9493654 },
+    { "lat": 37.4082047, "lon": -5.9492850 }
+  ],
+  "tags": {
+    "destination:int_ref:lanes": "E 05;E 01|E 05;E 01|E 05",
+    "destination:lanes": "Granada;Cádiz;Huelva|Granada;Cádiz;Huelva|Aeropuerto;Carmona;Córdoba",
+    "destination:ref:lanes": "SE-30;A-92;A-4;A-49|SE-30;A-92;A-4;A-49|A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "-1",
+    "maxspeed": "80",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "tunnel": "yes",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948986,
+  "bounds": {
+    "minlat": 37.4053121,
+    "minlon": -5.9483453,
+    "maxlat": 37.4054923,
+    "maxlon": -5.9482737
+  },
+  "nodes": [
+    11920407819,
+    11920407818
+  ],
+  "geometry": [
+    { "lat": 37.4054923, "lon": -5.9483453 },
+    { "lat": 37.4053121, "lon": -5.9482737 }
+  ],
+  "tags": {
+    "change:lanes": "no|not_left|not_left|yes",
+    "destination:lanes": "Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Sevilla;Sevilla Este;Avenida Montes Sierra",
+    "destination:ref:lanes": "SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|noref",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948987,
+  "bounds": {
+    "minlat": 37.4054923,
+    "minlon": -5.9485625,
+    "maxlat": 37.4060254,
+    "maxlon": -5.9483453
+  },
+  "nodes": [
+    206120389,
+    11920407819
+  ],
+  "geometry": [
+    { "lat": 37.4060254, "lon": -5.9485625 },
+    { "lat": 37.4054923, "lon": -5.9483453 }
+  ],
+  "tags": {
+    "change:lanes": "no|not_left|no|no",
+    "destination:lanes": "Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Granada;Málaga;Cádiz;Huelva|Sevilla;Sevilla Este;Avenida Montes Sierra",
+    "destination:ref:lanes": "SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|SE-30;A-92;A-4;E-1;A-49|noref",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948988,
+  "bounds": {
+    "minlat": 37.4086949,
+    "minlon": -5.9493937,
+    "maxlat": 37.4088677,
+    "maxlon": -5.9493654
+  },
+  "nodes": [
+    206129601,
+    11920407815
+  ],
+  "geometry": [
+    { "lat": 37.4088677, "lon": -5.9493937 },
+    { "lat": 37.4086949, "lon": -5.9493654 }
+  ],
+  "tags": {
+    "destination:int_ref:lanes": "E 05;E 01|E 05;E 01|E 05",
+    "destination:lanes": "Granada;Cádiz;Huelva|Granada;Cádiz;Huelva|Aeropuerto;Carmona;Córdoba",
+    "destination:ref:lanes": "SE-30;A-92;A-4;A-49|SE-30;A-92;A-4;A-49|A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "80",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948989,
+  "bounds": {
+    "minlat": 37.4100128,
+    "minlon": -5.9495116,
+    "maxlat": 37.4105648,
+    "maxlon": -5.9494181
+  },
+  "nodes": [
+    11920407826,
+    206130230
+  ],
+  "geometry": [
+    { "lat": 37.4100128, "lon": -5.9494181 },
+    { "lat": 37.4105648, "lon": -5.9495116 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948991,
+  "bounds": {
+    "minlat": 37.4088480,
+    "minlon": -5.9492822,
+    "maxlat": 37.4092212,
+    "maxlon": -5.9492309
+  },
+  "nodes": [
+    11920407851,
+    11920407853
+  ],
+  "geometry": [
+    { "lat": 37.4088480, "lon": -5.9492309 },
+    { "lat": 37.4092212, "lon": -5.9492822 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "change:lanes": "yes|not_right|yes|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "4",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "merge_to_right|through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948992,
+  "bounds": {
+    "minlat": 37.4105648,
+    "minlon": -5.9495849,
+    "maxlat": 37.4110287,
+    "maxlon": -5.9495116
+  },
+  "nodes": [
+    206130230,
+    11920407821,
+    11383609628
+  ],
+  "geometry": [
+    { "lat": 37.4105648, "lon": -5.9495116 },
+    { "lat": 37.4109288, "lon": -5.9495691 },
+    { "lat": 37.4110287, "lon": -5.9495849 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948993,
+  "bounds": {
+    "minlat": 37.4092212,
+    "minlon": -5.9493326,
+    "maxlat": 37.4095077,
+    "maxlon": -5.9492822
+  },
+  "nodes": [
+    11920407853,
+    206128434
+  ],
+  "geometry": [
+    { "lat": 37.4092212, "lon": -5.9492822 },
+    { "lat": 37.4095077, "lon": -5.9493326 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948994,
+  "bounds": {
+    "minlat": 37.4086220,
+    "minlon": -5.9492309,
+    "maxlat": 37.4088480,
+    "maxlon": -5.9491974
+  },
+  "nodes": [
+    206128422,
+    11920407851
+  ],
+  "geometry": [
+    { "lat": 37.4086220, "lon": -5.9491974 },
+    { "lat": 37.4088480, "lon": -5.9492309 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "change:lanes": "yes|not_right|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "50",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "merge_to_right|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1284948995,
+  "bounds": {
+    "minlat": 37.4077741,
+    "minlon": -5.9489045,
+    "maxlat": 37.4079153,
+    "maxlon": -5.9488114
+  },
+  "nodes": [
+    2040594552,
+    9921693348
+  ],
+  "geometry": [
+    { "lat": 37.4077741, "lon": -5.9488114 },
+    { "lat": 37.4079153, "lon": -5.9489045 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "70",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1292092321,
+  "bounds": {
+    "minlat": 37.3725793,
+    "minlon": -6.0174367,
+    "maxlat": 37.3726587,
+    "maxlon": -6.0168225
+  },
+  "nodes": [
+    206127618,
+    11978207216
+  ],
+  "geometry": [
+    { "lat": 37.3726587, "lon": -6.0168225 },
+    { "lat": 37.3725793, "lon": -6.0174367 }
+  ],
+  "tags": {
+    "bridge": "viaduct",
+    "bridge:name": "Puente Reina Sofía",
+    "change:lanes": "yes|not_right|not_left|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303261475,
+  "bounds": {
+    "minlat": 37.3712139,
+    "minlon": -6.0283620,
+    "maxlat": 37.3713599,
+    "maxlon": -6.0273368
+  },
+  "nodes": [
+    244018467,
+    12069735455,
+    244018468
+  ],
+  "geometry": [
+    { "lat": 37.3712139, "lon": -6.0283620 },
+    { "lat": 37.3713060, "lon": -6.0277629 },
+    { "lat": 37.3713599, "lon": -6.0273368 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "destination:lanes": "Sevilla;Cádiz;Granada;Málaga;Córdoba|Sevilla;Cádiz;Granada;Málaga;Córdoba|El Manchón;San Juan (bajo) de Aznalfarache;Tomares;Camas",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1303261476,
+  "bounds": {
+    "minlat": 37.3707114,
+    "minlon": -6.0299528,
+    "maxlat": 37.3712139,
+    "maxlon": -6.0283620
+  },
+  "nodes": [
+    12069735453,
+    12969189755,
+    12969189756,
+    12969310655,
+    5535475624,
+    244018466,
+    244018467
+  ],
+  "geometry": [
+    { "lat": 37.3707114, "lon": -6.0299528 },
+    { "lat": 37.3707320, "lon": -6.0298832 },
+    { "lat": 37.3708699, "lon": -6.0295591 },
+    { "lat": 37.3709979, "lon": -6.0291895 },
+    { "lat": 37.3710851, "lon": -6.0289080 },
+    { "lat": 37.3711529, "lon": -6.0286479 },
+    { "lat": 37.3712139, "lon": -6.0283620 }
+  ],
+  "tags": {
+    "highway": "motorway",
+    "lanes": "2",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through;right"
+  }
+},
+{
+  "type": "way",
+  "id": 1303427825,
+  "bounds": {
+    "minlat": 37.3763834,
+    "minlon": -6.0268419,
+    "maxlat": 37.3772417,
+    "maxlon": -6.0267037
+  },
+  "nodes": [
+    12071185636,
+    12071185628
+  ],
+  "geometry": [
+    { "lat": 37.3772417, "lon": -6.0267037 },
+    { "lat": 37.3763834, "lon": -6.0268419 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Granada;Córdoba|Cádiz;Granada;Córdoba|San Juan Aznalfarache (alto);Mairena del Aljarafe;Coria del Río",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|A-8058",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1303427826,
+  "bounds": {
+    "minlat": 37.3772417,
+    "minlon": -6.0267037,
+    "maxlat": 37.3774577,
+    "maxlon": -6.0266635
+  },
+  "nodes": [
+    12071185627,
+    12071185636
+  ],
+  "geometry": [
+    { "lat": 37.3774577, "lon": -6.0266635 },
+    { "lat": 37.3772417, "lon": -6.0267037 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Granada;Córdoba|Cádiz;Granada;Córdoba|San Juan Aznalfarache (alto);Mairena del Aljarafe;Coria del Río|El Manchón;San Juan Aznalfarache (bajo);Tomares;Camas",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|A-8058|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1303427827,
+  "bounds": {
+    "minlat": 37.3774577,
+    "minlon": -6.0266635,
+    "maxlat": 37.3830869,
+    "maxlon": -6.0257990
+  },
+  "nodes": [
+    244018557,
+    5535391751,
+    5535391752,
+    12071185627
+  ],
+  "geometry": [
+    { "lat": 37.3830869, "lon": -6.0257990 },
+    { "lat": 37.3802309, "lon": -6.0262407 },
+    { "lat": 37.3790347, "lon": -6.0264231 },
+    { "lat": 37.3774577, "lon": -6.0266635 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Granada;Córdoba|Cádiz;Granada;Córdoba|San Juan Aznalfarache (alto);Mairena del Aljarafe;Coria del Río;El Manchón;San Juan Aznalfarache (bajo);Tomares;Camas",
+    "destination:ref:lanes": "E-803;SE-30;E-5;A-4;A-92|E-803;SE-30;E-5;A-4;A-92|A-8058",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|slight_right;right"
+  }
+},
+{
+  "type": "way",
+  "id": 1303427828,
+  "bounds": {
+    "minlat": 37.3747501,
+    "minlon": -6.0271118,
+    "maxlat": 37.3752681,
+    "maxlon": -6.0269494
+  },
+  "nodes": [
+    206127730,
+    12071185637
+  ],
+  "geometry": [
+    { "lat": 37.3747501, "lon": -6.0271118 },
+    { "lat": 37.3752681, "lon": -6.0269494 }
+  ],
+  "tags": {
+    "change:lanes": "no|not_left|yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676889,
+  "bounds": {
+    "minlat": 37.4059474,
+    "minlon": -6.0316535,
+    "maxlat": 37.4069732,
+    "maxlon": -6.0308976
+  },
+  "nodes": [
+    12073349585,
+    12073349593
+  ],
+  "geometry": [
+    { "lat": 37.4059474, "lon": -6.0308976 },
+    { "lat": 37.4069732, "lon": -6.0316535 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676890,
+  "bounds": {
+    "minlat": 37.4057269,
+    "minlon": -6.0308976,
+    "maxlat": 37.4059474,
+    "maxlon": -6.0307320
+  },
+  "nodes": [
+    5535211019,
+    12073349585
+  ],
+  "geometry": [
+    { "lat": 37.4057269, "lon": -6.0307320 },
+    { "lat": 37.4059474, "lon": -6.0308976 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676891,
+  "bounds": {
+    "minlat": 37.4056555,
+    "minlon": -6.0310361,
+    "maxlat": 37.4058772,
+    "maxlon": -6.0308729
+  },
+  "nodes": [
+    12073349586,
+    1944134975,
+    12073349584
+  ],
+  "geometry": [
+    { "lat": 37.4058772, "lon": -6.0310361 },
+    { "lat": 37.4058457, "lon": -6.0310130 },
+    { "lat": 37.4056555, "lon": -6.0308729 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "layer": "1",
+    "maxspeed": "100",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676894,
+  "bounds": {
+    "minlat": 37.4069732,
+    "minlon": -6.0318831,
+    "maxlat": 37.4072973,
+    "maxlon": -6.0316535
+  },
+  "nodes": [
+    12073349593,
+    206128230
+  ],
+  "geometry": [
+    { "lat": 37.4069732, "lon": -6.0316535 },
+    { "lat": 37.4072973, "lon": -6.0318831 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676895,
+  "bounds": {
+    "minlat": 37.4079066,
+    "minlon": -6.0325084,
+    "maxlat": 37.4099258,
+    "maxlon": -6.0322202
+  },
+  "nodes": [
+    5535085369,
+    5535085370,
+    206130882,
+    5535085371,
+    5535085372,
+    206130883,
+    5534284006,
+    5534284007,
+    5534284008,
+    5534284009
+  ],
+  "geometry": [
+    { "lat": 37.4079066, "lon": -6.0322202 },
+    { "lat": 37.4083343, "lon": -6.0323617 },
+    { "lat": 37.4085819, "lon": -6.0324247 },
+    { "lat": 37.4087422, "lon": -6.0324558 },
+    { "lat": 37.4089216, "lon": -6.0324807 },
+    { "lat": 37.4091329, "lon": -6.0324999 },
+    { "lat": 37.4093432, "lon": -6.0325084 },
+    { "lat": 37.4095631, "lon": -6.0324996 },
+    { "lat": 37.4096941, "lon": -6.0324899 },
+    { "lat": 37.4099258, "lon": -6.0324588 }
+  ],
+  "tags": {
+    "destination:lanes": "Venta del Alto;Mérida|Venta del Alto;Mérida|Sevilla norte;La Cartuja;Córdoba",
+    "destination:ref:lanes": "E-803;A-66|E-803;A-66|SE-30;E-5;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1303676896,
+  "bounds": {
+    "minlat": 37.4072973,
+    "minlon": -6.0322202,
+    "maxlat": 37.4079066,
+    "maxlon": -6.0318831
+  },
+  "nodes": [
+    206128230,
+    12073349592,
+    12073349591,
+    5535085369
+  ],
+  "geometry": [
+    { "lat": 37.4072973, "lon": -6.0318831 },
+    { "lat": 37.4076494, "lon": -6.0320840 },
+    { "lat": 37.4078201, "lon": -6.0321686 },
+    { "lat": 37.4079066, "lon": -6.0322202 }
+  ],
+  "tags": {
+    "destination:lanes": "Camas;Olivares|Venta del Alto;Mérida|Venta del Alto;Mérida|Sevilla norte;La Cartuja;Córdoba",
+    "destination:ref:lanes": "|E-803;A-66|E-803;A-66|SE-30;E-5;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "slight_left|through|through|through"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081892,
+  "bounds": {
+    "minlat": 37.3613115,
+    "minlon": -5.9527102,
+    "maxlat": 37.3620642,
+    "maxlon": -5.9515534
+  },
+  "nodes": [
+    12087433067,
+    2175108195
+  ],
+  "geometry": [
+    { "lat": 37.3620642, "lon": -5.9515534 },
+    { "lat": 37.3613115, "lon": -5.9527102 }
+  ],
+  "tags": {
+    "change:lanes": "yes|yes|not_right|no",
+    "destination:int_ref:lanes": "E 5;E 1;E 803|E 5;E 1;E 803|E 5|",
+    "destination:lanes": "Cádiz;Huelva;Mérida|Cádiz;Huelva;Mérida|Universidad Pablo de Olavide;Utrera|Sevilla;Avenida de La Paz",
+    "destination:ref:lanes": "SE-30;A-4;A-49;A-66|SE-30;A-4;A-49;A-66|SE-30;A-376|",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081893,
+  "bounds": {
+    "minlat": 37.3626887,
+    "minlon": -5.9502569,
+    "maxlat": 37.3631378,
+    "maxlon": -5.9495115
+  },
+  "nodes": [
+    12087510773,
+    12087510769
+  ],
+  "geometry": [
+    { "lat": 37.3626887, "lon": -5.9502569 },
+    { "lat": 37.3631378, "lon": -5.9495115 }
+  ],
+  "tags": {
+    "destination": "Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081894,
+  "bounds": {
+    "minlat": 37.3631378,
+    "minlon": -5.9495115,
+    "maxlat": 37.3659394,
+    "maxlon": -5.9452488
+  },
+  "nodes": [
+    12087510769,
+    2210250589,
+    249679940,
+    249679941,
+    12087510770,
+    249679942
+  ],
+  "geometry": [
+    { "lat": 37.3631378, "lon": -5.9495115 },
+    { "lat": 37.3649483, "lon": -5.9465069 },
+    { "lat": 37.3652799, "lon": -5.9459895 },
+    { "lat": 37.3654526, "lon": -5.9457778 },
+    { "lat": 37.3656870, "lon": -5.9455000 },
+    { "lat": 37.3659394, "lon": -5.9452488 }
+  ],
+  "tags": {
+    "destination:int_ref:lanes": "E 803|E 803|E 803",
+    "destination:lanes": "Granada;Málaga;Córdoba;Mérida;Aeropuerto|Granada;Málaga;Córdoba;Mérida;Aeropuerto|Granada;Málaga;Córdoba;Mérida;Aeropuerto;Barriada Padre Pío;Barriada Palmete;Torreblanca",
+    "destination:ref:lanes": "SE-30;A-92;A-4;A-66|SE-30;A-92;A-4;A-66|SE-30;A-92;A-4;A-66;A-8020",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081895,
+  "bounds": {
+    "minlat": 37.3613368,
+    "minlon": -5.9524164,
+    "maxlat": 37.3614943,
+    "maxlon": -5.9521736
+  },
+  "nodes": [
+    2175108194,
+    12087510772
+  ],
+  "geometry": [
+    { "lat": 37.3613368, "lon": -5.9524164 },
+    { "lat": 37.3614943, "lon": -5.9521736 }
+  ],
+  "tags": {
+    "change:lanes": "yes|yes|not_right|no",
+    "destination": "Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081896,
+  "bounds": {
+    "minlat": 37.3614943,
+    "minlon": -5.9521736,
+    "maxlat": 37.3626887,
+    "maxlon": -5.9502569
+  },
+  "nodes": [
+    12087510772,
+    12087433068,
+    12087510773
+  ],
+  "geometry": [
+    { "lat": 37.3614943, "lon": -5.9521736 },
+    { "lat": 37.3617243, "lon": -5.9518312 },
+    { "lat": 37.3626887, "lon": -5.9502569 }
+  ],
+  "tags": {
+    "destination": "Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "4",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through|merge_to_left"
+  }
+},
+{
+  "type": "way",
+  "id": 1305081897,
+  "bounds": {
+    "minlat": 37.3601036,
+    "minlon": -5.9541347,
+    "maxlat": 37.3613368,
+    "maxlon": -5.9524164
+  },
+  "nodes": [
+    11244218705,
+    249680164,
+    2210250587,
+    249680165,
+    2175108194
+  ],
+  "geometry": [
+    { "lat": 37.3601036, "lon": -5.9541347 },
+    { "lat": 37.3603728, "lon": -5.9537920 },
+    { "lat": 37.3606451, "lon": -5.9534250 },
+    { "lat": 37.3610725, "lon": -5.9528164 },
+    { "lat": 37.3613368, "lon": -5.9524164 }
+  ],
+  "tags": {
+    "destination": "Granada;Córdoba;Aeropuerto",
+    "destination:ref": "SE-30;A-92;A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1326316698,
+  "bounds": {
+    "minlat": 37.3904491,
+    "minlon": -5.9427629,
+    "maxlat": 37.3915442,
+    "maxlon": -5.9423275
+  },
+  "nodes": [
+    2066981128,
+    249625769
+  ],
+  "geometry": [
+    { "lat": 37.3915442, "lon": -5.9427629 },
+    { "lat": 37.3904491, "lon": -5.9423275 }
+  ],
+  "tags": {
+    "destination:lanes": "Cádiz;Huelva;Utrera|Cádiz;Huelva;Utrera|Cádiz;Huelva;Utrera;Sevilla;Mercasevilla;Granada;Málaga",
+    "destination:ref:lanes": "SE-30;A-4;A-49;A-376|SE-30;A-4;A-49;A-376|SE-30;A-4;A-49;A-376;A-92",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 05",
+    "lanes": "3",
+    "lit": "yes",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;slight_right"
+  }
+},
+{
+  "type": "way",
+  "id": 1411421259,
+  "bounds": {
+    "minlat": 37.3715214,
+    "minlon": -6.0268271,
+    "maxlat": 37.3717646,
+    "maxlon": -6.0255401
+  },
+  "nodes": [
+    244018574,
+    5535469561,
+    244018575,
+    5535469559,
+    3241455973,
+    244018984,
+    5535469558,
+    5535469557
+  ],
+  "geometry": [
+    { "lat": 37.3717646, "lon": -6.0268271 },
+    { "lat": 37.3716938, "lon": -6.0266447 },
+    { "lat": 37.3716383, "lon": -6.0264617 },
+    { "lat": 37.3715899, "lon": -6.0262686 },
+    { "lat": 37.3715584, "lon": -6.0260854 },
+    { "lat": 37.3715390, "lon": -6.0258979 },
+    { "lat": 37.3715267, "lon": -6.0256955 },
+    { "lat": 37.3715214, "lon": -6.0255401 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1411427922,
+  "bounds": {
+    "minlat": 37.3714532,
+    "minlon": -6.0255401,
+    "maxlat": 37.3715214,
+    "maxlon": -6.0244821
+  },
+  "nodes": [
+    5535469557,
+    5535469553,
+    244018985
+  ],
+  "geometry": [
+    { "lat": 37.3715214, "lon": -6.0255401 },
+    { "lat": 37.3715010, "lon": -6.0246658 },
+    { "lat": 37.3714532, "lon": -6.0244821 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente Rey Juan Carlos I",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "int_ref": "E 803",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "60",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1411427923,
+  "bounds": {
+    "minlat": 37.3714440,
+    "minlon": -6.0255407,
+    "maxlat": 37.3714583,
+    "maxlon": -6.0244821
+  },
+  "nodes": [
+    5535474917,
+    5535469555,
+    244018985
+  ],
+  "geometry": [
+    { "lat": 37.3714583, "lon": -6.0255407 },
+    { "lat": 37.3714440, "lon": -6.0246680 },
+    { "lat": 37.3714532, "lon": -6.0244821 }
+  ],
+  "tags": {
+    "bridge": "yes",
+    "bridge:name": "Puente Rey Juan Carlos I",
+    "destination": "Sevilla;Cádiz;Granada;Málaga;Córdoba",
+    "highway": "motorway",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "80",
+    "name": "Circunvalación de Sevilla",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 1422881231,
+  "bounds": {
+    "minlat": 37.4077157,
+    "minlon": -5.9492850,
+    "maxlat": 37.4082047,
+    "maxlon": -5.9491830
+  },
+  "nodes": [
+    13076312140,
+    206129605
+  ],
+  "geometry": [
+    { "lat": 37.4082047, "lon": -5.9492850 },
+    { "lat": 37.4077157, "lon": -5.9491830 }
+  ],
+  "tags": {
+    "change:lanes": "yes|not_right|no",
+    "destination:int_ref:lanes": "E 05;E 01|E 05;E 01|E 05",
+    "destination:lanes": "Granada;Cádiz;Huelva|Granada;Cádiz;Huelva|Aeropuerto;Carmona;Córdoba",
+    "destination:ref:lanes": "SE-30;A-92;A-4;A-49|SE-30;A-92;A-4;A-49|A-4",
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "layer": "-1",
+    "maxspeed": "80",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "tunnel": "yes",
+    "turn:lanes": "through|through|right"
+  }
+},
+{
+  "type": "way",
+  "id": 1422881232,
+  "bounds": {
+    "minlat": 37.4088677,
+    "minlon": -5.9495689,
+    "maxlat": 37.4100112,
+    "maxlon": -5.9493937
+  },
+  "nodes": [
+    13076312141,
+    13076312139,
+    206129601
+  ],
+  "geometry": [
+    { "lat": 37.4100112, "lon": -5.9495689 },
+    { "lat": 37.4091210, "lon": -5.9494325 },
+    { "lat": 37.4088677, "lon": -5.9493937 }
+  ],
+  "tags": {
+    "hazmat": "designated",
+    "highway": "motorway",
+    "lanes": "3",
+    "maxspeed": "80",
+    "oneway": "yes",
+    "ref": "SE-30",
+    "source:maxspeed": "sign",
+    "surface": "asphalt",
+    "turn:lanes": "through|through|through;right"
+  }
+}
+
+  ]
+}

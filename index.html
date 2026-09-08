@@ -128,7 +128,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css?v=3058827f">
+<link rel="stylesheet" href="styles.css?v=80269295">
 </head>
 <body>
 
@@ -147,8 +147,8 @@
       <a href="#carta">Carta</a>
       <a href="#grupos">Grupos</a>
       <a href="#club">Club</a>
-      <a href="#equipo">Equipo</a>
       <a href="#locales">Locales</a>
+      <a href="#reservar">Reservar</a>
       <a class="nav-lang mono" href="en/" hreflang="en" lang="en" aria-label="English version">EN</a>
     </nav>
     <a class="chip-local" href="#pedir" id="chip-local" hidden>
@@ -413,7 +413,15 @@
   </p>
 </section>
 
-<div class="zig" aria-hidden="true"></div>
+<!-- ══════════ LIMA · rueda entre secciones ══════════ -->
+<div class="rueda rueda-izq rueda-redondo" aria-hidden="true">
+  <span class="rueda-traza"></span>
+  <svg class="rueda-burro" viewBox="0 0 64 64">
+    <circle class="rueda-cuerpo" cx="32" cy="32" r="26"/>
+    <circle class="rueda-pliegue" cx="32" cy="32" r="19"/>
+    <path class="rueda-pliegue" d="M32 13v38M13 32h38M18.6 18.6l26.8 26.8M45.4 18.6 18.6 45.4"/>
+  </svg>
+</div>
 
 <!-- ══════════ NUDES · BOWLS ══════════ -->
 <section class="bowls" id="bowls">
@@ -446,6 +454,7 @@
     <div class="bowls-panel" role="tabpanel" id="bowl-juarez" aria-labelledby="tab-juarez">
       <figure class="bowls-foto bowls-foto-rot">
         <img src="img/carta/nude-juarez.jpg" alt="Nude Juárez: pulled pork, guacamole, pico de gallo, totopos, lechuga y arroz con crema agria" width="900" height="900" loading="lazy">
+        <span class="foto-kcal mono" data-bowl="juarez">— kcal</span>
         <span class="rotulo" style="--x:70%;--y:27%">Pulled pork BBQ</span>
         <span class="rotulo" style="--x:22%;--y:30%">Totopos rotos</span>
         <span class="rotulo" style="--x:40%;--y:20%">Lechuga</span>
@@ -476,6 +485,7 @@
     <div class="bowls-panel" role="tabpanel" id="bowl-dolores" aria-labelledby="tab-dolores" hidden>
       <figure class="bowls-foto bowls-foto-rot">
         <img src="img/carta/nude-dolores.jpg" alt="Nude Dolores: carne sazonada, cheddar, guacamole, frijoles, arroz, lechuga y pico de gallo" width="900" height="900" loading="lazy">
+        <span class="foto-kcal mono" data-bowl="dolores">— kcal</span>
         <span class="rotulo" style="--x:50%;--y:24%">Carne sazonada</span>
         <span class="rotulo" style="--x:76%;--y:40%">Guacamole</span>
         <span class="rotulo" style="--x:48%;--y:48%">Cheddar fundido</span>
@@ -507,6 +517,7 @@
     <div class="bowls-panel" role="tabpanel" id="bowl-cochinita" aria-labelledby="tab-cochinita" hidden>
       <figure class="bowls-foto bowls-foto-rot">
         <img src="img/carta/nude-lady-cochinita.jpg" alt="Nude Lady Cochinita: cochinita pibil, chipotle, piña, guacamole, frijoles, arroz, lechuga y pico de gallo" width="900" height="900" loading="lazy">
+        <span class="foto-kcal mono" data-bowl="cochinita">— kcal</span>
         <span class="rotulo" style="--x:38%;--y:24%">Cochinita pibil</span>
         <span class="rotulo" style="--x:74%;--y:18%">Arroz</span>
         <span class="rotulo" style="--x:70%;--y:46%">Piña salteada</span>
@@ -617,7 +628,7 @@
     <div class="carta-nav-in">
       <button type="button" data-cat="cat-burritos" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17.5 17.5 4a4.5 4.5 0 0 1 2.5 2.5L6.5 20A4.5 4.5 0 0 1 4 17.5Z M7 15l3 3 M11 11l3 3"/></svg>Burritos</button>
       <button type="button" data-cat="cat-combos" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h16v12H4Z M4 8l2-4h12l2 4 M9 13h6"/></svg>Combos</button>
-      <button type="button" data-cat="cat-botanas" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 21 19H3Z M8.5 13h7"/></svg>Botanas</button>
+      <button type="button" data-cat="cat-botanas" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 21 19H3Z M8.5 13h7"/></svg>Botanas / Nachos</button>
       <button type="button" data-cat="cat-nudes" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18a9 9 0 0 1-18 0Z M7 6.5s1-2 2.5-2 M12 6s1-2.5 2.5-2.5"/></svg>Bowls</button>
       <button type="button" data-cat="cat-tacos" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17a9 9 0 0 1 18 0Z M8 17v-3 M12 17v-4 M16 17v-3"/></svg>Tacos</button>
       <button type="button" data-cat="cat-quesadillas" aria-pressed="false"><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18Z M12 12 20 9 M12 12l-4 7"/></svg>Quesadillas</button>
@@ -644,6 +655,7 @@
             <h4 class="plato-nombre">Papi Korean BBQ</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Pollo empanado crujiente, arroz, cheddar, bacon, cebolla encurtida, lechuga, totopos rotos y doble mayo Korean BBQ. La fusión Seúl-Sevilla que necesitabas. Crujiente, dulce, leve picante y adictivo.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-1">
             <span class="visually-hidden">Ver alérgenos de Papi Korean BBQ</span>
@@ -659,6 +671,7 @@
             <h4 class="plato-nombre">Don Brasa <em class="tag tag-fus">Nuevo</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Pollo marinado y braseado al punto, envuelto en guacamole casero, pico de gallo fresco, frijoles, nata agria y lechuga crujiente. Sabor explosivo en cada bocado. ¡Pura locura!</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-2">
             <span class="visually-hidden">Ver alérgenos de Don Brasa</span>
@@ -674,6 +687,7 @@
             <h4 class="plato-nombre">Black Chancho <em class="tag tag-pre">Premium</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Burrito de Guiso de carrilleras ibéricas al estilo anticucho con pico de gallo, arroz, cebolla encurtida, patatas paja, mayonesa de lima y salsa verde.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-3">
             <span class="visually-hidden">Ver alérgenos de Black Chancho</span>
@@ -689,6 +703,7 @@
             <h4 class="plato-nombre">Doña Dolores <em class="tag tag-top">Nº2</em><span class="picante" title="Picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Picante</span></span></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Nuestro Burrito clásico en Órale padre incluye carne sazonada, arroz, frijoles refritos, guacamole estilo Órale, queso cheddar, pico de gallo clásico, lechuga, y todo bañado en nuestra salsa verde.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-4">
             <span class="visually-hidden">Ver alérgenos de Doña Dolores</span>
@@ -704,6 +719,7 @@
             <h4 class="plato-nombre">Lady Cochinita<span class="picante" title="Muy picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Muy picante</span></span></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Burrito de Cochinita pibil cocinada a baja temperatura con salsa de chipotle, arroz, frijoles, lechuga fresca, cebolla encurtida, pico de gallo con piña salteada y remate de con nata agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-5">
             <span class="visually-hidden">Ver alérgenos de Lady Cochinita</span>
@@ -719,6 +735,7 @@
             <h4 class="plato-nombre">Don Juárez <em class="tag tag-top">Nº1</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Nuestro Burro padrísimo de Pulled Pork! Carne de cerdo deshilachada con salsa BBQ, pico de gallo, guacamole casero, lechuga, totopos, arroz y nuestra salsa de crema agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-6">
             <span class="visually-hidden">Ver alérgenos de Don Juárez</span>
@@ -734,6 +751,7 @@
             <h4 class="plato-nombre">Don Hampi <em class="tag tag-fus">Fusión</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Burrito al más estilo hindú: Pollo especiado, deshilachado y cocinado a baja temperatura en suave mantequilla, arroz, guacamole casero, pico de gallo, lechuga y totopos crujientes; todo envuelto en una deliciosa salsa mayo con sriracha y coco.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-7">
             <span class="visually-hidden">Ver alérgenos de Don Hampi</span>
@@ -749,6 +767,7 @@
             <h4 class="plato-nombre">Pollo Pastor</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Burrito de Delicioso pollo al pastor marinado con chiles morita y achiote, cocinado a baja temperatura y deshilachado. Arroz con cilantro y lima, salsa verde, guacamole casero, pico de gallo, frijoles, totopos rotos, nata agria y una mezcla de 4 quesos fu</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-8">
             <span class="visually-hidden">Ver alérgenos de Pollo Pastor</span>
@@ -764,6 +783,7 @@
             <h4 class="plato-nombre">Pollo Padre</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Burrito de Jugoso pollo macerado y rebozado crujiente de panko y risketos sobre ensalada de maíz mexicana, lechuga, arroz, crema agria, mayo de coco y sriracha, salsa cheddar y cebolla encurtida.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-9">
             <span class="visually-hidden">Ver alérgenos de Pollo Padre</span>
@@ -779,6 +799,7 @@
             <h4 class="plato-nombre">Doña Juana <em class="tag tag-veg">Vegetal</em></h4>
             <p class="plato-precio">12,50 €</p>
             <p class="plato-desc">Heura salteada bien sabrosa, arroz, frijoles refritos, salsa verde, pico de gallo, guacamole casero y lechuga fresca. 100% vegetal, 100% sabrosón</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-10">
             <span class="visually-hidden">Ver alérgenos de Doña Juana</span>
@@ -803,6 +824,7 @@
             <h4 class="plato-nombre">Combo Uno <em class="tag tag-top">El de diario</em></h4>
             <p class="plato-precio">14,95 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-11">
             <span class="visually-hidden">Ver alérgenos de Combo Uno</span>
@@ -818,6 +840,7 @@
             <h4 class="plato-nombre">Combo Duo</h4>
             <p class="plato-precio">29,90 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-12">
             <span class="visually-hidden">Ver alérgenos de Combo Duo</span>
@@ -833,6 +856,7 @@
             <h4 class="plato-nombre">Combo Taquero</h4>
             <p class="plato-precio">29,90 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-13">
             <span class="visually-hidden">Ver alérgenos de Combo Taquero</span>
@@ -846,7 +870,7 @@
       </section>
       <section id="cat-botanas" class="cat">
         <div class="cat-head">
-          <h3><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 21 19H3Z M8.5 13h7"/></svg>Botanas</h3>
+          <h3><svg class="cat-icono" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 21 19H3Z M8.5 13h7"/></svg>Botanas / Nachos</h3>
           <span class="cat-price">6,90 € – 10,90 €</span>
         </div>
         <div class="platos">
@@ -856,6 +880,7 @@
             <h4 class="plato-nombre">Bacon Cheese Apachurradas</h4>
             <p class="plato-precio">6,95 €</p>
             <p class="plato-desc">Patatas horneadas, las aplastamos, las cubrimos de especias y las bañamos con salsa ranchera, bacon crujiente y una mezcla de cuatro quesos. Todo vuelve al horno para que se gratine y mezcle a la perfección.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-14">
             <span class="visually-hidden">Ver alérgenos de Bacon Cheese Apachurradas</span>
@@ -871,6 +896,7 @@
             <h4 class="plato-nombre">Nachos Cienfuegos</h4>
             <p class="plato-precio">9,90 €</p>
             <p class="plato-desc">Totopos especiados en nuestro guacamole casero, con salsa de queso cheddar, carne picada sazonada, pico de gallo, mezcla de cuatro quesos y un toque final de nata agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-15">
             <span class="visually-hidden">Ver alérgenos de Nachos Cienfuegos</span>
@@ -886,6 +912,7 @@
             <h4 class="plato-nombre">Nachos Guadalupe <em class="tag tag-top">Nº3</em></h4>
             <p class="plato-precio">10,90 €</p>
             <p class="plato-desc">Nachos órale CON PULLED PORK bañado en salsa bbq, totopos especiados bañados en guacamole casero. chorreo de salsa de queso cheddar, pico de gallo y baño final con crema agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-16">
             <span class="visually-hidden">Ver alérgenos de Nachos Guadalupe</span>
@@ -901,6 +928,7 @@
             <h4 class="plato-nombre">Alitas Padre</h4>
             <p class="plato-precio">6,90 €</p>
             <p class="plato-desc">Alita de pollo macerada, horneada a baja temperatura, bañada en salsa bbq casera con un toque mexicano, chorro de nuestra mayo-lima y cubiertas de totopos.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-17">
             <span class="visually-hidden">Ver alérgenos de Alitas Padre</span>
@@ -916,6 +944,7 @@
             <h4 class="plato-nombre">Nachos Bacanos Clásicos <em class="tag tag-solo">Solo en San Luis</em></h4>
             <p class="plato-precio">9,50 €</p>
             <p class="plato-desc">Totopos clásicos de toda la vida con nuestro toque! Guacamole casero, salsa de queso cheddar, pico de gallo y chorreo de nata agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-18">
             <span class="visually-hidden">Ver alérgenos de Nachos Bacanos Clásicos</span>
@@ -940,6 +969,7 @@
             <h4 class="plato-nombre">Nude Juárez</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Bowl de Pulled Pork! Carne de cerdo deshilachada con salsa BBQ, pico de gallo, guacamole casero, lechuga, totopos, arroz y por encima bañado con nuestra crema agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-19">
             <span class="visually-hidden">Ver alérgenos de Nude Juárez</span>
@@ -955,6 +985,7 @@
             <h4 class="plato-nombre">Nude Lady Cochinita<span class="picante" title="Picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Picante</span></span></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Bowl cochinita pibil cocinada a baja temperatura con salsa de chipotle, arroz, lechuga fresca, frijoles, pico de gallo con piña salteada y remate de con nata agria.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-20">
             <span class="visually-hidden">Ver alérgenos de Nude Lady Cochinita</span>
@@ -970,6 +1001,7 @@
             <h4 class="plato-nombre">Nude Black Chancho</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Bowl de guiso de carrilleras ibéricas al estilo anticucho con pico de gallo, arroz, cebolla encurtida, patatas paja, mayonesa de lima y salsa verde.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-21">
             <span class="visually-hidden">Ver alérgenos de Nude Black Chancho</span>
@@ -985,6 +1017,7 @@
             <h4 class="plato-nombre">Nude Dolores<span class="picante" title="Picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Picante</span></span></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">Bowl de carne sazonada, arroz, frijoles refritos, guacamole estilo Órale, queso cheddar, pico de gallo clásico, lechuga, y todo bañado en nuestra salsa verde.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-22">
             <span class="visually-hidden">Ver alérgenos de Nude Dolores</span>
@@ -1009,6 +1042,7 @@
             <h4 class="plato-nombre">Taco Lady Cochinita<span class="picante" title="Picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Picante</span></span></h4>
             <p class="plato-precio">3,50 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-23">
             <span class="visually-hidden">Ver alérgenos de Taco Lady Cochinita</span>
@@ -1024,6 +1058,7 @@
             <h4 class="plato-nombre">Taco Chancho <em class="tag tag-pre">Premium</em></h4>
             <p class="plato-precio">3,50 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-24">
             <span class="visually-hidden">Ver alérgenos de Taco Chancho</span>
@@ -1039,6 +1074,7 @@
             <h4 class="plato-nombre">Taco Búffalo</h4>
             <p class="plato-precio">3,50 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-25">
             <span class="visually-hidden">Ver alérgenos de Taco Búffalo</span>
@@ -1054,6 +1090,7 @@
             <h4 class="plato-nombre">Taco Juárez</h4>
             <p class="plato-precio">3,50 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-26">
             <span class="visually-hidden">Ver alérgenos de Taco Juárez</span>
@@ -1069,6 +1106,7 @@
             <h4 class="plato-nombre">Trío Lalala</h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc"></p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-27">
             <span class="visually-hidden">Ver alérgenos de Trío Lalala</span>
@@ -1084,6 +1122,7 @@
             <h4 class="plato-nombre">Tacos Chancho <em class="tag tag-pre">Premium</em> <em class="tag tag-solo">Solo en San Luis</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">3 Tacos de guiso de carrilleras al estilo órale, cebolla morada, cilantro, 4 quesos y chorreón de salsa mayo-lima</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-28">
             <span class="visually-hidden">Ver alérgenos de Tacos Chancho</span>
@@ -1099,6 +1138,7 @@
             <h4 class="plato-nombre">Tacos Baby Cochinita <em class="tag tag-solo">Solo en San Luis</em></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">3 Tacos de cochinita pibil cocinada a baja temperatura, guacamole casero y 4 quesos.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-29">
             <span class="visually-hidden">Ver alérgenos de Tacos Baby Cochinita</span>
@@ -1114,6 +1154,7 @@
             <h4 class="plato-nombre">Tacos Don Pastor <em class="tag tag-solo">Solo en San Luis</em><span class="picante" title="Picante"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span class="visually-hidden">Picante</span></span></h4>
             <p class="plato-precio">9,95 €</p>
             <p class="plato-desc">3 Tacos de pollo pastor, cebolla morada, cilantro, 4 quesos y remate de nuestra mayo chipotle.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-30">
             <span class="visually-hidden">Ver alérgenos de Tacos Don Pastor</span>
@@ -1137,6 +1178,7 @@
             <h4 class="plato-nombre">Quesadilla Pulled Pork</h4>
             <p class="plato-precio">8,95 €</p>
             <p class="plato-desc">Quesadilla brutal de pulled pork BBQ, bañada en nuestra fusión de 4 quesos ultra fundentes. Dorada al punto en grill para un toque crujiente y acompañada de nuestra adictiva salsa chipotle.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-31">
             <span class="visually-hidden">Ver alérgenos de Quesadilla Pulled Pork</span>
@@ -1152,6 +1194,7 @@
             <h4 class="plato-nombre">Quesadilla Butter Chicken</h4>
             <p class="plato-precio">8,95 €</p>
             <p class="plato-desc">Quesadilla espectacular de Pollo Mantequilla, envuelta en nuestra mezcla de 4 quesos ultra cremosos. Dorada al punto en grill para un toque crujiente y acompañada de una irresistible mayo de coco. Un sutil toque de especias hindúes que te transportará a l</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-32">
             <span class="visually-hidden">Ver alérgenos de Quesadilla Butter Chicken</span>
@@ -1175,6 +1218,7 @@
             <h4 class="plato-nombre">Kinder Bueno</h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Final feliz de deliciosa crema Kinder!</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-33">
             <span class="visually-hidden">Ver alérgenos de Kinder Bueno</span>
@@ -1190,6 +1234,7 @@
             <h4 class="plato-nombre">Galleta Lotus</h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Irresistible sabor de las Galletas Lotus en cada cucharada</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-34">
             <span class="visually-hidden">Ver alérgenos de Galleta Lotus</span>
@@ -1205,6 +1250,7 @@
             <h4 class="plato-nombre">Filipino Blanco</h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Muerte por delicioso filipino de chocolate blanco</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-35">
             <span class="visually-hidden">Ver alérgenos de Filipino Blanco</span>
@@ -1220,6 +1266,7 @@
             <h4 class="plato-nombre">Oreo Blanco</h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Para llorar y volar fuerte con oreo de chocolate blanco.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-36">
             <span class="visually-hidden">Ver alérgenos de Oreo Blanco</span>
@@ -1235,6 +1282,7 @@
             <h4 class="plato-nombre">Filipino blanco con dulce de leche <em class="tag tag-solo">Solo en San Luis</em></h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Muerte por delicioso filipino de chocolate blanco con baño de dulce de leche.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-37">
             <span class="visually-hidden">Ver alérgenos de Filipino blanco con dulce de leche</span>
@@ -1250,6 +1298,7 @@
             <h4 class="plato-nombre">Bomba de Ferrero <em class="tag tag-solo">Solo en San Luis</em></h4>
             <p class="plato-precio">4,50 €</p>
             <p class="plato-desc">Antojo de crema de Ferrero Rocher</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-38">
             <span class="visually-hidden">Ver alérgenos de Bomba de Ferrero</span>
@@ -1274,6 +1323,7 @@
             <h4 class="plato-nombre">Lunes y miércoles: dos burritos</h4>
             <p class="plato-precio">13,90 €</p>
             <p class="plato-desc">Dos burritos a elegir por 13,90 €. Los dos días de la semana en que más apetece.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-39">
             <span class="visually-hidden">Ver alérgenos de Lunes y miércoles: dos burritos</span>
@@ -1289,6 +1339,7 @@
             <h4 class="plato-nombre">Martes: 3×2 en tacos</h4>
             <p class="plato-precio">7,00 €</p>
             <p class="plato-desc">Tres tacos al precio de dos, 7,00 €. A elegir: baby cochinita, pastor, chancho, búffalo, combinados.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-40">
             <span class="visually-hidden">Ver alérgenos de Martes: 3×2 en tacos</span>
@@ -1304,6 +1355,7 @@
             <h4 class="plato-nombre">Jueves y viernes: menú de mediodía</h4>
             <p class="plato-precio">10,00 €</p>
             <p class="plato-desc">Burrito a elegir, chips y bebida por 10,00 €. Postre por 3,00 € más. Guacamole extra 0,50 €, salsa de cheddar 1 €.</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-41">
             <span class="visually-hidden">Ver alérgenos de Jueves y viernes: menú de mediodía</span>
@@ -1341,6 +1393,40 @@
 <!-- CARTA:FIN -->
 </section>
 
+<!-- ══════════ TAKE AWAY · bloque oscuro ══════════ -->
+<section class="llevar" id="llevar" aria-labelledby="llevar-t">
+  <div class="llevar-in">
+    <div class="llevar-cab">
+      <p class="eyebrow">Para llevar</p>
+      <h2 class="big" id="llevar-t">Recoger sale<br>a cuenta</h2>
+      <p class="llevar-lede mono">Lo pides desde el móvil, lo recoges en el local y te lo llevas recién hecho. Sin intermediarios, que es donde se va el dinero.</p>
+      <a class="btn btn-p" href="#pedir">Pedir para recoger</a>
+    </div>
+    <ul class="llevar-puntos">
+      <li class="tick">
+        <span class="llevar-n mono">01</span>
+        <h3>Precio de carta</h3>
+        <p>Lo que marca la carta, ni un céntimo más. Sin envío ni comisión de plataforma, que en un pedido normal son 4 o 5 euros.</p>
+      </li>
+      <li class="tick">
+        <span class="llevar-n mono">02</span>
+        <h3>Listo en 15–25 min</h3>
+        <p>Entra directo en la cocina del local. Cuando llegas, está saliendo de la plancha, no esperando en una bolsa.</p>
+      </li>
+      <li class="tick">
+        <span class="llevar-n mono">03</span>
+        <h3>Promos solo aquí</h3>
+        <p>Lunes y miércoles dos burritos por 13,90 €. Martes, 3×2 en tacos. Jueves y viernes, menú de mediodía a 10 €. En las plataformas no existen.</p>
+      </li>
+      <li class="tick">
+        <span class="llevar-n mono">04</span>
+        <h3>Puntos y tacos gratis</h3>
+        <p>Pidiendo directo sumas el doble de puntos y estrenas el club con dos tacos. Está al caer: apúntate y te avisamos.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <!-- ══════════ PEDIDOS GRANDES ══════════ -->
 <section class="grupos" id="grupos">
   <div class="banner banner-catering tick">
@@ -1358,7 +1444,7 @@
 
   <div class="grupos-tabs" role="tablist" aria-label="Tipo de pedido grande">
     <button role="tab" id="t-cajas" aria-controls="p-cajas" aria-selected="true">
-      <b>Órale en casa</b><span class="mono">Cajas a toda España</span>
+      <b>Órale en casa <em class="pronto">Pronto</em></b><span class="mono">Cajas a toda España</span>
     </button>
     <button role="tab" id="t-catering" aria-controls="p-catering" aria-selected="false" tabindex="-1">
       <b>Catering</b><span class="mono">De 20 a 100 personas</span>
@@ -1366,6 +1452,9 @@
   </div>
 
   <div role="tabpanel" id="p-cajas" aria-labelledby="t-cajas">
+  <p class="pronto-aviso tick">
+    <b>Casi listas.</b> Las cajas Órale en Casa saldrán en las próximas semanas. Esto es lo que traerán. Si quieres que te avisemos, o más información para un pedido grande, <a href="mailto:orale.padre.food@gmail.com?subject=Cajas%20%C3%93rale%20en%20Casa&body=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20cajas%20%C3%93rale%20en%20Casa.%0A%0ANombre%3A%0ACiudad%3A%0AParа%20cu%C3%A1ntas%20personas%3A">escríbenos</a> y te contestamos en 24 horas.
+  </p>
 
 
 
@@ -1408,7 +1497,7 @@
         <li>3 salsas: suave, picante y especial</li>
         <li>Tortillas extra y limones</li>
       </ul>
-      <a class="btn btn-ghost btn-block" href="#" data-cfg="caja2">Pedir la Pareja</a>
+      <a class="btn btn-ghost btn-block" href="#" data-cfg="caja2">Avísame cuando salga</a>
     </li>
 
     <li class="plan plan-top tick">
@@ -1424,7 +1513,7 @@
         <li>5 salsas premium</li>
         <li>Tortillas, limones y especiales</li>
       </ul>
-      <a class="btn btn-p btn-block" href="#" data-cfg="caja4">Pedir la Tribu</a>
+      <a class="btn btn-p btn-block" href="#" data-cfg="caja4">Avísame cuando salga</a>
     </li>
 
     <li class="plan tick">
@@ -1439,7 +1528,7 @@
         <li>7 salsas premium</li>
         <li>Un detalle sorpresa nuestro</li>
       </ul>
-      <a class="btn btn-ghost btn-block" href="#" data-cfg="caja6">Pedir la Reunión</a>
+      <a class="btn btn-ghost btn-block" href="#" data-cfg="caja6">Avísame cuando salga</a>
     </li>
   </ul>
 
@@ -1654,12 +1743,19 @@
   </div>
 </section>
 
-<div class="zig" aria-hidden="true"></div>
+<!-- ══════════ GUINDILLA · rueda entre secciones ══════════ -->
+<div class="rueda " aria-hidden="true">
+  <span class="rueda-traza"></span>
+  <svg class="rueda-burro" viewBox="0 0 64 30">
+    <path class="rueda-cuerpo" d="M55 5c1-3 4-4 7-3-2 1-3 3-3 5 3 3 4 8 3 12-2 8-14 11-28 10C20 28 8 22 4 16c-1-2 0-3 2-3 9 1 17-1 23-6 6-5 15-6 26-2Z"/>
+    <path class="rueda-pliegue" d="M12 17c8 3 18 4 28 2"/>
+  </svg>
+</div>
 
 <section class="club" id="club">
   <div class="club-in">
     <div class="club-copy">
-      <p class="eyebrow">My Órale Padre</p>
+      <p class="eyebrow">My Órale Padre <em class="pronto">Próximamente</em></p>
       <h2 class="big">Tus dos primeros<br>tacos, gratis</h2>
       <p><b>Darse de alta es gratis</b>, y por hacerlo te llevas <b>tus dos
         primeros tacos gratis</b> en tu primer pedido para recoger en el local.
@@ -1755,12 +1851,24 @@
     <p class="eyebrow">Quiénes somos</p>
     <h2 class="big">Tres locales,<br>una cocina</h2>
     <p class="sec-lede">Órale Padre es comida mexicana de calle hecha en Sevilla:
-      burritos, tacos, nachos y bowls. Nació en 2021 en un local pequeño de la
-      calle San Luis, en la Macarena, y hoy son tres, con una cocina central donde
-      se prepara todo el producto. La cochinita y la carrillada van horas a baja
-      temperatura, y la tortilla se calienta cuando pides, no cuando abrimos.
-      Por eso tardamos quince minutos y no tres.</p>
+      burritos, tacos, nachos y bowls. Nació en 2021 como una dark kitchen en Los
+      Remedios, en el antiguo local de pizzas Puglia, de donde viene buena parte
+      del equipo. Hoy son tres locales con una cocina central donde se prepara
+      todo el producto. La cochinita y la carrillada van horas a baja temperatura,
+      y la tortilla se calienta cuando pides, no cuando abrimos. Por eso tardamos
+      quince minutos y no tres.</p>
   </header>
+
+  <ul class="fresco mono" aria-label="Producto que entra cada mañana">
+    <li class="fresco-k">Cada mañana entra:</li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3 0-4.6 3-5 5.4C6.7 11 4.5 12.4 4.5 15.3 4.5 18.7 7.9 21 12 21s7.5-2.3 7.5-5.7c0-2.9-2.2-4.3-2.5-6.9C16.6 6 15 3 12 3Z"/><circle cx="12" cy="15" r="3"/></svg><span>Aguacate</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="13.5" r="7.5"/><path d="M12 6c-.7-2-2-3-4-2.6 1 1 1.7 2 2.3 3M12 6c.7-2 2-3 4-2.6-1 1-1.7 2-2.3 3M12 6V3.5"/></svg><span>Tomate</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="6"/><path d="M12 6v12M6 12h12M7.8 7.8l8.4 8.4M16.2 7.8 7.8 16.2"/></svg><span>Lima</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.9 6.9c.4-1.9 2-3.3 4-3.4-.7 1-.9 2.2-.5 3.3.9 1.2 1.3 2.7 1.1 4.3-.5 4.6-5.2 8.6-10.3 8.9-3.2.2-5.9-1.1-6.8-2.9-.3-.6.1-1.3.8-1.3 3.4-.1 5.8-1.5 7.2-4 1.2-2.1 2.6-3.8 4.5-4.9Z"/></svg><span>Chile</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-9M12 12c-3 0-5-2-5.5-5 3 0 5.5 2 5.5 5Zm0 0c3 0 5-2 5.5-5-3 0-5.5 2-5.5 5Zm0-4c-1.5-1-2.5-3-2-5.5 2 .5 3.2 2.5 2 5.5Zm0 0c1.5-1 2.5-3 2-5.5-2 .5-3.2 2.5-2 5.5Z"/></svg><span>Cilantro</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-.5 2.5-2 3.5-4 5-2.2 1.7-3 4-2.5 6.5C6.1 17.6 8.8 20 12 20s5.9-2.4 6.5-5.5c.5-2.5-.3-4.8-2.5-6.5-2-1.5-3.5-2.5-4-5Z"/><path d="M12 20c-1.5-3-1.5-9 0-12M12 20c1.5-3 1.5-9 0-12"/></svg><span>Cebolla</span></li>
+    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2c3 0 5 4 5 10s-2 10-5 10-5-4-5-10S9 2 12 2Z"/><path d="M12 2v20M8.2 6.5h7.6M7.1 11h9.8M7.5 15.5h9"/></svg><span>Maíz</span></li>
+  </ul>
 
   <div class="equipo-valores">
     <article class="valor tick">
@@ -1809,7 +1917,14 @@
   </div>
 </section>
 
-<div class="zig" aria-hidden="true"></div>
+<!-- ══════════ AGUACATE · rueda entre secciones ══════════ -->
+<div class="rueda rueda-izq rueda-redondo" aria-hidden="true">
+  <span class="rueda-traza"></span>
+  <svg class="rueda-burro" viewBox="0 0 64 64">
+    <path class="rueda-cuerpo" d="M32 5c-9 0-14 9-15 16-1 8-8 12-8 21 0 10 10 17 23 17s23-7 23-17c0-9-7-13-8-21C46 14 41 5 32 5Z"/>
+    <circle class="rueda-pliegue" cx="32" cy="41" r="9"/>
+  </svg>
+</div>
 
 <!-- ══════════ LOCALES ══════════ -->
 <section class="locales" id="locales">
@@ -1821,12 +1936,44 @@
       dan caliente. Mesa para dos o mesa para doce.</p>
   </header>
 
-  <figure class="locales-foto">
-    <img src="img/neon-local.jpg" alt="El neón del local de San Luis" width="1400" height="1750" loading="lazy">
+<!-- MAPA:INICIO · generado por mapa-sevilla.py · no editar a mano -->
+  <figure class="mapa tick" aria-label="Mapa de Sevilla con los tres locales">
+    <svg class="mapa-svg" viewBox="0 0 640 455" role="img" aria-labelledby="mapa-t">
+      <title id="mapa-t">Los tres locales de Órale Padre sobre el mapa de Sevilla, y Tomares próximamente</title>
+      <path class="mapa-termino" d="M-1234.1 -600.8 L-1233.2 -596.1 L-1228.1 -589.6 L-1231.2 -586.1 L-1229.8 -580.9 L-1224.9 -582.7 L-1223.7 -579.8 L-1217.6 -578.4 L-1219.2 -574.4 L-1216.9 -572.4 L-1211.3 -574.5 L-1211.5 -571.4 L-1207.7 -569.7 L-1208.2 -564.3 L-1206.6 -562.8 L-1202.2 -564.4 L-1200.4 -571.0 L-1196.3 -572.2 L-1193.5 -570.6 L-1189.3 -573.6 L-1189.9 -584.0 L-1184.0 -580.4 L-1181.3 -582.1 L-1179.4 -588.0 L-1172.8 -586.3 L-1170.4 -589.7 L-1171.2 -594.6 L-1168.7 -595.9 L-1162.6 -594.2 L-1163.8 -590.5 L-1158.3 -586.3 L-1155.2 -592.0 L-1150.8 -593.9 L-1148.7 -590.9 L-1150.9 -584.5 L-1149.8 -581.2 L-1143.1 -588.5 L-1139.3 -588.1 L-1138.1 -593.0 L-1130.0 -583.1 L-1123.2 -587.0 L-1121.3 -581.0 L-1128.1 -579.2 L-1129.8 -576.4 L-1126.6 -571.6 L-1119.9 -575.6 L-1117.4 -567.3 L-1115.8 -571.4 L-1105.2 -575.7 L-1099.2 -581.1 L-1097.3 -579.1 L-1096.6 -570.0 L-1090.4 -568.7 L-1085.5 -563.6 L-1082.3 -569.5 L-1083.6 -577.6 L-1079.4 -580.6 L-1075.2 -581.2 L-1074.0 -576.3 L-1061.7 -575.2 L-1053.2 -586.1 L-1049.0 -578.0 L-1043.4 -581.9 L-1039.2 -579.5 L-1036.1 -581.7 L-1036.0 -577.6 L-1033.0 -576.8 L-1030.4 -578.6 L-1029.5 -582.7 L-1023.4 -583.1 L-1019.3 -581.1 L-1016.5 -584.8 L-1005.7 -588.4 L-1000.6 -580.3 L-990.9 -579.7 L-987.7 -581.8 L-986.0 -579.3 L-977.9 -580.6 L-975.5 -586.0 L-969.1 -589.2 L-961.6 -587.3 L-956.3 -582.2 L-947.0 -586.6 L-946.1 -583.0 L-935.5 -578.5 L-926.1 -581.8 L-920.3 -581.1 L-915.6 -584.0 L-908.2 -580.8 L-908.0 -578.4 L-897.0 -575.0 L-887.0 -576.3 L-878.7 -568.3 L-874.6 -557.9 L-866.3 -555.7 L-860.0 -556.6 L-854.6 -552.4 L-846.8 -552.0 L-841.7 -544.3 L-837.0 -547.5 L-835.5 -546.7 L-837.2 -534.4 L-832.7 -521.9 L-837.5 -519.9 L-838.8 -513.8 L-842.6 -512.5 L-841.1 -508.3 L-849.9 -511.1 L-854.5 -503.6 L-852.9 -501.8 L-846.5 -501.7 L-843.9 -491.7 L-849.3 -488.9 L-843.7 -486.5 L-847.5 -477.4 L-839.4 -473.9 L-837.7 -468.2 L-829.9 -465.9 L-830.3 -457.3 L-836.3 -455.4 L-835.5 -447.5 L-838.1 -447.7 L-842.1 -452.6 L-846.1 -449.9 L-849.3 -451.4 L-855.5 -437.3 L-852.2 -432.9 L-852.4 -421.8 L-829.3 -357.4 L-827.6 -346.7 L-823.3 -344.5 L-818.3 -337.6 L-805.0 -336.2 L-803.2 -333.4 L-798.7 -332.3 L-797.2 -328.8 L-790.5 -327.3 L-789.1 -323.3 L-780.1 -319.9 L-773.3 -311.8 L-769.2 -297.9 L-755.4 -282.6 L-757.7 -267.3 L-763.2 -264.1 L-764.6 -261.3 L-764.5 -257.5 L-761.1 -256.3 L-760.5 -243.6 L-757.4 -234.1 L-757.5 -221.5 L-753.9 -219.7 L-753.1 -215.5 L-746.1 -209.7 L-743.4 -204.9 L-742.9 -195.7 L-732.1 -174.0 L-734.7 -171.9 L-737.0 -175.1 L-738.7 -172.9 L-735.0 -167.6 L-732.1 -157.2 L-728.1 -160.5 L-725.1 -157.3 L-726.8 -144.1 L-720.5 -143.2 L-700.3 -134.5 L-694.0 -126.9 L-691.6 -119.6 L-683.8 -115.1 L-677.2 -106.2 L-679.7 -96.8 L-670.8 -82.5 L-665.1 -60.1 L-661.1 -53.4 L-662.7 -43.9 L-660.9 -33.2 L-653.0 -24.6 L-650.3 -17.9 L-639.8 -8.8 L-640.5 -2.4 L-632.2 2.9 L-629.6 12.7 L-622.3 14.2 L-619.3 19.7 L-612.6 23.7 L-610.3 29.2 L-603.6 32.7 L-602.7 44.9 L-596.0 51.7 L-596.4 59.7 L-588.9 69.8 L-587.3 76.9 L-588.7 95.0 L-586.1 102.1 L-588.0 103.9 L-591.4 103.1 L-603.6 114.3 L-605.6 127.0 L-622.5 124.1 L-627.3 125.1 L-629.8 120.8 L-634.0 124.7 L-640.2 126.0 L-645.5 136.0 L-647.7 135.6 L-648.2 133.0 L-656.0 138.3 L-727.0 149.9 L-733.5 161.1 L-742.7 187.6 L-721.5 201.9 L-727.7 240.2 L-725.3 242.0 L-743.2 276.9 L-733.4 280.4 L-731.7 283.4 L-724.5 283.8 L-724.6 288.1 L-726.7 288.3 L-723.9 294.7 L-716.5 300.5 L-711.4 299.7 L-705.0 308.4 L-701.1 309.0 L-698.5 312.4 L-707.1 323.9 L-742.8 347.4 L-760.8 369.3 L-776.2 371.9 L-788.1 381.2 L-804.6 404.5 L-805.8 411.3 L-804.2 414.1 L-798.0 417.5 L-797.4 421.4 L-794.7 422.1 L-792.3 427.7 L-785.4 430.7 L-783.5 435.4 L-775.6 436.0 L-774.5 440.2 L-771.5 440.8 L-769.3 446.4 L-763.0 447.5 L-757.2 451.3 L-753.2 456.9 L-746.6 458.9 L-741.2 466.1 L-736.4 466.8 L-731.7 474.0 L-718.2 482.9 L-702.9 488.4 L-692.8 496.6 L-686.1 511.5 L-669.9 534.0 L-669.6 537.8 L-662.3 545.6 L-666.7 554.1 L-666.2 561.3 L-672.0 579.4 L-677.4 583.8 L-677.9 592.0 L-682.6 603.0 L-689.6 608.5 L-686.4 619.6 L-677.1 624.2 L-673.6 630.9 L-687.7 640.2 L-708.8 664.4 L-721.6 698.3 L-717.6 712.3 L-713.0 718.9 L-718.8 728.7 L-724.9 746.0 L-735.6 754.7 L-737.0 759.2 L-730.2 773.6 L-724.6 778.4 L-707.1 809.3 L-707.0 812.5 L-701.4 818.8 L-696.3 828.5 L-696.3 837.6 L-701.9 847.2 L-704.8 861.3 L-713.0 867.7 L-710.0 883.1 L-715.7 893.1 L-719.5 895.7 L-715.7 900.1 L-719.1 906.1 L-717.2 908.7 L-717.2 920.0 L-715.1 924.6 L-716.9 929.9 L-712.4 938.8 L-711.1 960.5 L-700.5 975.0 L-670.9 998.8 L-704.3 1056.7 L-708.2 1061.0 L-717.8 1066.2 L-717.6 1076.7 L-734.6 1098.5 L-736.5 1108.0 L-724.9 1121.7 L-713.8 1129.4 L-705.8 1129.2 L-698.0 1142.2 L-690.6 1144.5 L-688.3 1151.5 L-688.3 1162.1 L-693.4 1170.9 L-699.8 1171.2 L-708.3 1168.5 L-719.7 1178.8 L-737.6 1182.0 L-737.9 1188.4 L-727.4 1198.4 L-727.1 1205.2 L-760.8 1227.6 L-783.7 1250.9 L-794.6 1267.0 L-805.2 1290.2 L-810.1 1311.1 L-809.5 1340.6 L-802.2 1372.7 L-794.3 1387.7 L-793.6 1416.4 L-789.4 1437.0 L-775.4 1477.8 L-749.8 1532.9 L-735.3 1570.9 L-729.6 1587.7 L-720.5 1632.8 L-723.7 1651.0 L-733.3 1668.4 L-740.7 1690.9 L-741.1 1707.8 L-736.6 1733.5 L-748.0 1782.2 L-755.9 1795.1 L-774.0 1814.4 L-780.5 1819.5 L-790.0 1821.0 L-764.9 1852.0 L-749.3 1863.9 L-733.9 1870.8 L-728.6 1875.9 L-709.9 1897.9 L-697.4 1916.2 L-688.4 1922.1 L-666.9 1931.2 L-656.7 1946.7 L-554.0 1922.4 L-513.2 1905.5 L-501.8 1903.4 L-472.9 1944.1 L-454.8 1959.1 L-441.9 1963.8 L-426.8 1964.7 L-404.0 1959.8 L-378.4 1949.1 L-373.4 1956.7 L-316.3 1965.5 L-273.3 1967.6 L-256.5 1964.9 L-246.8 1972.2 L-216.5 1978.7 L-208.1 1984.4 L-199.0 1987.1 L-168.4 1993.7 L-134.1 2025.7 L-98.8 2048.2 L-75.1 2069.2 L-28.5 2091.5 L-1.0 2095.4 L25.9 2101.8 L40.2 2099.2 L51.3 2105.2 L123.6 2105.5 L138.2 2113.5 L170.8 2121.6 L205.2 2126.4 L253.1 2128.6 L291.6 2133.3 L326.5 2133.2 L339.1 2137.8 L358.7 2121.3 L369.4 2114.7 L395.6 2106.6 L427.6 2110.8 L472.1 2106.8 L503.2 2117.0 L567.5 2144.8 L573.8 2140.9 L569.5 2137.2 L573.7 2128.8 L560.5 2112.0 L607.9 1961.0 L625.2 1965.1 L635.2 1959.4 L635.7 1956.5 L654.2 1942.6 L671.4 1920.3 L680.0 1904.2 L694.2 1889.3 L717.2 1892.2 L727.3 1888.6 L740.5 1887.2 L783.8 1863.5 L803.1 1854.5 L809.9 1853.2 L825.8 1857.3 L838.5 1852.7 L857.2 1852.0 L866.9 1855.8 L892.9 1857.6 L904.3 1852.7 L923.8 1852.5 L966.2 1862.2 L976.6 1862.2 L991.2 1871.7 L998.1 1878.7 L1017.6 1868.4 L1023.6 1867.2 L1051.8 1874.2 L1055.2 1871.2 L1060.8 1871.1 L1090.2 1852.9 L1091.4 1844.6 L1109.8 1819.0 L1116.7 1782.3 L1116.7 1770.7 L1111.5 1756.5 L1114.1 1743.8 L1126.4 1729.3 L1135.8 1723.8 L1138.7 1724.6 L1149.7 1713.1 L1156.5 1703.0 L1162.7 1697.6 L1173.8 1693.4 L1189.4 1676.5 L1193.4 1677.4 L1214.9 1707.4 L1230.1 1732.5 L1239.2 1752.4 L1251.1 1755.1 L1261.3 1760.7 L1286.0 1765.4 L1304.6 1752.0 L1306.9 1759.9 L1313.6 1769.6 L1327.1 1801.9 L1336.0 1793.6 L1343.4 1795.4 L1342.9 1798.2 L1348.9 1797.5 L1356.9 1786.0 L1355.7 1781.3 L1358.2 1775.2 L1357.7 1768.5 L1359.9 1764.7 L1378.4 1774.5 L1391.5 1786.2 L1396.4 1785.7 L1405.3 1779.7 L1413.3 1778.0 L1416.8 1867.4 L1423.6 1889.7 L1444.6 1903.5 L1477.5 1915.8 L1524.0 1946.2 L1561.5 1965.4 L1547.1 1926.4 L1545.9 1918.2 L1514.8 1870.3 L1515.0 1862.3 L1520.2 1856.0 L1525.1 1839.1 L1529.9 1836.0 L1556.1 1837.6 L1563.3 1828.9 L1562.6 1820.3 L1564.5 1817.0 L1586.7 1811.8 L1598.9 1785.6 L1597.2 1778.7 L1598.3 1774.3 L1601.7 1770.5 L1613.1 1766.7 L1615.2 1747.9 L1617.0 1744.6 L1623.6 1739.7 L1630.7 1737.6 L1649.2 1738.4 L1651.3 1725.7 L1658.8 1711.9 L1665.5 1705.0 L1668.7 1704.0 L1673.9 1694.3 L1684.0 1687.4 L1692.1 1689.9 L1707.3 1689.2 L1732.6 1659.8 L1739.9 1648.7 L1739.3 1643.0 L1741.4 1634.4 L1738.5 1630.5 L1738.5 1621.8 L1730.7 1609.2 L1718.0 1596.2 L1701.2 1583.6 L1700.6 1579.6 L1690.8 1571.3 L1691.2 1566.9 L1668.7 1552.4 L1667.8 1546.3 L1662.1 1537.3 L1645.8 1517.9 L1625.1 1474.9 L1643.4 1465.0 L1655.4 1455.7 L1664.3 1453.6 L1686.9 1453.1 L1730.5 1442.2 L1753.5 1449.8 L1759.5 1448.2 L1769.8 1444.2 L1800.6 1416.7 L1817.4 1419.2 L1823.8 1414.0 L1840.2 1408.9 L1846.8 1416.1 L1848.5 1424.0 L1856.7 1436.5 L1859.4 1451.6 L1858.7 1461.5 L1866.2 1479.0 L1874.3 1506.9 L1878.0 1546.3 L1875.3 1553.5 L1861.6 1572.5 L1858.5 1583.9 L1858.8 1593.8 L1852.2 1599.7 L1835.9 1623.6 L1831.2 1622.7 L1815.7 1628.0 L1813.9 1638.2 L1809.0 1642.9 L1798.8 1647.2 L1795.1 1653.3 L1786.6 1654.1 L1784.7 1661.5 L1778.0 1669.0 L1775.6 1670.1 L1771.5 1667.5 L1768.1 1667.7 L1766.2 1678.9 L1774.8 1683.0 L1775.3 1695.1 L1782.1 1728.3 L1806.1 1744.1 L1805.7 1747.0 L1800.5 1752.8 L1802.0 1757.4 L1805.6 1759.3 L1807.5 1768.6 L1805.2 1780.0 L1819.1 1788.6 L1819.6 1798.9 L1825.5 1819.0 L1834.7 1816.7 L1841.6 1817.7 L1851.8 1811.1 L1868.0 1805.9 L1881.3 1806.8 L1895.9 1803.2 L1884.2 1786.8 L1896.8 1763.4 L1894.8 1752.2 L1901.7 1744.3 L1920.2 1727.9 L1928.0 1717.0 L1944.4 1704.5 L1955.1 1686.0 L1969.7 1673.5 L1986.2 1663.8 L2000.9 1662.5 L2006.0 1654.3 L2008.6 1656.3 L2030.5 1642.7 L2043.1 1644.5 L2042.0 1640.2 L2045.0 1633.4 L2043.8 1626.2 L2046.1 1618.8 L2053.6 1617.4 L2056.5 1612.4 L2060.4 1614.8 L2064.0 1612.4 L2066.4 1613.5 L2067.8 1608.2 L2073.1 1603.6 L2086.6 1601.1 L2088.2 1594.2 L2096.9 1586.2 L2102.5 1574.3 L2107.8 1551.4 L2121.0 1538.0 L2126.3 1536.0 L2129.8 1528.7 L2142.8 1521.6 L2150.2 1512.7 L2153.7 1512.9 L2158.7 1503.5 L2170.0 1494.4 L2171.9 1490.2 L2184.3 1478.2 L2206.3 1461.7 L2207.1 1475.1 L2205.0 1487.4 L2207.8 1510.8 L2206.5 1525.2 L2207.9 1535.9 L2211.7 1540.9 L2211.6 1544.4 L2232.8 1559.9 L2254.1 1592.3 L2271.7 1614.0 L2276.0 1615.6 L2286.7 1627.6 L2288.8 1638.9 L2296.5 1651.3 L2298.3 1658.2 L2302.7 1661.8 L2303.3 1669.2 L2315.3 1678.7 L2322.0 1680.5 L2333.3 1696.6 L2334.1 1711.3 L2338.1 1726.2 L2346.6 1732.9 L2353.2 1744.5 L2376.3 1770.4 L2379.3 1779.5 L2383.4 1780.9 L2388.5 1793.5 L2395.1 1800.4 L2402.3 1802.7 L2404.3 1802.7 L2404.4 1798.4 L2409.0 1800.2 L2420.5 1799.8 L2424.2 1788.9 L2426.8 1786.6 L2426.5 1781.1 L2431.3 1768.0 L2434.6 1765.0 L2444.9 1763.9 L2453.4 1746.4 L2477.8 1723.1 L2479.5 1719.5 L2484.3 1716.7 L2488.1 1718.6 L2495.3 1717.6 L2515.2 1710.6 L2515.9 1703.5 L2518.9 1699.0 L2529.2 1697.0 L2532.8 1694.0 L2544.0 1690.7 L2551.3 1681.7 L2557.6 1677.8 L2559.2 1672.7 L2565.6 1668.0 L2566.8 1664.7 L2577.2 1660.9 L2581.2 1654.5 L2586.4 1654.1 L2602.3 1646.6 L2608.6 1637.8 L2608.5 1630.9 L2615.5 1621.1 L2622.9 1611.8 L2636.8 1600.6 L2643.2 1592.2 L2651.1 1577.7 L2651.5 1571.3 L2678.2 1551.5 L2679.0 1543.2 L2684.6 1537.5 L2686.2 1531.0 L2690.4 1526.3 L2696.2 1511.4 L2701.4 1509.0 L2705.1 1495.6 L2713.2 1492.8 L2719.9 1507.2 L2731.2 1506.7 L2730.4 1516.7 L2734.7 1525.6 L2739.1 1520.5 L2746.2 1518.7 L2750.0 1510.3 L2757.1 1508.5 L2761.3 1502.7 L2774.1 1503.0 L2785.3 1498.2 L2790.5 1498.0 L2815.1 1482.4 L2829.6 1485.3 L2839.4 1489.7 L2844.7 1481.5 L2856.4 1478.5 L2880.9 1480.8 L2893.1 1478.0 L2897.2 1480.4 L2899.2 1485.4 L2916.8 1452.7 L2937.0 1438.3 L2940.5 1431.5 L2953.5 1421.2 L2957.7 1422.7 L2969.1 1438.3 L2980.0 1431.6 L2970.0 1417.9 L2972.6 1411.6 L3013.0 1399.2 L3020.3 1400.9 L3029.4 1393.8 L3079.5 1366.5 L3103.4 1349.4 L3105.9 1345.9 L3107.0 1337.0 L3114.5 1335.0 L3124.1 1328.8 L3129.7 1319.3 L3147.9 1303.8 L3154.9 1293.8 L3160.9 1289.3 L3175.1 1270.5 L3181.3 1265.2 L3196.0 1254.3 L3222.3 1241.5 L3239.7 1242.8 L3250.0 1230.3 L3262.3 1231.2 L3265.6 1227.5 L3264.1 1218.4 L3277.5 1214.6 L3278.0 1203.9 L3286.0 1198.3 L3301.9 1191.2 L3309.1 1131.0 L3316.6 1114.8 L3316.0 1106.7 L3291.8 1088.2 L3256.5 1072.5 L3243.2 1059.5 L3223.5 1044.5 L3206.5 1040.9 L3209.4 1010.0 L3210.8 1007.0 L3214.5 1005.4 L3213.3 991.0 L3215.0 977.6 L3225.7 979.7 L3232.4 984.4 L3233.9 982.2 L3238.1 986.7 L3243.6 987.1 L3255.2 995.2 L3264.2 980.0 L3272.8 984.1 L3278.0 979.9 L3286.4 979.3 L3298.9 982.0 L3304.1 980.5 L3305.4 965.8 L3311.0 956.0 L3313.3 960.9 L3313.5 967.2 L3316.4 970.7 L3313.0 972.8 L3314.0 979.2 L3324.3 991.7 L3330.4 995.0 L3336.0 1006.9 L3335.6 1019.6 L3324.4 1033.5 L3331.8 1046.4 L3355.0 1049.3 L3361.7 1040.8 L3369.1 1035.7 L3379.6 1021.1 L3393.4 1038.8 L3408.0 1026.5 L3445.7 985.0 L3442.7 979.0 L3436.0 978.0 L3448.0 968.8 L3445.3 948.3 L3439.1 948.1 L3439.6 925.0 L3449.4 918.4 L3449.6 915.8 L3454.1 914.6 L3453.6 897.5 L3472.5 896.6 L3479.8 889.6 L3485.8 887.6 L3523.1 891.7 L3531.4 890.0 L3550.0 901.2 L3549.8 904.9 L3541.4 907.4 L3549.7 920.3 L3542.7 924.0 L3527.2 938.2 L3535.8 950.5 L3540.4 961.7 L3549.4 964.4 L3562.9 960.5 L3566.8 967.3 L3564.6 968.1 L3566.0 971.6 L3571.0 979.6 L3585.7 993.5 L3592.1 985.4 L3605.7 989.4 L3602.0 1008.8 L3600.4 1032.6 L3614.6 1052.5 L3619.6 1055.3 L3624.0 1054.0 L3626.9 1049.7 L3628.1 1032.0 L3643.3 1043.7 L3656.1 1033.2 L3660.3 1017.8 L3659.6 1009.1 L3666.3 1010.1 L3671.8 1004.2 L3683.4 998.7 L3710.2 994.1 L3714.5 985.6 L3714.7 972.1 L3735.4 965.7 L3744.8 959.1 L3757.6 958.0 L3789.9 945.3 L3817.3 925.7 L3857.8 900.6 L3843.8 886.6 L3848.1 884.2 L3843.9 880.3 L3850.2 875.1 L3850.4 868.5 L3826.9 865.9 L3822.3 861.2 L3821.6 855.5 L3817.7 856.8 L3818.9 851.5 L3816.3 850.0 L3806.0 853.6 L3805.9 844.4 L3797.2 823.5 L3791.8 801.0 L3800.5 784.2 L3831.8 752.9 L3797.4 744.9 L3782.3 735.6 L3786.9 720.3 L3798.2 705.4 L3826.9 683.6 L3832.9 696.5 L3842.7 707.6 L3855.9 699.6 L3861.0 700.1 L3885.0 693.7 L3901.1 706.1 L3905.6 706.9 L3906.7 711.0 L3924.8 709.6 L3924.7 707.3 L3922.6 707.4 L3923.2 702.7 L3930.0 702.1 L3930.2 695.3 L3938.8 695.1 L3947.0 689.2 L3950.0 690.1 L3957.6 698.7 L3958.0 702.1 L3965.1 708.5 L3966.8 697.6 L3971.7 698.8 L3978.0 704.7 L3983.3 699.2 L3987.3 690.6 L3996.5 690.4 L4011.5 697.1 L4006.4 675.0 L4007.1 652.4 L4009.7 641.0 L3996.0 616.0 L3989.4 609.1 L3987.2 599.4 L3975.5 587.0 L3968.5 592.4 L3960.8 588.1 L3950.6 587.3 L3936.9 580.9 L3934.4 577.3 L3936.1 575.4 L3948.3 574.4 L3943.8 564.6 L3941.5 552.8 L3944.3 543.6 L3950.6 536.3 L3953.0 537.1 L3961.9 549.7 L3981.2 562.6 L3988.7 564.7 L3991.3 561.9 L3990.1 558.4 L3979.9 552.7 L3977.0 545.1 L3988.5 532.8 L3996.7 529.2 L3995.8 524.7 L3979.2 512.6 L3960.5 506.0 L3953.6 508.0 L3946.7 512.8 L3941.0 513.1 L3926.1 488.8 L3926.7 486.3 L3936.3 483.7 L3938.4 480.6 L3938.8 474.0 L3931.3 462.6 L3933.3 460.7 L3963.8 475.8 L3968.5 475.1 L3969.6 473.2 L3971.2 463.7 L3968.2 454.8 L3962.2 449.7 L3938.6 437.5 L3941.8 432.8 L3953.9 434.9 L3960.9 432.2 L3963.2 427.6 L3961.9 421.8 L3956.2 418.6 L3939.3 414.5 L3934.5 420.9 L3933.1 435.3 L3925.9 437.9 L3921.7 436.6 L3918.5 431.1 L3925.3 408.5 L3918.6 398.5 L3902.8 396.3 L3898.5 391.8 L3896.6 383.4 L3890.4 380.1 L3880.3 380.7 L3871.9 383.9 L3870.6 381.2 L3871.8 365.7 L3868.9 363.9 L3862.0 364.3 L3841.8 356.6 L3837.3 350.7 L3834.7 339.0 L3829.8 337.8 L3820.3 343.0 L3812.4 355.5 L3811.2 361.3 L3822.0 369.7 L3818.8 380.0 L3809.7 385.7 L3794.2 388.0 L3790.1 392.8 L3796.7 395.6 L3809.2 396.1 L3808.5 408.6 L3804.2 412.0 L3800.4 418.9 L3752.6 433.7 L3746.5 431.1 L3746.2 434.3 L3738.4 432.1 L3735.0 426.6 L3726.8 427.9 L3719.0 424.1 L3713.6 416.0 L3707.6 413.8 L3705.4 410.9 L3694.0 410.5 L3678.3 415.6 L3671.2 426.8 L3666.4 423.6 L3666.1 418.7 L3658.9 418.6 L3652.9 442.7 L3650.0 437.4 L3639.6 427.2 L3635.1 418.4 L3603.7 386.8 L3552.9 349.1 L3541.9 338.8 L3538.2 326.1 L3539.8 312.9 L3537.8 301.8 L3562.5 288.4 L3562.6 271.1 L3531.1 265.7 L3533.7 260.7 L3533.4 250.8 L3525.4 254.4 L3517.1 242.8 L3517.3 226.1 L3498.3 198.3 L3490.7 193.3 L3481.5 193.9 L3483.2 186.3 L3489.4 177.7 L3485.9 175.1 L3481.7 179.6 L3477.7 180.0 L3472.2 161.9 L3464.9 155.2 L3471.6 148.7 L3483.0 143.4 L3486.4 139.8 L3489.6 133.9 L3488.7 129.7 L3493.4 124.3 L3498.7 111.2 L3491.9 95.9 L3490.4 66.4 L3482.2 62.1 L3452.3 54.6 L3437.1 60.0 L3367.7 59.6 L3373.9 52.2 L3373.5 34.1 L3384.4 30.1 L3393.9 18.4 L3393.8 15.9 L3380.6 12.1 L3374.7 7.7 L3368.9 1.1 L3362.5 -13.4 L3357.2 -20.4 L3351.2 -21.8 L3341.0 -15.6 L3327.0 -33.5 L3313.8 -43.4 L3309.1 -62.9 L3301.2 -74.1 L3296.9 -86.7 L3310.9 -109.8 L3315.1 -113.1 L3312.8 -120.7 L3310.5 -122.4 L3301.6 -115.8 L3296.9 -118.7 L3287.8 -99.7 L3285.2 -98.6 L3282.9 -102.1 L3282.4 -106.8 L3285.3 -113.9 L3282.0 -119.4 L3280.3 -131.9 L3288.0 -140.8 L3295.7 -138.6 L3303.6 -139.9 L3308.5 -156.9 L3302.4 -164.5 L3293.7 -154.8 L3256.7 -158.8 L3252.3 -167.4 L3241.2 -174.1 L3238.2 -178.6 L3240.4 -193.8 L3248.5 -201.1 L3239.8 -205.0 L3232.7 -196.1 L3227.8 -199.5 L3227.3 -204.8 L3231.2 -210.1 L3231.8 -214.8 L3230.8 -227.0 L3222.0 -228.8 L3214.1 -228.0 L3209.3 -230.1 L3201.6 -228.2 L3194.3 -229.4 L3189.1 -234.3 L3193.1 -233.7 L3196.3 -235.8 L3202.5 -241.8 L3204.1 -248.3 L3213.7 -254.4 L3214.4 -259.4 L3210.6 -264.8 L3211.7 -267.5 L3209.3 -276.0 L3211.5 -285.4 L3229.8 -301.0 L3230.7 -306.8 L3234.4 -308.8 L3232.5 -311.5 L3236.1 -318.2 L3233.8 -322.7 L3229.1 -323.7 L3224.9 -334.6 L3225.8 -337.5 L3234.9 -345.3 L3234.4 -351.1 L3232.3 -354.0 L3234.8 -356.8 L3233.3 -360.7 L3239.3 -365.9 L3235.2 -371.1 L3237.7 -374.6 L3237.6 -378.1 L3233.8 -380.0 L3236.0 -383.8 L3222.5 -392.4 L3226.3 -396.5 L3221.2 -401.9 L3220.4 -409.0 L3235.0 -412.8 L3235.4 -416.0 L3241.1 -423.0 L3238.2 -431.1 L3227.9 -448.1 L3229.2 -453.2 L3227.3 -461.1 L3229.1 -465.2 L3240.8 -471.9 L3235.8 -484.4 L3232.8 -499.1 L3228.1 -507.0 L3229.9 -507.5 L3229.0 -537.5 L3237.0 -568.1 L3213.5 -581.9 L3209.0 -572.4 L3203.4 -566.8 L3192.0 -560.5 L3172.3 -557.8 L3167.3 -555.5 L3164.5 -552.6 L3166.7 -547.4 L3158.9 -540.2 L3142.5 -545.0 L3120.3 -506.6 L3118.5 -508.0 L3117.4 -519.5 L3124.5 -529.0 L3135.5 -550.8 L3143.7 -548.4 L3163.4 -583.2 L3175.6 -691.1 L3168.8 -698.7 L3161.4 -712.8 L3152.5 -719.5 L3144.6 -729.0 L3126.1 -760.8 L3113.9 -767.8 L3109.8 -765.8 L3099.0 -776.2 L3095.1 -774.5 L3090.0 -783.8 L3085.7 -805.3 L3084.0 -805.9 L3083.3 -820.1 L3078.9 -826.5 L3073.0 -829.8 L3078.2 -834.8 L3070.1 -846.5 L3068.3 -845.3 L3055.4 -855.9 L3047.5 -880.6 L3002.3 -891.1 L3003.1 -894.9 L3000.0 -896.0 L2939.4 -915.8 L2915.5 -921.5 L2905.9 -916.9 L2906.1 -912.4 L2890.0 -903.7 L2845.0 -884.4 L2840.7 -872.7 L2840.0 -860.8 L2824.6 -861.1 L2807.2 -851.0 L2805.1 -847.6 L2805.6 -842.5 L2799.2 -838.8 L2808.1 -817.5 L2804.4 -815.7 L2806.1 -811.1 L2795.5 -799.9 L2792.3 -787.3 L2794.4 -778.0 L2806.1 -763.7 L2805.9 -759.8 L2812.9 -758.9 L2815.6 -752.9 L2821.2 -753.7 L2824.8 -756.5 L2834.3 -748.7 L2836.5 -744.2 L2833.1 -740.8 L2833.2 -733.8 L2841.0 -726.2 L2846.1 -729.7 L2848.7 -725.5 L2852.1 -723.9 L2854.9 -717.1 L2852.5 -715.2 L2850.7 -719.9 L2819.7 -719.6 L2818.6 -724.3 L2793.3 -745.2 L2774.6 -753.5 L2786.9 -770.0 L2786.5 -772.3 L2771.1 -795.5 L2768.3 -802.0 L2765.3 -822.6 L2744.7 -859.8 L2733.3 -866.5 L2686.0 -853.1 L2694.5 -844.7 L2710.4 -838.2 L2721.4 -831.2 L2731.2 -818.1 L2734.4 -791.2 L2733.5 -779.3 L2740.7 -766.9 L2737.6 -755.1 L2746.7 -726.5 L2715.1 -744.3 L2708.7 -744.1 L2696.8 -738.0 L2683.8 -744.9 L2669.2 -747.5 L2629.4 -720.7 L2617.3 -741.2 L2601.4 -758.7 L2555.1 -789.5 L2491.8 -753.3 L2478.7 -741.1 L2457.2 -729.6 L2437.2 -714.4 L2420.6 -698.4 L2392.0 -683.0 L2341.2 -633.7 L2301.9 -610.2 L2283.1 -596.0 L2277.0 -593.6 L2212.8 -587.6 L2180.1 -576.5 L2147.3 -557.4 L2148.4 -547.7 L2133.3 -529.4 L2125.7 -523.7 L2110.2 -499.6 L2093.7 -488.2 L2089.9 -483.6 L2089.3 -479.8 L2092.1 -475.6 L2088.5 -467.7 L2090.4 -463.4 L2086.9 -459.6 L2079.8 -455.6 L2067.9 -452.5 L2056.2 -452.6 L2050.9 -454.4 L2050.0 -459.2 L2054.2 -467.4 L2053.5 -495.5 L2049.6 -500.7 L2052.6 -507.0 L2050.6 -510.0 L2051.2 -516.1 L2045.4 -526.6 L2038.8 -529.5 L2035.0 -528.3 L2033.3 -530.4 L2021.5 -531.4 L2019.5 -535.0 L2011.1 -541.2 L2007.9 -539.6 L2004.0 -540.3 L2001.8 -543.0 L1997.4 -542.3 L1986.2 -545.7 L1987.0 -553.4 L1983.9 -558.4 L1977.4 -557.8 L1972.3 -566.1 L1967.0 -567.6 L1963.6 -577.4 L1956.6 -579.7 L1956.3 -592.3 L1950.0 -597.9 L1945.3 -598.3 L1943.8 -602.7 L1939.1 -603.5 L1938.0 -609.3 L1930.7 -616.3 L1931.8 -622.5 L1928.9 -626.9 L1929.3 -635.2 L1924.0 -636.3 L1918.9 -641.9 L1911.8 -642.6 L1909.5 -647.2 L1914.3 -648.5 L1913.7 -652.6 L1905.9 -649.6 L1902.4 -651.1 L1906.8 -661.5 L1906.4 -665.3 L1903.8 -665.5 L1898.7 -662.0 L1894.9 -666.0 L1894.0 -669.8 L1896.1 -674.1 L1918.5 -673.6 L1940.7 -683.9 L1946.8 -690.8 L1951.7 -703.6 L1944.3 -715.7 L1944.7 -721.5 L1941.7 -725.9 L1936.7 -726.7 L1932.5 -724.9 L1922.5 -714.6 L1918.5 -712.9 L1914.6 -712.8 L1907.1 -717.4 L1898.0 -735.0 L1898.3 -741.5 L1901.0 -744.3 L1901.9 -749.0 L1896.0 -759.0 L1894.4 -768.1 L1899.5 -795.8 L1904.8 -811.2 L1911.5 -822.6 L1927.6 -834.9 L1933.8 -836.0 L1944.1 -833.8 L1950.3 -834.7 L1964.3 -849.7 L1973.1 -846.0 L1979.4 -834.4 L1980.6 -817.9 L1976.7 -798.0 L1978.0 -792.1 L1989.3 -782.2 L1999.7 -779.0 L2005.4 -782.3 L2011.3 -791.1 L2016.3 -802.9 L2022.5 -826.7 L2037.5 -847.6 L2066.0 -866.1 L2087.4 -876.2 L2104.7 -879.5 L2109.6 -877.4 L2119.0 -857.8 L2121.0 -842.3 L2136.8 -828.2 L2140.7 -828.6 L2148.5 -838.6 L2155.7 -859.9 L2159.3 -862.8 L2171.6 -863.1 L2178.7 -852.0 L2183.6 -850.2 L2188.7 -852.6 L2192.5 -858.1 L2193.5 -869.8 L2186.8 -875.5 L2181.7 -887.7 L2187.5 -898.3 L2185.9 -903.3 L2187.7 -912.6 L2200.8 -933.7 L2194.9 -949.6 L2198.6 -965.8 L2192.6 -976.6 L2183.7 -1021.2 L2176.3 -1042.6 L2167.7 -1048.9 L2160.2 -1061.3 L2162.0 -1066.0 L2167.5 -1066.8 L2167.5 -1076.6 L2170.1 -1084.7 L2174.2 -1088.0 L2181.0 -1087.7 L2184.6 -1091.0 L2186.5 -1100.7 L2184.3 -1117.3 L2169.0 -1118.0 L2160.5 -1121.5 L2154.8 -1126.8 L2148.5 -1124.7 L2130.4 -1131.4 L2129.5 -1151.4 L2127.2 -1156.5 L2113.8 -1163.3 L2091.6 -1170.6 L2088.8 -1172.8 L2086.1 -1180.9 L2074.5 -1185.9 L2072.9 -1189.0 L2080.5 -1225.9 L2077.8 -1237.0 L2079.6 -1250.5 L2084.4 -1258.4 L2084.5 -1264.3 L2088.5 -1268.8 L2094.8 -1282.2 L2095.7 -1288.0 L2094.5 -1293.1 L2087.9 -1300.6 L2087.2 -1305.0 L2094.8 -1315.0 L2102.5 -1317.8 L2102.8 -1323.0 L2086.7 -1334.4 L2088.3 -1347.1 L2079.0 -1348.2 L2071.8 -1355.4 L2071.7 -1359.3 L2060.8 -1358.0 L2045.5 -1362.1 L2033.8 -1376.3 L2021.7 -1383.0 L2006.4 -1385.4 L1993.5 -1391.3 L1984.7 -1388.1 L1979.5 -1393.1 L1978.5 -1398.7 L1965.6 -1410.9 L1935.7 -1429.4 L1930.1 -1429.4 L1922.0 -1425.5 L1918.9 -1426.5 L1910.8 -1435.0 L1911.1 -1447.7 L1905.8 -1452.0 L1903.6 -1457.2 L1900.1 -1457.6 L1897.1 -1451.5 L1893.0 -1450.6 L1895.6 -1470.8 L1893.2 -1476.7 L1888.4 -1475.5 L1885.1 -1478.9 L1891.3 -1484.2 L1886.9 -1492.1 L1889.1 -1498.8 L1888.2 -1505.7 L1884.0 -1513.7 L1872.5 -1518.6 L1875.7 -1524.1 L1876.0 -1534.0 L1885.7 -1546.6 L1893.5 -1550.5 L1895.8 -1562.6 L1894.5 -1567.9 L1896.3 -1574.5 L1894.5 -1579.1 L1887.4 -1582.2 L1885.6 -1596.5 L1888.4 -1601.7 L1883.9 -1615.4 L1877.6 -1620.5 L1872.5 -1622.0 L1885.9 -1631.7 L1886.0 -1637.5 L1878.8 -1643.1 L1877.7 -1646.6 L1888.0 -1656.7 L1876.1 -1654.9 L1873.8 -1656.4 L1868.9 -1651.0 L1866.4 -1652.9 L1869.3 -1665.0 L1871.0 -1665.3 L1872.7 -1660.4 L1875.3 -1659.9 L1881.7 -1668.5 L1880.9 -1672.9 L1883.9 -1677.1 L1880.5 -1679.0 L1880.5 -1682.0 L1882.4 -1685.5 L1891.4 -1692.5 L1893.9 -1701.4 L1890.5 -1710.4 L1881.0 -1716.6 L1876.3 -1724.9 L1876.5 -1728.4 L1870.8 -1728.8 L1860.0 -1733.3 L1854.2 -1740.7 L1838.8 -1750.5 L1834.0 -1756.6 L1834.1 -1761.3 L1802.4 -1772.6 L1800.8 -1779.2 L1795.4 -1780.0 L1790.2 -1785.6 L1788.5 -1792.6 L1780.5 -1790.9 L1775.2 -1793.1 L1772.8 -1799.1 L1765.3 -1798.3 L1747.3 -1806.0 L1742.1 -1805.0 L1739.1 -1818.2 L1735.2 -1818.3 L1732.4 -1822.2 L1727.9 -1820.7 L1726.2 -1822.5 L1721.2 -1837.5 L1720.9 -1848.8 L1713.9 -1854.5 L1712.2 -1863.1 L1708.1 -1866.1 L1707.0 -1870.7 L1704.6 -1872.7 L1696.6 -1873.7 L1690.8 -1885.1 L1682.5 -1882.4 L1674.7 -1892.7 L1671.7 -1903.4 L1681.9 -1939.6 L1677.8 -1954.9 L1683.0 -1976.8 L1682.1 -1988.1 L1686.2 -2008.8 L1683.6 -2024.9 L1673.6 -2039.7 L1669.2 -2054.0 L1640.3 -2077.8 L1626.6 -2093.8 L1619.3 -2114.6 L1610.9 -2124.9 L1601.1 -2132.7 L1592.1 -2135.4 L1589.7 -2138.3 L1584.4 -2147.6 L1586.5 -2154.5 L1585.5 -2164.0 L1580.9 -2170.5 L1566.4 -2173.2 L1564.9 -2177.5 L1557.1 -2186.7 L1545.5 -2195.0 L1549.6 -2227.7 L1547.7 -2235.8 L1538.7 -2242.5 L1526.8 -2255.5 L1514.2 -2261.8 L1513.1 -2267.0 L1499.9 -2279.4 L1496.1 -2285.4 L1483.8 -2287.0 L1468.7 -2296.0 L1428.4 -2311.7 L1431.6 -2324.7 L1429.7 -2332.0 L1430.3 -2355.5 L1429.4 -2359.1 L1419.7 -2368.5 L1362.2 -2376.3 L1319.6 -2386.3 L1295.7 -2388.7 L1289.7 -2392.7 L1287.0 -2392.4 L1257.3 -2363.9 L1254.2 -2360.0 L1249.5 -2345.6 L1209.0 -2304.9 L1190.9 -2289.3 L1184.4 -2263.7 L1142.0 -2225.8 L1116.9 -2200.6 L1093.7 -2194.6 L1078.4 -2194.3 L1070.1 -2191.2 L1065.6 -2195.4 L1054.4 -2198.7 L1044.7 -2205.2 L1007.6 -2213.8 L1002.0 -2209.4 L1002.0 -2223.2 L998.8 -2238.3 L1004.3 -2251.2 L1002.2 -2274.9 L1004.2 -2290.7 L1000.3 -2312.6 L992.6 -2325.2 L992.3 -2338.4 L985.8 -2350.4 L989.0 -2356.1 L987.4 -2362.8 L991.1 -2372.4 L999.0 -2381.2 L1006.9 -2383.2 L1013.4 -2387.4 L1020.4 -2384.9 L1044.1 -2385.6 L1049.5 -2382.9 L1056.1 -2376.2 L1074.2 -2405.3 L1079.9 -2405.7 L1086.8 -2409.2 L1112.3 -2431.5 L1113.2 -2437.4 L1099.4 -2455.0 L1086.5 -2475.9 L1083.4 -2475.8 L1081.4 -2480.8 L1081.7 -2483.4 L1085.4 -2486.1 L1082.2 -2494.7 L1084.6 -2499.9 L1087.6 -2496.9 L1087.6 -2491.8 L1092.8 -2489.8 L1099.6 -2497.6 L1108.2 -2500.6 L1109.6 -2506.8 L1114.9 -2506.3 L1117.7 -2495.4 L1137.7 -2473.0 L1139.0 -2464.1 L1143.0 -2457.2 L1143.5 -2460.0 L1142.7 -2473.0 L1133.5 -2491.6 L1130.2 -2506.8 L1133.9 -2536.2 L1130.8 -2544.1 L1119.3 -2541.9 L1105.1 -2536.4 L1103.5 -2537.5 L1102.5 -2547.0 L1111.5 -2547.9 L1115.8 -2553.1 L1115.8 -2557.3 L1110.8 -2560.3 L1107.9 -2558.9 L1105.5 -2552.9 L1095.8 -2559.0 L1087.4 -2556.4 L1085.8 -2553.6 L1079.2 -2556.5 L1078.7 -2564.7 L1075.5 -2565.8 L1068.3 -2559.1 L1060.7 -2556.8 L1058.2 -2562.1 L1060.0 -2566.8 L1058.9 -2568.3 L1052.9 -2569.4 L1047.1 -2575.0 L1034.5 -2579.5 L1032.1 -2582.2 L1029.2 -2592.2 L1020.5 -2597.3 L1017.0 -2593.0 L1006.9 -2589.0 L987.7 -2589.2 L979.9 -2581.4 L977.0 -2570.9 L974.9 -2569.6 L970.0 -2569.9 L966.3 -2573.6 L960.2 -2570.6 L961.6 -2563.3 L951.1 -2551.4 L948.2 -2551.1 L943.3 -2554.3 L940.0 -2552.1 L939.3 -2549.5 L946.4 -2544.9 L946.6 -2542.6 L942.2 -2537.4 L934.4 -2539.8 L932.0 -2544.7 L927.9 -2546.4 L915.2 -2545.3 L908.9 -2548.3 L899.9 -2546.0 L891.3 -2553.1 L882.3 -2556.8 L879.5 -2556.6 L877.5 -2552.3 L871.7 -2557.2 L866.6 -2553.1 L865.7 -2546.1 L858.9 -2540.1 L852.9 -2538.2 L846.4 -2529.3 L835.7 -2526.3 L823.5 -2517.0 L819.3 -2517.5 L812.9 -2528.8 L809.7 -2530.2 L802.5 -2527.7 L796.6 -2516.8 L793.6 -2513.6 L790.6 -2513.3 L786.3 -2518.3 L792.1 -2528.7 L790.3 -2531.2 L784.3 -2526.1 L777.0 -2523.9 L771.7 -2528.1 L768.8 -2517.9 L763.7 -2517.5 L762.3 -2520.5 L758.8 -2520.5 L752.6 -2509.5 L758.5 -2504.5 L758.0 -2501.2 L755.5 -2500.5 L730.6 -2509.1 L718.7 -2515.3 L714.6 -2519.6 L706.7 -2518.6 L691.0 -2507.8 L686.5 -2509.5 L677.5 -2509.2 L670.5 -2505.6 L666.2 -2498.4 L667.5 -2487.5 L664.4 -2473.3 L646.4 -2468.1 L637.1 -2469.8 L613.1 -2461.7 L611.4 -2457.4 L605.2 -2451.5 L604.5 -2437.8 L607.1 -2426.7 L601.9 -2419.6 L604.4 -2404.2 L603.3 -2393.1 L606.7 -2390.0 L596.4 -2370.5 L580.5 -2370.8 L555.7 -2364.4 L547.1 -2356.3 L522.2 -2341.4 L507.8 -2337.9 L502.3 -2328.5 L503.4 -2319.6 L492.7 -2310.5 L490.6 -2307.1 L490.5 -2300.7 L483.4 -2293.4 L479.1 -2283.1 L473.7 -2281.5 L469.2 -2275.0 L465.8 -2249.1 L461.4 -2244.8 L461.7 -2236.7 L465.1 -2226.5 L461.1 -2219.7 L463.7 -2214.5 L484.9 -2204.5 L499.8 -2189.0 L503.8 -2188.2 L506.7 -2181.7 L512.5 -2181.2 L516.9 -2165.2 L515.6 -2159.1 L520.2 -2146.4 L515.0 -2130.0 L517.6 -2127.5 L516.3 -2125.9 L510.1 -2127.2 L506.1 -2116.2 L501.9 -2115.8 L492.8 -2105.0 L493.1 -2094.1 L489.0 -2081.8 L486.1 -2081.6 L481.7 -2084.9 L474.6 -2082.5 L466.1 -2084.0 L461.4 -2081.8 L456.5 -2075.0 L447.4 -2071.6 L447.2 -2063.1 L439.7 -2049.2 L443.5 -2037.7 L442.7 -2034.1 L451.0 -2020.6 L451.4 -2015.2 L449.3 -2011.7 L439.9 -2005.3 L441.2 -1993.0 L432.3 -1976.7 L429.7 -1959.6 L418.5 -1947.1 L417.0 -1931.9 L412.6 -1920.6 L393.9 -1887.3 L387.3 -1902.0 L373.1 -1906.6 L365.8 -1904.1 L350.4 -1907.5 L326.9 -1906.7 L314.6 -1901.2 L304.7 -1900.3 L282.4 -1905.9 L279.1 -1900.7 L246.9 -1877.4 L228.0 -1884.4 L216.8 -1876.4 L196.9 -1884.0 L186.3 -1890.5 L178.8 -1899.1 L171.2 -1899.1 L158.9 -1890.5 L152.3 -1889.7 L142.9 -1895.9 L135.9 -1898.1 L120.5 -1896.4 L116.3 -1893.0 L112.0 -1882.7 L108.3 -1878.7 L92.4 -1877.6 L84.0 -1867.8 L73.3 -1866.0 L47.7 -1853.7 L36.3 -1857.5 L19.8 -1855.5 L13.5 -1853.3 L1.5 -1843.1 L-27.4 -1847.1 L-59.8 -1842.4 L-74.0 -1833.2 L-85.4 -1821.4 L-96.8 -1813.2 L-117.8 -1808.8 L-131.8 -1787.9 L-135.5 -1786.3 L-143.6 -1790.1 L-150.2 -1789.6 L-149.7 -1774.5 L-155.2 -1766.3 L-163.6 -1759.3 L-171.5 -1760.0 L-182.0 -1755.8 L-189.2 -1755.8 L-194.1 -1752.5 L-202.6 -1752.9 L-204.8 -1747.9 L-203.0 -1739.3 L-209.8 -1736.0 L-227.6 -1721.0 L-234.2 -1711.7 L-237.5 -1699.9 L-242.8 -1692.3 L-241.3 -1684.8 L-247.8 -1659.0 L-245.2 -1647.9 L-235.9 -1632.4 L-226.8 -1623.3 L-222.6 -1610.3 L-208.6 -1591.9 L-199.9 -1588.9 L-199.8 -1597.5 L-191.3 -1620.4 L-184.6 -1621.0 L-172.2 -1615.6 L-161.7 -1623.4 L-155.7 -1624.7 L-154.8 -1622.3 L-157.1 -1614.7 L-154.4 -1612.8 L-148.4 -1617.4 L-143.3 -1628.5 L-139.7 -1629.2 L-135.0 -1624.0 L-131.1 -1611.3 L-120.6 -1589.9 L-115.6 -1586.9 L-100.5 -1587.7 L-95.6 -1581.3 L-84.1 -1575.2 L-83.2 -1573.0 L-84.6 -1560.7 L-115.0 -1542.5 L-129.4 -1509.7 L-129.2 -1505.0 L-137.6 -1503.7 L-141.9 -1501.0 L-148.7 -1491.6 L-155.4 -1475.2 L-178.6 -1464.6 L-182.6 -1452.7 L-181.5 -1438.1 L-191.1 -1429.0 L-192.8 -1424.5 L-190.9 -1410.3 L-178.2 -1396.9 L-168.8 -1394.5 L-157.8 -1395.7 L-141.0 -1406.7 L-131.2 -1402.4 L-130.8 -1392.4 L-123.6 -1375.5 L-121.0 -1362.4 L-111.9 -1357.6 L-110.1 -1353.4 L-112.0 -1343.1 L-110.5 -1334.0 L-112.5 -1329.8 L-96.3 -1320.7 L-94.8 -1308.1 L-86.9 -1291.8 L-88.9 -1282.2 L-86.1 -1272.4 L-76.1 -1268.3 L-74.2 -1265.6 L-74.4 -1262.0 L-82.2 -1251.7 L-89.4 -1247.6 L-81.5 -1224.2 L-83.0 -1208.4 L-87.5 -1197.6 L-90.8 -1193.8 L-94.8 -1192.8 L-116.5 -1194.0 L-120.2 -1191.6 L-119.4 -1187.0 L-108.1 -1172.6 L-108.6 -1164.9 L-110.2 -1168.9 L-112.9 -1169.8 L-115.0 -1167.4 L-125.0 -1166.7 L-129.8 -1163.0 L-133.6 -1163.1 L-135.9 -1175.3 L-145.0 -1185.5 L-153.0 -1184.4 L-159.8 -1189.5 L-164.0 -1188.9 L-170.0 -1176.8 L-173.2 -1174.8 L-178.3 -1174.8 L-181.9 -1181.4 L-189.5 -1187.3 L-201.5 -1182.2 L-199.9 -1188.0 L-202.4 -1192.7 L-216.6 -1193.2 L-216.7 -1195.6 L-213.5 -1198.9 L-214.2 -1202.3 L-226.5 -1200.4 L-230.6 -1202.1 L-231.8 -1209.2 L-238.8 -1218.9 L-240.4 -1225.7 L-245.5 -1230.0 L-249.5 -1241.4 L-257.8 -1242.1 L-264.1 -1238.8 L-273.9 -1237.6 L-279.2 -1233.5 L-298.8 -1226.9 L-304.7 -1215.8 L-315.5 -1208.3 L-315.2 -1204.1 L-312.5 -1201.6 L-326.0 -1193.1 L-331.5 -1186.6 L-335.4 -1176.8 L-326.4 -1159.3 L-319.8 -1127.6 L-313.2 -1107.1 L-317.0 -1100.4 L-308.0 -1088.6 L-347.5 -1048.1 L-349.0 -1027.3 L-338.5 -1013.4 L-339.5 -1010.6 L-354.0 -1002.1 L-352.8 -997.3 L-354.0 -996.3 L-361.5 -997.0 L-367.1 -994.1 L-367.5 -1002.9 L-373.4 -1001.5 L-382.6 -992.2 L-386.2 -993.8 L-389.0 -992.5 L-389.3 -999.3 L-384.0 -1007.8 L-386.3 -1011.5 L-390.0 -1012.9 L-415.6 -1000.1 L-424.6 -1000.9 L-438.1 -1007.2 L-445.6 -1016.6 L-445.6 -1020.4 L-443.0 -1023.3 L-433.0 -1025.0 L-418.7 -1021.1 L-416.5 -1024.6 L-421.3 -1038.2 L-424.2 -1058.8 L-437.8 -1078.5 L-443.3 -1077.1 L-453.1 -1069.7 L-460.2 -1072.3 L-468.0 -1071.1 L-476.3 -1072.4 L-481.6 -1067.2 L-490.3 -1063.2 L-510.6 -1061.9 L-543.3 -1069.7 L-550.3 -1067.9 L-579.4 -1073.3 L-601.1 -1084.5 L-625.8 -1081.3 L-651.8 -1066.9 L-706.2 -1058.5 L-717.9 -1051.2 L-737.9 -1049.7 L-782.1 -1032.8 L-821.0 -1024.4 L-874.7 -998.9 L-892.2 -986.8 L-914.0 -976.7 L-934.6 -953.6 L-987.8 -923.6 L-999.8 -932.2 L-1005.8 -928.9 L-1010.6 -933.6 L-1021.4 -931.2 L-1035.8 -936.9 L-1038.2 -940.6 L-1043.9 -944.0 L-1054.0 -946.2 L-1059.3 -944.7 L-1067.3 -938.6 L-1074.2 -936.3 L-1072.9 -930.1 L-1079.8 -930.4 L-1081.6 -927.5 L-1073.4 -912.8 L-1059.3 -908.2 L-1054.9 -900.3 L-1053.1 -889.3 L-1057.3 -888.8 L-1061.6 -899.5 L-1067.6 -898.7 L-1069.7 -896.0 L-1070.6 -874.5 L-1075.2 -868.0 L-1084.8 -861.5 L-1083.0 -856.2 L-1086.5 -846.4 L-1090.6 -851.0 L-1094.4 -851.6 L-1098.7 -846.7 L-1102.4 -845.4 L-1101.3 -839.4 L-1110.4 -827.0 L-1107.8 -822.8 L-1108.0 -817.9 L-1112.6 -816.1 L-1127.3 -819.0 L-1130.9 -818.0 L-1121.8 -795.7 L-1129.5 -777.5 L-1128.4 -753.8 L-1133.5 -741.1 L-1139.3 -738.8 L-1147.1 -746.2 L-1151.6 -746.2 L-1159.9 -733.8 L-1163.0 -733.1 L-1171.4 -736.2 L-1173.8 -729.7 L-1180.7 -725.0 L-1188.0 -733.3 L-1197.5 -732.3 L-1198.3 -728.8 L-1203.7 -723.5 L-1204.7 -716.4 L-1208.9 -710.7 L-1219.5 -707.1 L-1220.8 -699.3 L-1227.3 -686.2 L-1225.4 -676.1 L-1220.6 -671.5 L-1220.5 -666.3 L-1229.0 -650.4 L-1227.0 -647.9 L-1217.2 -644.9 L-1210.2 -638.3 L-1209.5 -633.7 L-1213.6 -625.4 L-1220.0 -623.7 L-1219.8 -613.4 L-1221.4 -609.8 Z"/>
+      <path class="mapa-ciudad" d="M191.5 261.9 L192.1 255.8 L192.1 248.9 L190.6 240.7 L189.2 234.1 L188.5 229.2 L190.3 222.8 L191.7 215.4 L192.1 204.8 L187.0 190.7 L179.2 171.7 L173.0 155.3 L173.7 146.1 L183.4 144.6 L194.8 144.2 L210.7 144.3 L223.7 144.5 L238.9 144.8 L297.9 147.9 L353.7 151.5 L405.6 159.0 L407.8 168.3 L411.6 180.3 L415.0 191.4 L418.4 202.1 L421.9 214.8 L425.7 227.2 L428.1 237.2 L427.7 245.5 L425.4 255.0 L422.4 267.4 L420.3 284.5 L419.2 298.1 L417.1 309.5 L411.6 315.2 L403.6 322.4 L395.2 329.5 L387.1 338.5 L380.4 348.5 L374.5 359.6 L369.6 369.3 L363.9 378.5 L357.2 386.5 L349.5 393.5 L343.7 398.2 L336.1 400.6 L327.3 399.8 L315.9 397.7 L304.5 391.2 L292.2 380.2 L282.6 370.2 L271.6 358.5 L265.3 352.0 L257.7 344.0 L254.5 340.6 L250.3 335.9 L246.2 331.6 L242.3 327.3 L237.4 322.3 L232.6 317.2 L228.5 312.9 L226.1 309.0 L224.9 304.9 L223.8 298.8 L219.4 294.9 L210.5 292.4 L196.6 293.4 L188.7 291.8 L185.4 288.4 L188.3 281.8 L189.5 274.4 L190.6 267.6 Z"/>
+      <g class="mapa-rio"><path d="M218.7 490.9 L181.0 536.8 L149.7 551.6 L142.5 561.2 L134.6 583.7 L131.8 602.8 L127.0 616.2 L107.2 656.8 L94.5 690.5 L92.4 704.1 L92.1 732.1 L89.5 763.7 L84.0 785.9 L77.6 803.9 L69.2 823.5 L46.5 848.1 L31.0 860.1 L21.2 871.3 L-3.6 907.2 L-15.6 931.9 L-26.6 971.4 L-29.4 1010.6 L-25.1 1031.9 L-8.4 1098.0 L0.4 1122.0 L18.3 1188.6 L28.1 1217.5 L26.9 1248.2 L22.2 1282.0 L26.0 1303.3 L22.6 1343.1 L10.4 1388.4 L-3.4 1409.5 L-27.2 1437.4 L-54.4 1461.4 L-88.6 1479.2 L-149.0 1498.3 L-164.8 1507.4 L-174.3 1518.0 L-182.0 1534.3 L-188.7 1559.7 L-202.5 1637.0 L-218.7 1700.8 L-236.4 1747.4 L-253.6 1803.6 L-265.6 1834.8 L-282.3 1865.5 L-296.1 1885.7 L-320.0 1909.7 L-352.5 1934.7 L-386.9 1954.4 L-415.5 1967.4 L-432.7 1969.8 L-447.1 1966.9 L-461.4 1960.1 L-472.9 1947.2 L-495.3 1909.2 L-503.9 1905.0 L-522.1 1903.5 L-578.0 1921.2 L-639.6 1934.7 L-658.1 1937.2 L-674.6 1945.3 L-691.3 1961.4 L-698.3 1975.4 L-704.3 2003.9 L-723.5 2115.8 L-726.6 2154.1 L-725.7 2169.8 L-719.9 2198.4 L-707.7 2226.6 L-687.5 2260.1 L-684.3 2271.7 L-683.3 2280.0 L-685.2 2294.3 L-690.7 2304.0"/><path d="M265.3 337.1 L282.9 354.9 L281.5 411.6 L285.1 435.0 L278.2 441.7 L275.1 454.3 L264.5 469.9 L244.6 477.5 L218.7 490.9"/><path d="M239.9 14.8 L245.6 32.0 L247.1 44.3 L246.3 72.9 L225.9 178.5 L201.7 284.6 L202.0 353.4 L200.6 385.1 L201.9 401.4 L209.8 423.3 L222.1 447.5 L224.7 458.5 L224.7 469.2 L218.7 490.9"/><path d="M279.0 100.3 L289.0 106.6 L293.4 111.8 L296.3 122.7 L294.7 135.0 L285.8 156.4 L249.5 208.2 L246.3 221.6 L246.8 226.8 L249.9 232.6 L267.5 249.8 L282.5 274.1 L285.4 302.9 L282.9 354.9"/><path d="M787.9 -481.7 L758.5 -481.0 L748.0 -477.4 L739.6 -469.8 L731.2 -457.5 L721.3 -451.9 L712.2 -449.2 L685.8 -459.4 L671.4 -459.2 L650.8 -454.4 L644.0 -450.4 L629.8 -428.1 L628.3 -412.1 L630.2 -403.5 L629.4 -393.1 L621.7 -385.3 L610.7 -381.3 L568.0 -373.8 L538.3 -373.6 L529.8 -372.9 L525.8 -370.1 L523.7 -365.0 L527.0 -356.8 L535.7 -346.3 L547.2 -326.4 L567.2 -310.5 L570.0 -304.0 L569.5 -301.6 L565.1 -298.4 L553.5 -295.1 L537.0 -292.4 L521.5 -287.0 L515.2 -283.0 L491.9 -246.0 L478.7 -235.1 L455.0 -207.9 L442.5 -201.9 L435.4 -201.1 L424.9 -202.1 L410.4 -209.0 L374.3 -207.4 L365.0 -209.6 L342.7 -224.5 L336.1 -226.9 L332.1 -226.5 L328.9 -205.7 L322.5 -193.0 L318.3 -188.2 L300.4 -175.8 L276.0 -146.2 L257.9 -130.0 L251.5 -121.5 L247.7 -110.7 L249.1 -102.0 L256.1 -92.1 L261.8 -88.9 L281.5 -83.1 L297.4 -65.9 L309.5 -50.3 L311.0 -46.2 L310.1 -38.1 L302.7 -30.4 L281.3 -19.0 L273.9 -16.6 L246.8 -14.2 L242.2 -11.4 L239.3 -6.2 L238.7 -1.4 L239.9 14.8"/></g>
+      <text class="mapa-rotulo" x="626" y="441" text-anchor="end">Sevilla · Guadalquivir</text>
+      <text class="mapa-norte" x="20" y="28">N</text>
+    <a class="pin" data-local="0" href="#loc-0" aria-label="San Luis · Macarena">
+      <circle class="pin-halo" cx="293.6" cy="189.0" r="16"/>
+      <circle class="pin-punto" cx="293.6" cy="189.0" r="9"/>
+      <text class="pin-n" x="293.6" y="192.5" text-anchor="middle">1</text>
+      <text class="pin-txt" x="309.6" y="193.0" text-anchor="start">San Luis · Macarena</text>
+    </a>
+    <a class="pin" data-local="1" href="#loc-1" aria-label="Los Remedios">
+      <circle class="pin-halo" cx="242.1" cy="271.3" r="16"/>
+      <circle class="pin-punto" cx="242.1" cy="271.3" r="9"/>
+      <text class="pin-n" x="242.1" y="274.8" text-anchor="middle">2</text>
+      <text class="pin-txt" x="258.1" y="275.3" text-anchor="start">Los Remedios</text>
+    </a>
+    <a class="pin" data-local="2" href="#loc-2" aria-label="Sevilla Este">
+      <circle class="pin-halo" cx="484.2" cy="176.8" r="16"/>
+      <circle class="pin-punto" cx="484.2" cy="176.8" r="9"/>
+      <text class="pin-n" x="484.2" y="180.3" text-anchor="middle">3</text>
+      <text class="pin-txt" x="500.2" y="180.8" text-anchor="start">Sevilla Este</text>
+    </a>
+    <g class="pin pin-pronto" aria-label="Tomares · pronto">
+      <circle class="pin-punto" cx="136.3" cy="287.0" r="8"/>
+      <text class="pin-txt" x="150.3" y="291.0" text-anchor="start">Tomares · pronto</text>
+    </g>
+    </svg>
+    <figcaption class="mono">Pulsa un local para ir a su ficha. Tomares, en camino.</figcaption>
   </figure>
+<!-- MAPA:FIN -->
   <div class="loc-grid">
 
-    <article class="loc" data-local="0">
+    <article class="loc" id="loc-0" data-local="0">
       <p class="loc-barrio">Macarena</p>
       <h3>San&nbsp;Luis</h3>
       <address>
@@ -1847,7 +1994,7 @@
       </div>
     </article>
 
-    <article class="loc" data-local="1">
+    <article class="loc" id="loc-1" data-local="1">
       <p class="loc-barrio">Los Remedios</p>
       <h3>Virgen de&nbsp;Loreto</h3>
       <address>
@@ -1868,7 +2015,7 @@
       </div>
     </article>
 
-    <article class="loc" data-local="2">
+    <article class="loc" id="loc-2" data-local="2">
       <p class="loc-barrio">Sevilla Este</p>
       <h3>Calle&nbsp;Japón</h3>
       <address>
@@ -1891,7 +2038,29 @@
   </div>
 </section>
 
-<div class="zig" aria-hidden="true"></div>
+<!-- ══════════ PRÓXIMAMENTE · TOMARES ══════════ -->
+<section class="tomares" id="tomares" aria-labelledby="tomares-t">
+  <div class="tomares-in tick">
+    <div class="tomares-copy">
+      <p class="eyebrow">Próximamente <em class="pronto">Aljarafe</em></p>
+      <h2 class="big" id="tomares-t">El cuarto,<br>en Tomares</h2>
+      <p class="tomares-lede">Si vives por el Aljarafe, deja de cruzar el río para comer un burrito. Estamos preparando el local: apúntate y te avisamos el día que abramos, con los dos tacos de bienvenida guardados a tu nombre.</p>
+    </div>
+    <div class="tomares-acc">
+      <a class="btn btn-p" href="mailto:orale.padre.food@gmail.com?subject=Avisadme%20cuando%20abra%20Tomares&body=Hola%2C%20avisadme%20cuando%20abra%20el%20local%20de%20Tomares.%0A%0ANombre%3A%0ATel%C3%A9fono%3A">Avísame cuando abra</a>
+      <p class="mono tomares-nota">Se abre tu correo con el aviso ya escrito. Solo tienes que enviarlo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TOMATE · rueda entre secciones ══════════ -->
+<div class="rueda rueda-redondo" aria-hidden="true">
+  <span class="rueda-traza"></span>
+  <svg class="rueda-burro" viewBox="0 0 64 64">
+    <circle class="rueda-cuerpo" cx="32" cy="37" r="22"/>
+    <path class="rueda-pliegue" d="M32 15c-2-6-6-9-12-8 3 3 6 5 8 8M32 15c2-6 6-9 12-8-3 3-6 5-8 8M32 15V8M22 20c-4 2-6 5-7 9"/>
+  </svg>
+</div>
 
 <!-- ══════════ RESERVA ══════════ -->
 <section class="reserva" id="reservar">
@@ -2081,8 +2250,9 @@
 <!-- ══════════ CHAT · TE AYUDAMOS A ELEGIR ══════════ -->
 <button class="chat-lanza" id="chat-lanza" type="button" aria-expanded="false" aria-controls="chat">
   <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M4 5h16v11H9l-5 4Z"/>
-    <path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/>
+    <path d="M7.5 14.5V19a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1v-4.5"/>
+    <path d="M7.5 14.5c-2.3.2-4-1.4-4-3.4 0-1.9 1.5-3.4 3.4-3.4.3-2.4 2.4-4.2 5.1-4.2s4.8 1.8 5.1 4.2c1.9 0 3.4 1.5 3.4 3.4 0 2-1.7 3.6-4 3.4"/>
+    <path d="M7.5 14.5h9M10 17h4"/>
   </svg>
   <span>¿Qué te pido?</span>
 </button>
@@ -2186,12 +2356,12 @@
 </div>
 
 <!-- ══════════ SUBIR ══════════ -->
-<button class="subir" id="subir" type="button" hidden>
-  <span class="visually-hidden">Volver arriba</span>
+<button class="subir" id="subir" type="button" hidden aria-label="Volver arriba">
   <svg viewBox="0 0 24 24" aria-hidden="true">
     <path d="M4.2 17.3 17.3 4.2a4.4 4.4 0 0 1 2.5 2.5L6.7 19.8a4.4 4.4 0 0 1-2.5-2.5Z"/>
     <path d="m7.4 14.9 2.9 2.9M11.3 11l2.9 2.9M15.2 7.1l2.9 2.9"/>
   </svg>
+  <span class="subir-txt mono" aria-hidden="true">Subir</span>
 </button>
 
 <!-- ══════════ BARRA DE PEDIDO (móvil) ══════════ -->
@@ -2202,6 +2372,6 @@
   <a class="bp-sec" href="#carta">Carta</a>
 </div>
 
-<script src="script.js?v=0b9174d0"></script>
+<script src="script.js?v=d746ff73"></script>
 </body>
 </html>

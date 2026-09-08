@@ -19,9 +19,9 @@ PAGINAS = ["index.html", "club.html", "legal.html"]
 VACIOS = {"img","br","meta","link","input","source","path","circle","hr","area","base","col","embed","param","track","wbr"}
 BLOQUE = {"html","head","body","div","section","article","header","footer","nav","main","aside","ul","ol","li","dl","dt","dd",
           "table","thead","tbody","tr","td","th","figure","figcaption","form","fieldset","label","select","option","button","details","summary",
-          "h1","h2","h3","h4","h5","h6","p","blockquote","pre","address","script","style","noscript","template","svg","video","picture","input","textarea","mark"}
+          "h1","h2","h3","h4","h5","h6","p","blockquote","pre","address","script","style","noscript","template","svg","video","picture","input","textarea","mark","circle","path","rect","line","polyline","polygon","g","use","ellipse"}
 TRADUCIBLES = {"p","h1","h2","h3","h4","h5","h6","li","dt","dd","figcaption","button","a","span","em","b","i","strong","small",
-               "summary","option","td","th","label","legend","title","address","blockquote","cite"}
+               "summary","option","td","th","label","legend","title","address","blockquote","cite","text"}
 ATRIBUTOS = {"alt","title","placeholder","aria-label","content"}
 METAS = {"description","og:title","og:description","og:image:alt","twitter:title","twitter:description"}
 

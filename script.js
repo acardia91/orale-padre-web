@@ -517,8 +517,8 @@ try {
   // redactado: así no hay botones muertos y os llega la demanda real.
   const pedirCajaPorCorreo = (caja) =>
     'mailto:' + CONFIG.contactoEmail +
-    '?subject=' + encodeURIComponent('Quiero la ' + caja) +
-    '&body=' + encodeURIComponent('Hola, quiero pedir la ' + caja + '.\n\nNombre:\nDirección de entrega:\nFecha en la que la quiero:\nTeléfono:');
+    '?subject=' + encodeURIComponent('Avisadme cuando salga la ' + caja) +
+    '&body=' + encodeURIComponent('Hola, avisadme cuando esté disponible la ' + caja + '.\n\nNombre:\nCiudad:');
 
   const SUELTOS = {
     caja2: [() => CONFIG.cajas.pareja || pedirCajaPorCorreo('Caja Pareja'), 'la Caja Pareja'],
@@ -1897,5 +1897,63 @@ try {
       e.preventDefault(); abreTab('t-cajas');
       const d = document.getElementById('p-cajas'); if (d) d.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+})();
+
+/* "Ver más" de cada ficha: abre la misma ficha ampliada que el botón + */
+(function () {
+  const carta = document.querySelector('.carta');
+  if (!carta) return;
+  carta.addEventListener('click', (e) => {
+    const b = e.target.closest('.plato-vermas');
+    if (!b) return;
+    const mas = b.closest('.plato') && b.closest('.plato').querySelector('.plato-mas');
+    if (mas) mas.click();
+  });
+
+  /* La barra de categorías: si hay más a la derecha, se ve una flecha */
+  const barra = document.querySelector('.carta-nav');
+  const carril = document.querySelector('.carta-nav-in');
+  if (!barra || !carril) return;
+  const mide = () => barra.classList.toggle('hay-mas', carril.scrollLeft + carril.clientWidth < carril.scrollWidth - 4);
+  carril.addEventListener('scroll', mide, { passive: true });
+  window.addEventListener('resize', mide);
+  mide();
+})();
+
+/* Mapa de locales: pin → ficha del local, y resaltado cruzado */
+(function () {
+  const pins = document.querySelectorAll('.mapa .pin[data-local]');
+  if (!pins.length) return;
+  pins.forEach((pin) => {
+    const card = document.getElementById('loc-' + pin.dataset.local);
+    if (!card) return;
+    pin.addEventListener('click', (e) => {
+      e.preventDefault();
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.add('senalado');
+      setTimeout(() => card.classList.remove('senalado'), 1800);
+    });
+    card.addEventListener('mouseenter', () => pin.classList.add('tuyo'));
+    card.addEventListener('mouseleave', () => { if (!card.classList.contains('loc-tuyo')) pin.classList.remove('tuyo'); });
+  });
+  // el local elegido en "Pedir" también se marca en el mapa
+  const observador = new MutationObserver(() => {
+    document.querySelectorAll('.loc').forEach((c) => {
+      const pin = document.querySelector('.mapa .pin[data-local="' + c.dataset.local + '"]');
+      if (pin) pin.classList.toggle('tuyo', c.classList.contains('loc-tuyo'));
+    });
+  });
+  document.querySelectorAll('.loc').forEach((c) => observador.observe(c, { attributes: true, attributeFilter: ['class'] }));
+})();
+
+/* Calorías sobre la foto de cada bowl, con el mismo dato que la tabla */
+(function () {
+  const nut = CONFIG.nutricion || {};
+  const tabla = Object.values(nut).find((v) => v && typeof v === 'object' && v.juarez) || nut;
+  document.querySelectorAll('.foto-kcal[data-bowl]').forEach((el) => {
+    const d = tabla[el.dataset.bowl];
+    if (d && d.kcal) el.textContent = d.kcal + ' kcal';
+    else el.hidden = true;
   });
 })();

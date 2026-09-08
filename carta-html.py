@@ -99,6 +99,7 @@ def tarjeta(it, n):
             <h4 class="plato-nombre">{esc(nombre)}{tags}</h4>
             <p class="plato-precio">{euro(it["precio"])}</p>
             <p class="plato-desc">{esc(it["desc"])}</p>
+            <button class="plato-vermas mono" type="button">Ver más</button>
           </div>
           <button class="plato-mas" type="button" aria-expanded="false" aria-controls="al-{n}">
             <span class="visually-hidden">Ver alérgenos de {esc(nombre)}</span>
@@ -129,6 +130,7 @@ def bebidas(lista):
 nav, cuerpo, n = [], [], 0
 for c in datos["categorias"]:
     clave, nombre = c["clave"], c["nombre"]
+    nombre = {"botanas": "Botanas / Nachos"}.get(clave, nombre)   # etiqueta en la web
     lista = por_cat.get(clave, [])
     if not lista: continue
     nav.append(f'      <button type="button" data-cat="cat-{clave}" aria-pressed="false">{icono(clave)}{nombre}</button>')
