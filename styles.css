@@ -3682,20 +3682,20 @@ body::before{
 .subir-txt{ font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--crema); line-height:1; }
 
 /* ── Producto fresco (iconos) ── */
-.fresco{
+.entra-hoy{
   width:min(var(--max), calc(100% - 2 * var(--gut))); margin:clamp(22px,3vw,34px) auto 0;
   padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:10px 14px; align-items:center;
 }
-.fresco-k{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--burdeos); margin-right:6px; }
-.fresco li:not(.fresco-k){
+.entra-hoy-k{ font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--burdeos); margin-right:6px; }
+.entra-hoy li:not(.entra-hoy-k){
   display:inline-flex; align-items:center; gap:7px;
   font-size:12px; color:var(--tinta-2);
   padding:7px 11px 7px 9px; border:1px solid var(--filete); background:var(--crema-3);
 }
-.fresco svg{ width:20px; height:20px; fill:none; stroke:var(--verde); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.entra-hoy svg{ width:20px; height:20px; fill:none; stroke:var(--verde); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
 @supports (animation-timeline: view()){
   @media (prefers-reduced-motion:no-preference){
-    .fresco li:not(.fresco-k){ animation:asoma-ficha linear both; animation-timeline:view(); animation-range:entry 0% entry 40%; }
+    .entra-hoy li:not(.entra-hoy-k){ animation:asoma-ficha linear both; animation-timeline:view(); animation-range:entry 0% entry 40%; }
   }
 }
 
