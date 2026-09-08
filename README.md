@@ -26,11 +26,11 @@ no sirva la versión antigua de la caché.
 
 ## Checklist antes de anunciarla
 
-- [ ] **Datos de empresa en `legal.html`**: lo que está en amarillo (razón social, CIF,
-      domicilio social, inscripción registral). Y borrar el aviso amarillo.
-- [ ] **Horarios**: los de Los Remedios y Sevilla Este salen de la ficha de Google
-      (2 sep 2026). Los de San Luis son una estimación: confirmadlos en `index.html`,
-      sección `locales`.
+- [x] **Datos de empresa en `legal.html`**: La Baba Hasta El Suelo S.L., CIF B56488323,
+      Calle Japón 10. Faltan tomo/folio/hoja del Registro Mercantil, si queréis ponerlos.
+- [x] **Horarios**: los tres salen de la ficha de Google (2 sep 2026).
+- [ ] **Teléfono de San Luis en Last App**: vuestra tienda tiene 661 01 83 80; el de Google
+      (y el de la web) es 672 96 49 07. Corregidlo en el panel de Last App.
 - [ ] **Formspree** (gratis, formspree.io): crear un formulario y pegar su URL en
       `CONFIG.cateringForm` y `CONFIG.clubForm`. Sin él, los formularios abren el correo
       ya redactado, que funciona pero es peor en móvil.

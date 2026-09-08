@@ -26,10 +26,11 @@ const CONFIG = {
      pedido en el local. Para volver a activarlo: pedidoPropio: true.      */
   pedidoPropio: false,
 
-  /* Teléfono de cada local, sin prefijo. Los tres salen en su propia
-     tienda de Last App, así que son los buenos.                            */
+  /* Teléfono de cada local, sin prefijo. Remedios y Sevilla Este salen en
+     vuestra tienda de Last App; San Luis es el de la ficha de Google (en
+     Last App aún figura uno antiguo, 661 01 83 80: corregidlo allí).       */
   telefonos: {
-    sanLuis:     '661018380',
+    sanLuis:     '672964907',
     remedios:    '658869341',
     sevillaEste: '672989917',
   },
@@ -100,10 +101,11 @@ const CONFIG = {
      CONFIRMADOS (búsqueda pública, agosto 2026):
        Los Remedios   → 658 86 93 41
        Sevilla Este   → 672 98 99 17
-       San Luis       → 661 01 83 80 (confirmado en su tienda de Last App,
-                         2 sep 2026). Va vacío aquí solo porque no sé si
+       San Luis       → 672 96 49 07 (el que figura en Google/directorios,
+                         2 sep 2026; la tienda de Last App tiene otro
+                         antiguo, 661 01 83 80, que hay que corregir allí). Va vacío aquí solo porque no sé si
                          ese número tiene WhatsApp; si lo tiene, poned
-                         '34661018380'.
+                         '34672964907'.
      Solo se usa si pedidoPropio es true.                                 */
   pedidoWhatsapp: {
     sanLuis:     '',
@@ -256,7 +258,7 @@ const LOCALES = [
     return CONFIG.recoger[local.clave] || CONFIG.recoger.general || '';
   }
 
-  /* '661018380' → '661 01 83 80' */
+  /* '672964907' → '672 96 49 07' */
   function formatoTel(t) {
     return t ? t.replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4') : '';
   }
@@ -1873,5 +1875,27 @@ try {
       pie.textContent = 'Este local todavía no tiene WhatsApp de pedidos: se ha abierto tu correo. Si corre prisa, llama directamente al local.';
       pie.className = 'mono f-foot es-error';
     }
+  });
+})();
+
+/* Los banners de catering y equipos abren la pestaña de catering, colocan el
+   tipo de evento y llevan al formulario. Las cajas, a su pestaña. */
+(function () {
+  const abreTab = (id) => { const t = document.getElementById(id); if (t && t.getAttribute('aria-selected') !== 'true') t.click(); };
+  document.querySelectorAll('[data-abre-catering]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      abreTab('t-catering');
+      const sel = document.querySelector('#cat-form select[name="tipo"]');
+      if (sel && a.dataset.tipo) sel.value = a.dataset.tipo;
+      const destino = document.getElementById('cat-form');
+      if (destino) destino.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  document.querySelectorAll('[data-abre-cajas]').forEach((a) => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault(); abreTab('t-cajas');
+      const d = document.getElementById('p-cajas'); if (d) d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   });
 })();

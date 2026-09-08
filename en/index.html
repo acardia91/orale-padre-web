@@ -58,6 +58,8 @@
       "@type": "Organization",
       "@id": "https://www.oralepadre.com/#marca",
       "name": "Órale Padre",
+      "legalName": "La Baba Hasta El Suelo S.L.",
+      "taxID": "B56488323",
       "url": "https://www.oralepadre.com/",
       "logo": "https://www.oralepadre.com/img/icon-512.png",
       "sameAs": ["https://instagram.com/orale_padre"]
@@ -72,7 +74,15 @@
       "priceRange": "€",
       "hasMenu": "https://www.oralepadre.com/#carta",
       "acceptsReservations": "True",
-      "address": { "@type": "PostalAddress", "streetAddress": "Calle San Luis, 78", "addressLocationity": "Sevilla", "postalCode": "41003", "addressCountry": "ES" }
+      "telephone": "+34672964907",
+      "address": { "@type": "PostalAddress", "streetAddress": "Calle San Luis, 78", "addressLocationity": "Sevilla", "postalCode": "41003", "addressCountry": "ES" },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "20:00", "closes": "23:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "13:30", "closes": "16:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "20:00", "closes": "23:30" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "13:30", "closes": "16:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday","Sunday"], "opens": "20:30", "closes": "23:30" }
+      ]
     },
     {
       "@type": "Restaurant",
@@ -118,7 +128,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../styles.css?v=7de3a284">
+<link rel="stylesheet" href="../styles.css?v=3058827f">
 </head>
 <body>
 
@@ -1162,11 +1172,18 @@
 
 <!-- ══════════ PEDIDOS GRANDES ══════════ -->
 <section class="grupos" id="grupos">
-  <header class="sec-head">
-    <p class="eyebrow">For a crowd</p>
-    <h2 class="big">Big<br>orders</h2>
-    <p class="sec-lede">If there are lots of you, or you don't live in Seville, no need to order burrito by burrito. Pick your route.</p>
-  </header>
+  <div class="banner banner-catering tick">
+    <img class="banner-foto" src="../img/manos-burrito.jpg" alt="" width="1000" height="1293" loading="lazy">
+    <div class="banner-copy">
+      <p class="eyebrow">Órale Catering</p>
+      <h2 class="big">Tacos for however<br>many you are</h2>
+      <p class="banner-lede">Weddings, birthdays, company lunches and stag or hen parties, from 20 to 100 people. The griddle comes with us and the guacamole is made on site. And if you're not in Seville, we ship a box to your door.</p>
+      <div class="banner-acc">
+        <a class="btn btn-p" href="#cat-form" data-abre-catering>Get a quote</a>
+        <a class="banner-alt mono" href="#p-cajas" data-abre-cajas>or see the boxes for home</a>
+      </div>
+    </div>
+  </div>
 
   <div class="grupos-tabs" role="tablist" aria-label="Type of big order">
     <button role="tab" id="t-cajas" aria-controls="p-cajas" aria-selected="true"><b>Órale at home</b><span class="mono">Boxes shipped across Spain</span></button>
@@ -1371,6 +1388,7 @@
           <select name="tipo" required>
             <option value="">Pick one</option>
             <option>Company lunch or dinner</option>
+            <option>Team, club or office</option>
             <option>Wedding</option>
             <option>Birthday</option>
             <option>Stag or hen party</option>
@@ -1412,6 +1430,52 @@
       <p class="f-foot" id="cat-foot">We reply within 24 hours, Monday to Friday.</p>
     </form>
   </div>
+  </div>
+</section>
+
+
+<!-- ══════════ ÓRALE PARA EQUIPOS · lo sano, para grupos ══════════ -->
+<section class="equipos" id="equipos" aria-labelledby="equipos-t">
+  <div class="equipos-in">
+    <div class="equipos-fotos" aria-hidden="true">
+      <img src="../img/carta/nude-juarez.jpg" alt="" width="900" height="900" loading="lazy">
+      <img src="../img/carta/nude-dolores.jpg" alt="" width="900" height="900" loading="lazy">
+      <img src="../img/carta/nude-lady-cochinita.jpg" alt="" width="900" height="900" loading="lazy">
+    </div>
+    <div class="equipos-copy">
+      <p class="eyebrow">Órale for teams</p>
+      <h2 class="big" id="equipos-t">Eat well as a group,<br>with no post-lunch slump</h2>
+      <p class="sec-lede">Bowls with griddled protein, guacamole made today and fresh veg, in individual boxes with each person's name. For offices, coworking spaces, clubs and teams that train.</p>
+
+      <ul class="equipos-usos">
+        <li class="tick">
+          <h3>Offices and coworking spaces</h3>
+          <p>A team lunch one Thursday, or every week. Everyone picks their bowl, it all arrives together, invoice included.</p>
+        </li>
+        <li class="tick">
+          <h3>Teams and clubs</h3>
+          <p>After the match or the session: griddled protein, carbs that don't weigh you down, nothing fried. Double protein for anyone who wants it.</p>
+        </li>
+        <li class="tick">
+          <h3>Workshops and training days</h3>
+          <p>Courses, presentations, long meetings. Bowls you can eat one-handed without messing up the room.</p>
+        </li>
+      </ul>
+
+      <ul class="equipos-chips mono">
+        <li>No tortilla</li>
+        <li>Dairy-free if needed</li>
+        <li>Plant-based with Heura</li>
+        <li>Boxes with names</li>
+        <li>From 10 people</li>
+        <li>Invoice included</li>
+      </ul>
+
+      <div class="equipos-acc">
+        <a class="btn btn-sombra" href="#cat-form" data-abre-catering data-tipo="Equipo, club u oficina">Get a quote for my team</a>
+        <p class="mono equipos-nota">Fixed quote within 24 hours. Pick-up in store or delivery in Seville.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1531,8 +1595,8 @@
 
   <div class="equipo-fotos">
     <figure class="zona-foto">
-      <img src="../img/manos-burrito.jpg" alt="Hands rolling a burrito" width="1000" height="1293" loading="lazy">
-      <figcaption>In the San Luis kitchen</figcaption>
+      <img src="../img/carta/trio-lalala.jpg" alt="Trío Lalala: three freshly made tacos" width="900" height="900" loading="lazy">
+      <figcaption>Trío Lalala, freshly made</figcaption>
     </figure>
     <figure class="zona-foto">
       <img src="../img/guacamole.jpg" alt="Freshly made guacamole" width="1000" height="1250" loading="lazy">
@@ -1572,11 +1636,11 @@
       <p class="loc-barrio">Macarena</p>
       <h3>San&nbsp;Luis</h3>
       <address>Calle San Luis, 78<br> 41003 Seville</address>
-      <p class="loc-tel mono"><a href="tel:+34661018380">661 01 83 80</a></p>
+      <p class="loc-tel mono"><a href="tel:+34672964907">672 96 49 07</a></p>
       <dl class="loc-h">
         <dt>Mon – Wed</dt><dd>20:00 – 23:30</dd>
-        <dt>Thu – Sat</dt><dd>13:30 – 16:00 · 20:00 – 23:30</dd>
-        <dt>Sunday</dt><dd>13:30 – 16:00 · 20:30 – 23:30</dd>
+        <dt>Thursday</dt><dd>13:30 – 16:00 · 20:00 – 23:30</dd>
+        <dt>Fri – Sun</dt><dd>13:30 – 16:00 · 20:30 – 23:30</dd>
       </dl>
       <div class="loc-act">
         <a class="btn btn-sm btn-p" href="#" data-loc-recoger>Pick-up</a>
@@ -1634,7 +1698,7 @@
       <h2 class="big">Tell us when<br>and how many</h2>
       <p>Fill this in and your booking reaches the restaurant. We'll confirm as soon as they see it.</p>
       <ul class="res-tel mono" aria-label="Book by phone">
-        <li><span>San Luis</span><a href="tel:+34661018380">661 01 83 80</a></li>
+        <li><span>San Luis</span><a href="tel:+34672964907">672 96 49 07</a></li>
         <li><span>Los Remedios</span><a href="tel:+34658869341">658 86 93 41</a></li>
         <li><span>Sevilla Este</span><a href="tel:+34672989917">672 98 99 17</a></li>
       </ul>
@@ -1760,7 +1824,7 @@
       <h4>Talk to us</h4>
       <a href="https://instagram.com/orale_padre" target="_blank" rel="noopener">@orale_padre</a>
       <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>
-      <a href="tel:+34661018380">San Luis · 661 01 83 80</a>
+      <a href="tel:+34672964907">San Luis · 672 96 49 07</a>
       <a href="tel:+34658869341">Remedios · 658 86 93 41</a>
       <a href="tel:+34672989917">Sevilla Este · 672 98 99 17</a>
     </nav>
@@ -1771,12 +1835,12 @@
       <a class="foot-seguir" href="https://instagram.com/orale_padre" target="_blank" rel="noopener">Follow us</a>
     </div>
 <ul class="insta-rejilla" id="insta-rejilla">
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/burro-lady-cochinita.jpg" alt="Burro Lady Cochinita" width="760" height="983" loading="lazy"></a></li>
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/nachos-cienfuegos.jpg" alt="Nachos Cienfuegos" width="760" height="1140" loading="lazy"></a></li>
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/manos-burrito.jpg" alt="Rolling a burrito" width="1000" height="1293" loading="lazy"></a></li>
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/postre-pistacho.jpg" alt="Pistachio bomb" width="760" height="950" loading="lazy"></a></li>
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/burro-dona-dolores.jpg" alt="Burro Doña Dolores" width="760" height="1140" loading="lazy"></a></li>
-    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/quesadilla.jpg" alt="Grilled quesadilla" width="760" height="950" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/burro-don-juarez.jpg" alt="Burro Don Juárez" width="900" height="900" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/nachos-guadalupe.jpg" alt="Nachos Guadalupe" width="900" height="900" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/trio-lalala.jpg" alt="Trío Lalala tacos" width="900" height="900" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/nude-lady-cochinita.jpg" alt="Nude Lady Cochinita" width="900" height="900" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/quesadilla-butter-chicken.jpg" alt="Quesadilla Butter Chicken" width="900" height="900" loading="lazy"></a></li>
+    <li><a href="https://instagram.com/orale_padre" target="_blank" rel="noopener"><img src="../img/carta/burro-black-chancho.jpg" alt="Burro Black Chancho" width="900" height="900" loading="lazy"></a></li>
   </ul>
   </div>
 
@@ -1921,6 +1985,6 @@
   <a class="bp-sec" href="#carta">Menu</a>
 </div>
 
-<script src="../script.js?v=c69bdd6b"></script>
+<script src="../script.js?v=0b9174d0"></script>
 </body>
 </html>
