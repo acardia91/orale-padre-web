@@ -103,7 +103,7 @@ def traducir(arbol, dic, faltan, en_script_ld=False):
                         h.dato = h.dato.replace(json.dumps(k, ensure_ascii=False)[1:-1], json.dumps(v, ensure_ascii=False)[1:-1])
             return
         if n.tag in ("script","style"): return
-        if any(k=="class" and "brand" in (v or "") for k,v in n.attrs): return
+        es_marca = any(k=="class" and "brand" in (v or "") for k,v in n.attrs)
         # atributos
         nuevos=[]
         for k,v in n.attrs:
@@ -117,6 +117,7 @@ def traducir(arbol, dic, faltan, en_script_ld=False):
                         if tiene_letras(key) and not IGUALES.match(key): faltan.add(key)
             nuevos.append((k,v))
         n.attrs=nuevos
+        if es_marca: return
         # texto interior de elementos hoja (sin bloques dentro)
         if n.tag in TRADUCIBLES and not tiene_bloque(n):
             key=norm(serial(N("raiz")) if False else "".join(serial(h) for h in n.hijos))

@@ -57,6 +57,39 @@ no sirva la versión antigua de la caché.
 | Valoraciones | Uber 4,5 · Glovo 96 % · Google 4,5 | Fichas públicas, agosto 2026 |
 | Nutrición bowls | Estimada por receta, marcada como tal | Ver `CONFIG.nutricion` |
 
+## Ponerla en www.oralepadre.com
+
+El dominio está en DonDominio (los DNS son ns1/ns2.dondominio.com) y ahora mismo
+apunta a un servidor que devuelve 404. Hay que cambiar a dónde apunta. Dos caminos:
+
+**A) GitHub Pages (recomendado: gratis, con HTTPS, y cada cambio es un `git push`).**
+La carpeta ya es un repositorio git con `CNAME` y `.nojekyll`.
+
+1. Crea un repositorio vacío en github.com (por ejemplo `orale-padre-web`, público).
+2. En esta carpeta: `git remote add origin https://github.com/TU_USUARIO/orale-padre-web.git`
+   y `git push -u origin main`.
+3. En el repositorio: Settings → Pages → Source: "Deploy from a branch", rama `main`, carpeta `/ (root)`.
+   Custom domain: `www.oralepadre.com`. Marca "Enforce HTTPS" cuando lo permita.
+4. En DonDominio → tu dominio → DNS, deja estos registros (y borra las A actuales):
+   - `A    @    185.199.108.153`  ·  `A @ 185.199.109.153`  ·  `A @ 185.199.110.153`  ·  `A @ 185.199.111.153`
+   - `CNAME  www   TU_USUARIO.github.io`
+5. Espera de 10 minutos a unas horas. `oralepadre.com` redirige solo a `www`.
+
+**B) Netlify (sin git: se arrastra la carpeta).**
+1. app.netlify.com/drop → arrastra el contenido descomprimido de `dist/oralepadre-web.zip`.
+2. Site settings → Domain management → Add custom domain → `www.oralepadre.com`.
+3. En DonDominio: `CNAME www → TU-SITIO.netlify.app` y `A @ → 75.2.60.5`. HTTPS se activa solo.
+Para actualizar, se vuelve a arrastrar la carpeta.
+
+En cualquiera de los dos, después de publicar: en Google Search Console dad de alta
+`www.oralepadre.com` y enviad `https://www.oralepadre.com/sitemap.xml`.
+
+## Versión en inglés
+
+`en/` se genera desde el castellano con `python3 traducir.py` (diccionario en
+`datos/en.tsv`). Tras cualquier cambio de texto: `python3 traducir.py --faltan` dice
+qué falta por traducir, se añade al TSV y se vuelve a generar. No editéis `en/` a mano.
+
 ## La carta sale de Last App
 
 La carta de la web se genera a partir de vuestros catálogos de Last App, así
