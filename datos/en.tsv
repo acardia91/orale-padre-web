@@ -1,0 +1,673 @@
+# Diccionario castellano ⇒ inglés. Clave = HTML interior del elemento tal cual (espacios normalizados).
+# Lo que no esté aquí se queda en castellano; python3 traducir.py --faltan lo lista.
+Día ⇒ Day
+Alta ⇒ Join
+Boda ⇒ Wedding
+Club ⇒ Club
+Hora ⇒ Time
+Otro ⇒ Other
+Baja. ⇒ Leaving.
+Carne ⇒ Beef
+Carta ⇒ Menu
+Comer ⇒ Eat
+Datos ⇒ Data
+Fecha ⇒ Date
+Local ⇒ Location
+Móvil ⇒ Mobile
+Nuevo ⇒ New
+Pedir ⇒ Order
+A mano ⇒ By hand
+Canje. ⇒ Redeeming.
+Cerrar ⇒ Close
+Cuándo ⇒ When
+Equipo ⇒ Team
+Fusión ⇒ Fusion
+Grasas ⇒ Fat
+Grupos ⇒ Groups
+Jueves ⇒ Thursday
+Nombre ⇒ Name
+Canjeas ⇒ You redeem
+Del día ⇒ Made today
+Domingo ⇒ Sunday
+El club ⇒ The club
+Energía ⇒ Energy
+Locales ⇒ Locations
+Picante ⇒ Spicy
+Recoger ⇒ Pick-up
+Vegetal ⇒ Plant-based
+24 horas ⇒ 24 hours
+Contacto ⇒ Contact
+Dónde es ⇒ Where is it
+Hablamos ⇒ Talk to us
+Hidratos ⇒ Carbs
+La carta ⇒ The menu
+Lo legal ⇒ Legal stuff
+Personas ⇒ People
+Proteína ⇒ Protein
+Reservar ⇒ Book a table
+Síguenos ⇒ Follow us
+Teléfono ⇒ Phone
+Titular: ⇒ Owner:
+Tu cesta ⇒ Your basket
+Tu local ⇒ Your location
+la carta ⇒ the menu
+10 salsas ⇒ 10 salsas
+15 salsas ⇒ 15 salsas
+Alérgenos ⇒ Allergens
+Apartados ⇒ Sections
+Despedida ⇒ Stag or hen party
+Elige uno ⇒ Pick one
+Finalidad ⇒ Purpose
+Jue – Dom ⇒ Thu – Sun
+Jue – Sáb ⇒ Thu – Sat
+Lun – Mié ⇒ Mon – Wed
+Principal ⇒ Main
+Sin arroz ⇒ No rice
+Tu nombre ⇒ Your name
+Tu pedido ⇒ Your order
+Tus datos ⇒ Your data
+Vie – Dom ⇒ Fri – Sun
+(opcional) ⇒ (optional)
+100 puntos ⇒ 100 points
+Abrir menú ⇒ Open menu
+Base legal ⇒ Legal basis
+Caducidad. ⇒ Expiry.
+Cumpleaños ⇒ Birthday
+Desde 2021 ⇒ Since 2021
+Por ración ⇒ Per serving
+Privacidad ⇒ Privacy
+Sin trampa ⇒ No catch
+Teléfonos: ⇒ Phones:
+desde aquí ⇒ right here
+A domicilio ⇒ Delivery
+Aviso legal ⇒ Legal notice
+Cumpleaños. ⇒ Birthday.
+Cómo llegar ⇒ Directions
+Elige local ⇒ Choose a location
+Fuego lento ⇒ Low and slow
+Importante: ⇒ Important:
+Muy picante ⇒ Very spicy
+Para muchos ⇒ For a crowd
+Pedir ahora ⇒ Order now
+Pi&ntilde;a ⇒ Pineapple
+Responsable ⇒ Data controller
+Sin lácteos ⇒ Dairy-free
+Sin picante ⇒ Not spicy
+¿Empezamos? ⇒ Shall we?
++ envío 12 € ⇒ + €12 shipping
+100% vegetal ⇒ 100% plant-based
+Conservación ⇒ Kept for
+Date de alta ⇒ Sign up
+El de diario ⇒ The everyday one
+Falta el día ⇒ Pick a day
+Inscripción: ⇒ Registration:
+Mandar el CV ⇒ Send your CV
+Quién puede. ⇒ Who can join.
+Sin tortilla ⇒ No tortilla
+Total aprox. ⇒ Approx. total
+Tres locales ⇒ Three locations
+Tres niveles ⇒ Three levels
+Tus derechos ⇒ Your rights
+o elígelo tú ⇒ or pick it yourself
+<b>6</b> Soja ⇒ <b>6</b> Soya
+<b>9</b> Apio ⇒ <b>9</b> Celery
+Cómo funciona ⇒ How it works
+Darme de alta ⇒ Sign me up
+Dónde estamos ⇒ Where we are
+Elige tu bowl ⇒ Pick your bowl
+Falta la hora ⇒ Pick a time
+La más pedida ⇒ Most popular
+Para llamarte ⇒ So we can call you
+Pedir un Nude ⇒ Order a Nude
+Piña salteada ⇒ Sautéed pineapple
+Por confirmar ⇒ To be confirmed
+Quiénes somos ⇒ Who we are
+Reservar mesa ⇒ Book a table
+Totopos rotos ⇒ Crushed tortilla chips
+Uso del sitio ⇒ Use of the site
+Uso indebido. ⇒ Misuse.
+Volver arriba ⇒ Back to top
+¿Qué te pido? ⇒ What should I get?
+Órale en casa ⇒ Órale at home
++ envío 9,90 € ⇒ + €9.90 shipping
+Abres y montas ⇒ Open and build
+Bases del club ⇒ Club terms
+Carne sazonada ⇒ Seasoned beef
+Cerrar el chat ⇒ Close the chat
+Con repartidor ⇒ With a courier
+Doble proteína ⇒ Double protein
+Elige tu local ⇒ Choose your location
+Elige un local ⇒ Choose a location
+Eliges tu caja ⇒ Pick your box
+Enviar reserva ⇒ Send booking
+Evento privado ⇒ Private event
+Falta la fecha ⇒ Pick a date
+Nude Cochinita ⇒ Nude Cochinita
+Pedir la Tribu ⇒ Order the Tribu
+Se puede tocar ⇒ Make it yours
+Sin comisiones ⇒ No fees
+Tacos · 9,95 € ⇒ Tacos · €9.95
+Te das de alta ⇒ You sign up
+Tipo de evento ⇒ Type of event
+Top en Sevilla ⇒ Top rated in Seville
+o reserva mesa ⇒ or book a table
+¿Cuántos sois? ⇒ How many of you?
+¿Dónde estáis? ⇒ Where are you?
+2 guacamoles XL ⇒ 2 XL guacamoles
+4 guacamoles XL ⇒ 4 XL guacamoles
+<b>3</b> Huevos ⇒ <b>3</b> Eggs
+A los 6 pedidos ⇒ After 6 orders
+Botana · 9,90 € ⇒ Starter · €9.90
+Cajas para casa ⇒ Boxes for home
+Cheddar fundido ⇒ Melted cheddar
+Crear mi cuenta ⇒ Create my account
+English version ⇒ English version
+Madrid y centro ⇒ Madrid and central Spain
+Norte de España ⇒ Northern Spain
+Pedidos grandes ⇒ Big orders
+Pedir la Pareja ⇒ Order the Pareja
+Reserva de mesa ⇒ Table booking
+Responsabilidad ⇒ Liability
+Volver a la web ⇒ Back to the site
+1 punto por euro ⇒ 1 point per euro
+5 salsas premium ⇒ 5 premium salsas
+7 salsas premium ⇒ 7 premium salsas
+<b>11</b> Sésamo ⇒ <b>11</b> Sesame
+<b>4</b> Pescado ⇒ <b>4</b> Fish
+A los 15 pedidos ⇒ After 15 orders
+Botana · 10,90 € ⇒ Starter · €10.90
+Burrito · 9,95 € ⇒ Burrito · €9.95
+Cocinamos fresco ⇒ We cook it fresh
+Hora de recogida ⇒ Pick-up time
+Pedir la Reunión ⇒ Order the Reunión
+Sale refrigerada ⇒ Ships chilled
+Solo en San Luis ⇒ San Luis only
+2 puntos por euro ⇒ 2 points per euro
+60 tacos surtidos ⇒ 60 assorted tacos
+<b>10</b> Mostaza ⇒ <b>10</b> Mustard
+<b>1</b> Tu local ⇒ <b>1</b> Your location
+Bomba de pistacho ⇒ Pistachio bomb
+Cajas de catering ⇒ Catering boxes
+Cochinita del día ⇒ Today's cochinita
+Cuanto más vienes ⇒ The more you come
+Domicilio social: ⇒ Registered office:
+Guacamole del día ⇒ Guacamole made today
+Pedir en tu local ⇒ Order from your location
+Pedir presupuesto ⇒ Get a quote
+Preguntas rápidas ⇒ Quick questions
+Saltar a la carta ⇒ Skip to the menu
+Te ayudo a elegir ⇒ I'll help you choose
+Uber Eats o Glovo ⇒ Uber Eats or Glovo
+Verla en la carta ⇒ See it on the menu
+100 tacos surtidos ⇒ 100 assorted tacos
+200 tacos surtidos ⇒ 200 assorted tacos
+<b>12</b> Sulfitos ⇒ <b>12</b> Sulphites
+<b>14</b> Moluscos ⇒ <b>14</b> Molluscs
+Pedidos<br>grandes ⇒ Big<br>orders
+Pedir para recoger ⇒ Order for pick-up
+Resto de península ⇒ Rest of mainland Spain
+Un euro, un punto. ⇒ One euro, one point.
+Un punto por euro. ⇒ One point per euro.
+la página del club ⇒ the club page
+mira Órale en Casa ⇒ see Órale at home
+¿A qué hora pasas? ⇒ What time will you come by?
+¿Te quieres venir? ⇒ Want to join us?
+1,5 puntos por euro ⇒ 1.5 points per euro
+<b>2</b> Crustáceos ⇒ <b>2</b> Crustaceans
+<b>5</b> Cacahuetes ⇒ <b>5</b> Peanuts
+Cajas a toda España ⇒ Boxes shipped across Spain
+Correo de contacto: ⇒ Contact email:
+Elegir local a mano ⇒ Choose a location manually
+En treinta segundos ⇒ In thirty seconds
+La parte importante ⇒ The important bit
+Montando un burrito ⇒ Rolling a burrito
+Quesadilla al grill ⇒ Grilled quesadilla
+Quesadilla · 8,95 € ⇒ Quesadilla · €8.95
+Saltar al contenido ⇒ Skip to content
+San Luis (Macarena) ⇒ San Luis (Macarena)
+San Luis · Macarena ⇒ San Luis · Macarena
+Sin gastos de envío ⇒ No delivery fees
+Ver la carta entera ⇒ See the full menu
+Órale Padre, inicio ⇒ Órale Padre, home
+<b>13</b> Altramuces ⇒ <b>13</b> Lupin
+A quién se comunican ⇒ Who we share it with
+De 20 a 100 personas ⇒ From 20 to 100 people
+Dinos cómo te llamas ⇒ Tell us your name
+Gestionar tu reserva ⇒ Managing your booking
+Guacamole XL (800 g) ⇒ XL guacamole (800 g)
+Lo que dice la gente ⇒ What people say
+Martes: 3×2 en tacos ⇒ Tuesdays: 3 tacos for the price of 2
+Pico de gallo grande ⇒ Large pico de gallo
+Quiero mis dos tacos ⇒ I want my two tacos
+Sin carne, sin drama ⇒ No meat, no drama
+Suma puntos del club ⇒ Earns club points
+Te ayudamos a elegir ⇒ We help you choose
+Buscar el más cercano ⇒ Find the closest one
+Categorías del pedido ⇒ Order categories
+Cómo se suman puntos. ⇒ How points add up.
+Pico de gallo (250 g) ⇒ Pico de gallo (250 g)
+Pico de gallo (500 g) ⇒ Pico de gallo (500 g)
+Propiedad intelectual ⇒ Intellectual property
+Reservar por teléfono ⇒ Book by phone
+Salsas extra · 0,95 € ⇒ Extra salsas · €0.95
+Sevilla y toda España ⇒ Seville and all of Spain
+Sumas con cada pedido ⇒ You earn with every order
+Tipo de pedido grande ⇒ Type of big order
+Alta en My Órale Padre ⇒ Join My Órale Padre
+Cuánto tarda en llegar ⇒ How long it takes to arrive
+Cuéntanos<br>tu evento ⇒ Tell us about<br>your event
+Elige dónde lo recoges ⇒ Choose where to pick it up
+Guacamole recién hecho ⇒ Freshly made guacamole
+Las cuentas,<br>claras ⇒ Straight<br>numbers
+Necesitamos tu permiso ⇒ We need your permission
+Pausar el v&iacute;deo ⇒ Pause the video
+Política de privacidad ⇒ Privacy policy
+Votas el plato del mes ⇒ You vote for the dish of the month
+tus dos primeros tacos ⇒ your first two tacos
+Coordenadas aproximadas ⇒ Approximate coordinates
+Cómo tratamos tus datos ⇒ How we handle your data
+Darse de alta es gratis ⇒ Signing up is free
+Elige el tipo de evento ⇒ Choose the type of event
+Los ocho<br>más pedidos ⇒ The eight<br>most ordered
+Presupuesto de catering ⇒ Catering quote
+Remedios · 658 86 93 41 ⇒ Remedios · 658 86 93 41
+San Luis · 661 01 83 80 ⇒ San Luis · 661 01 83 80
+Solo verdura y proteína ⇒ Just veg and protein
+Órale Padre en imágenes ⇒ Órale Padre in pictures
+<b>2</b> Cómo lo quieres ⇒ <b>2</b> How do you want it
+Carne extra para repetir ⇒ Extra meat for seconds
+Come más.<br>Paga menos. ⇒ Eat more.<br>Pay less.
+Comida o cena de empresa ⇒ Company lunch or dinner
+Darme de alta, es gratis ⇒ Sign me up, it's free
+Desde que te das de alta ⇒ From the moment you join
+Dinos al menos la ciudad ⇒ At least tell us the city
+En la cocina de San Luis ⇒ In the San Luis kitchen
+Guacamole del d&iacute;a ⇒ Guacamole made today
+Guacamole fresco (250 g) ⇒ Fresh guacamole (250 g)
+Guacamole grande (500 g) ⇒ Large guacamole (500 g)
+My Órale Padre · El club ⇒ My Órale Padre · The club
+Puedes pedirlo sin arroz ⇒ Ask for it without rice
+Recoges tu primer pedido ⇒ You pick up your first order
+Tus dos tacos te esperan ⇒ Your two tacos are waiting
+¿Cuántos sois? Mínimo 10 ⇒ How many of you? Minimum 10
+¿Se puede reservar mesa? ⇒ Can I book a table?
+<span>o elígelo tú</span> ⇒ <span>or pick it yourself</span>
+Dinos cuándo<br>y cuántos ⇒ Tell us when<br>and how many
+Empresa <i>(opcional)</i> ⇒ Company <i>(optional)</i>
+Fuera crema agria y queso ⇒ No sour cream or cheese
+Manos montando un burrito ⇒ Hands rolling a burrito
+No se cambian por dinero. ⇒ They cannot be exchanged for cash.
+O con el doble, tú mandas ⇒ Or double it, you decide
+Si va a nombre de empresa ⇒ If it's for a company
+Sin recargo de plataforma ⇒ No platform mark-up
+Tortillas extra y limones ⇒ Extra tortillas and limes
+los puntos se suman solos ⇒ points add up on their own
+<b>7</b> Leche y derivados ⇒ <b>7</b> Milk and dairy
+<b>8</b> Frutos de cáscara ⇒ <b>8</b> Tree nuts
+Algo más <i>(opcional)</i> ⇒ Anything else <i>(optional)</i>
+Enviar pedido por WhatsApp ⇒ Send order via WhatsApp
+Es con lo que sumas puntos ⇒ This is how you earn points
+Presupuesto sin compromiso ⇒ No-obligation quote
+Salsa extra siempre gratis ⇒ Extra salsa always free
+Tres locales<br>en Sevilla ⇒ Three locations<br>in Seville
+¿Cuánto cuesta un burrito? ⇒ How much is a burrito?
+Bandeja de nachos con queso ⇒ Tray of cheesy nachos
+Cambios y fin del programa. ⇒ Changes and end of the programme.
+Elige categoría de la carta ⇒ Choose a menu category
+La letra pequeña, en grande ⇒ The small print, in big letters
+Llega caliente, no templado ⇒ Arrives hot, not lukewarm
+Necesitamos un email válido ⇒ We need a valid email
+Sevilla Este · 672 98 99 17 ⇒ Sevilla Este · 672 98 99 17
+Tres locales,<br>una cocina ⇒ Three locations,<br>one kitchen
+Un detalle sorpresa nuestro ⇒ A little surprise from us
+16 tacos surtidos, 3 sabores ⇒ 16 assorted tacos, 3 flavours
+24 tacos surtidos, 4 sabores ⇒ 24 assorted tacos, 4 flavours
+5 salsas, de suave a picante ⇒ 5 salsas, from mild to hot
+<b>1</b> Cereales con gluten ⇒ <b>1</b> Cereals containing gluten
+Cumpleaños <i>(opcional)</i> ⇒ Birthday <i>(optional)</i>
+En nuestra web, para recoger ⇒ On our site, for pick-up
+Los dos tacos de bienvenida. ⇒ The two welcome tacos.
+Pico de gallo grande (500 g) ⇒ Large pico de gallo (500 g)
+Prote&iacute;na a la plancha ⇒ Protein off the griddle
+Todavía no has añadido nada. ⇒ Nothing added yet.
++2,50 € si vienes de entrenar ⇒ +€2.50 if you've just trained
+Bases del club My Órale Padre ⇒ My Órale Padre club terms
+Cochinita recién deshilachada ⇒ Freshly pulled cochinita
+El extra de picante es gratis ⇒ Extra heat is free
+El neón del local de San Luis ⇒ The neon sign at San Luis
+Lo que más sale de la plancha ⇒ What leaves the griddle most
+No podemos saber que eres tú. ⇒ We can't tell it's you.
+Nudes &middot; nuestros bowls ⇒ Nudes &middot; our bowls
+Por si hay que confirmar algo ⇒ In case we need to confirm something
+Qué datos tratamos y para qué ⇒ What data we process and why
+Todo lo que<br>hay que probar ⇒ Everything<br>worth trying
+tus dos primeros tacos gratis ⇒ your first two tacos free
+Postre el día de tu cumpleaños ⇒ Dessert on your birthday
+Tus dos primeros tacos, gratis ⇒ Your first two tacos, free
+Cuéntanos más <i>(opcional)</i> ⇒ Tell us more <i>(optional)</i>
+En el local, en mesa o en barra ⇒ In store, at a table or the bar
+Lo que nos<br>preguntan siempre ⇒ What people<br>always ask
+Lunes y miércoles: dos burritos ⇒ Mondays and Wednesdays: two burritos
+Pide directo<br>y suma el doble ⇒ Order direct<br>and earn double
+Tortillas, limones y especiales ⇒ Tortillas, limes and specials
+Recógelo tú,<br>o te lo llevamos ⇒ Pick it up,<br>or we bring it
+¿No sabes qué pedir? Te ayudamos ⇒ Not sure what to order? We'll help
+Antojo de crema de Ferrero Rocher ⇒ A craving of Ferrero Rocher cream
+Calle Japón, 10<br> 41020 Sevilla ⇒ Calle Japón, 10<br> 41020 Seville
+Servicio de presentación incluido ⇒ Presentation service included
+Tus dos primeros<br>tacos, gratis ⇒ Your first two<br>tacos, free
+¿Tenéis información de alérgenos? ⇒ Do you have allergen information?
+Creas tu cuenta, treinta segundos. ⇒ Create your account, thirty seconds.
+Jueves y viernes: menú de mediodía ⇒ Thursdays and Fridays: lunch menu
+Los platos nuevos, antes que nadie ⇒ New dishes before anyone else
+3 salsas: suave, picante y especial ⇒ 3 salsas: mild, hot and special
+Aviso legal, privacidad y alérgenos ⇒ Legal notice, privacy and allergens
+Bandeja de nachos con queso fundido ⇒ Tray of nachos with melted cheese
+Ciudad, o dirección si ya la tienes ⇒ City, or the address if you have it
+Pides como siempre, con esa cuenta. ⇒ Order as usual, with that account.
+8 tacos surtidos, a elegir 2 sabores ⇒ 8 assorted tacos, choose 2 flavours
+Burro Doña Juana, la versión vegetal ⇒ Doña Juana burrito, the plant-based one
+Calle San Luis, 78<br> 41003 Sevilla ⇒ Calle San Luis, 78<br> 41003 Seville
+Decirte qué local te pilla más cerca ⇒ To tell you which location is closest
+Mensajería con acumuladores de frío. ⇒ Courier with ice packs.
+Mexican street food &middot; Sevilla ⇒ Mexican street food &middot; Seville
+Prepararte y enviarte el presupuesto ⇒ To prepare and send you the quote
+Sin picante, sin cebolla, lo que sea ⇒ No spice, no onion, whatever you need
+Tu pedido para recoger salta la cola ⇒ Your pick-up order skips the queue
+Ves tus puntos ahí mismo, al entrar. ⇒ See your points right there when you log in.
+¿Tenéis opción vegetariana o vegana? ⇒ Do you have vegetarian or vegan options?
+<b>88 €</b> <span>+ envío 12 €</span> ⇒ <b>€88</b> <span>+ €12 shipping</span>
+Invitación a las catas de carta nueva ⇒ Invites to new-menu tastings
+Ver alérgenos de Martes: 3×2 en tacos ⇒ See allergens for Tuesday 3-for-2 tacos
+no usa cookies propias ni de terceros ⇒ does not use its own or third-party cookies
+¿Hacéis envío a domicilio en Sevilla? ⇒ Do you deliver in Seville?
+Final feliz de deliciosa crema Kinder! ⇒ A happy ending of delicious Kinder cream!
+Todo lo de dentro.<br>Sin la tortilla. ⇒ Everything inside.<br>Without the tortilla.
+WhatsApp (Meta Platforms Ireland Ltd.) ⇒ WhatsApp (Meta Platforms Ireland Ltd.)
+<b>34 €</b> <span>+ envío 9,90 €</span> ⇒ <b>€34</b> <span>+ €9.90 shipping</span>
+<b>62 €</b> <span>+ envío 9,90 €</span> ⇒ <b>€62</b> <span>+ €9.90 shipping</span>
+Agencia Española de Protección de Datos ⇒ Spanish Data Protection Agency
+Bodas, empresa, cumpleaños y despedidas ⇒ Weddings, corporate, birthdays and stag or hen parties
+Y un teléfono, por si hay que concretar ⇒ And a phone number, in case we need details
+Algo que debamos saber <i>(opcional)</i> ⇒ Anything we should know <i>(optional)</i>
+Burro Black Chancho partido por la mitad ⇒ Black Chancho burrito cut in half
+Necesitamos un teléfono para confirmarte ⇒ We need a phone number to confirm
+Pagas con tarjeta. Menos de dos minutos. ⇒ Pay by card. Under two minutes.
+Cómo funciona el club, con todo el detalle ⇒ How the club works, in full detail
+El doble de puntos. Y sin gastos de envío. ⇒ Double points. And no delivery fees.
+Valores pendientes de calcular con cocina. ⇒ Values still being calculated with the kitchen.
+Don Juárez <em class="tag tag-top">Nº1</em> ⇒ Don Juárez <em class="tag tag-top">No.1</em>
+40 tacos surtidos: cochinita, pastor y pollo ⇒ 40 assorted tacos: cochinita, pastor and chicken
+<b>180 €</b> <span>9,00 € por persona</span> ⇒ <b>€180</b> <span>€9.00 per person</span>
+<b>270 €</b> <span>9,00 € por persona</span> ⇒ <b>€270</b> <span>€9.00 per person</span>
+<b>420 €</b> <span>8,40 € por persona</span> ⇒ <b>€420</b> <span>€8.40 per person</span>
+<b>780 €</b> <span>7,80 € por persona</span> ⇒ <b>€780</b> <span>€7.80 per person</span>
+Calle Virgen de Loreto, 16<br> 41011 Sevilla ⇒ Calle Virgen de Loreto, 16<br> 41011 Seville
+El mismo día, en Sevilla. Sin congelar nada. ⇒ The same day, in Seville. Nothing frozen.
+Localización (botón "Buscar el más cercano") ⇒ Location ("Find the closest one" button)
+Nachos Guadalupe recién hechos en la plancha ⇒ Nachos Guadalupe fresh off the griddle
+Necesitamos tu permiso para poder contestarte ⇒ We need your permission to reply
+Tu consentimiento, al aceptar en el navegador ⇒ Your consent, given in the browser
+Última actualización: 2 de septiembre de 2026 ⇒ Last updated: 2 September 2026
+<b>Nachos Guadalupe</b> saliendo de la plancha ⇒ <b>Nachos Guadalupe</b> coming off the griddle
+Alergias, trona para peque, mesa en la terraza… ⇒ Allergies, a high chair, a table outside…
+Calientas la carne 5 min. Instrucciones dentro. ⇒ Heat the meat for 5 min. Instructions inside.
+Hasta 30 días después de la fecha de la reserva ⇒ Up to 30 days after the booking date
+Reserva mesa en <span id="acc-nombre-2"></span> ⇒ Book a table at <span id="acc-nombre-2"></span>
+Todo lo de dentro del burrito, sin la tortilla. ⇒ Everything inside the burrito, minus the tortilla.
+Treinta segundos, gratis, y sales con dos tacos. ⇒ Thirty seconds, free, and you walk out with two tacos.
+Dos tacos gratis en tu primer pedido para recoger ⇒ Two free tacos with your first pick-up order
+Muerte por delicioso filipino de chocolate blanco ⇒ Death by delicious white-chocolate Filipino cookie
+Nachos Guadalupe <em class="tag tag-top">Nº3</em> ⇒ Nachos Guadalupe <em class="tag tag-top">No.3</em>
+© <span id="yr">2026</span> Órale Padre · Sevilla ⇒ © <span id="yr">2026</span> Órale Padre · Seville
+Órale Padre · Aviso legal, privacidad y alérgenos ⇒ Órale Padre · Legal notice, privacy and allergens
+Ejecución del servicio que pides (art. 6.1.b RGPD) ⇒ Performance of the service you request (art. 6.1.b GDPR)
+Mexican street food en Sevilla.<br>Crazy burritos. ⇒ Mexican street food in Seville.<br>Crazy burritos.
+<b>CIF:</b> <mark class="rellenar">B-00000000</mark> ⇒ <b>Tax ID (CIF):</b> <mark class="rellenar">B-00000000</mark>
+<b>Sin arroz</b><span>Solo verdura y proteína</span> ⇒ <b>No rice</b><span>Just veg and protein</span>
+Nombre, teléfono, local, día, hora, personas y notas ⇒ Name, phone, location, day, time, party size and notes
+Te das de alta aquí. Es gratis y son treinta segundos. ⇒ You sign up here. It's free and takes thirty seconds.
+Elige local arriba y aquí te salen las formas de pedir. ⇒ Choose a location above and your ordering options appear here.
+Órale Padre · Crazy burritos, tacos y nachos en Sevilla ⇒ Órale Padre · Crazy burritos, tacos and nachos in Seville
+<b>Sin lácteos</b><span>Fuera crema agria y queso</span> ⇒ <b>Dairy-free</b><span>No sour cream or cheese</span>
+<b>Sin picante</b><span>O con el doble, tú mandas</span> ⇒ <b>Not spicy</b><span>Or double heat, you decide</span>
+Necesitamos un email válido para mandarte el presupuesto ⇒ We need a valid email to send you the quote
+Para llorar y volar fuerte con oreo de chocolate blanco. ⇒ White-chocolate Oreo, to cry and fly.
+Te contestamos en menos de 24 horas, de lunes a viernes. ⇒ We reply within 24 hours, Monday to Friday.
+<b>9,95 €</b> casi cualquier burrito, en los tres locales ⇒ <b>€9.95</b> for almost any burrito, at all three locations
+Irresistible sabor de las Galletas Lotus en cada cucharada ⇒ Irresistible Lotus biscuit flavour in every spoonful
+<b>Catering</b><span class="mono">De 20 a 100 personas</span> ⇒ <b>Catering</b><span class="mono">From 20 to 100 people</span>
+<small id="bp-local">Elige tu local</small><b>Pedir ahora</b> ⇒ <small id="bp-local">Choose your location</small><b>Order now</b>
+Mexican street food en Sevilla.<br>Crazy burritos desde 2021. ⇒ Mexican street food in Seville.<br>Crazy burritos since 2021.
+Órale Padre, crazy burritos. Un burrito partido por la mitad. ⇒ Órale Padre, crazy burritos. A burrito cut in half.
+Cerdo, pollo y especiales. Todos a 9,95 € salvo la Doña Juana. ⇒ Pork, chicken and specials. All €9.95 except the Doña Juana.
+Los puntos son personales y no se pueden pasar a otra persona. ⇒ Points are personal and cannot be transferred.
+<b>Doble proteína</b><span>+2,50 € si vienes de entrenar</span> ⇒ <b>Double protein</b><span>+€2.50 if you've just trained</span>
+Nombre, email, teléfono, cumpleaños (opcional) y local habitual ⇒ Name, email, phone, birthday (optional) and usual location
+<span>San Luis</span><a href="tel:+34661018380">661 01 83 80</a> ⇒ <span>San Luis</span><a href="tel:+34661018380">661 01 83 80</a>
+Recoges tu primer pedido en el local y te invitamos a dos tacos. ⇒ Pick up your first order and the first two tacos are on us.
+¿Vegano estricto? Pregunta en el local: confirmando la tortilla. ⇒ Strictly vegan? Ask in store: we're confirming the tortilla.
+<b>Órale en casa</b><span class="mono">Cajas a toda España</span> ⇒ <b>Órale at home</b><span class="mono">Boxes shipped across Spain</span>
+No vendemos tus datos ni los cedemos para publicidad de terceros. ⇒ We don't sell your data or pass it on for third-party advertising.
+Tu consentimiento (art. 6.1.a), que puedes retirar cuando quieras ⇒ Your consent (art. 6.1.a), which you can withdraw at any time
+<a href="club.html">Cómo funciona el club, con todo el detalle</a> ⇒ <a href="club.html">How the club works, in full detail</a>
+Un premio por visita, para que no se quede la cocina sin producto. ⇒ One reward per visit, so the kitchen doesn't run out.
+<span>Los Remedios</span><a href="tel:+34658869341">658 86 93 41</a> ⇒ <span>Los Remedios</span><a href="tel:+34658869341">658 86 93 41</a>
+<span>Sevilla Este</span><a href="tel:+34672989917">672 98 99 17</a> ⇒ <span>Sevilla Este</span><a href="tel:+34672989917">672 98 99 17</a>
+Cada día de la semana tiene la suya. Solo en el local y para recoger. ⇒ Every day of the week has its own. In store and for pick-up only.
+<span>Sevilla</span> <span>Desde 2021</span> <span>Tres locales</span> ⇒ <span>Seville</span> <span>Since 2021</span> <span>Three locations</span>
+Si cambiamos algo del programa, te avisamos con 30 días de antelación. ⇒ If we change anything in the programme, we'll give you 30 days' notice.
+Medidas precontractuales a tu petición (art. 6.1.b) y tu consentimiento ⇒ Pre-contractual steps at your request (art. 6.1.b) and your consent
+Órale Padre · Burritos, tacos y nachos en Sevilla · Mexican street food ⇒ Órale Padre · Burritos, tacos and nachos in Seville · Mexican street food
+A partir de ahí, cada euro suma un punto. Con 100 puntos, burrito gratis. ⇒ From then on, every euro earns a point. With 100 points, a free burrito.
+Doña Juana no come bicho <span class="vegetal-precio mono">12,50 €</span> ⇒ Doña Juana eats no animals <span class="vegetal-precio mono">€12.50</span>
+<span><small id="bp-local">Elige tu local</small><b>Pedir ahora</b></span> ⇒ <span><small id="bp-local">Choose your location</small><b>Order now</b></span>
+Gratis. Te llevas tus dos primeros tacos en tu primer pedido para recoger. ⇒ Free. Your first two tacos come with your first pick-up order.
+Se abre WhatsApp con el pedido ya escrito. Solo tienes que darle a enviar. ⇒ WhatsApp opens with your order already written. Just hit send.
+12 meses desde el último contacto, o mientras dure la relación si contratas ⇒ 12 months from last contact, or for as long as the relationship lasts if you book
+<b>1</b><span>Te das de alta aquí. Es gratis y son treinta segundos.</span> ⇒ <b>1</b><span>You sign up here. It's free and takes thirty seconds.</span>
+Alergias, si quieres servicio en mesa, presupuesto que manejas, lo que sea. ⇒ Allergies, table service, the budget you have in mind, anything.
+Con Heura en vez de carne. Mismo tamaño, misma cocina, <b>100% vegetal</b>. ⇒ Heura instead of meat. Same size, same kitchen, <b>100% plant-based</b>.
+Nuestro proveedor de correo y alojamiento, como encargados del tratamiento. ⇒ Our email and hosting providers, as data processors.
+Rellena esto y la reserva llega al local. Te confirmamos en cuanto la vean. ⇒ Fill this in and your booking reaches the restaurant. We'll confirm as soon as they see it.
+¿Prefieres llamar y pedirlo de viva voz? <a id="acc-tel-link" href="#"></a> ⇒ Rather call and order by voice? <a id="acc-tel-link" href="#"></a>
+Mientras seas miembro. Si no hay pedidos en 24 meses, damos de baja la cuenta ⇒ While you're a member. With no orders in 24 months, the account is closed
+Muerte por delicioso filipino de chocolate blanco con baño de dulce de leche. ⇒ Death by delicious white-chocolate Filipino cookie with dulce de leche.
+Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Próximamente Tomares ✦ ⇒ Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Tomares coming soon ✦
+Mayo chipotle · Mayo lima · Salsa verde mexicana · Siracha de coco · Valentina ⇒ Chipotle mayo · Lime mayo · Mexican salsa verde · Coconut sriracha · Valentina
+Con <b>100 puntos</b> te llevas un burrito gratis. Y sigues sumando desde cero. ⇒ With <b>100 points</b> you get a free burrito. And you keep earning from zero.
+Dos burritos a elegir por 13,90 €. Los dos días de la semana en que más apetece. ⇒ Two burritos of your choice for €13.90. On the two days you want it most.
+Gestionar tu cuenta de puntos, aplicar ventajas y avisarte de novedades del club ⇒ Managing your points account, applying perks and telling you about club news
+Tus datos son para el club y para avisarte. Nada más, y no se los damos a nadie. ⇒ Your data is for the club and to keep you posted. Nothing else, and we give it to no one.
+En los combos entran refrescos, cortadas y agua. La Doña Juana no entra en combo. ⇒ Combos include soft drinks, small beers and water. The Doña Juana isn't available in combos.
+Gratis. Te avisamos en cuanto abramos el club, y te puedes borrar cuando quieras. ⇒ Free. We'll let you know as soon as the club opens, and you can leave whenever you like.
+de cuota, de alta y de mantenimiento. No hay versión de pago ni nada que renovar. ⇒ in fees, sign-up or upkeep. There's no paid version and nothing to renew.
+<span class="manecilla" aria-hidden="true">☞</span> Pides directo y suman el doble ⇒ <span class="manecilla" aria-hidden="true">☞</span> Order direct and earn double
+<span class="visually-hidden">Cerrar</span> <span aria-hidden="true">&times;</span> ⇒ <span class="visually-hidden">Close</span> <span aria-hidden="true">&times;</span>
+3 Tacos de cochinita pibil cocinada a baja temperatura, guacamole casero y 4 quesos. ⇒ 3 tacos of slow-cooked cochinita pibil, homemade guacamole and four cheeses.
+<b>Titular:</b> <mark class="rellenar">Órale Padre S.L. (razón social exacta)</mark> ⇒ <b>Owner:</b> <mark class="rellenar">Órale Padre S.L. (exact registered name)</mark>
+Cada burrito se monta uno a uno cuando lo pides. Quince minutos, no tres, y se nota. ⇒ Every burrito is rolled one by one when you order. Fifteen minutes, not three, and you can tell.
+El precio final se confirma en el local. Los combos y extras pueden variar el total. ⇒ The final price is confirmed in store. Combos and extras may change the total.
+Nombre, empresa, email, teléfono, tipo y fecha del evento, lugar, personas y mensaje ⇒ Name, company, email, phone, event type and date, venue, party size and message
+<b>2</b><span>Recoges tu primer pedido en el local y te invitamos a dos tacos.</span> ⇒ <b>2</b><span>You pick up your first order and the first two tacos are on us.</span>
+Te lo lleva el repartidor a casa. Gastos de envío y comisión de la plataforma aparte. ⇒ A courier brings it to your door. Delivery fee and platform commission not included.
+Los dos tacos de bienvenida son una vez por persona, en tu primer pedido para recoger. ⇒ The two welcome tacos are once per person, with your first pick-up order.
+<b>Domicilio social:</b> <mark class="rellenar">Calle San Luis, 78, 41003 Sevilla</mark> ⇒ <b>Registered office:</b> <mark class="rellenar">Calle San Luis, 78, 41003 Seville</mark>
+<span class="manecilla" aria-hidden="true">☞</span> Postre gratis el día de tu cumpleaños ⇒ <span class="manecilla" aria-hidden="true">☞</span> Free dessert on your birthday
+Nude Dolores: carne sazonada, cheddar, guacamole, frijoles, arroz, lechuga y pico de gallo ⇒ Nude Dolores: seasoned beef, cheddar, guacamole, beans, rice, lettuce and pico de gallo
+<span class="visually-hidden">Cerrar el chat</span> <span aria-hidden="true">&times;</span> ⇒ <span class="visually-hidden">Close the chat</span> <span aria-hidden="true">&times;</span>
+Pide para recoger sin comisiones, reserva mesa o pide a domicilio. Tres locales en Sevilla. ⇒ Order for pick-up with no fees, book a table or get delivery. Three locations in Seville.
+En Los Remedios y Sevilla Este van sueltos, a 3,50 €. En San Luis, de tres en tres a 9,95 €. ⇒ Sold individually at €3.50 in Los Remedios and Sevilla Este. In San Luis, in threes for €9.95.
+Nude Juárez: pulled pork, guacamole, pico de gallo, totopos, lechuga y arroz con crema agria ⇒ Nude Juárez: pulled pork, guacamole, pico de gallo, tortilla chips, lettuce and rice with sour cream
+¿Prefieres sentarte? <a href="#reservar">Reserva mesa en <span id="acc-nombre-2"></span></a> ⇒ Rather sit down? <a href="#reservar">Book a table at <span id="acc-nombre-2"></span></a>
+3 Tacos de pollo pastor, cebolla morada, cilantro, 4 quesos y remate de nuestra mayo chipotle. ⇒ 3 tacos of chicken al pastor, red onion, coriander, four cheeses and a finish of our chipotle mayo.
+<b>3</b><span>A partir de ahí, cada euro suma un punto. Con 100 puntos, burrito gratis.</span> ⇒ <b>3</b><span>From then on, every euro earns a point. With 100 points, a free burrito.</span>
+Subes solo, por pedidos hechos en los últimos doce meses. No hay que pedir nada ni pagar nada. ⇒ You move up automatically, based on orders in the last twelve months. Nothing to request, nothing to pay.
+<b>Teléfonos:</b> San Luis 661 01 83 80 · Los Remedios 658 86 93 41 · Sevilla Este 672 98 99 17 ⇒ <b>Phones:</b> San Luis 661 01 83 80 · Los Remedios 658 86 93 41 · Sevilla Este 672 98 99 17
+¿Estás fuera de Sevilla? Te mandamos una caja a casa — <a href="#grupos">mira Órale en Casa</a>. ⇒ Not in Seville? We'll ship a box to your door — <a href="#grupos">see Órale at home</a>.
+Nombre, email y teléfono. Gratis, sin cuotas y sin letra pequeña. Puedes borrarte cuando quieras. ⇒ Name, email and phone. Free, no fees, no small print. Leave whenever you like.
+<span class="manecilla" aria-hidden="true">&#9758;</span> <a href="#carta">Ver la carta entera</a> ⇒ <span class="manecilla" aria-hidden="true">&#9758;</span> <a href="#carta">See the full menu</a>
+Das tu teléfono al pagar. <b>Un euro, un punto.</b> No hay que llevar tarjeta ni acordarse de nada. ⇒ Give your phone number when you pay. <b>One euro, one point.</b> No card to carry, nothing to remember.
+<span class="manecilla" aria-hidden="true">☞</span> Sin spam: escribimos poco y solo cuando hay algo ⇒ <span class="manecilla" aria-hidden="true">☞</span> No spam: we write rarely and only when there's news
+Tres tacos al precio de dos, 7,00 €. A elegir: baby cochinita, pastor, chancho, búffalo, combinados. ⇒ Three tacos for the price of two, €7.00. Choose from baby cochinita, pastor, chancho, búffalo or mixed.
+<b>Correo de contacto:</b> <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a> ⇒ <b>Contact email:</b> <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>
+Pides en Last App, el pedido entra directo en la cocina del local y lo tienes listo en 15–25 minutos. ⇒ Order on Last App, it goes straight to the restaurant kitchen and it's ready in 15–25 minutes.
+Si añadimos analítica en el futuro, actualizaremos esta política y pediremos tu consentimiento antes. ⇒ If we add analytics in the future, we'll update this policy and ask for your consent first.
+meses de vida tienen los puntos desde tu último pedido. Si vienes de vez en cuando, no se te caducan. ⇒ months is how long points last from your latest order. Come by now and then and they never expire.
+Nude Lady Cochinita: cochinita pibil, chipotle, piña, guacamole, frijoles, arroz, lechuga y pico de gallo ⇒ Nude Lady Cochinita: cochinita pibil, chipotle, pineapple, guacamole, beans, rice, lettuce and pico de gallo
+Si el local tiene reserva online, se abre ya con tus datos. Si no, te dejamos el mensaje listo para mandar. ⇒ If the restaurant has online booking, it opens with your details. If not, we leave the message ready to send.
+Si sois muchos, o si no vivís en Sevilla, no hace falta pedir burrito a burrito. Elige por dónde va la cosa. ⇒ If there are lots of you, or you don't live in Seville, no need to order burrito by burrito. Pick your route.
+Algunos burritos llevan un toque bajo de picante. <b>El extra de picante es gratis</b>, solo hay que pedirlo. ⇒ Some burritos carry a little heat. <b>Extra heat is free</b>, just ask.
+La cochinita y la carrillada se hacen a baja temperatura durante horas. No hay atajo, y por eso no lo tomamos. ⇒ The cochinita and the pork cheek cook low and slow for hours. There's no shortcut, so we don't take one.
+Lo último &middot; <a href="https://instagram.com/orale_padre" target="_blank" rel="noopener">@orale_padre</a> ⇒ Latest &middot; <a href="https://instagram.com/orale_padre" target="_blank" rel="noopener">@orale_padre</a>
+Usamos la ubicación solo en tu móvil, para calcular cuál cae más cerca. Ni se guarda ni se envía a ningún sitio. ⇒ Your location is used only on your phone, to work out which one is closest. It's neither stored nor sent anywhere.
+¿Prefieres escribir? <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> ⇒ Rather write? <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a>
+3 Tacos de guiso de carrilleras al estilo órale, cebolla morada, cilantro, 4 quesos y chorreón de salsa mayo-lima ⇒ 3 tacos of Órale-style braised pork cheek, red onion, coriander, four cheeses and a drizzle of lime mayo
+Burrito a elegir, chips y bebida por 10,00 €. Postre por 3,00 € más. Guacamole extra 0,50 €, salsa de cheddar 1 €. ⇒ Burrito of your choice, chips and a drink for €10.00. Dessert for €3.00 more. Extra guacamole €0.50, cheddar sauce €1.
+Date de alta gratis, llévate tus dos primeros tacos y suma puntos con cada pedido. Con 100 puntos, burrito gratis. ⇒ Sign up for free, get your first two tacos and earn points with every order. With 100 points, a free burrito.
+<b>Inscripción:</b> <mark class="rellenar">Registro Mercantil de Sevilla, tomo ___, folio ___, hoja SE-______</mark> ⇒ <b>Registration:</b> <mark class="rellenar">Seville Companies Register, volume ___, folio ___, sheet SE-______</mark>
+El guacamole, el pico de gallo y las salsas se hacen cada mañana, en la cantidad justa. Nunca te servimos los de ayer. ⇒ Guacamole, pico de gallo and salsas are made every morning, just enough for the day. We never serve you yesterday's.
+Cocinamos todo en la misma cocina: no podemos garantizar ausencia de trazas. Si tienes alergia, dínoslo antes de pedir. ⇒ Everything is cooked in the same kitchen, so we can't guarantee the absence of traces. If you have an allergy, tell us before ordering.
+Pide para recoger sin comisiones, reserva mesa o pide a domicilio. Tres locales: San Luis, Los Remedios y Sevilla Este. ⇒ Order for pick-up with no fees, book a table or get delivery. Three locations: San Luis, Los Remedios and Sevilla Este.
+puntos, y el burrito lo pagamos nosotros. Son 100 € gastados pidiendo en el local, o 50 € pidiendo directo para recoger. ⇒ points, and the burrito is on us. That's €100 spent ordering in store, or €50 ordering direct for pick-up.
+Aviso legal, política de privacidad, cookies, bases del club My Órale Padre y carta de alérgenos de Órale Padre, Sevilla. ⇒ Legal notice, privacy policy, cookies, My Órale Padre club terms and allergen list for Órale Padre, Seville.
+Sí, <a href="#reservar">desde aquí</a> o llamando al local. Para grupos de más de diez, escríbenos y lo montamos a medida. ⇒ Yes, <a href="#reservar">right here</a> or by calling the restaurant. For groups over ten, write to us and we'll tailor it.
+No se envía a ningún servidor ni se guarda: se calcula en tu dispositivo. Solo se recuerda el local elegido, en tu navegador ⇒ Never sent to a server or stored: it's worked out on your device. Only your chosen location is remembered, in your browser
+Coca-Cola Normal · Coca-Cola Zero · Fanta Naranja · Fanta Limón · Nestea · Aquarius Limón · Aquarius Naranja · Nestea Maracuyá ⇒ Coca-Cola · Coca-Cola Zero · Fanta Orange · Fanta Lemon · Nestea · Aquarius Lemon · Aquarius Orange · Nestea Passion Fruit
+Lo pides para recoger en cualquiera de los tres locales y te invitamos a <b>tus dos primeros tacos</b>. Sin gastarte nada más. ⇒ Order it for pick-up at any of the three locations and <b>your first two tacos</b> are on us. No extra spend.
+<b>Quién puede.</b> Mayores de 18 años. Una cuenta por persona y por número de teléfono. El alta es gratuita y no exige compra. ⇒ <b>Who can join.</b> Over 18s. One account per person and per phone number. Signing up is free and requires no purchase.
+Precios con IVA, los mismos en mesa y para recoger. ¿Dudas? El Don Juárez es el más pedido en los tres locales, y por algo será. ⇒ Prices include VAT, the same at the table and for pick-up. Not sure? The Don Juárez is the most ordered at all three locations, and there's a reason for that.
+Esta web <b>no usa cookies propias ni de terceros</b> con fines analíticos o publicitarios, y por eso no verás un aviso de cookies. ⇒ This site <b>uses no own or third-party cookies</b> for analytics or advertising, which is why you won't see a cookie banner.
+Totopos clásicos de toda la vida con nuestro toque! Guacamole casero, salsa de queso cheddar, pico de gallo y chorreo de nata agria. ⇒ Classic tortilla chips with our twist: homemade guacamole, cheddar sauce, pico de gallo and a drizzle of sour cream.
+Darse de alta es gratis y no cuesta nada mantenerlo. Lo único que pides es tu teléfono al pedir, y a cambio te va saliendo comida gratis. ⇒ Signing up is free and costs nothing to keep. All you do is give your phone number when you order, and free food keeps coming your way.
+El mismo relleno del burrito, servido en bowl. Sin tortilla, con m&aacute;s verdura y la prote&iacute;na hecha a la plancha en el momento. ⇒ The same burrito filling, served in a bowl. No tortilla, more veg and the protein cooked on the griddle to order.
+Sí, con Uber Eats y Glovo desde los tres locales. Y si lo recoges tú, pides en Last App sin comisiones y lo tienes listo en 15–25 minutos. ⇒ Yes, via Uber Eats and Glovo from all three locations. And if you pick it up yourself, order on Last App with no fees and it's ready in 15–25 minutes.
+Conforme al Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), te explicamos qué hacemos con tus datos cuando usas esta web. ⇒ Under Regulation (EU) 2016/679 (GDPR) and Spanish Organic Law 3/2018 (LOPDGDD), here's what we do with your data when you use this site.
+Contados de verdad: el orden real de pedidos en nuestra tienda, del uno al ocho y sin favoritismos. Si es tu primera vez, empieza por el uno. ⇒ Actually counted: the real order ranking from our shop, one to eight, no favourites. First time here? Start with number one.
+<b>Caducidad.</b> Los puntos caducan a los 12 meses del último pedido con puntos. El nivel se calcula por los pedidos de los últimos 12 meses. ⇒ <b>Expiry.</b> Points expire 12 months after the last order that earned points. Your level is worked out from the last 12 months of orders.
+Acepto que uséis mis datos para responderme a esto. <a href="legal.html#privacidad" target="_blank" rel="noopener">Cómo tratamos tus datos</a> ⇒ I agree to you using my data to reply to this. <a href="legal.html#privacidad" target="_blank" rel="noopener">How we handle your data</a>
+Lo confirmas aquí, lo pagas al recoger. Nada de tarjeta en la web. <a href="legal.html#privacidad" target="_blank" rel="noopener">Tus datos</a> ⇒ Confirm it here, pay on pick-up. No card details on the site. <a href="legal.html#privacidad" target="_blank" rel="noopener">Your data</a>
+<a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#club">Bases del club</a> ⇒ <a href="legal.html#aviso-legal">Legal notice</a> · <a href="legal.html#privacidad">Privacy</a> · <a href="legal.html#club">Club terms</a>
+Heura salteada bien sabrosa, arroz, frijoles refritos, salsa verde, pico de gallo, guacamole casero y lechuga fresca. 100% vegetal, 100% sabrosón ⇒ Sautéed Heura full of flavour, rice, refried beans, salsa verde, pico de gallo, homemade guacamole and fresh lettuce. 100% plant-based, 100% tasty
+<b>Cumpleaños.</b> Si nos das tu fecha, tienes un postre gratis en cualquier pedido en el local durante la semana de tu cumpleaños, una vez al año. ⇒ <b>Birthday.</b> If you give us your date, you get a free dessert with any in-store order during your birthday week, once a year.
+Acepto que gestéis mis datos para el programa de puntos. <a href="legal.html#privacidad" target="_blank" rel="noopener">Cómo tratamos tus datos</a> ⇒ I agree to you handling my data for the points programme. <a href="legal.html#privacidad" target="_blank" rel="noopener">How we handle your data</a>
+Rellena esto y te mandamos presupuesto cerrado en <b>24 horas</b>. Si tu evento pasa de 100 personas o quieres servicio en mesa, es justo por aquí. ⇒ Fill this in and we'll send a fixed quote within <b>24 hours</b>. If your event is over 100 people or you want table service, this is the place.
+Bowl de guiso de carrilleras ibéricas al estilo anticucho con pico de gallo, arroz, cebolla encurtida, patatas paja, mayonesa de lima y salsa verde. ⇒ Bowl of anticucho-style braised Iberian pork cheek with pico de gallo, rice, pickled onion, shoestring potatoes, lime mayo and salsa verde.
+En la calle San Luis 78 (Macarena), en Virgen de Loreto 16 (Los Remedios) y en la calle Japón 10 (Sevilla Este). Los tres con la plancha a la vista. ⇒ At Calle San Luis 78 (Macarena), Virgen de Loreto 16 (Los Remedios) and Calle Japón 10 (Sevilla Este). All three with the griddle in plain view.
+Valores estimados a partir de la receta, no medidos en laboratorio. Si entrenas y necesitas cuadrar macros al gramo, preg&uacute;ntanos en el local. ⇒ Values estimated from the recipe, not measured in a lab. If you train and need your macros to the gram, ask us in store.
+9,95 € casi todos. La Doña Juana, la vegetal, 12,50 €. Los combos con chips y bebida, desde 14,95 €, y el menú de mediodía de jueves y viernes, 10 €. ⇒ €9.95 for almost all of them. The Doña Juana, the plant-based one, is €12.50. Combos with chips and a drink from €14.95, and the Thursday and Friday lunch menu is €10.
+<b>Formspree Inc.</b> (EE. UU., adherida al Data Privacy Framework), que nos hace llegar por correo los formularios de catering y de alta en el club. ⇒ <b>Formspree Inc.</b> (USA, certified under the Data Privacy Framework), which emails us the catering and club sign-up forms.
+<b>Uso indebido.</b> Nos reservamos el derecho de anular cuentas o puntos obtenidos con datos falsos, cuentas duplicadas o cualquier uso fraudulento. ⇒ <b>Misuse.</b> We reserve the right to cancel accounts or points obtained with false data, duplicate accounts or any fraudulent use.
+<b>Last App</b>, <b>Uber Eats</b> y <b>Glovo</b>, cuando pides en ellas: los datos del pedido los tratan ellas como responsables, con sus condiciones. ⇒ <b>Last App</b>, <b>Uber Eats</b> and <b>Glovo</b>, when you order on them: they process your order data as data controllers, under their own terms.
+Burrito de Guiso de carrilleras ibéricas al estilo anticucho con pico de gallo, arroz, cebolla encurtida, patatas paja, mayonesa de lima y salsa verde. ⇒ Burrito of anticucho-style braised Iberian pork cheek with pico de gallo, rice, pickled onion, shoestring potatoes, lime mayo and salsa verde.
+Alita de pollo macerada, horneada a baja temperatura, bañada en salsa bbq casera con un toque mexicano, chorro de nuestra mayo-lima y cubiertas de totopos. ⇒ Marinated chicken wings, slow-baked, coated in homemade BBQ sauce with a Mexican twist, a drizzle of our lime mayo and topped with tortilla chips.
+Botellín Cruzcampo 2,00 € · Tercio Cruzcampo 2,50 € · Cortada Cruzcampo 2,00 € · Heineken 0.0 2,50 € · Amstel Tostada 0.0 2,50 € · Águila sin filtrar 2,50 € ⇒ Cruzcampo bottle €2.00 · Cruzcampo 33 cl €2.50 · Cruzcampo small draught €2.00 · Heineken 0.0 €2.50 · Amstel Tostada 0.0 €2.50 · Águila unfiltered €2.50
+<a href="#aviso-legal">Aviso legal</a> · <a href="#privacidad">Privacidad</a> · <a href="#alergenos">Alérgenos</a> · <a href="index.html">Volver a la web</a> ⇒ <a href="#aviso-legal">Legal notice</a> · <a href="#privacidad">Privacy</a> · <a href="#alergenos">Allergens</a> · <a href="index.html">Back to the site</a>
+Bowl de carne sazonada, arroz, frijoles refritos, guacamole estilo Órale, queso cheddar, pico de gallo clásico, lechuga, y todo bañado en nuestra salsa verde. ⇒ Bowl of seasoned beef, rice, refried beans, Órale-style guacamole, cheddar, classic pico de gallo, lettuce, all covered in our salsa verde.
+<b>WhatsApp (Meta Platforms Ireland Ltd.)</b>, si eliges enviar tu reserva por WhatsApp: el mensaje viaja por su servicio, bajo su propia política de privacidad. ⇒ <b>WhatsApp (Meta Platforms Ireland Ltd.)</b>, if you choose to send your booking via WhatsApp: the message travels through their service, under their own privacy policy.
+Bowl cochinita pibil cocinada a baja temperatura con salsa de chipotle, arroz, lechuga fresca, frijoles, pico de gallo con piña salteada y remate de con nata agria. ⇒ Bowl of slow-cooked cochinita pibil with chipotle sauce, rice, fresh lettuce, beans, pico de gallo with sautéed pineapple and a finish of sour cream.
+Bowl de Pulled Pork! Carne de cerdo deshilachada con salsa BBQ, pico de gallo, guacamole casero, lechuga, totopos, arroz y por encima bañado con nuestra crema agria. ⇒ Pulled pork bowl! Shredded pork in BBQ sauce, pico de gallo, homemade guacamole, lettuce, tortilla chips, rice and our sour cream on top.
+Para Baleares, Canarias, Ceuta y Melilla, escríbenos antes a <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> y lo miramos. ⇒ For the Balearics, Canaries, Ceuta and Melilla, write to us first at <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> and we'll look into it.
+<span class="manecilla" aria-hidden="true">&#9758;</span> El guacamole se hace cada ma&ntilde;ana, la cantidad justa para el d&iacute;a. Nunca del d&iacute;a anterior. ⇒ <span class="manecilla" aria-hidden="true">&#9758;</span> Guacamole is made every morning, just enough for the day. Never yesterday's.
+Dinos dónde estás y te decimos qué local te pilla más cerca. Recogerlo tú es la jugada: pagas lo que marca la carta, sin envío ni comisión, y te lo llevas recién hecho. ⇒ Tell us where you are and we'll tell you the closest location. Picking it up is the smart move: you pay the menu price, no delivery fee, no commission, and you take it away fresh off the griddle.
+Totopos especiados en nuestro guacamole casero, con salsa de queso cheddar, carne picada sazonada, pico de gallo, mezcla de cuatro quesos y un toque final de nata agria. ⇒ Spiced tortilla chips on our homemade guacamole, with cheddar sauce, seasoned minced beef, pico de gallo, a four-cheese mix and a final touch of sour cream.
+La Doña Juana, con Heura en vez de carne, es 100% vegetal. Cualquier bowl se puede pedir sin lácteos. Si eres vegano estricto, pregúntanos por la tortilla antes de pedir. ⇒ The Doña Juana, with Heura instead of meat, is 100% plant-based. Any bowl can be ordered dairy-free. If you're strictly vegan, ask us about the tortilla before ordering.
+Nuestro Burro padrísimo de Pulled Pork! Carne de cerdo deshilachada con salsa BBQ, pico de gallo, guacamole casero, lechuga, totopos, arroz y nuestra salsa de crema agria. ⇒ Our mighty pulled pork burrito! Shredded pork in BBQ sauce, pico de gallo, homemade guacamole, lettuce, tortilla chips, rice and our sour cream sauce.
+Tu cuenta es la misma con la que pides. Te das de alta una vez y, a partir de ahí, <b>los puntos se suman solos</b> cada vez que pides. Sin tarjetas ni códigos que apuntar. ⇒ Your account is the same one you order with. Sign up once and, from then on, <b>points add up on their own</b> every time you order. No cards, no codes to note down.
+Macarena, Los Remedios y Sevilla Este. En los tres la plancha está a la vista: te sientas, ves cómo se monta tu burrito y te lo dan caliente. Mesa para dos o mesa para doce. ⇒ Macarena, Los Remedios and Sevilla Este. In all three the griddle is in plain view: you sit down, watch your burrito being rolled and get it hot. A table for two or a table for twelve.
+Buscamos gente para cocina y sala en los tres locales. No hace falta experiencia en mexicano: enseñamos nosotros. Sí hace falta ganas y aguantar el ritmo de un viernes noche. ⇒ We're looking for kitchen and front-of-house staff at all three locations. No Mexican-food experience needed: we'll teach you. You do need drive and the stamina for a Friday night.
+Pollo marinado y braseado al punto, envuelto en guacamole casero, pico de gallo fresco, frijoles, nata agria y lechuga crujiente. Sabor explosivo en cada bocado. ¡Pura locura! ⇒ Marinated chicken grilled to perfection, wrapped with homemade guacamole, fresh pico de gallo, beans, sour cream and crunchy lettuce. Explosive flavour in every bite. Pure madness!
+Nachos órale CON PULLED PORK bañado en salsa bbq, totopos especiados bañados en guacamole casero. chorreo de salsa de queso cheddar, pico de gallo y baño final con crema agria. ⇒ Órale nachos with pulled pork in BBQ sauce, spiced tortilla chips covered in homemade guacamole, a drizzle of cheddar sauce, pico de gallo and a final coating of sour cream.
+Cuando pides por una plataforma de reparto, nosotros no sabemos quién eres: la plataforma no nos lo dice. Por eso los puntos solo se pueden sumar cuando pides directamente con nosotros. ⇒ When you order through a delivery platform, we don't know who you are: the platform doesn't tell us. That's why points can only be earned when you order directly from us.
+<span class="notas-plat">Glovo</span> <span class="notas-num" id="nota-glovo">—</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">Por confirmar</span> ⇒ <span class="notas-plat">Glovo</span> <span class="notas-num" id="nota-glovo">—</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">To be confirmed</span>
+¿Sois más de 10? ¿Cumpleaños, comida de empresa, despedida? Escríbenos a <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> y lo montamos a medida. ⇒ More than 10 of you? Birthday, company lunch, stag or hen do? Write to <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> and we'll tailor it.
+<span class="notas-plat">Google</span> <span class="notas-num" id="nota-google">—</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">Por confirmar</span> ⇒ <span class="notas-plat">Google</span> <span class="notas-num" id="nota-google">—</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">To be confirmed</span>
+Burrito de Cochinita pibil cocinada a baja temperatura con salsa de chipotle, arroz, frijoles, lechuga fresca, cebolla encurtida, pico de gallo con piña salteada y remate de con nata agria. ⇒ Burrito of slow-cooked cochinita pibil with chipotle sauce, rice, beans, fresh lettuce, pickled onion, pico de gallo with sautéed pineapple and a finish of sour cream.
+En cada plato de <a href="#carta">la carta</a>, pulsando el +. Cocinamos todo en la misma cocina, así que si tienes una alergia dínoslo al pedir y te decimos qué puedes tomar con seguridad. ⇒ On every dish in <a href="#carta">the menu</a>, by pressing the +. Everything is cooked in the same kitchen, so if you have an allergy tell us when ordering and we'll say what's safe for you.
+Quesadilla brutal de pulled pork BBQ, bañada en nuestra fusión de 4 quesos ultra fundentes. Dorada al punto en grill para un toque crujiente y acompañada de nuestra adictiva salsa chipotle. ⇒ A brutal BBQ pulled pork quesadilla, smothered in our blend of four ultra-melty cheeses. Grilled golden for a crunchy edge and served with our addictive chipotle sauce.
+<a href="legal.html#aviso-legal">Aviso legal</a> · <a href="legal.html#privacidad">Privacidad</a> · <a href="legal.html#alergenos">Alérgenos</a> · <a href="legal.html#club">Bases del club</a> ⇒ <a href="legal.html#aviso-legal">Legal notice</a> · <a href="legal.html#privacidad">Privacy</a> · <a href="legal.html#alergenos">Allergens</a> · <a href="legal.html#club">Club terms</a>
+Burrito de Jugoso pollo macerado y rebozado crujiente de panko y risketos sobre ensalada de maíz mexicana, lechuga, arroz, crema agria, mayo de coco y sriracha, salsa cheddar y cebolla encurtida. ⇒ Burrito of juicy marinated chicken in a crunchy panko and corn-snack crust over Mexican corn salad, lettuce, rice, sour cream, coconut-sriracha mayo, cheddar sauce and pickled onion.
+Lo marcado en amarillo son datos de la empresa que hay que rellenar antes de publicar: razón social exacta, CIF, domicilio social e inscripción registral. Cuando estén puestos, borrad este aviso. ⇒ The parts in yellow are company details to fill in before publishing: exact registered name, tax ID, registered office and company registration. Once they're in, delete this notice.
+En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa de que este sitio web, <b>www.oralepadre.com</b>, es titularidad de: ⇒ In compliance with Spanish Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE), you are informed that this website, <b>www.oralepadre.com</b>, is owned by:
+Nuestro Burrito clásico en Órale padre incluye carne sazonada, arroz, frijoles refritos, guacamole estilo Órale, queso cheddar, pico de gallo clásico, lechuga, y todo bañado en nuestra salsa verde. ⇒ Our classic Órale Padre burrito: seasoned beef, rice, refried beans, Órale-style guacamole, cheddar, classic pico de gallo, lettuce, all covered in our salsa verde.
+<span class="notas-plat">Uber&nbsp;Eats</span> <span class="notas-num" id="nota-uber">4,5</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">Top en Sevilla</span> ⇒ <span class="notas-plat">Uber&nbsp;Eats</span> <span class="notas-num" id="nota-uber">4.5</span> <span class="notas-est" aria-hidden="true">★★★★★</span> <span class="notas-pie">Top rated in Seville</span>
+Pollo empanado crujiente, arroz, cheddar, bacon, cebolla encurtida, lechuga, totopos rotos y doble mayo Korean BBQ. La fusión Seúl-Sevilla que necesitabas. Crujiente, dulce, leve picante y adictivo. ⇒ Crispy breaded chicken, rice, cheddar, bacon, pickled onion, lettuce, crushed tortilla chips and double Korean BBQ mayo. The Seoul-Seville fusion you needed. Crunchy, sweet, mildly spicy and addictive.
+Comida mexicana en Sevilla para recoger, a domicilio o en mesa: crazy burritos, tacos, nachos, quesadillas y bowls. Tres locales: Macarena (San Luis), Los Remedios y Sevilla Este. Pide sin comisiones. ⇒ Mexican food in Seville for pick-up, delivery or dine-in: crazy burritos, tacos, nachos, quesadillas and bowls. Three locations: Macarena (San Luis), Los Remedios and Sevilla Este. Order with no fees.
+<b>Baja.</b> Puedes darte de baja cuando quieras escribiendo a <a href="mailto:orale.padre.food@gmail.com?subject=Baja%20del%20club">orale.padre.food@gmail.com</a>. Al darte de baja se borran tus puntos. ⇒ <b>Leaving.</b> You can leave whenever you like by writing to <a href="mailto:orale.padre.food@gmail.com?subject=Baja%20del%20club">orale.padre.food@gmail.com</a>. Leaving deletes your points.
+Patatas horneadas, las aplastamos, las cubrimos de especias y las bañamos con salsa ranchera, bacon crujiente y una mezcla de cuatro quesos. Todo vuelve al horno para que se gratine y mezcle a la perfección. ⇒ Baked potatoes, smashed, covered in spices and topped with ranchera sauce, crispy bacon and a four-cheese mix. Back into the oven until it's perfectly melted and gratinated.
+<b>Cambios y fin del programa.</b> Podemos modificar estas bases o cerrar el programa avisando con 30 días de antelación por correo y en esta página. Los puntos ya acumulados se podrán canjear durante ese plazo. ⇒ <b>Changes and end of the programme.</b> We may change these terms or close the programme with 30 days' notice by email and on this page. Points already earned can be redeemed during that period.
+Estas bases regulan el programa de fidelización My Órale Padre. Darse de alta implica aceptarlas. La explicación en lenguaje llano está en <a href="club.html">la página del club</a>; en caso de duda, manda lo que dice aquí. ⇒ These terms govern the My Órale Padre loyalty programme. Signing up means accepting them. The plain-language version is on <a href="club.html">the club page</a>; if in doubt, this text prevails.
+Las tipografías se cargan desde Google Fonts, lo que implica que tu navegador pide los archivos a los servidores de Google (y les comunica tu dirección IP). Google no recibe ninguna otra información sobre ti desde esta web. ⇒ Fonts are loaded from Google Fonts, which means your browser requests the files from Google's servers (and shares your IP address with them). Google receives no other information about you from this site.
+La marca Órale Padre, el logotipo, los textos, las fotografías y el diseño de esta web son propiedad de su titular o se usan con autorización. No pueden reproducirse sin permiso escrito, salvo para compartir enlaces a la web. ⇒ The Órale Padre brand, logo, texts, photographs and design of this site belong to their owner or are used with permission. They may not be reproduced without written permission, other than to share links to the site.
+<b>Canje.</b> Con 100 puntos puedes canjear un burrito de la carta (excepto Doña Juana y ediciones especiales) en cualquier pedido en el local o para recoger. Al canjear, se descuentan 100 puntos. Los puntos no se cambian por dinero. ⇒ <b>Redeeming.</b> With 100 points you can redeem a burrito from the menu (except Doña Juana and special editions) on any in-store or pick-up order. Redeeming deducts 100 points. Points cannot be exchanged for cash.
+Guardamos en tu navegador (<i>localStorage</i>) el local que hayas elegido, para no preguntártelo cada vez. Es un dato técnico, no identifica a nadie y no sale de tu dispositivo. Se borra limpiando los datos del sitio en tu navegador. ⇒ We store your chosen location in your browser (<i>localStorage</i>) so we don't ask every time. It's technical data, identifies no one and never leaves your device. It's deleted by clearing the site data in your browser.
+Conforme al Reglamento (UE) 1169/2011, cada plato de <a href="index.html#carta">la carta</a> indica los alérgenos que contiene: pulsa el <b>+</b> de cualquier plato para verlos. Esta es la lista de los 14 alérgenos de declaración obligatoria: ⇒ Under Regulation (EU) 1169/2011, every dish on <a href="index.html#carta">the menu</a> lists the allergens it contains: press the <b>+</b> on any dish to see them. This is the list of the 14 allergens that must be declared:
+Burrito al más estilo hindú: Pollo especiado, deshilachado y cocinado a baja temperatura en suave mantequilla, arroz, guacamole casero, pico de gallo, lechuga y totopos crujientes; todo envuelto en una deliciosa salsa mayo con sriracha y coco. ⇒ An Indian-style burrito: spiced chicken, shredded and slow-cooked in soft butter, rice, homemade guacamole, pico de gallo, lettuce and crunchy tortilla chips, all wrapped in a delicious sriracha-coconut mayo.
+<b>Darse de alta es gratis</b>, y por hacerlo te llevas <b>tus dos primeros tacos gratis</b> en tu primer pedido para recoger en el local. A partir de ahí cada pedido suma puntos. Sin tarjeta de cartón que se pierde en la cartera: va con tu teléfono. ⇒ <b>Signing up is free</b>, and for doing it you get <b>your first two tacos free</b> with your first pick-up order. From then on every order earns points. No cardboard card to lose in your wallet: it works with your phone number.
+Burrito de Delicioso pollo al pastor marinado con chiles morita y achiote, cocinado a baja temperatura y deshilachado. Arroz con cilantro y lima, salsa verde, guacamole casero, pico de gallo, frijoles, totopos rotos, nata agria y una mezcla de 4 quesos fu ⇒ Burrito of delicious chicken al pastor marinated with morita chillies and achiote, slow-cooked and shredded. Coriander-lime rice, salsa verde, homemade guacamole, pico de gallo, beans, crushed tortilla chips, sour cream and a melted four-cheese mix.
+Quesadilla espectacular de Pollo Mantequilla, envuelta en nuestra mezcla de 4 quesos ultra cremosos. Dorada al punto en grill para un toque crujiente y acompañada de una irresistible mayo de coco. Un sutil toque de especias hindúes que te transportará a l ⇒ A spectacular butter chicken quesadilla, wrapped in our blend of four ultra-creamy cheeses. Grilled golden for a crunchy edge and served with an irresistible coconut mayo. A subtle touch of Indian spices that will take you far away.
+<mark class="rellenar">Órale Padre S.L.</mark>, con los datos de contacto indicados en el aviso legal. Para cualquier cuestión de privacidad, escribe a <a href="mailto:orale.padre.food@gmail.com?subject=Protecci%C3%B3n%20de%20datos">orale.padre.food@gmail.com</a>. ⇒ <mark class="rellenar">Órale Padre S.L.</mark>, with the contact details given in the legal notice. For any privacy matter, write to <a href="mailto:orale.padre.food@gmail.com?subject=Protecci%C3%B3n%20de%20datos">orale.padre.food@gmail.com</a>.
+Hacemos lo posible por que la información sea correcta, pero no garantizamos que esté libre de errores. Los enlaces a sitios de terceros (Uber Eats, Glovo, Last App, Instagram, Google Maps) se ofrecen para tu comodidad; no controlamos su contenido ni sus políticas. ⇒ We do our best to keep the information accurate, but we can't guarantee it's error-free. Links to third-party sites (Uber Eats, Glovo, Last App, Instagram, Google Maps) are provided for your convenience; we don't control their content or policies.
+Órale Padre es comida mexicana de calle hecha en Sevilla: burritos, tacos, nachos y bowls. Nació en 2021 en un local pequeño de la calle San Luis, en la Macarena, y hoy son tres, con una cocina central donde se prepara todo el producto. La cochinita y la carrillada van horas a baja temperatura, y la tortilla se calienta cuando pides, no cuando abrimos. Por eso tardamos quince minutos y no tres. ⇒ Órale Padre is Mexican street food made in Seville: burritos, tacos, nachos and bowls. It was born in 2021 in a small place on Calle San Luis, in the Macarena, and today there are three, with a central kitchen where everything is prepared. The cochinita and the pork cheek cook low and slow for hours, and the tortilla is heated when you order, not when we open. That's why we take fifteen minutes and not three.
+<b>Los dos tacos de bienvenida.</b> Al darte de alta, te invitamos a dos tacos en tu primer pedido para recoger en cualquiera de los tres locales, presentando el mensaje de bienvenida o identificándote con el teléfono con el que te diste de alta. Un solo canje por persona, sin cambio por dinero ni por otro producto, y con un pedido mínimo de un plato principal. Válido durante 60 días desde el alta. ⇒ <b>The two welcome tacos.</b> When you sign up, we treat you to two tacos with your first pick-up order at any of the three locations, by showing the welcome message or identifying yourself with the phone number you signed up with. One redemption per person, not exchangeable for cash or another product, with a minimum order of one main dish. Valid for 60 days from sign-up.
+<b>Importante:</b> cocinamos todo en la misma cocina, así que no podemos garantizar la ausencia total de trazas de ningún alérgeno. Si tienes una alergia o intolerancia, díselo al equipo antes de pedir, en el local o por teléfono: te diremos qué platos puedes tomar con seguridad y qué podemos adaptar. Los valores nutricionales que aparecen en los bowls son estimaciones calculadas a partir de la receta, no análisis de laboratorio. ⇒ <b>Important:</b> everything is cooked in the same kitchen, so we can't guarantee the total absence of traces of any allergen. If you have an allergy or intolerance, tell the team before ordering, in store or by phone: we'll tell you which dishes are safe for you and what we can adapt. The nutritional values shown for the bowls are estimates calculated from the recipe, not lab analyses.
+<b>Cómo se suman puntos.</b> Un euro gastado equivale a un punto en pedidos en el local (mesa, barra o recogida identificándote con tu teléfono al pagar) y a dos puntos en pedidos hechos para recoger a través de la web o de nuestra tienda online. Los pedidos por plataformas de reparto (Uber Eats, Glovo) no suman puntos porque la plataforma no nos comunica quién es el cliente. Los niveles Compadre y Padrino multiplican los puntos según se indica en la página del club. ⇒ <b>How points add up.</b> One euro spent equals one point on in-store orders (table, bar or pick-up, identifying yourself with your phone number when paying) and two points on pick-up orders placed through the website or our online shop. Orders through delivery platforms (Uber Eats, Glovo) earn no points because the platform doesn't tell us who the customer is. The Compadre and Padrino levels multiply points as shown on the club page.
+La web es informativa: muestra la carta, los locales y las vías para pedir o reservar. Los pedidos para recoger se tramitan en la tienda online de Last App de cada local; los pedidos a domicilio, en Uber Eats o Glovo. Cada una de esas plataformas tiene sus propias condiciones, que se aceptan al pedir en ellas. Los precios de la carta llevan el IVA incluido y pueden cambiar sin previo aviso; el precio válido es el que figura en el local o en la plataforma en el momento de pedir. ⇒ This site is informational: it shows the menu, the locations and the ways to order or book. Pick-up orders are handled in each location's Last App online shop; delivery orders on Uber Eats or Glovo. Each of those platforms has its own terms, accepted when ordering there. Menu prices include VAT and may change without notice; the valid price is the one shown in store or on the platform at the time of ordering.
+Puedes pedirnos acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad de tus datos, y retirar tu consentimiento en cualquier momento, escribiendo a <a href="mailto:orale.padre.food@gmail.com?subject=Protecci%C3%B3n%20de%20datos">orale.padre.food@gmail.com</a> con una copia de tu documento de identidad. Si crees que no te hemos atendido bien, puedes reclamar ante la <a href="https://www.aepd.es" target="_blank" rel="noopener">Agencia Española de Protección de Datos</a>. ⇒ You can ask us for access, rectification, erasure, objection, restriction of processing and portability of your data, and withdraw your consent at any time, by writing to <a href="mailto:orale.padre.food@gmail.com?subject=Protecci%C3%B3n%20de%20datos">orale.padre.food@gmail.com</a> with a copy of your ID. If you feel we haven't handled it well, you can complain to the <a href="https://www.aepd.es" target="_blank" rel="noopener">Spanish Data Protection Agency</a>.
+# ── Placeholders y campos ──
+600 000 000 ⇒ 600 000 000
+DD/MM ⇒ DD/MM
+Dónde: ⇒ Where:
+Día: ⇒ Day:
+Cumpleaños: ⇒ Birthday:
+Teléfono: ⇒ Phone:
+Elige dónde lo recoges ⇒ Choose where to pick it up
+Reproducir el vídeo ⇒ Play the video
+Cerrar menú ⇒ Close menu
+# ── Cadenas del JS (mensajes al visitante) ──
+Tu navegador te va a pedir permiso para la ubicación. ⇒ Your browser will ask for location permission.
+No nos has dado permiso, así que elige tu local aquí abajo. ⇒ No permission given, so choose your location below.
+No hemos podido saber dónde estás. Elígelo tú aquí abajo. ⇒ We couldn't work out where you are. Pick it yourself below.
+Ha tardado demasiado. Elige tu local aquí abajo. ⇒ That took too long. Choose your location below.
+Te hemos dejado el local de la última vez. Cámbialo si quieres. ⇒ We've kept your location from last time. Change it if you like.
+Tu local más cercano es ⇒ Your closest location is
+Estás a ⇒ You're
+ km de nuestro local más cercano.  ⇒  km from our closest location. 
+Desde ahí no te merece la pena venir: te mandamos una caja a casa. ⇒ From there it's not worth the trip: we'll ship a box to your door.
+Todavía no está puesto el enlace de ⇒ The link isn't set up yet for
+Abre script.js y rellénalo en el bloque CONFIG de arriba. ⇒ Open script.js and fill it in the CONFIG block at the top.
+Valoración positiva ⇒ Positive rating
+Más de 300 reseñas ⇒ Over 300 reviews
+Estamos calculándolos. Pregúntanos en el local. ⇒ We're working them out. Ask us in store.
+Valores medios por ración. Pueden variar según el montaje. ⇒ Average values per serving. They may vary with how it's built.
+Valores estimados a partir de la receta, no medidos en laboratorio. ⇒ Values estimated from the recipe, not measured in a lab.
+¡Órale! Dime tres cosas y te digo qué pedir. ⇒ Órale! Tell me three things and I'll tell you what to order.
+¿Con qué te apetece? ⇒ What are you in the mood for?
+¿Y de picante, cómo vamos? ⇒ And how about heat?
+Última: ¿cómo lo quieres? ⇒ Last one: how do you want it?
+Cuanto más mejor ⇒ The more the better
+el formato que querías ⇒ the format you wanted
+la proteína que has pedido ⇒ the protein you asked for
+¡Hola  ⇒ Hi 
+No hemos podido enviarlo. Escríbenos directamente a  ⇒ We couldn't send it. Write to us directly at 
+Se ha abierto tu correo con el alta escrita. Dale a enviar y te avisamos al abrir el club. ⇒ Your email app has opened with the sign-up written. Hit send and we'll let you know when the club opens.
+Apuntado ⇒ You're on the list
+Te escribimos en cuanto abramos el club, con tus dos tacos de bienvenida. ⇒ We'll write to you as soon as the club opens, with your two welcome tacos.
+Quiero mis puntos ⇒ I want my points
+Enviando… ⇒ Sending…
+Se ha abierto la reserva online de  ⇒ The online booking for 
+ en otra pestaña. Termínala allí. ⇒  has opened in another tab. Finish it there.
+Te hemos dejado el correo redactado, solo tienes que enviarlo. ⇒ We've left the email written for you, just send it.
+ Para confirmar al momento, llama a  ⇒  To confirm right away, call 
+Reserva ·  ⇒ Booking · 
+¡Hola Órale Padre! Quiero reservar mesa. ⇒ Hi Órale Padre! I'd like to book a table.
+Nombre:  ⇒ Name: 
+Local:  ⇒ Location: 
+Hora:  ⇒ Time: 
+Personas:  ⇒ People: 
+Nota:  ⇒ Note: 
+Quiero la  ⇒ I want the 
+Hola, quiero pedir la  ⇒ Hi, I'd like to order the 
+Pausar el vídeo ⇒ Pause the video
+Abrir menú ⇒ Open menu
+<span class="visually-hidden">Pausar el v&iacute;deo</span> <span class="video-ctrl-icono" aria-hidden="true"></span> ⇒ <span class="visually-hidden">Pause the video</span> <span class="video-ctrl-icono" aria-hidden="true"></span>
