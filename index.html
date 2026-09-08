@@ -35,7 +35,7 @@
     { "@type": "Question", "name": "¿Hacéis envío a domicilio en Sevilla?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, con Uber Eats y Glovo desde los tres locales. Para recoger, se pide en Last App sin comisiones y está listo en 15-25 minutos." } },
     { "@type": "Question", "name": "¿Cuánto cuesta un burrito?", "acceptedAnswer": { "@type": "Answer", "text": "9,95 € casi todos; la Doña Juana vegetal, 12,50 €. Combos desde 14,95 € y menú de mediodía jueves y viernes por 10 €." } },
     { "@type": "Question", "name": "¿Tenéis opción vegetariana o vegana?", "acceptedAnswer": { "@type": "Answer", "text": "Sí: la Doña Juana, con Heura, es 100% vegetal, y cualquier bowl se puede pedir sin lácteos." } },
-    { "@type": "Question", "name": "¿Se puede reservar mesa?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, desde la web o llamando al local. Grupos de más de diez, por email." } },
+    { "@type": "Question", "name": "¿Se puede reservar mesa?", "acceptedAnswer": { "@type": "Answer", "text": "En Los Remedios y Sevilla Este sí, desde la web o llamando al local. San Luis es solo para recoger y llevar. Grupos de más de diez, por email." } },
     { "@type": "Question", "name": "¿Dónde está Órale Padre?", "acceptedAnswer": { "@type": "Answer", "text": "Calle San Luis 78 (Macarena), Virgen de Loreto 16 (Los Remedios) y calle Japón 10 (Sevilla Este), en Sevilla." } },
     { "@type": "Question", "name": "¿Tenéis información de alérgenos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, en cada plato de la carta y en la página de alérgenos. Se cocina todo en la misma cocina, por lo que no se garantiza ausencia de trazas." } }
   ]
@@ -73,7 +73,7 @@
       "servesCuisine": "Mexicana",
       "priceRange": "€",
       "hasMenu": "https://www.oralepadre.com/#carta",
-      "acceptsReservations": "True",
+      "acceptsReservations": "False",
       "telephone": "+34672964907",
       "address": { "@type": "PostalAddress", "streetAddress": "Calle San Luis, 78", "addressLocality": "Sevilla", "postalCode": "41003", "addressCountry": "ES" },
       "openingHoursSpecification": [
@@ -128,7 +128,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css?v=c952253b">
+<link rel="stylesheet" href="styles.css?v=8c6548b6">
 </head>
 <body>
 
@@ -1434,7 +1434,14 @@
     <div class="banner-copy">
       <p class="eyebrow">Órale Catering</p>
       <h2 class="big">Tacos para todos<br>los que seáis</h2>
-      <p class="banner-lede">Bodas, cumpleaños, comidas de empresa y despedidas, de 20 a 100 personas. La plancha viene con nosotros y el guacamole se hace allí. Y si no vivís en Sevilla, os mandamos una caja a casa.</p>
+      <p class="banner-lede">Bodas, cumpleaños, comidas de empresa, despedidas y fiestas de barrio. Llegamos con la plancha, montamos los tacos delante de la gente y nos vamos con la cocina recogida. Tú solo pones el hambre.</p>
+      <ul class="banner-ventajas mono">
+        <li>Plancha en directo</li>
+        <li>Guacamole hecho allí</li>
+        <li>De 20 a 100 personas</li>
+        <li>Presupuesto cerrado en 24 h</li>
+        <li>Sevilla y toda Andalucía</li>
+      </ul>
       <div class="banner-acc">
         <a class="btn btn-p" href="#cat-form" data-abre-catering>Pedir presupuesto</a>
         <a class="banner-alt mono" href="#p-cajas" data-abre-cajas>o ver las cajas para casa</a>
@@ -1700,6 +1707,7 @@
 
 <!-- ══════════ ÓRALE PARA EQUIPOS · lo sano, para grupos ══════════ -->
 <section class="equipos" id="equipos" aria-labelledby="equipos-t">
+  <svg class="flota-fresco" style="--l:-3%;--t:8%;--g:-18deg;--v:-90px" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5c-9 0-14 9-15 16-1 8-8 12-8 21 0 10 10 17 23 17s23-7 23-17c0-9-7-13-8-21C46 14 41 5 32 5Z"/><circle cx="32" cy="41" r="9"/></svg><svg class="flota-fresco" style="--l:88%;--t:62%;--g:14deg;--v:-140px" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="37" r="22"/><path d="M32 15c-2-6-6-9-12-8 3 3 6 5 8 8M32 15c2-6 6-9 12-8-3 3-6 5-8 8M32 15V8"/></svg>
   <div class="equipos-in">
     <div class="equipos-fotos" aria-hidden="true">
       <img src="img/carta/nude-juarez.jpg" alt="" width="900" height="900" loading="lazy">
@@ -1847,6 +1855,7 @@
 
 <!-- ══════════ EQUIPO ══════════ -->
 <section class="equipo" id="equipo">
+  <svg class="flota-fresco" style="--l:90%;--t:12%;--g:14deg;--v:-140px" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="37" r="22"/><path d="M32 15c-2-6-6-9-12-8 3 3 6 5 8 8M32 15c2-6 6-9 12-8-3 3-6 5-8 8M32 15V8"/></svg><svg class="flota-fresco" style="--l:-4%;--t:64%;--g:-18deg;--v:-90px" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 5c-9 0-14 9-15 16-1 8-8 12-8 21 0 10 10 17 23 17s23-7 23-17c0-9-7-13-8-21C46 14 41 5 32 5Z"/><circle cx="32" cy="41" r="9"/></svg>
   <header class="sec-head">
     <p class="eyebrow">Quiénes somos</p>
     <h2 class="big">Tres locales,<br>una cocina</h2>
@@ -1932,8 +1941,8 @@
     <p class="eyebrow">Dónde estamos</p>
     <h2 class="big">Tres locales<br>en Sevilla</h2>
     <p class="sec-lede">Macarena, Los Remedios y Sevilla Este. En los tres la
-      plancha está a la vista: te sientas, ves cómo se monta tu burrito y te lo
-      dan caliente. Mesa para dos o mesa para doce.</p>
+      plancha está a la vista. En Los Remedios y Sevilla Este te sientas, mesa
+      para dos o para doce; San Luis es solo para recoger y llevar.</p>
   </header>
 
 <!-- MAPA:INICIO · generado por mapa-sevilla.py · no editar a mano -->
@@ -1981,6 +1990,7 @@
         41003 Sevilla
       </address>
       <p class="loc-tel mono"><a href="tel:+34672964907">672 96 49 07</a></p>
+      <p class="loc-nota mono">Solo para recoger y llevar. Sin mesas ni reservas.</p>
       <dl class="loc-h">
         <dt>Lun – Mié</dt><dd>20:00 – 23:30</dd>
         <dt>Jueves</dt><dd>13:30 – 16:00 · 20:00 – 23:30</dd>
@@ -2023,6 +2033,7 @@
         41020 Sevilla
       </address>
       <p class="loc-tel mono"><a href="tel:+34672989917">672 98 99 17</a></p>
+      <p class="loc-nota mono">Zona de aparcamiento justo enfrente.</p>
       <dl class="loc-h">
         <dt>Lun – Mié</dt><dd>20:30 – 23:30</dd>
         <dt>Jue – Dom</dt><dd>13:30 – 16:00 · 20:30 – 23:30</dd>
@@ -2070,7 +2081,6 @@
       <h2 class="big">Dinos cuándo<br>y cuántos</h2>
       <p>Rellena esto y la reserva llega al local. Te confirmamos en cuanto la vean.</p>
       <ul class="res-tel mono" aria-label="Reservar por teléfono">
-        <li><span>San Luis</span><a href="tel:+34672964907">672 96 49 07</a></li>
         <li><span>Los Remedios</span><a href="tel:+34658869341">658 86 93 41</a></li>
         <li><span>Sevilla Este</span><a href="tel:+34672989917">672 98 99 17</a></li>
       </ul>
@@ -2098,11 +2108,11 @@
         <span>Local</span>
         <select name="local" required>
           <option value="">Elige local</option>
-          <option>San Luis (Macarena)</option>
           <option>Los Remedios</option>
           <option>Sevilla Este</option>
         </select>
         <em class="err">Elige un local</em>
+        <small class="field-nota mono">San Luis es solo para recoger: allí no hay mesas.</small>
       </label>
 
       <div class="f-row f-row-3">
@@ -2138,6 +2148,7 @@
      Lo que la gente busca en Google antes de venir. Cada respuesta va
      también en datos estructurados (FAQPage) para salir en resultados. -->
 <section class="faq" id="faq" aria-labelledby="faq-t">
+  <svg class="flota-fresco" style="--l:90%;--t:6%;--g:22deg;--v:-70px" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="26"/><circle cx="32" cy="32" r="19"/><path d="M32 13v38M13 32h38M18.6 18.6l26.8 26.8M45.4 18.6 18.6 45.4"/></svg><svg class="flota-fresco" style="--l:-4%;--t:70%;--g:-30deg;--v:-110px" viewBox="0 0 64 30" aria-hidden="true"><path d="M55 5c1-3 4-4 7-3-2 1-3 3-3 5 3 3 4 8 3 12-2 8-14 11-28 10C20 28 8 22 4 16c-1-2 0-3 2-3 9 1 17-1 23-6 6-5 15-6 26-2Z"/></svg>
   <div class="faq-in">
     <header class="sec-head faq-cab">
       <p class="eyebrow">Preguntas rápidas</p>
@@ -2158,7 +2169,7 @@
       </details>
       <details class="faq-item">
         <summary>¿Se puede reservar mesa?</summary>
-        <p>Sí, <a href="#reservar">desde aquí</a> o llamando al local. Para grupos de más de diez, escríbenos y lo montamos a medida.</p>
+        <p>En Los Remedios y Sevilla Este sí, <a href="#reservar">desde aquí</a> o llamando al local. San Luis es solo para recoger y llevar, sin mesas. Para grupos de más de diez, escríbenos y lo montamos a medida.</p>
       </details>
       <details class="faq-item">
         <summary>¿Dónde estáis?</summary>
@@ -2372,6 +2383,6 @@
   <a class="bp-sec" href="#carta">Carta</a>
 </div>
 
-<script src="script.js?v=d746ff73"></script>
+<script src="script.js?v=f022a896"></script>
 </body>
 </html>

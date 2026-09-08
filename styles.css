@@ -3752,3 +3752,32 @@ body{ touch-action:pan-y pinch-zoom; }
 /* Las anclas del menú caen justo debajo de la cabecera fija */
 [id]{ scroll-margin-top:calc(var(--nav-h, 72px) + var(--marco) + 12px); }
 #carta{ scroll-margin-top:calc(var(--nav-h, 72px) + var(--marco) + 4px); }
+
+
+/* ── Notas de local y de formulario ── */
+.loc-nota{ margin-top:6px; font-size:11.5px; color:var(--humo); }
+.field-nota{ display:block; margin-top:6px; font-size:11px; color:var(--humo); }
+
+/* ── Catering: ventajas dentro del banner ── */
+.banner-ventajas{ list-style:none; margin:18px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+.banner-ventajas li{ font-size:11px; letter-spacing:.06em; padding:6px 10px; border:1px solid rgba(245,238,230,.45); color:var(--crema); background:rgba(36,26,28,.35); }
+
+/* ── Aguacate, tomate, lima y guindilla flotando por los bloques ── */
+.equipos, .faq, .equipo{ position:relative; }
+.flota-fresco{
+  position:absolute; left:var(--l); top:var(--t); z-index:0; pointer-events:none;
+  width:clamp(70px, 9vw, 130px); height:auto;
+  fill:none; stroke:var(--verde); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round;
+  opacity:.16; transform:rotate(var(--g));
+}
+.equipos-in, .faq-in, .equipo > *{ position:relative; z-index:1; }
+@supports (animation-timeline: view()){
+  @media (prefers-reduced-motion:no-preference){
+    .flota-fresco{ animation:fresco-deriva linear both; animation-timeline:view(); animation-range:cover 0% cover 100%; }
+    @keyframes fresco-deriva{
+      from{ transform:translateY(calc(var(--v) * -1)) rotate(calc(var(--g) - 12deg)); }
+      to{   transform:translateY(var(--v)) rotate(calc(var(--g) + 12deg)); }
+    }
+  }
+}
+@media (max-width:640px){ .flota-fresco{ width:64px; opacity:.12; } }

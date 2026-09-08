@@ -344,6 +344,10 @@ const LOCALES = [
       enlazar(btnGlovo, CONFIG.glovo.activo ? CONFIG.glovo[local.clave] || '' : '', 'pedidos a Glovo');
     }
 
+    // San Luis no tiene mesas: fuera el "¿prefieres sentarte?"
+    const pie = $('.acc-pie');
+    if (pie) pie.hidden = local.clave === 'sanLuis'; // sin-mesas
+
     // Teléfono del local, por si prefieren pedirlo de viva voz
     const tel = CONFIG.telefonos[local.clave] || '';
     const telLinea = $('#acc-tel');
