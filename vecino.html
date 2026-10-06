@@ -115,11 +115,8 @@ h1{
 
   <div class="btns">
     <a class="b b-p" id="descargar" href="/img/cupon-vecino-remedios.jpg" download="cupon-orale-padre-remedios.jpg">Descargar cupón</a>
-    <a class="b" id="pedir" href="https://oralepadre.last.shop/l/orale-padre-remedios" target="_blank" rel="noopener">Pedir ahora para recoger</a>
-    <div class="fila">
-      <a class="b" id="llamar" href="tel:+34658869341">Llamar</a>
-      <a class="b" id="whatsapp" href="https://wa.me/34658869341" target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+    <a class="b" id="pedir" href="https://oralepadre.last.shop/l/orale-padre-remedios" target="_blank" rel="noopener">Pedir para recoger</a>
+    <a class="b" id="llamar" href="tel:+34658869341">O llamar al local</a>
   </div>
 
   <p class="pie">
@@ -161,8 +158,6 @@ h1{
 
   $('pedir').href = 'https://oralepadre.last.shop/l/' + local.tienda;
   $('llamar').href = 'tel:+34' + local.tel;
-  $('whatsapp').href = 'https://wa.me/34' + local.tel + '?text=' +
-    encodeURIComponent('¡Hola! Quiero hacer un pedido para recoger en ' + local.nombre + '. Tengo el cupón VECINO 🌮');
 
   /* Fuera de fechas, se dice. Un cupón caducado sin avisar quema al cliente
      y le hace discutir con el equipo en la barra. */
