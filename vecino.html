@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cupón vecino · Órale Padre</title>
+<meta name="description" content="Dos tacos gratis con tu pedido de 15 € o más, del 8 al 29 de octubre. Enseña el cupón al recoger.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5EEE6">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Página de la campaña de buzoneo. Va suelta y con el CSS dentro a
+   propósito: se abre desde un QR, con datos móviles y una sola vez, así
+   que pesa menos cargarlo todo junto que traerse el CSS de la web. */
+:root{
+  --crema:#F5EEE6; --crema-3:#FBF7F2; --tinta:#241A1C; --tinta-2:#574548;
+  --humo:#6E5C60; --burdeos:#6B1C28; --oro:#C98A12; --linea:#DDD0C2;
+  --display:'Anton','Arial Narrow',Impact,sans-serif;
+  --texto:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--crema); color:var(--tinta);
+  font-family:var(--texto); line-height:1.5;
+  padding:18px 16px calc(32px + env(safe-area-inset-bottom));
+  display:flex; justify-content:center;
+}
+main{width:100%; max-width:460px}
+
+.marca{display:flex; align-items:center; gap:9px; margin-bottom:22px; text-decoration:none; color:inherit}
+.marca img{width:34px; height:auto; display:block}
+.marca span{font-family:var(--display); font-size:17px; letter-spacing:.02em; text-transform:uppercase}
+
+.k{
+  font-family:var(--mono); font-size:11px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--burdeos);
+}
+h1{
+  font-family:var(--display); font-weight:400;
+  font-size:clamp(38px,12vw,52px); line-height:.94;
+  text-transform:uppercase; letter-spacing:.01em;
+  margin:8px 0 10px;
+}
+.sub{font-size:16px; color:var(--tinta-2); margin-bottom:18px}
+.sub b{color:var(--tinta)}
+
+/* Marco con escuadras de imprenta, como el resto de la web */
+.marco{position:relative; padding:9px; border:1px solid var(--burdeos); background:var(--crema-3)}
+.marco::before,.marco::after{
+  content:""; position:absolute; width:13px; height:13px; border:2px solid var(--burdeos);
+}
+.marco::before{top:-1px; left:-1px; border-right:0; border-bottom:0}
+.marco::after{bottom:-1px; right:-1px; border-left:0; border-top:0}
+.marco img{width:100%; height:auto; display:block; background:var(--crema-3)}
+
+.btns{display:grid; gap:10px; margin-top:18px}
+.b{
+  display:block; text-align:center; text-decoration:none;
+  font-family:var(--texto); font-size:15px; font-weight:800;
+  letter-spacing:.09em; text-transform:uppercase;
+  padding:16px 14px; border:1.5px solid var(--tinta);
+  background:var(--crema-3); color:var(--tinta);
+  -webkit-tap-highlight-color:transparent;
+}
+.b:active{transform:translateY(1px)}
+.b-p{
+  background:var(--burdeos); color:var(--crema); border-color:var(--burdeos);
+  box-shadow:0 3px 0 var(--tinta);
+}
+.b-p:active{box-shadow:0 1px 0 var(--tinta)}
+.fila{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+
+.pie{
+  margin-top:18px; padding-top:14px; border-top:1px solid var(--linea);
+  font-size:12.5px; line-height:1.55; color:var(--humo);
+}
+.pie b{color:var(--tinta-2)}
+.pie + .pie{border-top:0; padding-top:8px}
+
+/* Avisos de fecha: solo aparecen fuera del periodo de la promo */
+.aviso{
+  margin-bottom:16px; padding:12px 14px;
+  border:1px solid var(--oro); background:#FFF6DC;
+  font-size:13.5px; color:var(--tinta-2);
+}
+.aviso b{color:var(--tinta)}
+[hidden]{display:none !important}
+</style>
+</head>
+<body>
+<main>
+
+  <a class="marca" href="/">
+    <img src="/img/logo-tinta.png" alt="" width="560" height="674">
+    <span>Órale Padre</span>
+  </a>
+
+  <p class="aviso" id="aviso" hidden></p>
+
+  <p class="k" id="etiqueta">Promo vecinos · Los Remedios · 8 al 29 oct</p>
+  <h1>Tu cupón vecino</h1>
+  <p class="sub">Guárdalo y enséñalo al recoger tu pedido de <b>15 € o más</b>. Los 2 tacos van por la casa.</p>
+
+  <div class="marco">
+    <img id="cupon" src="/img/cupon-vecino-remedios.jpg"
+         alt="Cupón vecino de Órale Padre: dos tacos gratis con tu pedido de 15 € o más"
+         width="1080" height="1350" fetchpriority="high" decoding="async">
+  </div>
+
+  <div class="btns">
+    <a class="b b-p" id="descargar" href="/img/cupon-vecino-remedios.jpg" download="cupon-orale-padre-remedios.jpg">Descargar cupón</a>
+    <a class="b" id="pedir" href="https://oralepadre.last.shop/l/orale-padre-remedios" target="_blank" rel="noopener">Pedir ahora para recoger</a>
+    <div class="fila">
+      <a class="b" id="llamar" href="tel:+34658869341">Llamar</a>
+      <a class="b" id="whatsapp" href="https://wa.me/34658869341" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <p class="pie">
+    ¿No te deja descargar? Haz una captura de pantalla: también vale.
+    Si pides por la web, escribe <b>VECINO</b> en observaciones.
+  </p>
+  <p class="pie">
+    Válido del 8 al 29 de octubre, de lunes a jueves y domingos por la noche,
+    excepto 11 y 12/10. Un canje por pedido. No válido en apps de reparto.
+  </p>
+
+</main>
+
+<script>
+/* Un parámetro, tres locales. Si no llega o no se reconoce, Los Remedios,
+   que es lo que ya está puesto en el HTML: si este script fallara, la
+   página sigue siendo válida en vez de quedarse a medias. */
+(function () {
+  var LOCALES = {
+    remedios:    { nombre: 'Los Remedios', tel: '658869341', tienda: 'orale-padre-remedios' },
+    sevillaeste: { nombre: 'Sevilla Este', tel: '672989917', tienda: 'orale-padre-sevilla-este' },
+    sanluis:     { nombre: 'San Luis',     tel: '672964907', tienda: 'orale-padre-san-luis' }
+  };
+
+  var pedido = (new URLSearchParams(location.search).get('l') || '')
+    .toLowerCase().replace(/[^a-z]/g, '');          // "Sevilla-Este" → "sevillaeste"
+  var clave = LOCALES[pedido] ? pedido : 'remedios';
+  var local = LOCALES[clave];
+
+  var img = '/img/cupon-vecino-' + clave + '.jpg';
+  var $ = function (id) { return document.getElementById(id); };
+
+  $('cupon').src = img;
+  $('etiqueta').textContent = 'Promo vecinos · ' + local.nombre + ' · 8 al 29 oct';
+
+  var dl = $('descargar');
+  dl.href = img;
+  dl.setAttribute('download', 'cupon-orale-padre-' + clave + '.jpg');
+
+  $('pedir').href = 'https://oralepadre.last.shop/l/' + local.tienda;
+  $('llamar').href = 'tel:+34' + local.tel;
+  $('whatsapp').href = 'https://wa.me/34' + local.tel + '?text=' +
+    encodeURIComponent('¡Hola! Quiero hacer un pedido para recoger en ' + local.nombre + '. Tengo el cupón VECINO 🌮');
+
+  /* Fuera de fechas, se dice. Un cupón caducado sin avisar quema al cliente
+     y le hace discutir con el equipo en la barra. */
+  var hoy = new Date();
+  var inicio = new Date(2026, 9, 8);          // 8 de octubre de 2026
+  var fin = new Date(2026, 9, 29, 23, 59, 59); // 29 de octubre, final del día
+  var aviso = $('aviso');
+  if (hoy < inicio) {
+    aviso.innerHTML = '<b>Aún no empieza.</b> El cupón se puede canjear a partir del <b>jueves 8 de octubre</b>. Guárdalo ya y lo usas ese día.';
+    aviso.hidden = false;
+  } else if (hoy > fin) {
+    aviso.innerHTML = '<b>Esta promo ya terminó</b> (acabó el 29 de octubre), pero la carta sigue ahí. ' +
+      'Pedir para recoger siempre sale sin comisiones.';
+    aviso.hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
