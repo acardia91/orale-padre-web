@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cupón vecino · Órale Padre</title>
-<meta name="description" content="Dos tacos gratis con tu pedido de 15 € o más, del 8 al 29 de octubre. Enseña el cupón al recoger.">
+<meta name="description" content="Dos tacos gratis con tu pedido de 15 € o más, hasta el 27 de noviembre. Enseña el cupón al recoger.">
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#F5EEE6">
 <link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -130,7 +130,7 @@ h1{
 
   <p class="aviso" id="aviso" hidden></p>
 
-  <p class="k" id="etiqueta">Promo vecinos · Los Remedios · 8 al 29 oct</p>
+  <p class="k" id="etiqueta">Promo vecinos · Los Remedios · hasta el 27 nov</p>
   <h1>Tu cupón vecino</h1>
   <p class="sub">Guárdalo y enséñalo al recoger tu pedido de <b>15 € o más</b>. Los 2 tacos van por la casa.</p>
 
@@ -182,8 +182,8 @@ h1{
     Si pides por la web, escribe <b>VECINO</b> en observaciones.
   </p>
   <p class="pie">
-    Válido del 8 al 29 de octubre, de lunes a jueves y viernes a mediodía,
-    excepto el 12/10. 1 canje por pedido. No válido en apps de reparto.
+    Válido hasta el 27 de noviembre, de lunes a jueves y viernes a mediodía,
+    excepto el 2/11. 1 canje por pedido. No válido en apps de reparto.
   </p>
 
 </main>
@@ -234,7 +234,7 @@ var SUPABASE_ANON = '';
   var $ = function (id) { return document.getElementById(id); };
 
   $('cupon').src = img;
-  $('etiqueta').textContent = 'Promo vecinos · ' + local.nombre + ' · 8 al 29 oct';
+  $('etiqueta').textContent = 'Promo vecinos · ' + local.nombre + ' · hasta el 27 nov';
 
   var dl = $('descargar');
   dl.href = img;
@@ -317,13 +317,13 @@ var SUPABASE_ANON = '';
 
   var hoy = new Date();
   var inicio = new Date(2026, 9, 8);          // 8 de octubre de 2026
-  var fin = new Date(2026, 9, 29, 23, 59, 59); // 29 de octubre, final del día
+  var fin = new Date(2026, 10, 27, 23, 59, 59); // 27 de noviembre, final del día
   var aviso = $('aviso');
   if (hoy < inicio) {
     aviso.innerHTML = '<b>Aún no empieza.</b> El cupón se puede canjear a partir del <b>jueves 8 de octubre</b>. Guárdalo ya y lo usas ese día.';
     aviso.hidden = false;
   } else if (hoy > fin) {
-    aviso.innerHTML = '<b>Esta promo ya terminó</b> (acabó el 29 de octubre), pero la carta sigue ahí. ' +
+    aviso.innerHTML = '<b>Esta promo ya terminó</b> (acabó el 27 de noviembre), pero la carta sigue ahí. ' +
       'Pedir para recoger siempre sale sin comisiones.';
     aviso.hidden = false;
   }
