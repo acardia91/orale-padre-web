@@ -91,6 +91,33 @@ h1{
 }
 .aviso b{color:var(--tinta)}
 [hidden]{display:none !important}
+
+/* Aviso de próximas promos. Va debajo del cupón a propósito: el cupón
+   no depende de esto, se ve y se descarga sin dar ningún dato. */
+.lista{margin-top:22px; padding:18px 16px; border:1px solid var(--linea); background:var(--crema-3)}
+.lista h2{font-family:var(--display); font-weight:400; font-size:24px; line-height:1; text-transform:uppercase; letter-spacing:.02em}
+.lista p.intro{font-size:14px; color:var(--tinta-2); margin-top:7px}
+.campo{display:block; margin-top:12px}
+.campo span{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--humo); margin-bottom:5px}
+.campo input{
+  width:100%; padding:13px 12px; font-family:var(--texto); font-size:16px; /* 16px evita el zoom de iOS */
+  color:var(--tinta); background:var(--crema-3); border:1px solid var(--linea);
+}
+.campo input:focus{outline:2px solid var(--burdeos); outline-offset:-1px; border-color:var(--burdeos)}
+.check{display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:start; margin-top:14px}
+.check input{width:20px; height:20px; margin-top:2px; accent-color:var(--burdeos); flex:none}
+.check span{font-size:13.5px; line-height:1.5; color:var(--tinta-2)}
+.lista button{
+  width:100%; margin-top:14px; padding:16px 14px; cursor:pointer;
+  font-family:var(--texto); font-size:15px; font-weight:800; letter-spacing:.09em; text-transform:uppercase;
+  background:var(--burdeos); color:var(--crema); border:1.5px solid var(--burdeos); box-shadow:0 3px 0 var(--tinta);
+}
+.lista button:disabled{background:var(--crema-3); color:var(--humo); border-color:var(--linea); box-shadow:none; cursor:not-allowed}
+.legal{margin-top:12px; font-size:11.5px; line-height:1.5; color:var(--humo)}
+.legal a{color:var(--burdeos)}
+.hecho{padding:18px 16px; border:1px solid var(--burdeos); background:var(--crema-3)}
+.hecho b{font-family:var(--display); font-weight:400; font-size:22px; text-transform:uppercase; display:block; margin-bottom:5px}
+.hecho p{font-size:14px; color:var(--tinta-2)}
 </style>
 </head>
 <body>
@@ -119,18 +146,75 @@ h1{
     <a class="b" id="llamar" href="tel:+34658869341">O llamar al local</a>
   </div>
 
+  <section class="lista" id="lista">
+    <h2>¿Te avisamos de la próxima?</h2>
+    <p class="intro">Mandamos pocas cosas y solo cuando hay promo de verdad.</p>
+    <form id="form-lista" novalidate>
+      <label class="campo">
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email" inputmode="email" placeholder="tu@email.com">
+      </label>
+      <label class="campo">
+        <span>Teléfono <i>(opcional)</i></span>
+        <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="600 000 000">
+      </label>
+      <label class="check">
+        <input type="checkbox" name="consentimiento" id="consentimiento">
+        <span id="texto-consentimiento">Quiero recibir promos y novedades de Órale Padre por email/WhatsApp. Me puedo dar de baja cuando quiera.</span>
+      </label>
+      <button type="submit" id="enviar" disabled>Avisadme</button>
+      <p class="legal">
+        Responsable: La Baba Hasta El Suelo S.L. (Órale Padre). Finalidad: enviarte promos y
+        novedades de Órale Padre. No cedemos tus datos a terceros. Puedes darte de baja y
+        ejercer tus derechos de acceso, rectificación y supresión en
+        <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>.
+        <a href="/legal.html#privacidad" target="_blank" rel="noopener">Política de privacidad</a>.
+      </p>
+    </form>
+    <div class="hecho" id="hecho" hidden>
+      <b>¡Hecho, vecino!</b>
+      <p>Te avisamos de la próxima.</p>
+    </div>
+  </section>
+
   <p class="pie">
     ¿No te deja descargar? Haz una captura de pantalla: también vale.
     Si pides por la web, escribe <b>VECINO</b> en observaciones.
   </p>
   <p class="pie">
-    Válido del 8 al 29 de octubre, de lunes a jueves y domingos por la noche,
-    excepto 11 y 12/10. Un canje por pedido. No válido en apps de reparto.
+    Válido del 8 al 29 de octubre, de lunes a jueves y viernes a mediodía,
+    excepto el 12/10. 1 canje por pedido. No válido en apps de reparto.
   </p>
 
 </main>
 
 <script>
+/* ══ RELLENAR CUANDO HAYA SUPABASE ══
+   Mientras estos dos valores estén vacíos, el formulario abre el correo
+   del visitante con sus datos ya escritos, para no perder ningún lead.
+   En cuanto peguéis la URL del proyecto y la clave anon, los envíos van
+   solos a la tabla leads_vecino y el visitante no sale de la página.
+
+   La clave 'anon' es pública por diseño (va en el navegador). Lo que
+   protege la tabla es la política RLS: hay que crearla permitiendo solo
+   INSERT y nunca SELECT, o cualquiera podría leerse la lista entera.
+
+       create table leads_vecino (
+         id bigint generated always as identity primary key,
+         email text not null,
+         telefono text,
+         local text,
+         utm_source text,
+         consentimiento boolean not null default true,
+         texto_consentimiento text,
+         created_at timestamptz not null default now()
+       );
+       alter table leads_vecino enable row level security;
+       create policy "alta publica" on leads_vecino for insert to anon with check (true);
+*/
+var SUPABASE_URL = '';
+var SUPABASE_ANON = '';
+
 /* Un parámetro, tres locales. Si no llega o no se reconoce, Los Remedios,
    que es lo que ya está puesto en el HTML: si este script fallara, la
    página sigue siendo válida en vez de quedarse a medias. */
@@ -161,6 +245,76 @@ h1{
 
   /* Fuera de fechas, se dice. Un cupón caducado sin avisar quema al cliente
      y le hace discutir con el equipo en la barra. */
+  /* ── Aviso de próximas promos ── */
+  var form = $('form-lista');
+  var casilla = $('consentimiento');
+  var boton = $('enviar');
+
+  /* El botón no se activa hasta que marcan la casilla: el consentimiento
+     tiene que ser un acto afirmativo, no algo que venga puesto de serie. */
+  casilla.addEventListener('change', function () { boton.disabled = !casilla.checked; });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.email.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      form.email.focus();
+      form.email.style.borderColor = '#6B1C28';
+      return;
+    }
+    if (!casilla.checked) return;
+
+    var utm = new URLSearchParams(location.search).get('utm_source') || 'directo';
+    var datos = {
+      email: email,
+      telefono: form.telefono.value.trim() || null,
+      local: clave,
+      utm_source: utm,
+      consentimiento: true,
+      texto_consentimiento: $('texto-consentimiento').textContent.trim(),
+      created_at: new Date().toISOString()
+    };
+
+    var hecho = function () { form.hidden = true; $('hecho').hidden = false; };
+
+    if (!SUPABASE_URL || !SUPABASE_ANON) {
+      // Sin Supabase todavía: el correo redactado es el plan B para no perder a nadie.
+      window.location.href = 'mailto:orale.padre.food@gmail.com' +
+        '?subject=' + encodeURIComponent('Avisadme de promos · ' + local.nombre) +
+        '&body=' + encodeURIComponent(
+          'Email: ' + datos.email + '\n' +
+          'Teléfono: ' + (datos.telefono || '-') + '\n' +
+          'Local: ' + local.nombre + '\n' +
+          'Origen: ' + utm + '\n\n' +
+          datos.texto_consentimiento);
+      hecho();
+      return;
+    }
+
+    boton.disabled = true;
+    boton.textContent = 'Enviando…';
+    fetch(SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/leads_vecino', {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON,
+        'Authorization': 'Bearer ' + SUPABASE_ANON,
+        'Content-Type': 'application/json',
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify([datos])
+    }).then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      hecho();
+    }).catch(function () {
+      boton.disabled = false;
+      boton.textContent = 'Avisadme';
+      var aviso = document.createElement('p');
+      aviso.className = 'legal';
+      aviso.innerHTML = 'No hemos podido guardarlo. Escríbenos a <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a> y te apuntamos.';
+      form.appendChild(aviso);
+    });
+  });
+
   var hoy = new Date();
   var inicio = new Date(2026, 9, 8);          // 8 de octubre de 2026
   var fin = new Date(2026, 9, 29, 23, 59, 59); // 29 de octubre, final del día
