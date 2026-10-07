@@ -118,6 +118,23 @@ h1{
 .hecho{padding:18px 16px; border:1px solid var(--burdeos); background:var(--crema-3)}
 .hecho b{font-family:var(--display); font-weight:400; font-size:22px; text-transform:uppercase; display:block; margin-bottom:5px}
 .hecho p{font-size:14px; color:var(--tinta-2)}
+
+/* Selector de local: solo sale cuando el folleto es el único para los tres */
+.sel p.intro{font-size:15px; color:var(--tinta-2); margin:10px 0 18px}
+.sel-locales{display:grid; gap:12px}
+.sel-locales button{
+  width:100%; text-align:left; cursor:pointer;
+  padding:16px 16px 15px; background:var(--crema-3);
+  border:1.5px solid var(--tinta); box-shadow:0 3px 0 var(--burdeos);
+  -webkit-tap-highlight-color:transparent;
+}
+.sel-locales button:active{box-shadow:0 1px 0 var(--burdeos); transform:translateY(2px)}
+.sel-locales b{
+  display:block; font-family:var(--display); font-weight:400;
+  font-size:26px; line-height:1; text-transform:uppercase; letter-spacing:.02em; color:var(--tinta);
+}
+.sel-locales span{display:block; margin-top:6px; font-family:var(--mono); font-size:12px; color:var(--humo)}
+.sel-locales em{font-style:normal; color:var(--burdeos)}
 </style>
 </head>
 <body>
@@ -127,6 +144,19 @@ h1{
     <img src="/img/logo-tinta.png" alt="" width="560" height="674">
     <span>Órale Padre</span>
   </a>
+
+  <section class="sel" id="selector" hidden>
+    <p class="k">Promo vecinos · hasta el 27 nov</p>
+    <h1>¿Cuál es tu Órale?</h1>
+    <p class="intro">Elige dónde vas a recoger y te damos tu cupón de <b>2 tacos gratis</b>.</p>
+    <div class="sel-locales">
+      <button type="button" data-local="remedios"><b>Los Remedios</b><span>C/ Virgen de Loreto, 16</span></button>
+      <button type="button" data-local="sevillaeste"><b>Sevilla Este</b><span>C/ Japón, 10</span></button>
+      <button type="button" data-local="sanluis"><b>San Luis</b><span>C/ San Luis, 78 <em>(solo para llevar)</em></span></button>
+    </div>
+  </section>
+
+  <div id="contenido" hidden>
 
   <p class="aviso" id="aviso" hidden></p>
 
@@ -189,6 +219,8 @@ h1{
     excepto el 2/11. 1 canje por pedido. No válido en apps de reparto.
   </p>
 
+  </div>
+
 </main>
 
 <script>
@@ -228,25 +260,129 @@ var SUPABASE_ANON = '';
     sanluis:     { nombre: 'San Luis',     tel: '672964907', tienda: 'orale-padre-san-luis' }
   };
 
-  var pedido = (new URLSearchParams(location.search).get('l') || '')
-    .toLowerCase().replace(/[^a-z]/g, '');          // "Sevilla-Este" → "sevillaeste"
-  var clave = LOCALES[pedido] ? pedido : 'remedios';
-  var local = LOCALES[clave];
-
-  var img = '/img/cupon-vecino-' + clave + '.png';
   var $ = function (id) { return document.getElementById(id); };
 
-  $('cupon').src = img;
-  $('etiqueta').textContent = 'Promo vecinos · ' + local.nombre + ' · hasta el 27 nov';
+  /* clave y local cambian si el visitante elige en el selector; todo lo que
+     los use (el formulario, por ejemplo) los lee en el momento, no al cargar. */
+  var clave = null;
+  var local = null;
 
-  var dl = $('descargar');
-  dl.href = img;
-  dl.setAttribute('download', 'cupon-orale-padre-' + clave + '.png');
+  function aplicarLocal(k) {
+    clave = k;
+    local = LOCALES[k];
+    var img = '/img/cupon-vecino-' + k + '.png';
 
-  $('pedir').href = 'https://oralepadre.last.shop/l/' + local.tienda;
-  $('llamar').href = 'tel:+34' + local.tel;
-  $('whatsapp').href = 'https://wa.me/34' + local.tel + '?text=' +
-    encodeURIComponent('¡Hola! Quiero hacer un pedido para recoger en ' + local.nombre + '. Tengo el cupón VECINO 🌮');
+    $('cupon').src = img;
+    $('cupon').alt = 'Cupón vecino de Órale Padre ' + local.nombre + ': dos tacos gratis con tu pedido de 15 € o más';
+    $('etiqueta').textContent = 'Promo vecinos · ' + local.nombre + ' · hasta el 27 nov';
+
+    var dl = $('descargar');
+    dl.href = img;
+    dl.setAttribute('download', 'cupon-orale-padre-' + k + '.png');
+
+    $('pedir').href = 'https://oralepadre.last.shop/l/' + local.tienda;
+    $('llamar').href = 'tel:+34' + local.tel;
+    $('whatsapp').href = 'https://wa.me/34' + local.tel + '?text=' +
+      encodeURIComponent('¡Hola! Quiero hacer un pedido para recoger en ' + local.nombre + '. Tengo el cupón VECINO 🌮');
+  }
+
+  var pedido = (new URLSearchParams(location.search).get('l') || '')
+    .toLowerCase().replace(/[^a-z]/g, '');          // "Sevilla-Este" → "sevillaeste"
+
+  if (LOCALES[pedido]) {
+    /* Viene del cartel de mostrador o de un folleto por barrio: va directo. */
+    aplicarLocal(pedido);
+    $('selector').hidden = true;
+    $('contenido').hidden = false;
+  } else {
+    /* Folleto único para los tres: primero hay que saber de qué local es. */
+    $('selector').hidden = false;
+    $('contenido').hidden = true;
+  }
+
+  document.querySelectorAll('.sel-locales button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      aplicarLocal(b.dataset.local);
+      /* La URL pasa a llevar el local, sin tocar las UTM: si comparte el
+         enlace o vuelve atrás, cae ya en su cupón. */
+      var p = new URLSearchParams(location.search);
+      p.set('l', b.dataset.local);
+      history.replaceState(null, '', location.pathname + '?' + p.toString());
+      $('selector').hidden = true;
+      $('contenido').hidden = false;
+      window.scrollTo(0, 0);
+    });
+  });
+
+  /* ── Lista de avisos ─────────────────────────────────────────────────────
+     El botón nace desactivado: se abre cuando hay email con pinta de email y
+     la casilla marcada. Así el consentimiento es un acto suyo, no un descuido
+     nuestro, que es lo que pide el RGPD para enviar promos. */
+  var form = $('form-lista');
+  var enviar = $('enviar');
+  var email = form.querySelector('[name=email]');
+  var telefono = form.querySelector('[name=telefono]');
+  var marca = $('consentimiento');
+
+  function revisar() {
+    var vale = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()) && marca.checked;
+    enviar.disabled = !vale;
+  }
+  email.addEventListener('input', revisar);
+  marca.addEventListener('change', revisar);
+
+  form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (enviar.disabled) return;
+
+    var params = new URLSearchParams(location.search);
+    var datos = {
+      email: email.value.trim().toLowerCase(),
+      telefono: telefono.value.trim() || null,
+      local: clave,                                  // el que haya elegido
+      utm_source: params.get('utm_source') || null,
+      consentimiento: true,
+      texto_consentimiento: $('texto-consentimiento').textContent.trim(),
+      created_at: new Date().toISOString()
+    };
+
+    enviar.disabled = true;
+    enviar.textContent = 'Enviando…';
+
+    function hecho() {
+      form.hidden = true;
+      $('hecho').hidden = false;
+    }
+    function falla() {
+      enviar.disabled = false;
+      enviar.textContent = 'Avisadme';
+      alert('No se ha podido enviar. Escríbenos a orale.padre.food@gmail.com y te apuntamos a mano.');
+    }
+
+    if (SUPABASE_URL && SUPABASE_ANON) {
+      fetch(SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/leads_vecino', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_ANON,
+          'Authorization': 'Bearer ' + SUPABASE_ANON,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify([datos])
+      }).then(function (r) { if (r.ok) hecho(); else falla(); }, falla);
+    } else {
+      /* Sin base de datos todavía: al menos que el email llegue al correo de
+         Órale en vez de perderse. */
+      var asunto = 'Apúntame a los avisos (cupón vecino)';
+      var cuerpo = 'Email: ' + datos.email +
+        '\nTeléfono: ' + (datos.telefono || '—') +
+        '\nLocal: ' + (datos.local ? LOCALES[datos.local].nombre : '—') +
+        '\nAcepto recibir promos y novedades de Órale Padre.';
+      location.href = 'mailto:orale.padre.food@gmail.com?subject=' +
+        encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+      hecho();
+    }
+  });
 
   /* Pasada la fecha de fin se avisa, para que nadie llegue al local con un
      cupón caducado y se lo tenga que discutir al equipo en la barra. */
