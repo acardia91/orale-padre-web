@@ -186,6 +186,41 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
 .marcador b{display:block; font-family:var(--display); font-weight:400; font-size:24px; text-transform:uppercase; line-height:1}
 .marcador p{font-size:14px; color:var(--tinta-2); margin-top:6px}
 
+/* ── Remate: requisitos y comprobante ───────────────────────────── */
+.remate{border:2px solid var(--tinta); background:var(--crema-3); padding:18px}
+.reqs{list-style:none; display:grid; gap:1px; background:var(--linea); border:1px solid var(--linea)}
+.req{display:grid; grid-template-columns:auto 1fr auto; gap:11px; align-items:center; background:var(--crema-3); padding:12px 13px}
+.req.ok{background:#EDF5EA}
+.req-ic{width:22px; height:22px; border:2px solid var(--humo); display:grid; place-items:center; font-size:12px; line-height:1; color:transparent}
+.req.ok .req-ic{background:var(--verde); border-color:var(--verde); color:#fff}
+.req-t{font-size:14.5px; font-weight:700; min-width:0}
+.req-n{font-family:var(--mono); font-size:11.5px; color:var(--humo); flex:none}
+.req.ok .req-n{color:var(--verde)}
+
+.firma{margin-top:16px}
+.firma label{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--humo); margin-bottom:5px}
+.firma input{
+  width:100%; padding:14px 13px; font-family:var(--texto); font-size:16px;
+  border:1.5px solid var(--linea); background:var(--crema); color:var(--tinta);
+}
+.firma input:focus{outline:2px solid var(--burdeos); outline-offset:-1px; border-color:var(--burdeos)}
+.firma input:disabled{background:#EFE7DE; color:var(--humo)}
+.firma .donde{margin-top:9px; font-size:13.5px; color:var(--tinta-2)}
+.firma .donde b{color:var(--tinta)}
+.bloqueo{margin-top:13px; padding:12px 13px; border-left:3px solid var(--oro); background:#FFF6DC; font-size:13.5px; line-height:1.55; color:var(--tinta-2)}
+.acciones{display:grid; gap:9px; margin-top:14px}
+.acciones button, .acciones a{
+  display:block; text-align:center; text-decoration:none; padding:15px 13px; cursor:pointer;
+  font-family:var(--texto); font-weight:800; font-size:14px; letter-spacing:.09em; text-transform:uppercase;
+  border:1.5px solid var(--tinta); background:var(--crema); color:var(--tinta);
+  -webkit-tap-highlight-color:transparent;
+}
+.acciones .pri{background:var(--burdeos); color:var(--crema); border-color:var(--burdeos); box-shadow:0 3px 0 var(--tinta)}
+.acciones .pri:active{box-shadow:0 1px 0 var(--tinta); transform:translateY(2px)}
+.acciones button:disabled{background:#EFE7DE; color:var(--humo); border-color:var(--linea); box-shadow:none; cursor:not-allowed}
+.vista{margin-top:14px; border:1px solid var(--linea); background:var(--crema); padding:9px}
+.vista img{width:100%; height:auto; display:block}
+
 .pie{margin-top:36px; padding-top:16px; border-top:1px solid var(--linea); font-size:12.5px; line-height:1.6; color:var(--humo)}
 .pie a{color:var(--burdeos)}
 .volver{display:inline-block; margin-top:24px; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--burdeos)}
@@ -337,6 +372,37 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
   </div>
 </section>
 
+<!-- ══════ REMATE ══════ -->
+<section id="remate">
+  <div class="cab">
+    <p class="k">Para terminar</p>
+    <h2>Firma y<br>mándalo</h2>
+    <p class="lede">
+      Cuando tengas las cuatro cosas hechas, pon tu nombre y descarga el comprobante.
+      <b>Mándaselo a tu encargado</b> y ya está.
+    </p>
+  </div>
+
+  <div class="remate">
+    <ul class="reqs" id="reqs"></ul>
+
+    <div class="firma">
+      <label for="nombre">Tu nombre y apellido</label>
+      <input type="text" id="nombre" autocomplete="name" placeholder="Ej.: María López" disabled>
+      <p class="donde">Local: <b id="firma-local">—</b></p>
+    </div>
+
+    <p class="bloqueo" id="bloqueo"></p>
+
+    <div class="acciones">
+      <button class="pri" id="descargar" type="button" disabled>Descargar comprobante</button>
+      <a href="/equipo/chuleta.html">Imprimir la chuleta del pase</a>
+    </div>
+
+    <div class="vista" id="vista" hidden><img id="vista-img" alt="Comprobante del protocolo"></div>
+  </div>
+</section>
+
 <p class="pie">
   Dentro de un mes volvemos a mirar las notas. Si algo de aquí no se puede cumplir en tu
   turno, díselo a tu encargado: se cambia el protocolo, no se calla.<br>
@@ -458,6 +524,7 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
     li.querySelector('.regla-top').setAttribute('aria-pressed', String(pos === -1));
     guardar('orale.equipo.uber.reglas', hechas);
     pintarAvance();
+    pintarRequisitos();
   });
   $('#reglas').addEventListener('keydown', function (e) {
     if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('regla-top')) {
@@ -494,6 +561,7 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
   }).join('');
   function pintarLocal(k) {
     elegido = k; guardar('orale.equipo.local', k);
+    if (document.getElementById('firma-local')) $('#firma-local').textContent = LOCALES[k].nombre;
     var l = LOCALES[k];
     $('#panel').innerHTML = '<h3>' + l.nombre + '</h3><p class="diag">' + l.diag + '</p><ul>' +
       l.puntos.map(function (p) { return '<li><span>' + p + '</span></li>'; }).join('') + '</ul>';
@@ -589,6 +657,7 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
         '</ul><p class="pista">' + p.moraleja + '</p></div>'
       : '<div class="veredicto bien"><b>Bolsa perfecta</b><p>Ticket completo, nada de más y la nota confirmada. Así es como se sube la nota.</p>' +
         '<p class="pista">' + p.moraleja + '</p></div>';
+    apuntar('sim', sp);
     $('#sim-cerrar').textContent = 'Siguiente pedido →';
     $('#sim-veredicto').scrollIntoView({ block:'center' });
   });
@@ -633,6 +702,7 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
     var p = card.querySelector('.pista');
     p.innerHTML = (j === r.c ? '<b>Eso es.</b> ' : '<b>No.</b> ') + r.x;
     p.hidden = false;
+    apuntar('resenas', +card.dataset.i);
   });
 
   /* ══ Checklist de bolsa ═════════════════════════════════════════ */
@@ -715,7 +785,200 @@ h3{font-size:16px; font-weight:800; line-height:1.3}
     }
     $('#marcador').hidden = false;
     guardar('orale.equipo.uber.test', { aciertos:aciertos, de:TEST.length, fecha:new Date().toISOString() });
+    apuntar('test', { aciertos:aciertos, de:TEST.length });
     $('#marcador').scrollIntoView({ block:'center' });
+  }
+
+  /* ══ Requisitos y comprobante ═══════════════════════════════════
+     La página no puede avisarnos sola de quién la ha hecho: no hay
+     servidor detrás. Lo que sí puede es no dar el comprobante hasta
+     que estén las cuatro cosas hechas, y que el comprobante lleve
+     nombre, local, nota y fecha para que el encargado los junte. */
+  var progreso = leer('orale.equipo.uber.progreso', null);
+  if (!progreso || typeof progreso !== 'object') progreso = {};
+  if (!Array.isArray(progreso.sim)) progreso.sim = [];
+  if (!Array.isArray(progreso.resenas)) progreso.resenas = [];
+  if (!progreso.test || typeof progreso.test !== 'object') progreso.test = null;
+
+  function apuntar(que, dato) {
+    if (que === 'test') progreso.test = dato;
+    else if (progreso[que].indexOf(dato) === -1) progreso[que].push(dato);
+    guardar('orale.equipo.uber.progreso', progreso);
+    pintarRequisitos();
+  }
+
+  /* El test cuenta como hecho aunque se falle alguna: lo que importa para
+     desbloquear es haberlo contestado entero. Pero en el comprobante sale
+     el acierto de verdad, para que el encargado vea quién necesita otra
+     vuelta en vez de un 7/7 que no dice nada. */
+  function estado() {
+    return [
+      { t:'Leer las once reglas', n:hechas.length,           de:REGLAS.length,  hecho:hechas.length >= REGLAS.length },
+      { t:'Monta la bolsa',       n:progreso.sim.length,     de:PEDIDOS.length, hecho:progreso.sim.length >= PEDIDOS.length },
+      { t:'¿Qué falló aquí?',     n:progreso.resenas.length, de:RESENAS.length, hecho:progreso.resenas.length >= RESENAS.length },
+      { t:'El test',              n:progreso.test ? progreso.test.aciertos : 0, de:TEST.length, hecho:!!progreso.test }
+    ];
+  }
+
+  function pintarRequisitos() {
+    var e = estado(), faltan = e.filter(function (x) { return !x.hecho; });
+    $('#reqs').innerHTML = e.map(function (x) {
+      var ok = x.hecho;
+      return '<li class="req' + (ok ? ' ok' : '') + '">' +
+        '<span class="req-ic" aria-hidden="true">✓</span>' +
+        '<span class="req-t">' + x.t + '</span>' +
+        '<span class="req-n">' + Math.min(x.n, x.de) + '/' + x.de + '</span></li>';
+    }).join('');
+
+    var listo = faltan.length === 0;
+    $('#nombre').disabled = !listo;
+    $('#bloqueo').hidden = listo;
+    if (!listo) {
+      $('#bloqueo').innerHTML = 'Te falta: <b>' +
+        faltan.map(function (x) { return x.t.toLowerCase(); }).join('</b>, <b>') + '</b>.';
+    }
+    revisarBoton();
+  }
+  function revisarBoton() {
+    var listo = estado().every(function (x) { return x.hecho; });
+    $('#descargar').disabled = !(listo && $('#nombre').value.trim().length >= 3);
+  }
+  $('#nombre').addEventListener('input', revisarBoton);
+  $('#firma-local').textContent = LOCALES[elegido].nombre;
+  pintarRequisitos();
+
+  /* ── El comprobante ───────────────────────────────────────────── */
+  function codigo(txt) {
+    var h = 5381;
+    for (var i = 0; i < txt.length; i++) h = ((h * 33) ^ txt.charCodeAt(i)) >>> 0;
+    return h.toString(36).toUpperCase().slice(0, 6).padStart(6, '0');
+  }
+
+  function dibujar(nombre, local, cb) {
+    var A = 1080, B = 1350;
+    var c = document.createElement('canvas');
+    c.width = A; c.height = B;
+    var x = c.getContext('2d');
+
+    var CREMA = '#F5EEE6', TINTA = '#241A1C', BURDEOS = '#6B1C28', HUMO = '#6E5C60', VERDE = '#46703C';
+    x.fillStyle = CREMA; x.fillRect(0, 0, A, B);
+
+    /* Marco con escuadras, como el resto de la marca */
+    x.strokeStyle = BURDEOS; x.lineWidth = 3;
+    x.strokeRect(44, 44, A - 88, B - 88);
+    x.lineWidth = 7;
+    [[44,44,1,1],[A-44,44,-1,1],[44,B-44,1,-1],[A-44,B-44,-1,-1]].forEach(function (e) {
+      x.beginPath();
+      x.moveTo(e[0] + 46 * e[2], e[1]); x.lineTo(e[0], e[1]); x.lineTo(e[0], e[1] + 46 * e[3]);
+      x.stroke();
+    });
+
+    function centrado(txt, y, fuente, color, esp) {
+      x.font = fuente; x.fillStyle = color; x.textAlign = 'center';
+      try { x.letterSpacing = (esp || 0) + 'px'; } catch (err) {}
+      x.fillText(txt, A / 2, y);
+      try { x.letterSpacing = '0px'; } catch (err) {}
+    }
+    function raya(y) {
+      x.strokeStyle = '#DDD0C2'; x.lineWidth = 2;
+      x.beginPath(); x.moveTo(140, y); x.lineTo(A - 140, y); x.stroke();
+    }
+
+    var e = estado();
+    var hoy = new Date();
+    var fecha = hoy.toLocaleDateString('es-ES', { day:'2-digit', month:'long', year:'numeric' });
+    var hora = hoy.toLocaleTimeString('es-ES', { hour:'2-digit', minute:'2-digit' });
+
+    centrado('PROTOCOLO COMPLETADO', 290, '500 26px "IBM Plex Mono", monospace', BURDEOS, 7);
+    centrado('SUBIR A 4,7', 400, '400 94px Anton, sans-serif', TINTA, 2);
+    centrado('Protocolo de pedidos · Órale Padre', 450, '400 26px Archivo, sans-serif', HUMO);
+    raya(520);
+
+    centrado('LO HA HECHO', 580, '500 22px "IBM Plex Mono", monospace', HUMO, 6);
+    var tam = 76;
+    x.font = '400 ' + tam + 'px Anton, sans-serif';
+    while (x.measureText(nombre).width > A - 220 && tam > 30) {
+      tam -= 3; x.font = '400 ' + tam + 'px Anton, sans-serif';
+    }
+    centrado(nombre, 660, '400 ' + tam + 'px Anton, sans-serif', TINTA, 1);
+    centrado(local, 714, '700 30px Archivo, sans-serif', BURDEOS);
+    raya(780);
+
+    /* Las cuatro partes, con su resultado */
+    var y0 = 840;
+    e.forEach(function (it, i) {
+      var y = y0 + i * 62;
+      x.textAlign = 'left';
+      x.font = '400 27px Archivo, sans-serif'; x.fillStyle = '#574548';
+      x.fillText(it.t, 170, y);
+      x.textAlign = 'right';
+      x.font = '500 27px "IBM Plex Mono", monospace';
+      x.fillStyle = it.n >= it.de ? VERDE : BURDEOS;
+      x.fillText(Math.min(it.n, it.de) + '/' + it.de, A - 170, y);
+    });
+    raya(y0 + 4 * 62 - 18);
+
+    centrado(fecha + ' · ' + hora, 1165, '400 27px Archivo, sans-serif', '#574548');
+    centrado('Nº ' + codigo(nombre + local + hoy.toDateString()),
+             1215, '500 24px "IBM Plex Mono", monospace', HUMO, 4);
+    centrado('ORALEPADRE.COM/EQUIPO', 1268, '500 20px "IBM Plex Mono", monospace', '#A8958F', 5);
+
+    var logo = new Image();
+    logo.onload = function () {
+      var an = 110, al = an * (logo.height / logo.width);
+      x.drawImage(logo, (A - an) / 2, 120, an, al);
+      cb(c);
+    };
+    logo.onerror = function () { cb(c); };   // sin logo, pero con comprobante
+    logo.src = '/img/logo-tinta.png';
+  }
+
+  $('#descargar').addEventListener('click', function () {
+    var nombre = $('#nombre').value.trim().replace(/\s+/g, ' ');
+    if (nombre.length < 3) return;
+    var local = LOCALES[elegido].nombre;
+    var btn = $('#descargar');
+    btn.disabled = true; btn.textContent = 'Preparando…';
+
+    var fuentes = ['400 94px Anton', '700 30px Archivo', '500 26px "IBM Plex Mono"'];
+    var espera = document.fonts && document.fonts.load
+      ? Promise.all(fuentes.map(function (f) { return document.fonts.load(f); })).catch(function () {})
+      : Promise.resolve();
+
+    espera.then(function () {
+      dibujar(nombre, local, function (c) {
+        c.toBlob(function (blob) {
+          var nf = 'orale-protocolo-' +
+            nombre.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') + '.png';
+          $('#vista-img').src = URL.createObjectURL(blob);
+          $('#vista').hidden = false;
+
+          /* En el móvil se comparte directo al WhatsApp del encargado;
+             en el ordenador no hay compartir, así que se descarga. */
+          var fichero = null;
+          try { fichero = new File([blob], nf, { type:'image/png' }); } catch (err) {}
+          if (fichero && navigator.canShare && navigator.canShare({ files:[fichero] })) {
+            navigator.share({ files:[fichero], title:'Protocolo completado' })
+              .catch(function () {})
+              .then(function () { btn.disabled = false; btn.textContent = 'Volver a mandarlo'; });
+          } else {
+            var a = document.createElement('a');
+            a.href = URL.createObjectURL(blob); a.download = nf;
+            document.body.appendChild(a); a.click(); a.remove();
+            btn.disabled = false; btn.textContent = 'Descargado ✓ · descargar otra vez';
+          }
+          guardar('orale.equipo.uber.firma', { nombre:nombre, local:local, fecha:new Date().toISOString() });
+          $('#vista').scrollIntoView({ block:'center' });
+        }, 'image/png');
+      });
+    });
+  });
+
+  /* Si ya lo hizo en este móvil, se le deja el nombre puesto */
+  var firma = leer('orale.equipo.uber.firma', null);
+  if (firma && firma.nombre && !$('#nombre').disabled) {
+    $('#nombre').value = firma.nombre;
+    revisarBoton();
   }
 })();
 </script>
