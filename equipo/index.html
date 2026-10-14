@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipo Órale Padre · Protocolos</title>
+<meta name="description" content="Protocolos y mejoras para el equipo de Órale Padre.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5EEE6">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --crema:#F5EEE6; --crema-3:#FBF7F2; --tinta:#241A1C; --tinta-2:#574548;
+  --humo:#6E5C60; --burdeos:#6B1C28; --oro:#C98A12; --verde:#46703C; --linea:#DDD0C2;
+  --display:'Anton','Arial Narrow',Impact,sans-serif;
+  --texto:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--crema); color:var(--tinta); font-family:var(--texto); line-height:1.55;
+  padding:18px 16px calc(40px + env(safe-area-inset-bottom));
+  display:flex; justify-content:center; overflow-x:clip;
+}
+main{width:100%; max-width:520px}
+
+.marca{display:flex; align-items:center; gap:9px; margin-bottom:22px; text-decoration:none; color:inherit}
+.marca img{width:32px; height:auto; display:block}
+.marca span{font-family:var(--display); font-size:16px; letter-spacing:.02em; text-transform:uppercase}
+.marca em{font-family:var(--mono); font-style:normal; font-size:10px; letter-spacing:.14em; color:var(--humo); border:1px solid var(--linea); padding:2px 6px}
+
+.k{font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--burdeos)}
+h1{font-family:var(--display); font-weight:400; font-size:clamp(36px,11vw,50px); line-height:.95; text-transform:uppercase; margin:8px 0 12px}
+.lede{font-size:16px; color:var(--tinta-2)}
+.lede b{color:var(--tinta)}
+
+.fichas{display:grid; gap:12px; margin-top:28px}
+.ficha{
+  display:block; text-decoration:none; color:inherit; position:relative;
+  border:1.5px solid var(--tinta); background:var(--crema-3);
+  padding:18px 16px; box-shadow:0 3px 0 var(--burdeos);
+  -webkit-tap-highlight-color:transparent;
+}
+.ficha:active{box-shadow:0 1px 0 var(--burdeos); transform:translateY(2px)}
+.ficha .et{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.ficha .et span{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--humo)}
+.ficha .et b{font-family:var(--mono); font-size:10px; font-weight:500; letter-spacing:.12em; text-transform:uppercase; color:var(--crema); background:var(--verde); padding:3px 7px}
+.ficha h2{font-family:var(--display); font-weight:400; font-size:28px; line-height:1; text-transform:uppercase; margin:9px 0 7px}
+.ficha p{font-size:14.5px; color:var(--tinta-2)}
+.ficha .ir{display:block; margin-top:12px; font-family:var(--mono); font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--burdeos)}
+
+.pronto{border:1px dashed var(--linea); background:none; box-shadow:none; cursor:default}
+.pronto h2{color:var(--humo)}
+.pronto .et b{background:var(--humo)}
+
+.pie{margin-top:32px; padding-top:16px; border-top:1px solid var(--linea); font-size:12.5px; line-height:1.6; color:var(--humo)}
+.pie a{color:var(--burdeos)}
+</style>
+</head>
+<body>
+<main>
+
+<a class="marca" href="/">
+  <img src="/img/logo-tinta.png" alt="" width="560" height="694">
+  <span>Órale Padre</span>
+  <em>Equipo</em>
+</a>
+
+<p class="k">Solo para el equipo</p>
+<h1>Protocolos<br>y mejoras</h1>
+<p class="lede">
+  Aquí vamos dejando lo que hay que saber para que esto salga bien: cómo trabajamos,
+  qué estamos fallando y cómo lo arreglamos. <b>Se lee desde el móvil, en cinco minutos.</b>
+</p>
+
+<div class="fichas">
+
+  <a class="ficha" href="/equipo/uber-eats.html">
+    <span class="et"><b>Nuevo</b> <span>Octubre 2026 · 10 min</span></span>
+    <h2>Subir a 4,7<br>en Uber</h2>
+    <p>
+      Qué nos está bajando la nota, las once cosas que hacemos en cada pedido y lo que
+      tiene que mejorar tu local. Con dos prácticas y un test.
+    </p>
+    <span class="ir">Abrir protocolo →</span>
+  </a>
+
+  <div class="ficha pronto">
+    <span class="et"><b>Próximamente</b></span>
+    <h2>Más protocolos</h2>
+    <p>Irán cayendo aquí: apertura y cierre, escandallos, atención en barra y pedidos grandes.</p>
+  </div>
+
+</div>
+
+<p class="pie">
+  Esta página es interna. No está enlazada desde la web ni sale en Google, pero cualquiera
+  con el enlace puede verla: no la publiques fuera del equipo.<br>
+  Dudas o algo que no cuadre: <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>
+</p>
+
+</main>
+</body>
+</html>

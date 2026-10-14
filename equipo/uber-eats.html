@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subir a 4,7 · Equipo Órale Padre</title>
+<meta name="description" content="Protocolo de calidad en pedidos para el equipo de Órale Padre.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#F5EEE6">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --crema:#F5EEE6; --crema-3:#FBF7F2; --tinta:#241A1C; --tinta-2:#574548;
+  --humo:#6E5C60; --burdeos:#6B1C28; --oro:#C98A12; --verde:#46703C; --linea:#DDD0C2;
+  --display:'Anton','Arial Narrow',Impact,sans-serif;
+  --texto:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  background:var(--crema); color:var(--tinta);
+  font-family:var(--texto); line-height:1.55;
+  padding:18px 16px calc(40px + env(safe-area-inset-bottom));
+  display:flex; justify-content:center; overflow-x:clip;
+}
+main{width:100%; max-width:520px}
+[hidden]{display:none !important}
+section{margin-top:38px; scroll-margin-top:62px}
+
+.marca{display:flex; align-items:center; gap:9px; margin-bottom:20px; text-decoration:none; color:inherit}
+.marca img{width:32px; height:auto; display:block}
+.marca span{font-family:var(--display); font-size:16px; letter-spacing:.02em; text-transform:uppercase}
+.marca em{font-family:var(--mono); font-style:normal; font-size:10px; letter-spacing:.14em; color:var(--humo); border:1px solid var(--linea); padding:2px 6px}
+
+.k{font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.16em; text-transform:uppercase; color:var(--burdeos)}
+h1{font-family:var(--display); font-weight:400; font-size:clamp(34px,10.5vw,48px); line-height:.95; text-transform:uppercase; margin:8px 0 10px}
+h2{font-family:var(--display); font-weight:400; font-size:27px; line-height:1; text-transform:uppercase; letter-spacing:.02em}
+h3{font-size:16px; font-weight:800; line-height:1.3}
+.lede{font-size:16px; color:var(--tinta-2)}
+.lede b{color:var(--tinta)}
+.cab{margin-bottom:15px}
+.cab p.k{margin-bottom:6px}
+.cab .lede{margin-top:8px; font-size:15px}
+
+/* ── Índice ─────────────────────────────────────────────────────── */
+.indice{margin-top:22px; display:grid; gap:7px}
+.indice a{
+  display:grid; grid-template-columns:auto 1fr auto; gap:11px; align-items:center;
+  text-decoration:none; color:var(--tinta); border:1px solid var(--linea);
+  background:var(--crema-3); padding:11px 13px; font-size:14.5px; font-weight:700;
+}
+.indice i{font-family:var(--mono); font-style:normal; font-size:11px; color:var(--burdeos)}
+.indice em{font-family:var(--mono); font-style:normal; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--humo); font-weight:400}
+
+/* ── Notas ──────────────────────────────────────────────────────── */
+.notas{display:grid; gap:10px}
+.nota{border:1px solid var(--linea); background:var(--crema-3); padding:13px 14px}
+.nota-fila{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+.nota-local{font-family:var(--mono); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--humo)}
+.nota-val{font-family:var(--display); font-size:28px; line-height:1}
+.barra{position:relative; height:9px; margin-top:9px; background:#E9DFD4; overflow:hidden}
+.barra i{position:absolute; inset:0 auto 0 0; background:var(--burdeos); display:block}
+.barra u{position:absolute; top:-3px; bottom:-3px; width:2px; background:var(--verde); text-decoration:none}
+.nota-pie{display:flex; justify-content:space-between; margin-top:7px; font-family:var(--mono); font-size:10.5px; color:var(--humo)}
+.nota-pie em{font-style:normal; color:var(--verde)}
+
+/* ── Lo que cuesta ──────────────────────────────────────────────── */
+.coste{background:var(--tinta); color:var(--crema); margin-left:-16px; margin-right:-16px; padding:24px 16px}
+.coste h2{color:var(--crema)}
+.coste .k{color:var(--oro)}
+.coste .lede{color:#D8C9C1; margin-top:10px; font-size:15px}
+.coste .lede b{color:var(--crema)}
+.cifras{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; margin-top:16px; background:rgba(245,238,230,.22)}
+.cifra{background:var(--tinta); padding:13px 10px; min-width:0}
+.cifra b{display:block; font-family:var(--display); font-weight:400; font-size:clamp(25px,7.6vw,33px); line-height:1; color:var(--oro)}
+.cifra span{display:block; margin-top:6px; font-family:var(--mono); font-size:9.5px; line-height:1.45; letter-spacing:.05em; text-transform:uppercase; color:#C9B8B2}
+.coste .nb{margin-top:14px; font-family:var(--mono); font-size:11px; line-height:1.6; color:#AE9A95; border-left:2px solid var(--oro); padding-left:11px}
+
+/* ── Reglas ─────────────────────────────────────────────────────── */
+.avance{position:sticky; top:0; z-index:5; margin:0 -16px 14px; padding:10px 16px; background:var(--crema); border-bottom:1px solid var(--linea)}
+.avance-fila{display:flex; align-items:center; gap:10px}
+.avance-barra{flex:1; height:7px; background:#E9DFD4; min-width:0}
+.avance-barra i{display:block; height:100%; width:0; background:var(--verde); transition:width .25s}
+.avance span{font-family:var(--mono); font-size:11px; letter-spacing:.08em; color:var(--humo); flex:none}
+
+.reglas{display:grid; gap:10px; list-style:none}
+.regla{border:1.5px solid var(--linea); background:var(--crema-3)}
+.regla.ok{border-color:var(--verde); background:#F3F7F1}
+.regla-top{display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:start; padding:14px; cursor:pointer; -webkit-tap-highlight-color:transparent}
+.caja{width:26px; height:26px; flex:none; border:2px solid var(--tinta); background:var(--crema); display:grid; place-items:center; font-size:15px; line-height:1; color:transparent; margin-top:1px}
+.regla.ok .caja{background:var(--verde); border-color:var(--verde); color:#fff}
+.regla-txt{min-width:0}
+.regla-txt h3{text-transform:uppercase; font-family:var(--display); font-weight:400; font-size:19px; letter-spacing:.01em; line-height:1.05}
+.regla-txt p{font-size:14px; color:var(--tinta-2); margin-top:5px}
+.mas{flex:none; border:0; background:none; cursor:pointer; padding:4px 2px; margin-top:-2px; font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--burdeos)}
+.porque{padding:12px 14px 14px 52px; font-size:13.5px; color:var(--humo); border-top:1px dashed var(--linea)}
+.porque b{color:var(--tinta-2)}
+
+/* ── Local ──────────────────────────────────────────────────────── */
+.pestanas{display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:14px}
+.pestanas button{
+  padding:12px 6px; cursor:pointer; background:var(--crema-3); color:var(--tinta);
+  border:1.5px solid var(--tinta); font-family:var(--display); font-weight:400;
+  font-size:15px; text-transform:uppercase; letter-spacing:.02em; line-height:1.1;
+  -webkit-tap-highlight-color:transparent;
+}
+.pestanas button[aria-selected=true]{background:var(--burdeos); color:var(--crema); border-color:var(--burdeos); box-shadow:0 3px 0 var(--tinta)}
+.panel{border:1px solid var(--linea); background:var(--crema-3); padding:16px}
+.panel h3{font-family:var(--display); font-weight:400; font-size:22px; text-transform:uppercase; line-height:1}
+.panel .diag{margin-top:4px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--burdeos)}
+.panel ul{list-style:none; margin-top:13px; display:grid; gap:11px}
+.panel li{display:grid; grid-template-columns:auto 1fr; gap:10px; font-size:14.5px; color:var(--tinta-2); align-items:start}
+.panel li::before{content:"▸"; color:var(--burdeos); font-size:13px; line-height:1.5}
+.panel li b{color:var(--tinta)}
+
+/* ── Simulador ──────────────────────────────────────────────────── */
+.sim{border:1.5px solid var(--tinta); background:var(--crema-3); padding:16px}
+.sim-cab{display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:12px}
+.sim-cab span{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--humo)}
+.ticket{border:1px dashed var(--tinta); background:var(--crema); padding:13px; font-family:var(--mono); font-size:13px; line-height:1.75}
+.ticket .t-cab{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--humo); border-bottom:1px solid var(--linea); padding-bottom:7px; margin-bottom:8px; display:flex; justify-content:space-between}
+.ticket .t-nota{margin-top:9px; padding:7px 9px; background:#FFF6DC; border-left:3px solid var(--oro); font-size:12.5px; line-height:1.5}
+.sim-aviso{display:grid; grid-template-columns:auto 1fr; gap:10px; align-items:center; margin-top:12px; padding:10px 12px; border:1px solid var(--oro); background:#FFF6DC; font-size:13.5px; cursor:pointer}
+.sim-aviso input{width:20px; height:20px; accent-color:var(--verde)}
+.chips{display:flex; flex-wrap:wrap; gap:7px; margin-top:13px}
+.chip{
+  padding:9px 12px; cursor:pointer; font-family:var(--texto); font-size:13.5px;
+  background:var(--crema); color:var(--tinta); border:1.5px solid var(--linea);
+  -webkit-tap-highlight-color:transparent;
+}
+.chip[aria-pressed=true]{background:var(--tinta); color:var(--crema); border-color:var(--tinta)}
+.chip:disabled{opacity:.55; cursor:default}
+.sim-btn{
+  margin-top:14px; width:100%; padding:15px; cursor:pointer;
+  background:var(--burdeos); color:var(--crema); border:1.5px solid var(--burdeos);
+  box-shadow:0 3px 0 var(--tinta);
+  font-family:var(--texto); font-weight:800; font-size:14px; letter-spacing:.09em; text-transform:uppercase;
+}
+.sim-btn:active{box-shadow:0 1px 0 var(--tinta); transform:translateY(2px)}
+.veredicto{margin-top:13px; padding:14px; font-size:14px; line-height:1.6}
+.veredicto.bien{border:1.5px solid var(--verde); background:#EDF5EA}
+.veredicto.mal{border:1.5px solid var(--burdeos); background:#F9EDEE}
+.veredicto > b{display:block; font-family:var(--display); font-weight:400; font-size:21px; text-transform:uppercase; line-height:1; margin-bottom:7px}
+.veredicto li b{color:var(--tinta); font-weight:800}
+.veredicto ul{list-style:none; margin-top:8px; display:grid; gap:5px}
+.veredicto li{font-size:13.5px; color:var(--tinta-2); display:grid; grid-template-columns:auto 1fr; gap:8px}
+.veredicto li i{font-style:normal; color:var(--burdeos)}
+
+/* ── Reseñas ────────────────────────────────────────────────────── */
+.resena{border:1px solid var(--linea); background:var(--crema-3); padding:15px; margin-bottom:10px}
+.estrellas{font-family:var(--mono); font-size:13px; letter-spacing:.14em; color:var(--burdeos)}
+.resena q{display:block; margin-top:8px; font-size:15.5px; line-height:1.5; font-style:italic}
+.ops{display:grid; gap:7px; margin-top:12px}
+.ops button{
+  text-align:left; padding:12px 13px; cursor:pointer; font-size:14px; line-height:1.4;
+  background:var(--crema); color:var(--tinta); border:1.5px solid var(--linea);
+  font-family:var(--texto); -webkit-tap-highlight-color:transparent;
+}
+.ops button:disabled{cursor:default}
+.ops button.bien{border-color:var(--verde); background:#EDF5EA; font-weight:700}
+.ops button.mal{border-color:var(--burdeos); background:#F9EDEE; color:var(--humo)}
+.pista{margin-top:10px; font-size:13.5px; line-height:1.6; color:var(--tinta-2); border-left:3px solid var(--oro); padding-left:11px}
+
+/* ── Bolsa ──────────────────────────────────────────────────────── */
+.bolsa{border:1.5px solid var(--burdeos); background:var(--crema-3); padding:16px}
+.bolsa ul{list-style:none; display:grid; gap:2px; margin-top:12px}
+.bolsa label{display:grid; grid-template-columns:auto 1fr; gap:11px; align-items:center; padding:10px 2px; cursor:pointer; border-bottom:1px solid var(--linea); font-size:15px}
+.bolsa li:last-child label{border-bottom:0}
+.bolsa input{width:22px; height:22px; accent-color:var(--verde); flex:none}
+.bolsa input:checked + span{color:var(--humo); text-decoration:line-through}
+.reiniciar{margin-top:13px; width:100%; padding:12px; cursor:pointer; background:var(--crema); color:var(--tinta); border:1.5px solid var(--tinta); font-family:var(--texto); font-weight:800; font-size:13px; letter-spacing:.09em; text-transform:uppercase}
+
+/* ── Test ───────────────────────────────────────────────────────── */
+.test{border:1px solid var(--linea); background:var(--crema-3); padding:16px}
+.preg{padding:16px 0; border-bottom:1px solid var(--linea)}
+.preg:first-of-type{padding-top:6px}
+.preg:last-of-type{border-bottom:0}
+.preg p.q{font-weight:800; font-size:15.5px}
+.preg p.q i{font-style:normal; font-family:var(--mono); font-size:11px; color:var(--humo); display:block; margin-bottom:5px; letter-spacing:.1em}
+.marcador{margin-top:16px; padding:16px; border:1.5px solid var(--verde); background:#EDF5EA}
+.marcador b{display:block; font-family:var(--display); font-weight:400; font-size:24px; text-transform:uppercase; line-height:1}
+.marcador p{font-size:14px; color:var(--tinta-2); margin-top:6px}
+
+.pie{margin-top:36px; padding-top:16px; border-top:1px solid var(--linea); font-size:12.5px; line-height:1.6; color:var(--humo)}
+.pie a{color:var(--burdeos)}
+.volver{display:inline-block; margin-top:24px; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--burdeos)}
+</style>
+</head>
+<body>
+<main>
+
+<a class="marca" href="/equipo/">
+  <img src="/img/logo-tinta.png" alt="" width="560" height="674">
+  <span>Órale Padre</span>
+  <em>Equipo</em>
+</a>
+
+<p class="k">Protocolo · Pedidos · Octubre 2026</p>
+<h1>Subir a 4,7</h1>
+<p class="lede">
+  La comida ya gusta: lo que más repite la gente en las reseñas es <b>"qué rico"</b> y la
+  mayoría nos pone 5 estrellas. Las notas que perdemos no vienen del sabor, vienen de
+  fallos al preparar y entregar. <b>Eso se arregla, y se arregla esta semana.</b>
+</p>
+
+<nav class="indice">
+  <a href="#notas-sec"><i>01</i><span>Dónde estamos</span><em>1 min</em></a>
+  <a href="#once"><i>02</i><span>Las once de siempre</span><em>4 min</em></a>
+  <a href="#local"><i>03</i><span>Tu local</span><em>1 min</em></a>
+  <a href="#monta"><i>04</i><span>Monta la bolsa</span><em>Práctica</em></a>
+  <a href="#fallo"><i>05</i><span>¿Qué falló aquí?</span><em>Práctica</em></a>
+  <a href="#test"><i>06</i><span>¿Te lo sabes?</span><em>Test</em></a>
+</nav>
+
+<!-- ══════ DÓNDE ESTAMOS ══════ -->
+<section id="notas-sec">
+  <div class="cab">
+    <p class="k">Dónde estamos</p>
+    <h2>La nota de cada local</h2>
+  </div>
+  <div class="notas" id="notas"></div>
+</section>
+
+<!-- ══════ LO QUE CUESTA ══════ -->
+<section class="coste">
+  <p class="k">Lo que nos cuesta</p>
+  <h2>Tres meses<br>de fallos</h2>
+  <p class="lede">
+    Productos que faltan, productos equivocados y cambios del cliente que no se hicieron.
+    Cada error se lleva una reseña mala, y con las reseñas malas <b>nos ve menos gente</b>
+    en la app.
+  </p>
+  <div class="cifras">
+    <div class="cifra"><b>~75</b><span>pedidos con error</span></div>
+    <div class="cifra"><b>~725 €</b><span>perdidos</span></div>
+    <div class="cifra"><b>~43</b><span>pedidos rechazados</span></div>
+  </div>
+  <p class="nb">
+    Son las cifras de Uber multiplicadas por 2,5, porque lo mismo pasa en Glovo y en la
+    recogida y ahí nadie nos lo descuenta: simplemente el cliente no vuelve.
+  </p>
+</section>
+
+<!-- ══════ LAS ONCE ══════ -->
+<section id="once">
+  <div class="cab">
+    <p class="k">En cada pedido, todos</p>
+    <h2>Las once de siempre</h2>
+    <p class="lede">Tócalas según las vayas repasando. Se guardan en este móvil.</p>
+  </div>
+
+  <div class="avance">
+    <div class="avance-fila">
+      <div class="avance-barra"><i id="avance-i"></i></div>
+      <span id="avance-t">0 de 11</span>
+    </div>
+  </div>
+
+  <ol class="reglas" id="reglas"></ol>
+</section>
+
+<!-- ══════ TU LOCAL ══════ -->
+<section id="local">
+  <div class="cab">
+    <p class="k">Lo tuyo</p>
+    <h2>Tu local</h2>
+    <p class="lede">Cada sitio falla en una cosa distinta. Esto es lo de los últimos 3 meses.</p>
+  </div>
+  <div class="pestanas" id="pestanas" role="tablist"></div>
+  <div class="panel" id="panel"></div>
+</section>
+
+<!-- ══════ SIMULADOR ══════ -->
+<section id="monta">
+  <div class="cab">
+    <p class="k">Práctica · lo más importante de la página</p>
+    <h2>Monta la bolsa</h2>
+    <p class="lede">
+      Entra un pedido. Lee el ticket, toca lo que metes en la bolsa y ciérrala.
+      Te dice qué te has dejado <b>antes</b> de que lo diga un cliente.
+    </p>
+  </div>
+  <div class="sim">
+    <div class="sim-cab"><h3 id="sim-titulo"></h3><span id="sim-paso"></span></div>
+    <div class="ticket" id="sim-ticket"></div>
+    <label class="sim-aviso" id="sim-aviso" hidden>
+      <input type="checkbox" id="sim-leida">
+      <span>He leído la nota del cliente <b>en voz alta</b></span>
+    </label>
+    <div class="chips" id="sim-chips"></div>
+    <div id="sim-veredicto"></div>
+    <button class="sim-btn" id="sim-cerrar" type="button">Cerrar la bolsa</button>
+  </div>
+</section>
+
+<!-- ══════ RESEÑAS ══════ -->
+<section id="fallo">
+  <div class="cab">
+    <p class="k">Práctica</p>
+    <h2>¿Qué falló aquí?</h2>
+    <p class="lede">Reseñas reales de clientes. ¿Cuál de las once se nos saltó?</p>
+  </div>
+  <div id="resenas"></div>
+</section>
+
+<!-- ══════ BOLSA ══════ -->
+<section>
+  <div class="cab">
+    <p class="k">Úsalo en el turno</p>
+    <h2>Antes de cerrar<br>la bolsa</h2>
+    <p class="lede">Guarda esta página en la pantalla de inicio y tenla a mano en el pase.</p>
+  </div>
+  <div class="bolsa">
+    <ul id="bolsa"></ul>
+    <button class="reiniciar" id="reiniciar" type="button">Siguiente pedido ↺</button>
+  </div>
+</section>
+
+<!-- ══════ TEST ══════ -->
+<section id="test">
+  <div class="cab">
+    <p class="k">Dos minutos</p>
+    <h2>¿Te lo sabes?</h2>
+    <p class="lede">Si fallas te dice por qué, que es de lo que se trata.</p>
+  </div>
+  <div class="test">
+    <div id="preguntas"></div>
+    <div class="marcador" id="marcador" hidden>
+      <b id="marcador-t"></b>
+      <p id="marcador-p"></p>
+    </div>
+  </div>
+</section>
+
+<p class="pie">
+  Dentro de un mes volvemos a mirar las notas. Si algo de aquí no se puede cumplir en tu
+  turno, díselo a tu encargado: se cambia el protocolo, no se calla.<br>
+  Dudas: <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>
+</p>
+
+<a class="volver" href="/equipo/">← Todos los protocolos</a>
+
+</main>
+
+<script>
+(function () {
+  var $ = function (s) { return document.querySelector(s); };
+  var esc = function (t) { return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;'); };
+
+  /* localStorage puede fallar (modo privado, datos bloqueados). Si falla,
+     la página sigue funcionando: solo se pierde el guardado. */
+  function leer(k, d) { try { var v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } }
+  function guardar(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+
+  /* ══ Notas ══════════════════════════════════════════════════════ */
+  var OBJETIVO = 4.7, SUELO = 4.0;
+  [{ local:'Los Remedios', nota:4.5 }, { local:'San Luis', nota:4.4 }, { local:'Sevilla Este', nota:4.4 }]
+  .forEach(function (n) {
+    var pct = (n.nota - SUELO) / (5 - SUELO) * 100, obj = (OBJETIVO - SUELO) / (5 - SUELO) * 100;
+    $('#notas').insertAdjacentHTML('beforeend',
+      '<div class="nota"><div class="nota-fila">' +
+      '<span class="nota-local">' + n.local + '</span>' +
+      '<span class="nota-val">' + n.nota.toFixed(1).replace('.', ',') + '</span></div>' +
+      '<div class="barra"><i style="width:' + pct.toFixed(1) + '%"></i><u style="left:' + obj.toFixed(1) + '%"></u></div>' +
+      '<div class="nota-pie"><span>Hoy</span><em>Objetivo 4,7 · faltan ' +
+      (OBJETIVO - n.nota).toFixed(1).replace('.', ',') + '</em></div></div>');
+  });
+
+  /* ══ Las once ═══════════════════════════════════════════════════ */
+  var REGLAS = [
+    { t:'Lee la nota en voz alta',
+      d:'Si pone "sin queso" o "sin picante", lo dice quien monta y lo comprueba quien cierra la bolsa.',
+      p:'Tenemos reseñas de 1 y 3 estrellas por ponerle queso a alguien que lo había quitado. Decirlo en voz alta es lo que hace que lo comprueben <b>dos personas</b>, no una.' },
+
+    { t:'Repasa el ticket, línea por línea',
+      d:'Antes de cerrar: cada producto, su cantidad y sus extras.',
+      p:'No vale mirar la bolsa y pensar "está todo". Se lee el ticket de arriba abajo y se va contando contra lo que hay dentro. Es lo que más errores corta de golpe.' },
+
+    { t:'Bebidas y postres, los últimos y los primeros que faltan',
+      d:'Cuéntalos aparte, en voz alta, antes de cerrar.',
+      p:'Lo que más se olvida es la <b>Coca-Cola</b>, el <b>Kinder Bueno</b> y la <b>Galleta Lotus</b>. Son pequeños, se quedan en la encimera o en la nevera y cuestan la reseña entera: el cliente no valora el burrito, valora que le faltaba la bebida.' },
+
+    { t:'Los combos, dos veces',
+      d:'Los dos burritos con lo que eligió el cliente, y los nachos.',
+      p:'El <b>Combo Duo Guadalupe</b> es nuestro producto con más quejas, y casi siempre porque le falta algo. Si solo vas a revisar un producto dos veces, que sea este.' },
+
+    { t:'Cada producto, con su nombre',
+      d:'Marca el envase. Que se sepa qué hay dentro sin abrirlo.',
+      p:'Nos han llegado quejas de <b>Nachos Guadalupe</b>, <b>Burro Juárez</b> y <b>Burro Dolores</b> cambiados entre sí. El cliente no abre la bolsa hasta su casa: ahí ya no hay arreglo posible.' },
+
+    { t:'Que llegue caliente',
+      d:'Lo caliente se mantiene en plancha hasta que se monta. Se cierra bien y se envuelve bien.',
+      p:'Con el frío que entra ahora esto pesa el doble. Los entrantes y lo que va caliente se aguantan <b>en plancha</b>, no en la encimera, y se montan en el último momento. Bien cerrado y bien envuelto es lo que hace que llegue entero y no manchado.' },
+
+    { t:'Antes del servicio, la tablet',
+      d:'Revisa la disponibilidad de productos en Uber y en Glovo. Lo agotado se quita y lo repuesto se vuelve a poner.',
+      p:'Las dos cosas fallan igual. Si está agotado y sigue a la venta, el cliente pide algo que no hay y el pedido acaba mal. Y si se repuso y nadie lo volvió a activar, estamos perdiendo ventas de un producto que tenemos en la nevera.' },
+
+    { t:'Las plataformas, abiertas cuando toca',
+      d:'Se abren a su hora y no se cierran ni se pausan antes de tiempo.',
+      p:'Cada minuto cerrado es un cliente que pide en otro sitio, y a la app no le gusta: si cerramos a deshora nos enseña menos. Si no damos abasto se sube el tiempo de preparación, que para eso está.' },
+
+    { t:'No se rechazan pedidos',
+      d:'Si vamos hasta arriba: avisa al encargado y sube el tiempo en la tablet.',
+      p:'Unos 43 pedidos rechazados en 3 meses contando todos los canales. Cada uno es un cliente que ya no vuelve a probar. Subir el tiempo es gratis; rechazar, no.' },
+
+    { t:'El rider espera lo menos posible',
+      d:'No des a "listo" si de verdad no faltan dos o tres minutos. Ni tan justo que llegue y no esté, ni tan pronto que se enfríe esperando.',
+      p:'Dar a listo antes de tiempo es lo que tiene al rider parado en la puerta, y ahora pasa en <b>uno de cada cinco pedidos</b>. Pero darlo demasiado tarde enfría la comida. Mira lo que tienes en cola, calcula el margen y avisa cuando queden esos pocos minutos.' },
+
+    { t:'Las cantidades del escandallo',
+      d:'El plato sale igual tenga quien tenga el turno.',
+      p:'Pasarse tampoco es bueno: de más se sale y mancha, de menos sabe a poco. Lo de "no tan rico" en las reseñas casi siempre es esto, no la receta.' }
+  ];
+
+  var hechas = leer('orale.equipo.uber.reglas', []);
+  if (!Array.isArray(hechas)) hechas = [];
+  hechas = hechas.filter(function (i) { return i >= 0 && i < REGLAS.length; });
+
+  $('#reglas').innerHTML = REGLAS.map(function (r, i) {
+    var ok = hechas.indexOf(i) > -1;
+    return '<li class="regla' + (ok ? ' ok' : '') + '" data-i="' + i + '">' +
+      '<div class="regla-top" role="button" tabindex="0" aria-pressed="' + ok + '">' +
+        '<span class="caja" aria-hidden="true">✓</span>' +
+        '<span class="regla-txt"><h3>' + (i + 1) + '. ' + r.t + '</h3><p>' + r.d + '</p></span>' +
+        '<button class="mas" type="button" aria-expanded="false">Por qué</button>' +
+      '</div><div class="porque" hidden>' + r.p + '</div></li>';
+  }).join('');
+
+  function pintarAvance() {
+    $('#avance-i').style.width = (hechas.length / REGLAS.length * 100) + '%';
+    $('#avance-t').textContent = hechas.length + ' de ' + REGLAS.length;
+  }
+  pintarAvance();
+
+  $('#reglas').addEventListener('click', function (e) {
+    var li = e.target.closest('.regla'); if (!li) return;
+    var i = +li.dataset.i;
+    /* "Por qué" despliega, no marca: abrir el detalle no puede dar por
+       repasada una regla que todavía estás leyendo. */
+    var mas = e.target.closest('.mas');
+    if (mas) {
+      var p = li.querySelector('.porque');
+      p.hidden = !p.hidden;
+      mas.setAttribute('aria-expanded', String(!p.hidden));
+      mas.textContent = p.hidden ? 'Por qué' : 'Cerrar';
+      return;
+    }
+    if (!e.target.closest('.regla-top')) return;
+    var pos = hechas.indexOf(i);
+    if (pos > -1) hechas.splice(pos, 1); else hechas.push(i);
+    li.classList.toggle('ok', pos === -1);
+    li.querySelector('.regla-top').setAttribute('aria-pressed', String(pos === -1));
+    guardar('orale.equipo.uber.reglas', hechas);
+    pintarAvance();
+  });
+  $('#reglas').addEventListener('keydown', function (e) {
+    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('regla-top')) {
+      e.preventDefault(); e.target.click();
+    }
+  });
+
+  /* ══ Tu local ═══════════════════════════════════════════════════ */
+  var LOCALES = {
+    remedios: { nombre:'Los Remedios', diag:'Nota 4,5 · el que mejor va', puntos:[
+      '<b>Los cambios que pide el cliente.</b> La mitad de nuestros errores son un "sin esto" o un "extra de aquello" que no se hizo. Quien monta repite el cambio en voz alta.',
+      '<b>Una reseña dijo que la comida olía mal.</b> Al abrir el servicio se revisa la carne, el pico, las salsas y las tortillas. Si algo no está perfecto, no se sirve.',
+      '<b>Don Brasa, Pollo Padre y Apachurradas</b> son los platos peor valorados. Son los que hay que cuidar más.'
+    ]},
+    sanluis: { nombre:'San Luis', diag:'Nota 4,4 · el local con más errores', puntos:[
+      '<b>Productos equivocados y productos que faltan.</b> Antes de cerrar la bolsa, una segunda persona revisa el ticket. Siempre.',
+      '<b>La app ha estado cerrada 14 horas en 3 meses solo en Uber</b>, mucho más que los otros locales. No se pausa sin avisar al encargado: si vamos agobiados se sube el tiempo, no se cierra.',
+      '<b>Quejas de "no tan rico" y de comida blanda o que se sale.</b> Cantidades del escandallo, ingredientes bien escurridos y lo caliente en plancha hasta montar.',
+      '<b>Hay 10 reseñas sin contestar.</b> El encargado tiene que ponerse al día.'
+    ]},
+    sevillaeste: { nombre:'Sevilla Este', diag:'Nota 4,4', puntos:[
+      '<b>Se quedan productos fuera de la bolsa.</b> Se cuenta lo que va dentro contra el ticket antes de dárselo al rider.',
+      '<b>Somos el local que más tarda: unos 15 minutos.</b> El objetivo es 12, y para eso la mise en place tiene que estar lista a las 20:00.',
+      '<b>Somos el que más pedidos rechaza.</b> No se rechaza ninguno sin avisar al encargado.',
+      '<b>Hay 3 reseñas sin contestar.</b>'
+    ]}
+  };
+  var orden = ['remedios', 'sanluis', 'sevillaeste'];
+  var elegido = leer('orale.equipo.local', 'remedios');
+  if (orden.indexOf(elegido) === -1) elegido = 'remedios';
+
+  $('#pestanas').innerHTML = orden.map(function (k) {
+    return '<button type="button" role="tab" data-k="' + k + '" aria-selected="false">' + LOCALES[k].nombre + '</button>';
+  }).join('');
+  function pintarLocal(k) {
+    elegido = k; guardar('orale.equipo.local', k);
+    var l = LOCALES[k];
+    $('#panel').innerHTML = '<h3>' + l.nombre + '</h3><p class="diag">' + l.diag + '</p><ul>' +
+      l.puntos.map(function (p) { return '<li><span>' + p + '</span></li>'; }).join('') + '</ul>';
+    Array.prototype.forEach.call($('#pestanas').children, function (b) {
+      b.setAttribute('aria-selected', String(b.dataset.k === k));
+    });
+  }
+  $('#pestanas').addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (b) pintarLocal(b.dataset.k);
+  });
+  pintarLocal(elegido);
+
+  /* ══ Simulador de pedidos ═══════════════════════════════════════ */
+  var PEDIDOS = [
+    { titulo:'Pedido #1',
+      lineas:['1 × Burro Juárez', '1 × Nachos Guadalupe', '1 × Coca-Cola Zero', '1 × Kinder Bueno', '1 × Cubiertos'],
+      nota:'Sin cebolla en el burrito, por favor.',
+      bien:['Burro Juárez','Nachos Guadalupe','Coca-Cola Zero','Kinder Bueno','Cubiertos'],
+      extra:['Burro Dolores','Coca-Cola normal','Galleta Lotus','Don Brasa','Agua'],
+      moraleja:'Bebida y postre son los dos que más se quedan fuera. Y la nota del cliente se lee en voz alta, no se da por leída.' },
+
+    { titulo:'Pedido #2',
+      lineas:['1 × Combo Duo Guadalupe','&nbsp;&nbsp;&nbsp;↳ Burrito 1: Burro Juárez','&nbsp;&nbsp;&nbsp;↳ Burrito 2: Burro Dolores','&nbsp;&nbsp;&nbsp;↳ Nachos del combo','1 × Galleta Lotus'],
+      nota:'El segundo burrito sin queso.',
+      bien:['Burro Juárez','Burro Dolores','Nachos del combo','Galleta Lotus'],
+      extra:['Nachos Guadalupe','Kinder Bueno','Coca-Cola Zero','Pollo Padre'],
+      moraleja:'El combo son tres cosas, no una: los dos burritos y los nachos. Es nuestro producto con más quejas justo por esto.' },
+
+    { titulo:'Pedido #3',
+      lineas:['2 × Don Brasa','1 × Apachurradas','2 × Galleta Lotus','1 × Agua'],
+      nota:'Uno de los Don Brasa sin picante.',
+      bien:['Don Brasa','Don Brasa (2.º)','Apachurradas','Galleta Lotus','Galleta Lotus (2.ª)','Agua'],
+      extra:['Burro Juárez','Kinder Bueno','Coca-Cola Zero','Nachos Guadalupe'],
+      moraleja:'Las cantidades también se cuentan: dos Don Brasa y dos Lotus. Y uno de los dos va sin picante, que no es lo mismo que los dos.' }
+  ];
+  var sp = 0, elegidos = [], cerrado = false;
+
+  function pintarSim() {
+    var p = PEDIDOS[sp];
+    cerrado = false; elegidos = [];
+    $('#sim-titulo').textContent = p.titulo;
+    $('#sim-paso').textContent = (sp + 1) + ' de ' + PEDIDOS.length;
+    $('#sim-ticket').innerHTML =
+      '<div class="t-cab"><span>Ticket</span><span>' + (sp + 1) + '/' + PEDIDOS.length + '</span></div>' +
+      p.lineas.join('<br>') +
+      (p.nota ? '<div class="t-nota"><b>Nota del cliente:</b> ' + esc(p.nota) + '</div>' : '');
+    $('#sim-aviso').hidden = !p.nota;
+    $('#sim-leida').checked = false;
+    $('#sim-leida').disabled = false;
+
+    /* Las opciones se barajan para que no se aprendan las posiciones
+       en vez de los productos. */
+    var todo = p.bien.concat(p.extra);
+    for (var i = todo.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1)), t = todo[i]; todo[i] = todo[j]; todo[j] = t;
+    }
+    $('#sim-chips').innerHTML = todo.map(function (x) {
+      return '<button class="chip" type="button" aria-pressed="false" data-x="' + esc(x) + '">' + esc(x) + '</button>';
+    }).join('');
+    $('#sim-veredicto').innerHTML = '';
+    $('#sim-cerrar').textContent = 'Cerrar la bolsa';
+  }
+
+  $('#sim-chips').addEventListener('click', function (e) {
+    var c = e.target.closest('.chip'); if (!c || cerrado) return;
+    var x = c.dataset.x, i = elegidos.indexOf(x);
+    if (i > -1) elegidos.splice(i, 1); else elegidos.push(x);
+    c.setAttribute('aria-pressed', String(i === -1));
+  });
+
+  $('#sim-cerrar').addEventListener('click', function () {
+    var p = PEDIDOS[sp];
+    if (cerrado) {
+      sp = (sp + 1) % PEDIDOS.length;
+      pintarSim();
+      $('#monta').scrollIntoView({ block:'start' });
+      return;
+    }
+    cerrado = true;
+    Array.prototype.forEach.call($('#sim-chips').children, function (c) { c.disabled = true; });
+    $('#sim-leida').disabled = true;
+
+    var faltan = p.bien.filter(function (x) { return elegidos.indexOf(x) === -1; });
+    var sobran = elegidos.filter(function (x) { return p.bien.indexOf(x) === -1; });
+    var sinLeer = p.nota && !$('#sim-leida').checked;
+    var fallos = [];
+    if (sinLeer) fallos.push('<li><i>✗</i><span>No has confirmado la nota del cliente: <b>"' + esc(p.nota) + '"</b></span></li>');
+    faltan.forEach(function (x) { fallos.push('<li><i>✗</i><span>Falta: <b>' + esc(x) + '</b></span></li>'); });
+    sobran.forEach(function (x) { fallos.push('<li><i>✗</i><span>Sobra: <b>' + esc(x) + '</b> (no está en el ticket)</span></li>'); });
+
+    $('#sim-veredicto').innerHTML = fallos.length
+      ? '<div class="veredicto mal"><b>Esto habría sido una reseña mala</b><ul>' + fallos.join('') +
+        '</ul><p class="pista">' + p.moraleja + '</p></div>'
+      : '<div class="veredicto bien"><b>Bolsa perfecta</b><p>Ticket completo, nada de más y la nota confirmada. Así es como se sube la nota.</p>' +
+        '<p class="pista">' + p.moraleja + '</p></div>';
+    $('#sim-cerrar').textContent = 'Siguiente pedido →';
+    $('#sim-veredicto').scrollIntoView({ block:'center' });
+  });
+  pintarSim();
+
+  /* ══ ¿Qué falló aquí? ═══════════════════════════════════════════ */
+  var RESENAS = [
+    { e:1, q:'Pedí el burrito SIN QUESO y venía con queso. Mi pareja es intolerante y no se lo pudo comer.',
+      o:['No se leyó la nota del cliente en voz alta','No se repasó el ticket línea por línea','No se siguieron las cantidades del escandallo'], c:0,
+      x:'Regla 1. La nota se lee en voz alta al montar y la comprueba quien cierra la bolsa. Aquí no es una reseña mala: es alguien que no pudo cenar.' },
+    { e:2, q:'Todo buenísimo pero faltaba la Coca-Cola que había pagado. Ya es la segunda vez.',
+      o:['No se marcó el envase con su nombre','No se contaron bebidas y postres antes de cerrar','El pedido se montó demasiado pronto'], c:1,
+      x:'Regla 3. Bebidas y postres se cuentan aparte y en voz alta. "Ya es la segunda vez" es lo que convierte a un cliente fiel en uno que se va.' },
+    { e:2, q:'Llegó frío y el burrito deshecho por abajo, hecho una pena. Una lástima porque sabe muy bien.',
+      o:['No se respetó el escandallo','No se mantuvo en plancha y se montó antes de tiempo','Se rechazó el pedido anterior'], c:1,
+      x:'Regla 6. Lo caliente se aguanta en plancha hasta montar, y se monta al final. Con el frío de ahora esto se nota el doble.' },
+    { e:3, q:'Pedí Nachos Guadalupe y me llegaron otros nachos distintos. No me enteré hasta llegar a casa.',
+      o:['No se marcó cada envase con su nombre','No se leyó la nota del cliente','No estaba actualizada la disponibilidad'], c:0,
+      x:'Regla 5. Si el envase no va marcado, el error no se ve hasta que el cliente abre la bolsa en su casa. Ahí ya no hay arreglo.' },
+    { e:2, q:'El repartidor estuvo 15 minutos esperando dentro del local y la comida llegó helada.',
+      o:['Se cerró la plataforma antes de tiempo','Se dio a "listo" demasiado pronto','Faltaban productos en la bolsa'], c:1,
+      x:'Regla 10. Dar a listo cuando aún faltaba mucho tiene al rider parado y la comida enfriándose. Se avisa cuando queden dos o tres minutos de verdad.' },
+    { e:1, q:'Pedí un plato que salía disponible y me llamaron para decirme que estaba agotado. Anulé el pedido.',
+      o:['No se revisó la disponibilidad en la tablet antes del servicio','No se leyó la nota del cliente','No se repasó el ticket'], c:0,
+      x:'Regla 7. Antes del servicio se repasa la tablet de Uber y la de Glovo: lo agotado se quita y lo que se ha repuesto se vuelve a activar.' }
+  ];
+  $('#resenas').innerHTML = RESENAS.map(function (r, i) {
+    return '<div class="resena" data-i="' + i + '">' +
+      '<p class="estrellas">' + '★'.repeat(r.e) + '☆'.repeat(5 - r.e) + '</p>' +
+      '<q>' + esc(r.q) + '</q>' +
+      '<div class="ops">' + r.o.map(function (o, j) {
+        return '<button type="button" data-j="' + j + '">' + esc(o) + '</button>';
+      }).join('') + '</div><p class="pista" hidden></p></div>';
+  }).join('');
+  $('#resenas').addEventListener('click', function (e) {
+    var b = e.target.closest('.ops button'); if (!b || b.disabled) return;
+    var card = b.closest('.resena'), r = RESENAS[+card.dataset.i], j = +b.dataset.j;
+    Array.prototype.forEach.call(card.querySelectorAll('.ops button'), function (x, k) {
+      x.disabled = true;
+      if (k === r.c) x.classList.add('bien'); else if (k === j) x.classList.add('mal');
+    });
+    var p = card.querySelector('.pista');
+    p.innerHTML = (j === r.c ? '<b>Eso es.</b> ' : '<b>No.</b> ') + r.x;
+    p.hidden = false;
+  });
+
+  /* ══ Checklist de bolsa ═════════════════════════════════════════ */
+  var BOLSA = [
+    'He leído la nota del cliente en voz alta',
+    'Los cambios ("sin…", "extra…") están hechos',
+    'Ticket repasado línea por línea, con cantidades',
+    'Bebidas dentro',
+    'Postres dentro (Kinder, Lotus)',
+    'Cubiertos y servilletas',
+    'Combos: los dos burritos y los nachos',
+    'Cada envase marcado con su nombre',
+    'Lo caliente ha estado en plancha hasta montar',
+    'Todo bien cerrado y bien envuelto',
+    'Al rider le faltan dos o tres minutos para llegar'
+  ];
+  $('#bolsa').innerHTML = BOLSA.map(function (t, i) {
+    return '<li><label><input type="checkbox" data-i="' + i + '"><span>' + t + '</span></label></li>';
+  }).join('');
+  /* A propósito no se guarda: es por pedido, y arrastrar las marcas del
+     pedido anterior es justo el fallo que queremos evitar. */
+  $('#reiniciar').addEventListener('click', function () {
+    Array.prototype.forEach.call($('#bolsa').querySelectorAll('input'), function (c) { c.checked = false; });
+    $('#bolsa').scrollIntoView({ block:'center' });
+  });
+
+  /* ══ Test ═══════════════════════════════════════════════════════ */
+  var TEST = [
+    { q:'Entra un pedido con nota: "sin cebolla". ¿Qué hacemos?',
+      o:['La lee quien monta en voz alta y la comprueba quien cierra la bolsa','La lee quien monta y ya está, que para eso la ha leído','Se mira al final, al cerrar la bolsa'], c:0,
+      e:'En voz alta y dos personas. Si solo lo comprueba uno es cuando se cuela el queso que el cliente había quitado.' },
+    { q:'Son las 21:30, está petado y no damos abasto. ¿Qué hacemos?',
+      o:['Rechazar los pedidos que no podamos sacar a tiempo','Pausar la plataforma hasta que baje el pico','Avisar al encargado y subir el tiempo de preparación'], c:2,
+      e:'Ni rechazar ni cerrar. Unos 43 pedidos rechazados en 3 meses y cada uno es un cliente que no vuelve. Subir el tiempo no cuesta nada.' },
+    { q:'¿Qué repasamos en la tablet antes de abrir el servicio?',
+      o:['Solo que la impresora tenga papel','La disponibilidad: quitar lo agotado y volver a activar lo repuesto','Nada, se mira cuando entre el primer pedido'], c:1,
+      e:'Las dos cosas, y en Uber y en Glovo. Si algo agotado sigue a la venta el pedido acaba mal; si algo repuesto sigue apagado, perdemos ventas de lo que tenemos en la nevera.' },
+    { q:'¿Cuándo damos un pedido como "listo"?',
+      o:['En cuanto entra, así el rider ya viene de camino','Cuando faltan dos o tres minutos de verdad, mirando la cola','Cuando ya está todo cerrado y la bolsa en el mostrador'], c:1,
+      e:'Con margen, pero con margen corto. Demasiado pronto y el rider espera parado; demasiado tarde y la comida se enfría esperando a que llegue.' },
+    { q:'Ha entrado frío de verdad. ¿Qué hacemos con los entrantes y lo caliente?',
+      o:['Montarlo todo nada más prepararlo para no olvidarlo','Mantenerlo en plancha y montarlo en el último momento','Dejarlo tapado en la encimera hasta que venga el rider'], c:1,
+      e:'En plancha hasta montar. Es lo que hace que aguante el trayecto y llegue como salió de cocina.' },
+    { q:'¿Qué es lo que más se nos olvida meter en la bolsa?',
+      o:['Las tortillas de más','Los cubiertos','La Coca-Cola, el Kinder Bueno y la Galleta Lotus'], c:2,
+      e:'Bebida y postres. Son pequeños, se quedan fuera y cuestan la reseña entera: el cliente no valora el burrito, valora lo que le faltaba.' },
+    { q:'El Combo Duo Guadalupe, ¿cuántas cosas son?',
+      o:['Dos: los dos burritos','Tres: los dos burritos y los nachos','Una: va todo en el mismo envase'], c:1,
+      e:'Tres. Es nuestro producto con más quejas justamente porque se cierra la bolsa con dos de las tres.' }
+  ];
+  var aciertos = 0, contestadas = 0;
+  $('#preguntas').innerHTML = TEST.map(function (p, i) {
+    return '<div class="preg" data-i="' + i + '">' +
+      '<p class="q"><i>Pregunta ' + (i + 1) + ' de ' + TEST.length + '</i>' + esc(p.q) + '</p>' +
+      '<div class="ops">' + p.o.map(function (o, j) {
+        return '<button type="button" data-j="' + j + '">' + esc(o) + '</button>';
+      }).join('') + '</div><p class="pista" hidden></p></div>';
+  }).join('');
+  $('#preguntas').addEventListener('click', function (e) {
+    var b = e.target.closest('.ops button'); if (!b || b.disabled) return;
+    var preg = b.closest('.preg'), p = TEST[+preg.dataset.i], j = +b.dataset.j;
+    Array.prototype.forEach.call(preg.querySelectorAll('.ops button'), function (x, k) {
+      x.disabled = true;
+      if (k === p.c) x.classList.add('bien'); else if (k === j) x.classList.add('mal');
+    });
+    var pista = preg.querySelector('.pista');
+    pista.innerHTML = (j === p.c ? '<b>Bien.</b> ' : '<b>No.</b> ') + p.e;
+    pista.hidden = false;
+    contestadas++; if (j === p.c) aciertos++;
+    if (contestadas === TEST.length) rematar();
+  });
+  function rematar() {
+    var hoy = new Date().toLocaleDateString('es-ES', { day:'numeric', month:'long' });
+    if (aciertos === TEST.length) {
+      $('#marcador-t').textContent = 'Pleno: ' + aciertos + ' de ' + TEST.length;
+      $('#marcador-p').textContent = 'Protocolo repasado el ' + hoy + '. Ahora toca hacerlo en el turno.';
+    } else {
+      $('#marcador-t').textContent = aciertos + ' de ' + TEST.length;
+      $('#marcador-p').textContent = 'Vuelve a las que has fallado, arriba están explicadas. Repasado el ' + hoy + '.';
+    }
+    $('#marcador').hidden = false;
+    guardar('orale.equipo.uber.test', { aciertos:aciertos, de:TEST.length, fecha:new Date().toISOString() });
+    $('#marcador').scrollIntoView({ block:'center' });
+  }
+})();
+</script>
+</body>
+</html>
