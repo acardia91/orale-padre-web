@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DON VICE · Órale Padre</title>
+<meta name="description" content="DON VICE: burrito de cerdo asado y Patatas 6 Estrellas. Edición limitada en Órale City. Solo en Órale Padre, Sevilla.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#10101C">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* ═══════════════════════════════════════════════════════════════════
+   DON VICE · Órale City
+   Campaña propia. Nada de aquí sale de ninguna marca de videojuegos:
+   la ciudad, el sol, las palmeras y los rótulos están dibujados en SVG
+   y CSS a mano para esta página.
+   ═══════════════════════════════════════════════════════════════════ */
+:root{
+  --rosa:#FF2697; --turquesa:#18D9EA; --naranja:#FF963F;
+  --morado:#40146A; --noche:#10101C;
+  --hueso:#FFF4EC; --niebla:#B9A9C9;
+  --display:'Anton','Arial Narrow',Impact,sans-serif;
+  --texto:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth}
+body{
+  background:var(--noche); color:var(--hueso);
+  font-family:var(--texto); line-height:1.55;
+  overflow-x:clip; -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; height:auto; display:block}   /* sin esto manda el height="" del HTML */
+[hidden]{display:none !important}
+.env{width:100%; max-width:1080px; margin:0 auto; padding:0 20px}
+
+/* Grano y líneas de tubo: todo el rato por encima, muy sutil */
+body::after{
+  content:""; position:fixed; inset:0; z-index:90; pointer-events:none;
+  background:repeating-linear-gradient(0deg, rgba(0,0,0,.17) 0 1px, transparent 1px 3px);
+  mix-blend-mode:multiply; opacity:.5;
+}
+
+.k{font-family:var(--mono); font-size:11px; font-weight:600; letter-spacing:.24em; text-transform:uppercase}
+.k-rosa{color:var(--rosa)} .k-turq{color:var(--turquesa)} .k-nar{color:var(--naranja)}
+
+h2{
+  font-family:var(--display); font-weight:400; line-height:.88;
+  font-size:clamp(40px,10vw,86px); text-transform:uppercase;
+  letter-spacing:.005em; transform:skewX(-7deg);
+}
+.lede{font-size:clamp(16px,2.1vw,19px); color:var(--niebla); max-width:46ch}
+.lede b{color:var(--hueso)}
+
+/* ─── Neón ────────────────────────────────────────────────────────── */
+.neon{
+  color:var(--hueso);
+  text-shadow:
+    0 0 4px rgba(255,255,255,.85),
+    0 0 14px var(--rosa), 0 0 34px var(--rosa),
+    0 0 70px rgba(255,38,151,.55);
+}
+.neon-t{
+  color:#E9FDFF;
+  text-shadow:0 0 4px rgba(255,255,255,.8), 0 0 14px var(--turquesa), 0 0 36px var(--turquesa);
+}
+@keyframes parpadeo{
+  0%,97%,100%{opacity:1}
+  97.5%{opacity:.45} 98.2%{opacity:1} 98.8%{opacity:.6} 99.3%{opacity:1}
+}
+.flick{animation:parpadeo 7s infinite}
+
+/* ═══ HERO ═══════════════════════════════════════════════════════ */
+.hero{
+  position:relative; min-height:100svh; display:flex; flex-direction:column; overflow:hidden;
+  background:linear-gradient(180deg,#140822 0%,#1A0B33 24%,#2E0F52 58%,#541473 100%);
+}
+/* La ciudad se ancla abajo y ocupa todo el ancho: si se recorta a lo
+   alto da igual, pero recortarla a lo ancho se comía las palmeras. */
+.ciudad{
+  position:absolute; left:0; right:0; bottom:0; z-index:0;
+  -webkit-mask-image:linear-gradient(to bottom, transparent 0%, #000 24%);
+          mask-image:linear-gradient(to bottom, transparent 0%, #000 24%);
+}
+.ciudad svg{width:100%; height:auto; display:block}
+.hero::before{  /* bruma de calor sobre el horizonte */
+  content:""; position:absolute; left:0; right:0; top:38%; height:34%; z-index:1;
+  background:radial-gradient(60% 100% at 50% 100%, rgba(255,150,63,.35), transparent 70%);
+  pointer-events:none;
+}
+.hero::after{   /* fundido al negro de abajo */
+  content:""; position:absolute; left:0; right:0; bottom:0; height:34%; z-index:3;
+  background:linear-gradient(transparent, var(--noche) 88%); pointer-events:none;
+}
+.hero-in{position:relative; z-index:4; flex:1; display:flex; flex-direction:column; padding:20px 20px 32px}
+
+.top{display:flex; align-items:center; justify-content:space-between; gap:14px}
+.marca{display:flex; align-items:center; gap:9px; text-decoration:none; color:var(--hueso)}
+.marca img{width:34px; filter:brightness(0) invert(1)}
+.marca span{font-family:var(--display); font-size:15px; text-transform:uppercase; letter-spacing:.03em}
+.top .k{color:var(--turquesa); text-align:right; line-height:1.5}
+
+.hero-centro{flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:18px 0 6px}
+.bienvenida{
+  font-family:var(--mono); font-weight:600; font-size:clamp(10px,2.6vw,14px);
+  letter-spacing:.34em; text-transform:uppercase; color:var(--turquesa);
+  border-top:1px solid rgba(24,217,234,.4); border-bottom:1px solid rgba(24,217,234,.4);
+  padding:8px 0; margin-bottom:clamp(10px,3vw,20px); width:100%; max-width:560px;
+}
+.titulazo{
+  font-family:var(--display); font-weight:400; text-transform:uppercase;
+  font-size:clamp(68px,18vw,172px); line-height:.86; letter-spacing:-.01em;
+  transform:skewX(-8deg); position:relative;
+  background:linear-gradient(176deg, #FFFFFF 4%, #FFE7F5 22%, var(--rosa) 54%, #B8106A 74%, var(--naranja) 96%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 0 22px rgba(255,38,151,.6)) drop-shadow(0 5px 0 rgba(64,20,106,.9));
+}
+.hambre{
+  margin-top:clamp(8px,2vw,16px);
+  font-family:var(--display); font-weight:400; text-transform:uppercase;
+  font-size:clamp(17px,4.6vw,38px); letter-spacing:.14em; transform:skewX(-8deg);
+}
+.hero-prod{position:relative; width:min(78vw,400px); margin:clamp(12px,3vw,22px) auto 0}
+.hero-prod img{
+  width:100%; height:min(27svh,234px); object-fit:cover; object-position:50% 74%;
+  border-radius:3px;
+  filter:drop-shadow(0 26px 50px rgba(0,0,0,.72)) contrast(1.06) saturate(1.1);
+  -webkit-mask-image:radial-gradient(118% 112% at 50% 46%, #000 58%, transparent 100%);
+          mask-image:radial-gradient(118% 112% at 50% 46%, #000 58%, transparent 100%);
+}
+.sello{
+  position:absolute; left:50%; bottom:-14px; transform:translateX(-50%) rotate(-4deg);
+  display:flex; align-items:stretch; border:2px solid var(--noche);
+  box-shadow:0 8px 24px rgba(0,0,0,.6); white-space:nowrap;
+}
+.sello i{
+  font-style:normal; font-family:var(--display); font-weight:400;
+  font-size:clamp(15px,3.4vw,21px); text-transform:uppercase; letter-spacing:.04em;
+  padding:6px 11px 5px; color:var(--noche);
+}
+.sello i:nth-child(1){background:var(--rosa)}
+.sello i:nth-child(2){background:var(--turquesa)}
+.sello i:nth-child(3){background:var(--naranja); font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:.14em; display:grid; place-items:center}
+
+.hero-pie{display:grid; gap:11px; justify-items:center; margin-top:clamp(20px,3.4vw,30px)}
+.btn{
+  display:inline-block; text-decoration:none; cursor:pointer; border:0;
+  font-family:var(--display); font-weight:400; font-size:clamp(19px,4.6vw,25px);
+  text-transform:uppercase; letter-spacing:.07em; transform:skewX(-8deg);
+  padding:16px 34px; color:var(--noche); background:var(--hueso);
+  box-shadow:5px 5px 0 var(--rosa), 10px 10px 0 var(--turquesa);
+  transition:transform .12s, box-shadow .12s; -webkit-tap-highlight-color:transparent;
+}
+.btn > span{display:inline-block; transform:skewX(8deg)}
+.btn:active{transform:skewX(-8deg) translate(4px,4px); box-shadow:2px 2px 0 var(--rosa), 4px 4px 0 var(--turquesa)}
+.btn-2{background:transparent; color:var(--hueso); border:2px solid var(--turquesa); box-shadow:none; font-size:clamp(14px,3.4vw,17px); padding:12px 24px}
+.btn-2:active{box-shadow:none; transform:skewX(-8deg) translateY(2px)}
+.baja{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--niebla)}
+
+/* ═══ Secciones ══════════════════════════════════════════════════ */
+section{position:relative; padding:clamp(64px,11vw,124px) 0}
+.sec-cab{margin-bottom:clamp(26px,4vw,42px)}
+.sec-cab .k{display:block; margin-bottom:12px}
+.sec-cab .lede{margin-top:16px}
+
+/* ─── Se busca ────────────────────────────────────────────────── */
+.busca{background:linear-gradient(180deg, var(--noche), #190E2B 50%, var(--noche))}
+.cartel{
+  display:grid; grid-template-columns:minmax(0,.86fr) minmax(0,1fr); gap:clamp(18px,3vw,34px);
+  border:2px solid rgba(255,244,236,.22); background:rgba(255,244,236,.035);
+  padding:clamp(16px,2.6vw,26px); backdrop-filter:blur(2px);
+}
+@media (max-width:760px){ .cartel{grid-template-columns:1fr} }
+.ficha-foto{position:relative; min-width:0}
+.ficha-foto img{width:100%; filter:grayscale(.45) contrast(1.22) brightness(.92)}
+.ficha-foto::after{
+  content:""; position:absolute; inset:0;
+  background:linear-gradient(200deg, rgba(255,38,151,.3), transparent 45%, rgba(24,217,234,.26));
+  mix-blend-mode:screen;
+}
+.regla{
+  position:absolute; left:0; right:0; bottom:0; display:flex; justify-content:space-between;
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; color:var(--hueso);
+  background:rgba(16,16,28,.8); padding:5px 8px; z-index:2;
+}
+.ficha-datos{min-width:0}
+.ficha-datos h3{
+  font-family:var(--display); font-weight:400; font-size:clamp(34px,7vw,58px);
+  line-height:.86; text-transform:uppercase; transform:skewX(-7deg); margin-bottom:4px;
+}
+.alias{font-family:var(--mono); font-size:11.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--turquesa)}
+.datos{list-style:none; margin-top:18px; display:grid; gap:0; border-top:1px solid rgba(255,244,236,.18)}
+.datos li{
+  display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:12px;
+  padding:9px 0; border-bottom:1px solid rgba(255,244,236,.12); font-size:14px;
+}
+.datos dt, .datos .dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--niebla); padding-top:3px}
+.datos .dd{font-weight:700}
+.datos .dd b{color:var(--rosa)}
+
+/* ─── Estrellas ───────────────────────────────────────────────── */
+.estrellas{margin-top:20px; border:1px solid rgba(255,150,63,.5); background:rgba(255,150,63,.07); padding:14px}
+.est-cab{display:flex; justify-content:space-between; align-items:baseline; gap:10px; margin-bottom:10px}
+.est-fila{display:flex; gap:7px}
+.est{width:clamp(26px,5.4vw,36px); height:clamp(26px,5.4vw,36px); flex:none; position:relative}
+.est svg{width:100%; height:100%; display:block}
+.est .relleno{fill:rgba(255,244,236,.12); transition:fill .3s, filter .3s}
+.est.on .relleno{fill:var(--naranja); filter:drop-shadow(0 0 7px var(--naranja))}
+.est.max .relleno{fill:var(--rosa); filter:drop-shadow(0 0 12px var(--rosa))}
+.est-pie{margin-top:10px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; color:var(--naranja)}
+.est-pie b{color:var(--rosa)}
+
+/* ─── Patatas ─────────────────────────────────────────────────── */
+.patatas{background:
+  radial-gradient(120% 70% at 80% 0%, rgba(255,150,63,.2), transparent 60%),
+  radial-gradient(100% 70% at 10% 100%, rgba(255,38,151,.16), transparent 60%), var(--noche)}
+.pat-rejilla{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px}
+@media (max-width:700px){ .pat-rejilla{grid-template-columns:1fr} }
+.pat{border:1px solid rgba(255,244,236,.2); padding:18px; background:rgba(255,244,236,.03); min-width:0}
+.pat b{display:block; font-family:var(--display); font-weight:400; font-size:26px; text-transform:uppercase; transform:skewX(-7deg); color:var(--naranja); margin-bottom:7px}
+.pat p{font-size:14.5px; color:var(--niebla)}
+
+/* ─── Combo ───────────────────────────────────────────────────── */
+.combo{background:linear-gradient(180deg, var(--noche), var(--morado) 55%, #220A3A)}
+.caja{
+  border:2px solid var(--turquesa); background:rgba(16,16,28,.62); padding:clamp(20px,3.4vw,34px);
+  box-shadow:0 0 44px rgba(24,217,234,.26), inset 0 0 44px rgba(64,20,106,.5);
+}
+.caja-top{display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap}
+.caja h3{font-family:var(--display); font-weight:400; font-size:clamp(32px,7.4vw,62px); line-height:.86; text-transform:uppercase; transform:skewX(-7deg)}
+.precio{text-align:right; flex:none}
+.precio b{display:block; font-family:var(--display); font-weight:400; font-size:clamp(38px,8vw,64px); line-height:.9; color:var(--turquesa)}
+.precio span{font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--niebla)}
+.lleva{list-style:none; margin-top:22px; display:grid; gap:11px}
+.lleva li{display:grid; grid-template-columns:auto 1fr; gap:12px; align-items:start; font-size:15.5px}
+.lleva li i{
+  font-style:normal; font-family:var(--mono); font-size:10px; font-weight:600; letter-spacing:.1em;
+  color:var(--noche); background:var(--turquesa); padding:3px 7px; margin-top:3px;
+}
+.lleva li b{display:block; font-weight:800}
+.lleva li span{color:var(--niebla); font-size:14px}
+
+/* ─── Cuenta atrás ────────────────────────────────────────────── */
+.reloj{display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-top:24px; max-width:440px}
+.reloj div{border:1px solid rgba(255,244,236,.22); background:rgba(16,16,28,.5); padding:11px 6px; text-align:center; min-width:0}
+.reloj b{display:block; font-family:var(--display); font-weight:400; font-size:clamp(26px,6.4vw,38px); line-height:1; color:var(--rosa)}
+.reloj span{font-family:var(--mono); font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:var(--niebla)}
+
+/* ─── Packaging ───────────────────────────────────────────────── */
+.pack-rejilla{display:grid; grid-template-columns:1fr 1fr; gap:clamp(16px,3vw,30px); align-items:center}
+@media (max-width:760px){ .pack-rejilla{grid-template-columns:1fr} }
+.etiqueta{
+  position:relative; border:3px solid var(--noche); background:var(--hueso); color:var(--noche);
+  padding:20px 18px; transform:rotate(-2deg); box-shadow:0 18px 40px rgba(0,0,0,.6);
+}
+.etiqueta::before{
+  content:""; position:absolute; inset:7px; border:1.5px dashed rgba(16,16,28,.4); pointer-events:none;
+}
+.etq-k{font-family:var(--mono); font-size:9.5px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:#8A2A66}
+.etq-n{font-family:var(--display); font-weight:400; font-size:clamp(40px,9vw,66px); line-height:.84; text-transform:uppercase; transform:skewX(-7deg); margin:7px 0 4px}
+.etq-barras{display:flex; gap:4px; margin:13px 0 10px}
+.etq-barras i{height:11px; flex:1}
+.etq-barras i:nth-child(1){background:var(--rosa)}
+.etq-barras i:nth-child(2){background:var(--turquesa)}
+.etq-barras i:nth-child(3){background:var(--naranja)}
+.etq-pie{display:flex; justify-content:space-between; gap:10px; font-family:var(--mono); font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#5B4B57}
+
+/* ─── Locales ─────────────────────────────────────────────────── */
+.barrios{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:28px}
+@media (max-width:760px){ .barrios{grid-template-columns:1fr} }
+.barrio{
+  position:relative; display:block; text-decoration:none; color:var(--hueso); min-width:0;
+  border:1px solid rgba(255,244,236,.2); background:rgba(255,244,236,.03); padding:20px 18px 18px;
+  transition:border-color .2s, background .2s; -webkit-tap-highlight-color:transparent;
+}
+.barrio:hover,.barrio:focus-visible{border-color:var(--rosa); background:rgba(255,38,151,.09)}
+.barrio .zona{font-family:var(--mono); font-size:9.5px; letter-spacing:.18em; text-transform:uppercase; color:var(--turquesa)}
+.barrio b{display:block; font-family:var(--display); font-weight:400; font-size:30px; line-height:.95; text-transform:uppercase; transform:skewX(-7deg); margin:7px 0 6px}
+.barrio p{font-size:13.5px; color:var(--niebla)}
+.barrio .ir{display:block; margin-top:14px; font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--rosa)}
+
+/* ─── Cierre ──────────────────────────────────────────────────── */
+.cierre{text-align:center; background:
+  radial-gradient(90% 60% at 50% 100%, rgba(255,38,151,.28), transparent 70%), var(--noche)}
+.cierre h2{margin-bottom:18px}
+.pie{border-top:1px solid rgba(255,244,236,.14); padding:30px 0 44px}
+.pie-in{display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap; font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--niebla)}
+.pie a{color:var(--turquesa)}
+.legalillo{margin-top:16px; font-family:var(--mono); font-size:10.5px; line-height:1.8; color:#6E6080; max-width:70ch}
+
+/* ─── Reveal al hacer scroll ──────────────────────────────────── */
+.rev{opacity:0; transform:translateY(26px); transition:opacity .7s cubic-bezier(.2,.7,.3,1), transform .7s cubic-bezier(.2,.7,.3,1)}
+.rev.visto{opacity:1; transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rev{opacity:1; transform:none; transition:none}
+  .flick{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<header class="hero">
+  <div class="ciudad" id="ciudad" aria-hidden="true">
+    <svg viewBox="0 0 1200 760" preserveAspectRatio="xMidYMax meet">
+      <defs>
+        <linearGradient id="cielo" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#4A1270"/>
+          <stop offset="26%" stop-color="#7A1A7E"/>
+          <stop offset="52%" stop-color="#C21B81"/>
+          <stop offset="72%" stop-color="#FF2697"/>
+          <stop offset="100%" stop-color="#FF963F"/>
+        </linearGradient>
+        <linearGradient id="sol" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#FFE9A8"/>
+          <stop offset="45%" stop-color="#FF963F"/>
+          <stop offset="100%" stop-color="#FF2697"/>
+        </linearGradient>
+        <mask id="rayas">
+          <rect x="0" y="0" width="1200" height="760" fill="#fff"/>
+          <g fill="#000">
+            <rect x="0" y="300" width="1200" height="4"/><rect x="0" y="315" width="1200" height="6"/>
+            <rect x="0" y="334" width="1200" height="8"/><rect x="0" y="357" width="1200" height="10"/>
+            <rect x="0" y="384" width="1200" height="13"/><rect x="0" y="416" width="1200" height="16"/>
+          </g>
+        </mask>
+        <linearGradient id="torre" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2A1046"/><stop offset="100%" stop-color="#140822"/>
+        </linearGradient>
+        <linearGradient id="agua" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF2697" stop-opacity=".55"/>
+          <stop offset="100%" stop-color="#10101C"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="1200" height="760" fill="url(#cielo)"/>
+
+      <!-- Sol con listas, el truco de siempre del atardecer -->
+      <circle cx="600" cy="300" r="178" fill="url(#sol)" mask="url(#rayas)" opacity=".95"/>
+
+      <!-- Horizonte -->
+      <path d="M0 470 L0 404 L38 404 L38 366 L70 366 L70 410 L118 410 L118 340 L148 340 L148 298 L176 298 L176 410
+               L228 410 L228 362 L266 362 L266 424 L318 424 L318 330 L350 330 L350 288 L380 288 L380 424
+               L438 424 L438 382 L488 382 L488 428 L543 428 L543 354 L573 354 L573 312 L602 312 L602 428
+               L663 428 L663 376 L710 376 L710 424 L763 424 L763 328 L796 328 L796 288 L824 288 L824 424
+               L882 424 L882 390 L928 390 L928 430 L983 430 L983 352 L1014 352 L1014 310 L1044 310 L1044 430
+               L1103 430 L1103 384 L1148 384 L1148 420 L1200 420 L1200 470 Z"
+            fill="url(#torre)" opacity=".94"/>
+      <g fill="#18D9EA" opacity=".6">
+        <rect x="126" y="352" width="5" height="7"/><rect x="138" y="368" width="5" height="7"/>
+        <rect x="326" y="344" width="5" height="7"/><rect x="338" y="362" width="5" height="7"/>
+        <rect x="551" y="368" width="5" height="7"/><rect x="563" y="386" width="5" height="7"/>
+        <rect x="771" y="342" width="5" height="7"/><rect x="804" y="304" width="5" height="7"/>
+        <rect x="991" y="366" width="5" height="7"/><rect x="1022" y="326" width="5" height="7"/>
+      </g>
+      <g fill="#FF2697" opacity=".55">
+        <rect x="154" y="312" width="5" height="7"/><rect x="386" y="330" width="5" height="7"/>
+        <rect x="608" y="330" width="5" height="7"/><rect x="830" y="330" width="5" height="7"/>
+        <rect x="1050" y="338" width="5" height="7"/>
+      </g>
+
+      <!-- Agua -->
+      <rect x="0" y="470" width="1200" height="290" fill="url(#agua)"/>
+      <g stroke="#FF2697" stroke-width="1.1" opacity=".3">
+        <line x1="0" y1="492" x2="1200" y2="492"/><line x1="0" y1="516" x2="1200" y2="516"/>
+        <line x1="0" y1="548" x2="1200" y2="548"/><line x1="0" y1="590" x2="1200" y2="590"/>
+        <line x1="0" y1="646" x2="1200" y2="646"/><line x1="0" y1="716" x2="1200" y2="716"/>
+      </g>
+
+      <!-- Palmeras, dibujadas a mano -->
+      <g fill="#0B0614">
+        <g transform="translate(118,500) scale(.92)">
+          <path d="M0 0 C-5 -70 -9 -140 -20 -214 L-6 -216 C2 -142 6 -70 11 0 Z"/>
+          <path d="M-13 -214 C-62 -238 -104 -232 -136 -206 C-100 -224 -58 -226 -12 -204 Z"/>
+          <path d="M-13 -216 C-50 -262 -96 -282 -140 -278 C-98 -288 -50 -268 -10 -222 Z"/>
+          <path d="M-9 -218 C-6 -268 16 -308 54 -330 C22 -300 2 -262 -3 -220 Z"/>
+          <path d="M-7 -214 C30 -246 82 -252 124 -234 C84 -254 30 -254 -6 -220 Z"/>
+          <path d="M-8 -210 C28 -196 66 -168 88 -130 C62 -174 24 -202 -10 -214 Z"/>
+          <path d="M-16 -210 C-54 -196 -88 -170 -108 -134 C-86 -176 -52 -202 -18 -214 Z"/>
+        </g>
+        <g transform="translate(1086,512) scale(-1.06,1.06)">
+          <path d="M0 0 C-5 -70 -9 -140 -20 -214 L-6 -216 C2 -142 6 -70 11 0 Z"/>
+          <path d="M-13 -214 C-62 -238 -104 -232 -136 -206 C-100 -224 -58 -226 -12 -204 Z"/>
+          <path d="M-13 -216 C-50 -262 -96 -282 -140 -278 C-98 -288 -50 -268 -10 -222 Z"/>
+          <path d="M-9 -218 C-6 -268 16 -308 54 -330 C22 -300 2 -262 -3 -220 Z"/>
+          <path d="M-7 -214 C30 -246 82 -252 124 -234 C84 -254 30 -254 -6 -220 Z"/>
+          <path d="M-8 -210 C28 -196 66 -168 88 -130 C62 -174 24 -202 -10 -214 Z"/>
+          <path d="M-16 -210 C-54 -196 -88 -170 -108 -134 C-86 -176 -52 -202 -18 -214 Z"/>
+        </g>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-in">
+    <div class="top">
+      <a class="marca" href="/"><img src="/img/logo-tinta.png" alt="" width="560" height="674"><span>Órale Padre</span></a>
+      <p class="k">Edición limitada<br>Sevilla · <span id="anio">2026</span></p>
+    </div>
+
+    <div class="hero-centro">
+      <p class="bienvenida flick">Welcome to Órale City</p>
+      <h1 class="titulazo">Don<br>Vice</h1>
+      <p class="hambre neon-t flick">The city is hungry.</p>
+
+      <div class="hero-prod">
+        <img id="foto-hero" src="/img/manos-burrito.jpg"
+             alt="Burrito Don Vice de cerdo asado, envuelto en papel de aluminio"
+             width="1000" height="1250" fetchpriority="high">
+        <span class="sello"><i>Don</i><i>Vice</i><i>Ed. limitada</i></span>
+      </div>
+
+      <div class="hero-pie">
+        <a class="btn" id="cta-hero" href="#pedir"><span>Pedir ahora</span></a>
+        <p class="baja" id="baja-hero">Cerdo asado · Patatas 6 Estrellas</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════ SE BUSCA ═══════════════ -->
+<section class="busca" id="ficha">
+  <div class="env">
+    <div class="sec-cab rev">
+      <span class="k k-rosa">Ficha del sospechoso</span>
+      <h2 class="neon">Se busca<br>por exceso</h2>
+      <p class="lede">
+        Cerdo asado a fuego lento hasta que se deshace solo. Lleva <b>cuatro horas</b>
+        en la plancha y ni una sola coartada.
+      </p>
+    </div>
+
+    <div class="cartel rev">
+      <div class="ficha-foto">
+        <img id="foto-ficha" src="/img/manos-burrito.jpg" alt="Montaje del burrito Don Vice" width="1000" height="1250">
+        <span class="regla"><span>ÓRALE CITY P.D.</span><span id="codigo-ficha">OC-000-000</span></span>
+      </div>
+
+      <div class="ficha-datos">
+        <h3>Don Vice</h3>
+        <p class="alias">Alias: el cerdo que no se entrega</p>
+
+        <ul class="datos">
+          <li><span class="dt">Delito</span><span class="dd">Exceso de cerdo asado</span></li>
+          <li><span class="dt">Señas</span><span class="dd">Aluminio y etiqueta rosa</span></li>
+          <li><span class="dt">Armado con</span><span class="dd"><b>Patatas 6 Estrellas</b></span></li>
+          <li><span class="dt">Visto en</span><span class="dd">Los Remedios · Sevilla Este · San Luis</span></li>
+          <li><span class="dt">Condena</span><span class="dd">Edición limitada</span></li>
+        </ul>
+
+        <div class="estrellas" id="estrellas">
+          <div class="est-cab">
+            <span class="k k-nar">Nivel de búsqueda</span>
+            <span class="k k-rosa" id="est-texto">0 / 6</span>
+          </div>
+          <div class="est-fila" id="est-fila" aria-hidden="true"></div>
+          <p class="est-pie">El máximo son cinco. Este se sale de la escala: <b>seis estrellas</b>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PATATAS ═══════════════ -->
+<section class="patatas" id="patatas">
+  <div class="env">
+    <div class="sec-cab rev">
+      <span class="k k-nar">La prueba del delito</span>
+      <h2>Patatas<br><span class="neon-t">6 estrellas</span></h2>
+      <p class="lede">
+        No son una guarnición, son el motivo por el que te van a buscar.
+        Crujientes por fuera, con nuestro <b>aliño de la casa</b> y un punto de picante
+        que sube despacio.
+      </p>
+    </div>
+
+    <div class="pat-rejilla rev">
+      <div class="pat"><b>Doble fritura</b><p>Dos pasadas para que aguanten crujientes todo el camino a casa. También en el pedido para llevar.</p></div>
+      <div class="pat"><b>Aliño de la casa</b><p>Nuestra mezcla de especias, la misma que lleva el cerdo. Se nota desde la primera.</p></div>
+      <div class="pat"><b>Salsa Vice</b><p>Cremosa, con chipotle y un punto cítrico. Va aparte, para que mojes tú.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMBO ═══════════════ -->
+<section class="combo" id="combo">
+  <div class="env">
+    <div class="sec-cab rev">
+      <span class="k k-turq">El golpe completo</span>
+      <h2>The Vice<br>Combo</h2>
+    </div>
+
+    <div class="caja rev">
+      <div class="caja-top">
+        <h3>Combo<br>Don Vice</h3>
+        <p class="precio"><b id="precio">—</b><span>IVA incluido</span></p>
+      </div>
+
+      <ul class="lleva">
+        <li><i>01</i><span><b>Burrito Don Vice</b><span>Cerdo asado a fuego lento, arroz, frijol, pico y salsa Vice. En papel de aluminio con la etiqueta de la edición.</span></span></li>
+        <li><i>02</i><span><b>Patatas 6 Estrellas</b><span>Con su aliño y su salsa aparte.</span></span></li>
+        <li><i>03</i><span><b>Bebida</b><span>La que quieras de la nevera.</span></span></li>
+      </ul>
+
+      <div id="bloque-reloj" hidden>
+        <p class="k k-rosa" style="margin-top:26px">Sale a la calle en</p>
+        <div class="reloj" id="reloj">
+          <div><b id="r-d">—</b><span>Días</span></div>
+          <div><b id="r-h">—</b><span>Horas</span></div>
+          <div><b id="r-m">—</b><span>Min</span></div>
+          <div><b id="r-s">—</b><span>Seg</span></div>
+        </div>
+      </div>
+
+      <div class="hero-pie" style="justify-items:start; margin-top:28px">
+        <a class="btn" id="cta-combo" href="#pedir"><span>Pedir ahora</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PACKAGING ═══════════════ -->
+<section id="packaging">
+  <div class="env">
+    <div class="pack-rejilla">
+      <div class="sec-cab rev" style="margin-bottom:0">
+        <span class="k k-rosa">Edición limitada</span>
+        <h2>Se envuelve<br>y no vuelve</h2>
+        <p class="lede">
+          Cada Don Vice sale en papel de aluminio con su <b>etiqueta numerada</b>.
+          Cuando se acaba la tirada, se acaba. No hay segunda remesa.
+        </p>
+      </div>
+
+      <div class="etiqueta rev">
+        <p class="etq-k">Órale City · Edición limitada</p>
+        <p class="etq-n">Don Vice</p>
+        <p class="etq-k">Cerdo asado · Patatas 6 Estrellas</p>
+        <div class="etq-barras"><i></i><i></i><i></i></div>
+        <div class="etq-pie"><span>Órale Padre · Sevilla</span><span id="etq-num">Nº 000 / 000</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PEDIR ═══════════════ -->
+<section id="pedir">
+  <div class="env">
+    <div class="sec-cab rev">
+      <span class="k k-turq">Tres distritos</span>
+      <h2>Dónde se<br>entrega</h2>
+      <p class="lede">Pídelo directo y lo tienes recién hecho. Sin comisiones de nadie.</p>
+    </div>
+    <div class="barrios rev" id="barrios"></div>
+  </div>
+</section>
+
+<!-- ═══════════════ CIERRE ═══════════════ -->
+<section class="cierre">
+  <div class="env">
+    <h2 class="neon">La ciudad<br>tiene hambre</h2>
+    <p class="lede" style="margin:0 auto 26px">Don Vice está en la calle. Tú decides de qué lado estás.</p>
+    <a class="btn" href="#pedir"><span>Pedir ahora</span></a>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="env">
+    <div class="pie-in">
+      <span>© <span id="anio2">2026</span> Órale Padre · Sevilla</span>
+      <span><a href="/">oralepadre.com</a> · <a href="https://instagram.com/orale_padre" target="_blank" rel="noopener">@orale_padre</a></span>
+    </div>
+    <p class="legalillo">
+      Órale City, Don Vice y Patatas 6 Estrellas son creaciones propias de Órale Padre
+      (La Baba Hasta El Suelo S.L.). Esta campaña no está asociada, patrocinada ni
+      autorizada por ningún estudio de videojuegos ni por ninguna otra marca, y no guarda
+      relación con ellos. Fotografías orientativas. Oferta válida hasta fin de existencias
+      en los locales participantes.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ═══ LO QUE HAY QUE TOCAR ══════════════════════════════════════
+     Todo lo que cambia de la campaña está aquí arriba. */
+  var CONFIG = {
+    precio: '12,90 €',                       // precio del combo
+    lanzamiento: '2026-11-19T12:00:00+01:00', // cuándo sale a la venta
+    tirada: 500,                              // unidades de la edición
+    tiendas: {
+      remedios:    'https://oralepadre.last.shop/l/orale-padre-remedios',
+      sevillaeste: 'https://oralepadre.last.shop/l/orale-padre-sevilla-este',
+      sanluis:     'https://oralepadre.last.shop/l/orale-padre-san-luis'
+    }
+  };
+
+  var LOCALES = [
+    { k:'remedios',    zona:'Distrito oeste',  nombre:'Los Remedios', dir:'C/ Virgen de Loreto, 16', nota:'Para llevar o en local' },
+    { k:'sevillaeste', zona:'Distrito este',   nombre:'Sevilla Este', dir:'C/ Japón, 10',            nota:'Para llevar o en local' },
+    { k:'sanluis',     zona:'Distrito norte',  nombre:'San Luis',     dir:'C/ San Luis, 78 · Macarena', nota:'Solo para llevar' }
+  ];
+
+  var $ = function (s) { return document.querySelector(s); };
+  var hoy = new Date();
+
+  $('#anio').textContent = hoy.getFullYear();
+  $('#anio2').textContent = hoy.getFullYear();
+  $('#precio').textContent = CONFIG.precio;
+
+  /* Número de ficha y de etiqueta: decorativos, pero que no canten a
+     relleno. Salen del día, así que son estables durante la jornada. */
+  var sem = (hoy.getFullYear() * 372 + hoy.getMonth() * 31 + hoy.getDate());
+  function pad(n, l) { return String(n).padStart(l, '0'); }
+  $('#codigo-ficha').textContent = 'OC-' + pad(sem % 1000, 3) + '-' + pad((sem * 7) % 1000, 3);
+  $('#etq-num').textContent = 'Nº ' + pad((sem % CONFIG.tirada) + 1, 3) + ' / ' + CONFIG.tirada;
+
+  /* ═══ Los barrios ═══════════════════════════════════════════════ */
+  $('#barrios').innerHTML = LOCALES.map(function (l) {
+    return '<a class="barrio" href="' + CONFIG.tiendas[l.k] + '" target="_blank" rel="noopener">' +
+      '<span class="zona">' + l.zona + '</span>' +
+      '<b>' + l.nombre + '</b>' +
+      '<p>' + l.dir + '<br>' + l.nota + '</p>' +
+      '<span class="ir">Pedir aquí →</span></a>';
+  }).join('');
+
+  /* ═══ Antes y después del lanzamiento ═══════════════════════════
+     Mandar a la tienda un producto que todavía no existe es la forma
+     más rápida de quemar la campaña: hasta que salga, la llamada es
+     a mirar, no a pedir. */
+  var sale = new Date(CONFIG.lanzamiento);
+  var yaEsta = isNaN(sale.getTime()) || hoy >= sale;
+
+  if (!yaEsta) {
+    $('#cta-hero').innerHTML = '<span>Ver el combo</span>';
+    $('#cta-hero').setAttribute('href', '#combo');
+    $('#cta-combo').innerHTML = '<span>Ver dónde</span>';
+    $('#baja-hero').textContent = 'Muy pronto en Órale City';
+    $('#bloque-reloj').hidden = false;
+
+    var rD = $('#r-d'), rH = $('#r-h'), rM = $('#r-m'), rS = $('#r-s');
+    (function tic() {
+      var falta = sale - new Date();
+      if (falta <= 0) { location.reload(); return; }
+      var s = Math.floor(falta / 1000);
+      rD.textContent = Math.floor(s / 86400);
+      rH.textContent = pad(Math.floor(s / 3600) % 24, 2);
+      rM.textContent = pad(Math.floor(s / 60) % 60, 2);
+      rS.textContent = pad(s % 60, 2);
+      setTimeout(tic, 1000);
+    })();
+  }
+
+  /* ═══ Las seis estrellas ════════════════════════════════════════ */
+  var ESTRELLA = '<svg viewBox="0 0 24 24"><path class="relleno" d="M12 1.6l3.1 6.6 7.1.9-5.2 5 1.3 7.1L12 17.8 5.7 21.2 7 14.1 1.8 9.1l7.1-.9z"/></svg>';
+  var fila = $('#est-fila');
+  for (var i = 0; i < 6; i++) {
+    var e = document.createElement('span');
+    e.className = 'est'; e.innerHTML = ESTRELLA;
+    fila.appendChild(e);
+  }
+  var estrellas = fila.querySelectorAll('.est');
+  var encendidas = 0;
+
+  function encender() {
+    if (encendidas >= 6) return;
+    estrellas[encendidas].classList.add('on');
+    if (encendidas === 5) estrellas[5].classList.add('max');
+    encendidas++;
+    $('#est-texto').textContent = encendidas + ' / 6';
+    if (encendidas < 6) setTimeout(encender, 230);
+  }
+
+  /* ═══ Aparecer al hacer scroll ══════════════════════════════════ */
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var porVer = document.querySelectorAll('.rev');
+
+  if (reduce || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(porVer, function (n) { n.classList.add('visto'); });
+    encender();
+  } else {
+    var ojo = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('visto');
+        ojo.unobserve(en.target);
+        /* Las estrellas suben solas cuando la ficha entra en pantalla */
+        if (en.target.querySelector && en.target.querySelector('#estrellas')) encender();
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: .15 });
+    Array.prototype.forEach.call(porVer, function (n) { ojo.observe(n); });
+  }
+
+  /* ═══ La ciudad se mueve un poco al bajar ═══════════════════════ */
+  if (!reduce) {
+    var ciudad = $('#ciudad'), pendiente = false;
+    window.addEventListener('scroll', function () {
+      if (pendiente) return;
+      pendiente = true;
+      requestAnimationFrame(function () {
+        var y = window.scrollY;
+        if (y < window.innerHeight * 1.2) {
+          ciudad.style.transform = 'translate3d(0,' + (y * 0.22) + 'px,0) scale(' + (1 + y * 0.00012) + ')';
+        }
+        pendiente = false;
+      });
+    }, { passive: true });
+  }
+})();
+</script>
+</body>
+</html>
