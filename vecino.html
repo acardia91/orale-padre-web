@@ -92,6 +92,33 @@ h1{
 .aviso b{color:var(--tinta)}
 [hidden]{display:none !important}
 
+/* Puerta del email. El cupón se sigue viendo: el folleto impreso promete
+   que canjear no exige dar datos, así que lo que se pide a cambio del email
+   es la descarga del archivo, no el derecho a la promo. */
+.puerta{margin-top:14px; padding:16px 15px; border:1.5px solid var(--burdeos); background:var(--crema-3)}
+.puerta h3{font-family:var(--display); font-weight:400; font-size:21px; line-height:1.05; text-transform:uppercase; letter-spacing:.02em}
+.puerta .pq{margin-top:6px; font-size:14px; color:var(--tinta-2)}
+.puerta input[type=email]{
+  width:100%; margin-top:12px; padding:14px 13px; font-family:var(--texto); font-size:16px;
+  border:1.5px solid var(--linea); background:var(--crema); color:var(--tinta);
+}
+.puerta input[type=email]:focus{outline:2px solid var(--burdeos); outline-offset:-1px; border-color:var(--burdeos)}
+.puerta button{
+  width:100%; margin-top:13px; padding:15px 20px; cursor:pointer;
+  background:var(--burdeos); color:var(--crema); border:1.5px solid var(--burdeos);
+  box-shadow:0 3px 0 var(--tinta);
+  font-family:var(--texto); font-weight:800; font-size:14px; letter-spacing:.08em; text-transform:uppercase;
+}
+.puerta button:active{box-shadow:0 1px 0 var(--tinta); transform:translateY(2px)}
+.puerta button:disabled{background:var(--crema-3); color:var(--humo); border-color:var(--linea); box-shadow:none; cursor:not-allowed}
+.puerta .check{margin-top:12px}
+.puerta .legal{margin-top:11px}
+.puerta .salida{
+  display:block; margin-top:12px; padding-top:11px; border-top:1px solid var(--linea);
+  font-size:13px; color:var(--humo);
+}
+.puerta .salida a{color:var(--burdeos)}
+
 /* Aviso de próximas promos. Va debajo del cupón a propósito: el cupón
    no depende de esto, se ve y se descarga sin dar ningún dato. */
 .lista{margin-top:22px; padding:18px 16px; border:1px solid var(--linea); background:var(--crema-3)}
@@ -179,6 +206,27 @@ h1{
     </div>
   </div>
 
+  <form class="puerta" id="puerta" hidden novalidate>
+    <h3>Te lo guardamos</h3>
+    <p class="pq">Déjanos tu email y te lo descargamos ahora. Te avisaremos cuando haya otra promo de vecinos.</p>
+    <input type="email" id="puerta-email" required autocomplete="email" inputmode="email" placeholder="tu@email.com" aria-label="Tu email">
+    <label class="check">
+      <input type="checkbox" id="puerta-ok">
+      <span id="puerta-consent">Quiero recibir promos y novedades de Órale Padre por email. Me puedo dar de baja cuando quiera.</span>
+    </label>
+    <button type="submit" id="puerta-btn" disabled>Descargar cupón</button>
+    <p class="legal">
+      Responsable: La Baba Hasta El Suelo S.L. (Órale Padre). Finalidad: enviarte promos y
+      novedades. Puedes darte de baja en
+      <a href="mailto:orale.padre.food@gmail.com">orale.padre.food@gmail.com</a>.
+      <a href="/legal.html#privacidad" target="_blank" rel="noopener">Política de privacidad</a>.
+    </p>
+    <span class="salida">
+      ¿Prefieres no dejarlo? <b>No hace falta para la promo</b>: enseña el folleto, una foto
+      de él o una captura de esta pantalla y te valen igual. <a href="#" id="puerta-no">Seguir sin dejar el email</a>.
+    </span>
+  </form>
+
   <section class="lista" id="lista">
     <h2>¿Te avisamos de la próxima?</h2>
     <p class="intro">Mandamos pocas cosas y solo cuando hay promo de verdad.</p>
@@ -247,8 +295,41 @@ h1{
        alter table leads_vecino enable row level security;
        create policy "alta publica" on leads_vecino for insert to anon with check (true);
 */
-var SUPABASE_URL = '';
-var SUPABASE_ANON = '';
+/* ═══════════════════════════════════════════════════════════════════
+   ¿A DÓNDE VAN LOS EMAILS?
+   Rellena UNA de las dos. Mientras las dos estén vacías, los datos no
+   se guardan en ninguna parte, pero el cupón se descarga igual: nunca
+   dejamos a un vecino sin cupón por un problema nuestro de fontanería.
+
+   A) Hoja de cálculo de Google  ← lo más sencillo
+      Pega aquí la URL que te da Apps Script al publicar (acaba en /exec).
+      El código que hay que pegar en Apps Script está más abajo.
+
+   B) Supabase
+      Pega la URL del proyecto y la clave "anon" (la anon es pública por
+      diseño; la "service_role" NO se pone nunca aquí ni se comparte).
+   ═══════════════════════════════════════════════════════════════════ */
+var HOJA_URL     = '';   // A) https://script.google.com/macros/s/..../exec
+var SUPABASE_URL = '';   // B) https://xxxxxxxx.supabase.co
+var SUPABASE_ANON = '';  // B) la clave anon
+
+/* ── Código para Apps Script (opción A) ───────────────────────────────
+   En la hoja de cálculo: Extensiones › Apps Script, pega esto, guarda,
+   Implementar › Nueva implementación › Aplicación web ›
+   "Ejecutar como: yo" y "Quién tiene acceso: cualquier usuario".
+
+   function doPost(e) {
+     var h = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+     if (h.getLastRow() === 0) {
+       h.appendRow(['Fecha','Email','Teléfono','Local','Origen','Consentimiento','Texto del consentimiento']);
+     }
+     var d = JSON.parse(e.postData.contents);
+     h.appendRow([new Date(), d.email, d.telefono || '', d.local || '',
+                  d.utm_source || '', d.consentimiento ? 'Sí' : 'No',
+                  d.texto_consentimiento || '']);
+     return ContentService.createTextOutput('ok');
+   }
+   ──────────────────────────────────────────────────────────────────── */
 
 /* Un parámetro, tres locales. Si no llega o no se reconoce, Los Remedios,
    que es lo que ya está puesto en el HTML: si este script fallara, la
@@ -314,6 +395,98 @@ var SUPABASE_ANON = '';
     });
   });
 
+  /* ── A dónde van los datos ──────────────────────────────────────────
+     Devuelve siempre una promesa que se cumple. Si no hay destino puesto
+     o el envío falla, se resuelve en false y quien llama decide: la
+     descarga del cupón sigue adelante igual. */
+  function guardarLead(datos) {
+    if (HOJA_URL) {
+      /* Sin cabeceras propias el navegador lo manda como text/plain y se
+         ahorra la petición previa de CORS, que es con lo que tropieza
+         Apps Script. El doPost lee e.postData.contents igual. */
+      return fetch(HOJA_URL, { method:'POST', body: JSON.stringify(datos) })
+        .then(function () { return true; }, function () { return false; });
+    }
+    if (SUPABASE_URL && SUPABASE_ANON) {
+      return fetch(SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/leads_vecino', {
+        method: 'POST',
+        headers: {
+          'apikey': SUPABASE_ANON,
+          'Authorization': 'Bearer ' + SUPABASE_ANON,
+          'Content-Type': 'application/json',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify([datos])
+      }).then(function (r) { return r.ok; }, function () { return false; });
+    }
+    return Promise.resolve(false);
+  }
+
+  function datosLead(email, telefono, textoConsent) {
+    var params = new URLSearchParams(location.search);
+    return {
+      email: email.trim().toLowerCase(),
+      telefono: (telefono || '').trim() || null,
+      local: clave,
+      utm_source: params.get('utm_source') || null,
+      consentimiento: true,
+      texto_consentimiento: textoConsent,
+      created_at: new Date().toISOString()
+    };
+  }
+
+  var ES_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  /* ── La puerta del email sobre la descarga ──────────────────────────
+     El cupón se ve siempre. Lo que pide el email es bajarse el archivo,
+     y hasta eso tiene salida: el folleto impreso promete que canjear no
+     exige dar datos y esa promesa se respeta. */
+  var puerta = $('puerta'), pEmail = $('puerta-email'), pOk = $('puerta-ok'), pBtn = $('puerta-btn');
+  var YA = 'orale.vecino.email';
+
+  function yaLoDio() {
+    try { return !!localStorage.getItem(YA); } catch (e) { return false; }
+  }
+  function bajarCupon() {
+    var a = document.createElement('a');
+    a.href = $('descargar').getAttribute('href');
+    a.setAttribute('download', $('descargar').getAttribute('download'));
+    document.body.appendChild(a); a.click(); a.remove();
+  }
+
+  $('descargar').addEventListener('click', function (ev) {
+    if (yaLoDio() || !puerta.hidden) return;      // ya lo dejó, o la puerta ya está abierta
+    ev.preventDefault();
+    puerta.hidden = false;
+    pEmail.focus({ preventScroll: true });
+    puerta.scrollIntoView({ block: 'center' });
+  });
+
+  function revisarPuerta() {
+    pBtn.disabled = !(ES_EMAIL.test(pEmail.value.trim()) && pOk.checked);
+  }
+  pEmail.addEventListener('input', revisarPuerta);
+  pOk.addEventListener('change', revisarPuerta);
+
+  puerta.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    if (pBtn.disabled) return;
+    pBtn.disabled = true; pBtn.textContent = 'Un segundo…';
+    var datos = datosLead(pEmail.value, '', $('puerta-consent').textContent.trim());
+
+    guardarLead(datos).then(function () {
+      try { localStorage.setItem(YA, datos.email); } catch (e) {}
+      puerta.hidden = true;
+      bajarCupon();
+    });
+  });
+
+  $('puerta-no').addEventListener('click', function (ev) {
+    ev.preventDefault();
+    puerta.hidden = true;
+    bajarCupon();
+  });
+
   /* ── Lista de avisos ─────────────────────────────────────────────────────
      El botón nace desactivado: se abre cuando hay email con pinta de email y
      la casilla marcada. Así el consentimiento es un acto suyo, no un descuido
@@ -325,7 +498,7 @@ var SUPABASE_ANON = '';
   var marca = $('consentimiento');
 
   function revisar() {
-    var vale = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email.value.trim()) && marca.checked;
+    var vale = ES_EMAIL.test(email.value.trim()) && marca.checked;
     enviar.disabled = !vale;
   }
   email.addEventListener('input', revisar);
@@ -335,54 +508,34 @@ var SUPABASE_ANON = '';
     ev.preventDefault();
     if (enviar.disabled) return;
 
-    var params = new URLSearchParams(location.search);
-    var datos = {
-      email: email.value.trim().toLowerCase(),
-      telefono: telefono.value.trim() || null,
-      local: clave,                                  // el que haya elegido
-      utm_source: params.get('utm_source') || null,
-      consentimiento: true,
-      texto_consentimiento: $('texto-consentimiento').textContent.trim(),
-      created_at: new Date().toISOString()
-    };
-
+    var datos = datosLead(email.value, telefono.value, $('texto-consentimiento').textContent.trim());
     enviar.disabled = true;
     enviar.textContent = 'Enviando…';
 
-    function hecho() {
-      form.hidden = true;
-      $('hecho').hidden = false;
-    }
-    function falla() {
-      enviar.disabled = false;
-      enviar.textContent = 'Avisadme';
-      alert('No se ha podido enviar. Escríbenos a orale.padre.food@gmail.com y te apuntamos a mano.');
-    }
+    function hecho() { form.hidden = true; $('hecho').hidden = false; }
 
-    if (SUPABASE_URL && SUPABASE_ANON) {
-      fetch(SUPABASE_URL.replace(/\/$/, '') + '/rest/v1/leads_vecino', {
-        method: 'POST',
-        headers: {
-          'apikey': SUPABASE_ANON,
-          'Authorization': 'Bearer ' + SUPABASE_ANON,
-          'Content-Type': 'application/json',
-          'Prefer': 'return=minimal'
-        },
-        body: JSON.stringify([datos])
-      }).then(function (r) { if (r.ok) hecho(); else falla(); }, falla);
-    } else {
-      /* Sin base de datos todavía: al menos que el email llegue al correo de
-         Órale en vez de perderse. */
-      var asunto = 'Apúntame a los avisos (cupón vecino)';
+    guardarLead(datos).then(function (ok) {
+      if (ok) { hecho(); return; }
+
+      /* Sin destino configurado o con el envío caído: que el email llegue
+         al correo de Órale en vez de perderse. */
       var cuerpo = 'Email: ' + datos.email +
         '\nTeléfono: ' + (datos.telefono || '—') +
         '\nLocal: ' + (datos.local ? LOCALES[datos.local].nombre : '—') +
         '\nAcepto recibir promos y novedades de Órale Padre.';
       location.href = 'mailto:orale.padre.food@gmail.com?subject=' +
-        encodeURIComponent(asunto) + '&body=' + encodeURIComponent(cuerpo);
+        encodeURIComponent('Apúntame a los avisos (cupón vecino)') +
+        '&body=' + encodeURIComponent(cuerpo);
       hecho();
-    }
+    });
   });
+
+  /* Si ya dejó el email al descargar, no se le vuelve a pedir abajo. */
+  (function () {
+    var suyo = null;
+    try { suyo = localStorage.getItem(YA); } catch (e) {}
+    if (suyo) { email.value = suyo; revisar(); }
+  })();
 
   /* Pasada la fecha de fin se avisa, para que nadie llegue al local con un
      cupón caducado y se lo tenga que discutir al equipo en la barra. */
