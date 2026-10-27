@@ -210,6 +210,8 @@ h1{
     <h3>Te lo guardamos</h3>
     <p class="pq">Déjanos tu email y te lo descargamos ahora. Te avisaremos cuando haya otra promo de vecinos.</p>
     <input type="email" id="puerta-email" required autocomplete="email" inputmode="email" placeholder="tu@email.com" aria-label="Tu email">
+    <input type="text" id="trampa" name="apellido2" tabindex="-1" autocomplete="off" aria-hidden="true"
+           style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
     <label class="check">
       <input type="checkbox" id="puerta-ok">
       <span id="puerta-consent">Quiero recibir promos y novedades de Órale Padre por email. Me puedo dar de baja cuando quiera.</span>
@@ -239,6 +241,8 @@ h1{
         <span>Teléfono <i>(opcional)</i></span>
         <input type="tel" name="telefono" autocomplete="tel" inputmode="tel" placeholder="600 000 000">
       </label>
+      <input type="text" id="trampa2" name="apellido2" tabindex="-1" autocomplete="off" aria-hidden="true"
+             style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <label class="check">
         <input type="checkbox" name="consentimiento" id="consentimiento">
         <span id="texto-consentimiento">Quiero recibir promos y novedades de Órale Padre por email/WhatsApp. Me puedo dar de baja cuando quiera.</span>
@@ -309,9 +313,15 @@ h1{
       Pega la URL del proyecto y la clave "anon" (la anon es pública por
       diseño; la "service_role" NO se pone nunca aquí ni se comparte).
    ═══════════════════════════════════════════════════════════════════ */
-var HOJA_URL     = '';   // A) https://script.google.com/macros/s/..../exec
-var SUPABASE_URL = '';   // B) https://xxxxxxxx.supabase.co
-var SUPABASE_ANON = '';  // B) la clave anon
+var HOJA_URL     = '';   // A) sin usar
+var SUPABASE_URL  = 'https://pnpmigcbqgcggtkfkqeh.supabase.co';          // proyecto "orale padre app"
+var SUPABASE_ANON = 'sb_publishable_O52yBoiZ7mtqR4Y1E6JsjQ_L8pK_mUZ';    // clave publicable
+
+/* Esta clave es pública a propósito y va a la vista en el código: con ella
+   sólo se puede INSERTAR en leads_vecino. La política de la tabla no da
+   permiso de lectura, así que nadie puede descargarse la lista de emails
+   aunque copie la clave de aquí. Comprobado: un GET devuelve lista vacía.
+   La clave service_role no se pone nunca aquí ni se comparte. */
 
 /* ── Código para Apps Script (opción A) ───────────────────────────────
    En la hoja de cálculo: Extensiones › Apps Script, pega esto, guarda,
@@ -471,6 +481,9 @@ var SUPABASE_ANON = '';  // B) la clave anon
   puerta.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (pBtn.disabled) return;
+    /* Si el campo trampa viene relleno es un bot: le damos el cupón y nos
+       ahorramos la fila basura. No se le avisa, para no enseñarle el truco. */
+    if ($('trampa').value) { puerta.hidden = true; bajarCupon(); return; }
     pBtn.disabled = true; pBtn.textContent = 'Un segundo…';
     var datos = datosLead(pEmail.value, '', $('puerta-consent').textContent.trim());
 
@@ -507,6 +520,8 @@ var SUPABASE_ANON = '';  // B) la clave anon
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     if (enviar.disabled) return;
+
+    if ($('trampa2').value) { form.hidden = true; $('hecho').hidden = false; return; }
 
     var datos = datosLead(email.value, telefono.value, $('texto-consentimiento').textContent.trim());
     enviar.disabled = true;
