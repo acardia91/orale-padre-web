@@ -15,10 +15,14 @@ const CONFIG = {
     // Tienda de Last App de cada local (comprobadas el 2 de septiembre de
     // 2026: las tres ofrecen "Recoger · lo antes posible" y el pedido entra
     // directo en el local). El general es la portada de la tienda.
-    general:     'https://oralepadre.last.shop',
-    sanLuis:     'https://oralepadre.last.shop/l/orale-padre-san-luis',
-    remedios:    'https://oralepadre.last.shop/l/orale-padre-remedios',
-    sevillaEste: 'https://oralepadre.last.shop/l/orale-padre-sevilla-este',
+    // Desde noviembre de 2026 todo pasa por nuestra página /pedir: los locales
+    // que ya están en el sistema propio se piden allí, y los que siguen en
+    // Last App rebotan solos a su tienda (la lista está en pedir/locales.js).
+    general:     '/pedir/',
+    tomares:     '/pedir/?local=tomares',
+    sanLuis:     '/pedir/?local=san-luis',
+    remedios:    '/pedir/?local=remedios',
+    sevillaEste: '/pedir/?local=sevilla-este',
   },
 
   /* Carrito propio (pedido por WhatsApp sin pago). Está construido y
@@ -223,6 +227,15 @@ const LOCALES = [
     lat: 37.4045,
     lng: -5.9210,
   },
+  // El cuarto, y va el último: los botones y fichas de la portada van por posición (0-3).
+  {
+    clave: 'tomares',
+    nombre: 'Tomares',
+    barrio: 'Aljarafe',
+    dir: 'Tomares (Sevilla)',
+    lat: 37.3727,
+    lng: -6.0456,
+  },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -338,6 +351,9 @@ const LOCALES = [
 
     // A domicilio → las dos plataformas, cada una con su enlace
     enlazar($('#acc-uber'), CONFIG.uber[local.clave] || '', 'pedidos a Uber Eats');
+    // Tomares aún no está en Uber ni en Glovo: fuera la tarjeta de domicilio.
+    const dom = $('#acc-domicilio');
+    if (dom) dom.hidden = !CONFIG.uber[local.clave] && !(CONFIG.glovo.activo && CONFIG.glovo[local.clave]);
     const btnGlovo = $('#acc-glovo');
     if (btnGlovo) {
       btnGlovo.hidden = !CONFIG.glovo.activo;
@@ -384,7 +400,8 @@ const LOCALES = [
     el.onclick = null;
     if (url) {
       el.href = url;
-      if (!url.startsWith('mailto:')) el.target = '_blank';
+      // Nuestras páginas (/pedir, /reservar) en la misma pestaña; lo de fuera, en otra.
+      if (!url.startsWith('mailto:') && !url.startsWith('/')) el.target = '_blank';
       else el.removeAttribute('target');
       el.rel = 'noopener';
       el.classList.remove('sin-enlace');
