@@ -352,6 +352,29 @@
     },
     async cerrarCaja(local, contado, retirado, notas) { const r = await this.resumenCaja(local); return { ...r, efectivo_contado: contado, retirado, notas, hasta: new Date().toISOString(), descuadre: contado - r.fondo_inicial - r.efectivo, fondo_siguiente: contado - retirado }; },
     async auditoria() { return []; }, async cierres() { return []; },
+    // Reseñas e informes (demo: en este navegador)
+    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, origen }) {
+      if (!(nota >= 1 && nota <= 5)) throw new Error('DATOS: elige de 1 a 5 estrellas');
+      let ped = null; if (pedido) { ped = lee(K.pedidos, []).find(p => p.token === pedido); if (!ped) throw new Error('DATOS: no encontramos ese pedido'); local = ped.local; }
+      if (!local) throw new Error('DATOS: elige el local');
+      const rs = lee('op-demo-resenas', []).filter(r => !ped || r.pedido_id !== ped.id);
+      rs.push({ id: uuid(), local, creada: new Date().toISOString(), nota, comentario: comentario || null, nombre: nombre || (ped && ped.cliente_nombre) || null,
+        contacto: contacto || null, pedido_id: ped ? ped.id : null, pedido_numero: ped ? ped.numero : null, origen: origen || 'web', estado: 'nueva' });
+      guarda('op-demo-resenas', rs); avisa();
+      return { ok: true, local, enlace: lee('op-demo-enlaces', {})[local] || null };
+    },
+    async resenas(local, desde, hasta) { return lee('op-demo-resenas', []).filter(r => (!local || r.local === local) && r.creada >= desde && r.creada < hasta).sort((a, b) => b.creada.localeCompare(a.creada)); },
+    async gestionarResena(id, estado, nota) { const rs = lee('op-demo-resenas', []); const r = rs.find(x => x.id === id); Object.assign(r, { estado, nota_interna: nota || r.nota_interna, gestionada: new Date().toISOString(), gestionada_email: 'demo@oralepadre.com' }); guarda('op-demo-resenas', rs); },
+    async enlacesResenas() { return lee('op-demo-enlaces', {}); },
+    async guardarEnlaceResenas(local, url) { const e = lee('op-demo-enlaces', {}); if (url) e[local] = url; else delete e[local]; guarda('op-demo-enlaces', e); },
+    async informeEmpleados(local, desde, hasta) {
+      const m = {}; lee(K.tickets, []).filter(t => (!local || t.local === local) && t.fecha >= desde && t.fecha < hasta).forEach(t => {
+        const k = t.local + '|' + (t.pedido_id && t.metodo === 'stripe' ? 'web (pago online)' : 'demo@oralepadre.com');
+        const x = m[k] = m[k] || { local: t.local, email: k.split('|')[1], tickets: 0, total: 0, efectivo: 0, tarjeta: 0, descuentos: 0 };
+        x.tickets++; x.total += t.total; if (t.metodo === 'efectivo') x.efectivo += t.total; if (t.metodo === 'tarjeta' || t.metodo === 'stripe') x.tarjeta += t.total; x.descuentos += t.descuento || 0;
+      });
+      return Object.values(m).sort((a, b) => b.total - a.total);
+    },
     async clienteActual() { return null; }, async pedirCodigo() { throw new Error('DEMO: en modo demo no hay cuentas'); },
     async anularCuenta(cuentaId, motivo) {
       const cs = lee(K.cuentas, []); const c = cs.find(x => x.id === cuentaId);
@@ -568,6 +591,15 @@
     async cerrarCaja(local, contado, retirado, notas) { return ok(await cliente().rpc('cerrar_caja', { p_local: local, p_contado: contado, p_retirado: retirado, p_notas: notas || '' })); },
     async auditoria(local, desde, hasta) { return ok(await cliente().rpc('listar_auditoria', { p_local: local, p_desde: desde, p_hasta: hasta })); },
     async cierres(local, desde, hasta) { return ok(await cliente().rpc('listar_cierres', { p_local: local, p_desde: desde, p_hasta: hasta })).map(r => r.c); },
+    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, origen }) {
+      return ok(await cliente().rpc('dejar_resena', { p_local: local || null, p_nota: nota, p_comentario: comentario || null, p_nombre: nombre || null,
+        p_contacto: contacto || null, p_pedido: pedido || null, p_origen: origen || 'web' }));
+    },
+    async resenas(local, desde, hasta) { return ok(await cliente().rpc('listar_resenas', { p_local: local, p_desde: desde, p_hasta: hasta })).map(r => r.r); },
+    async gestionarResena(id, estado, nota) { ok(await cliente().rpc('gestionar_resena', { p_id: id, p_estado: estado, p_nota_interna: nota || null })); },
+    async enlacesResenas() { return Object.fromEntries(ok(await cliente().from('resenas_enlaces').select('local,url')).map(r => [r.local, r.url])); },
+    async guardarEnlaceResenas(local, url) { ok(await cliente().rpc('guardar_enlace_resenas', { p_local: local, p_url: url || '' })); },
+    async informeEmpleados(local, desde, hasta) { return ok(await cliente().rpc('informe_empleados', { p_local: local, p_desde: desde, p_hasta: hasta })); },
     // items = [{pedido, indice, cantidad}] → cobra sólo esos productos (dividir la cuenta).
     async cobrar({ cuenta, pedido, metodo, entregado, promocion, nota, items }) {
       if (items) return ok(await cliente().rpc('cobrar_parte', { p_cuenta: cuenta, p_items: items, p_metodo: metodo,
