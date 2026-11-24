@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Pedir para recoger · Órale Padre Tomares</title>
-<meta name="description" content="Pide tus burritos, tacos y nachos de Órale Padre Tomares y recógelos en el local sin esperar.">
+<title>Pedir para recoger · Órale Padre</title>
+<meta name="description" content="Pide tus burritos, tacos y nachos de Órale Padre y recógelos en tu local sin esperar.">
 <meta name="theme-color" content="#7C2430">
 <link rel="canonical" href="https://www.oralepadre.com/pedir/">
 <link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
@@ -20,13 +20,22 @@
   <a class="cab-logo" href="/" aria-label="Órale Padre, volver a la web"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
   <div class="cab-local">
     <span class="cab-k">Para recoger en</span>
-    <strong id="nombre-local">Tomares</strong>
-    <select id="sel-local" class="sel-local" aria-label="Elige local" hidden></select>
+    <strong id="nombre-local">Órale Padre</strong>
+    <a class="cambiar-local" id="cambiar-local" href="./">Cambiar de local</a>
   </div>
   <span class="estado-local" id="estado-local" hidden></span>
 </header>
 
 <p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: los pedidos no llegan al local.</p>
+
+<!-- ── Elegir local ── -->
+<main id="vista-elegir" hidden>
+  <section class="intro">
+    <h1>Elige <span>tu local</span></h1>
+    <p>Pides online y pasas a recogerlo a la hora que elijas.</p>
+  </section>
+  <div class="elegir" id="elegir"></div>
+</main>
 
 <!-- ── Carta ── -->
 <main id="vista-carta">
@@ -123,6 +132,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="api.js"></script>
+<script src="locales.js"></script>
 <script src="pedir.js"></script>
 </body>
 </html>

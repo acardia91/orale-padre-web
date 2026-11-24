@@ -2,7 +2,7 @@
 (function () {
   'use strict';
   const { api, DEMO, franjas, hhmm, partesMadrid, indexar, precioLinea, mensajeError, euros } = window.OP;
-  let LOCAL = new URLSearchParams(location.search).get('local') || (() => { try { return localStorage.getItem('op-pedir-local'); } catch (e) { return null; } })() || 'tomares';
+  let LOCAL = new URLSearchParams(location.search).get('local') || '';
   const $ = s => document.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const CLAVE_CARRITO = 'op-carrito-' + LOCAL;
@@ -19,17 +19,19 @@
   if (token) { verPedido(token); } else { cargar(); }
 
   async function cargar() {
-    // Locales que aceptan pedidos ahora mismo: si hay varios, el cliente elige.
-    try {
-      const ls = (await api.localesConPedidos()).filter(l => l.acepta_pedidos);
-      if (ls.length && !ls.some(l => l.id === LOCAL)) LOCAL = ls[0].id;
-      if (ls.length > 1) {
-        const sel = $('#sel-local'); sel.hidden = false; $('#nombre-local').hidden = true;
-        sel.innerHTML = ls.map(l => `<option value="${l.id}">${esc(l.nombre.replace(/^Órale Padre\s*/, ''))}</option>`).join('');
-        sel.value = LOCAL;
-        sel.onchange = () => { try { localStorage.setItem('op-pedir-local', sel.value); } catch (e) {} location.search = '?local=' + sel.value + (DEMO && location.search.includes('demo') ? '&demo' : ''); };
-      }
-    } catch (e) { /* sin lista: seguimos con el local por defecto */ }
+    // Sin ?local, o un local que aún no pide por aquí: pantalla "elige tu local".
+    // Los que siguen en Last App mandan a su tienda de Last App.
+    let propios = [];
+    try { propios = await api.localesConPedidos(); } catch (e) { /* sin lista: sólo enlaces de fuera */ }
+    if (!propios.some(l => l.id === LOCAL && l.acepta_pedidos)) {
+      const d = LOCAL ? window.OPL.destino(LOCAL, 'pedir', propios) : null;
+      if (d && d.tipo === 'fuera') { location.replace(d.url); return; }
+      $('#vista-carta').hidden = true; $('#vista-elegir').hidden = false; $('#cambiar-local').hidden = true;
+      $('#nombre-local').textContent = 'Órale Padre';
+      window.OPL.pintarElegir($('#elegir'), 'pedir', propios);
+      return;
+    }
+    try { localStorage.setItem('op-local', LOCAL); } catch (e) {}
     try {
       [carta, local, agotados] = await Promise.all([api.carta(LOCAL), api.local(LOCAL), api.agotados(LOCAL)]);
     } catch (e) {
