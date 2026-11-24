@@ -171,6 +171,9 @@
     },
     async guardarLocal(id, datos) { const l = lee(K.locales, {}); l[id] = { ...(l[id] || {}), ...datos }; guarda(K.locales, l); avisa(); },
     async staffDelLocal() { return [{ email: 'demo@oralepadre.com', rol: 'encargado', ultimo_acceso: new Date().toISOString(), alta: new Date().toISOString() }]; },
+    async usuariosEquipo() { return [{ email: 'demo@oralepadre.com', ultimo_acceso: new Date().toISOString(), accesos: { tomares: 'encargado', 'san-luis': 'encargado' }, app_interna: false },
+      { email: 'camarero@oralepadre.com', ultimo_acceso: null, accesos: { tomares: 'sala' }, app_interna: false },
+      { email: 'cocinero@oralepadre.com', ultimo_acceso: null, accesos: {}, app_interna: true }]; },
     async anadirStaff() { throw new Error('USUARIO: en modo demo no se pueden añadir usuarios'); },
     async cambiarRol() { throw new Error('USUARIO: en modo demo no se pueden cambiar roles'); },
     async quitarStaff() { throw new Error('USUARIO: en modo demo no se pueden quitar usuarios'); },
@@ -196,6 +199,25 @@
       const g = lee(K.promos, {}); g[local] = (await this.promociones(local)).filter(x => x.id !== id); guarda(K.promos, g); avisa();
     },
     async ticketsEntre(local, desde, hasta) { return lee(K.tickets, []).filter(t => t.local === local && t.fecha >= desde && t.fecha < hasta); },
+    async deliveryEntre(desde, hasta) { return lee('op-demo-delivery', []).filter(r => r.fecha >= desde && r.fecha <= hasta); },
+    async resumenesDelivery(desde, hasta) { return lee('op-demo-delivery-res', []).filter(r => r.fecha >= desde && r.fecha <= hasta).sort((a, b) => b.fecha.localeCompare(a.fecha)); },
+    async guardarDelivery(filas, resumenes) {
+      const c = v => v == null || v === '' ? null : Math.round(+v * 100);
+      const ds = lee('op-demo-delivery', []); (filas || []).forEach(f => {
+        const r = { local: f.local, fecha: f.fecha, plataforma: f.plataforma, pedidos: +f.pedidos || 0, ventas: c(f.ventas_eur) || 0, comision: c(f.comision_eur),
+          anuncios: c(f.anuncios_eur), promociones: c(f.promociones_eur), neto: c(f.neto_eur), cancelados: f.cancelados ?? null, errores: f.errores ?? null,
+          valoracion: f.valoracion ?? null, valoracion_tipo: f.valoracion_tipo || null, resenas: f.resenas ?? null, tiempo_prep: f.tiempo_prep ?? null, minutos_cerrado: f.minutos_cerrado ?? null, detalle: f.detalle || null };
+        const i = ds.findIndex(x => x.local === r.local && x.fecha === r.fecha && x.plataforma === r.plataforma); if (i >= 0) ds[i] = r; else ds.push(r); });
+      guarda('op-demo-delivery', ds);
+      const rs = lee('op-demo-delivery-res', []); (resumenes || []).forEach(x => { const i = rs.findIndex(y => y.fecha === x.fecha && y.local === (x.local || 'general'));
+        const r = { fecha: x.fecha, local: x.local || 'general', texto: x.texto, alertas: x.alertas || null }; if (i >= 0) rs[i] = r; else rs.push(r); });
+      guarda('op-demo-delivery-res', rs); return { filas: (filas || []).length, resumenes: (resumenes || []).length };
+    },
+    async costes(local) { return lee('op-demo-costes', {})[local] || {}; },
+    async guardarCostes(local, costes) { const t = lee('op-demo-costes', {}); t[local] = t[local] || {};
+      costes.forEach(c => { if (c.coste == null) delete t[local][c.producto]; else t[local][c.producto] = { producto: c.producto, coste: c.coste, fuente: c.fuente }; });
+      guarda('op-demo-costes', t); return costes.length; },
+    async costesEscandallo() { return [{ nombre: 'Don Brasa', coste: 308 }, { nombre: 'Black Chancho', coste: 169 }, { nombre: 'Dona Dolores', coste: 191 }, { nombre: 'Pollo Padre', coste: 198 }]; },
     async pedidosEntre(local, desde, hasta) { return lee(K.pedidos, []).filter(p => p.local === local && p.creado >= desde && p.creado < hasta); },
     async ventasImportadasEntre() { return []; },
     async productosImportados() { return []; },
@@ -314,6 +336,23 @@
       const ps = lee(K.pedidos, []); ps.filter(p => p.cuenta_id === cuentaId).forEach(p => { p.mesa = m.nombre; p.cliente_nombre = m.nombre; });
       guarda(K.pedidos, ps); avisa();
     },
+    async anularLinea(pedidoId, indice, cantidad, motivo) {
+      const ps = lee(K.pedidos, []); const p = ps.find(x => x.id === pedidoId); const l = p.lineas[indice];
+      const q = Math.min(cantidad || 1, l.cantidad); p.anuladas = [...(p.anuladas || []), { ...l, cantidad: q, motivo }];
+      if (q === l.cantidad) p.lineas.splice(indice, 1); else l.cantidad -= q;
+      p.total = p.lineas.reduce((s2, x) => s2 + x.unitario * x.cantidad, 0); if (!p.lineas.length) p.estado = 'cancelado';
+      guarda(K.pedidos, ps); avisa(); return { total: p.total };
+    },
+    async apuntarPinFallido() {}, async fijarPin() {}, async registrarPrecuenta() {},
+    async resumenCaja(local) {
+      const ts = lee(K.tickets, []).filter(t => t.local === local); const s = m => ts.filter(t => t.metodo === m).reduce((a, t) => a + t.total, 0);
+      return { desde: new Date(new Date().setHours(0, 0, 0, 0)).toISOString(), fondo_inicial: 0, efectivo: s('efectivo'), tarjeta: s('tarjeta'), online: s('stripe'),
+        invitaciones: ts.filter(t => t.metodo === 'invitacion').length, descuentos: ts.reduce((a, t) => a + (t.descuento || 0), 0), tickets: ts.length,
+        anulaciones: 0, importe_anulado: 0, cuentas_abiertas: lee(K.cuentas, []).filter(c => c.local === local && c.estado === 'abierta').length };
+    },
+    async cerrarCaja(local, contado, retirado, notas) { const r = await this.resumenCaja(local); return { ...r, efectivo_contado: contado, retirado, notas, hasta: new Date().toISOString(), descuadre: contado - r.fondo_inicial - r.efectivo, fondo_siguiente: contado - retirado }; },
+    async auditoria() { return []; }, async cierres() { return []; },
+    async clienteActual() { return null; }, async pedirCodigo() { throw new Error('DEMO: en modo demo no hay cuentas'); },
     async anularCuenta(cuentaId, motivo) {
       const cs = lee(K.cuentas, []); const c = cs.find(x => x.id === cuentaId);
       Object.assign(c, { estado: 'anulada', cerrada: new Date().toISOString(), motivo_anulacion: motivo }); guarda(K.cuentas, cs);
@@ -321,12 +360,21 @@
         .forEach(p => { p.estado = 'cancelado'; p.motivo_cancel = 'Cuenta anulada: ' + motivo; });
       guarda(K.pedidos, ps); avisa();
     },
-    async cobrar({ cuenta, pedido, metodo, entregado, promocion, nota }) {
+    async cobrar({ cuenta, pedido, metodo, entregado, promocion, nota, items }) {
       const ps = lee(K.pedidos, []); const cs = lee(K.cuentas, []);
       let lineas, localId;
+      const vivos = () => ps.filter(p => p.cuenta_id === cuenta && p.estado !== 'cancelado').sort((a, b) => a.numero - b.numero);
       if (cuenta) {
         const c = cs.find(x => x.id === cuenta); if (!c || c.estado !== 'abierta') throw new Error('COBRO: la cuenta no está abierta');
-        localId = c.local; lineas = ps.filter(p => p.cuenta_id === cuenta && p.estado !== 'cancelado').sort((a, b) => a.numero - b.numero).flatMap(p => p.lineas);
+        localId = c.local;
+        if (items) {
+          lineas = items.map(it => { const p = ps.find(x => x.id === it.pedido); const l = p.lineas[it.indice];
+            if (it.cantidad > l.cantidad - (l.pagadas || 0)) throw new Error('COBRO: de "' + l.nombre + '" ya no quedan tantos por cobrar');
+            l.pagadas = (l.pagadas || 0) + it.cantidad; const { pagadas, ...resto } = l; return { ...resto, cantidad: it.cantidad }; });
+        } else {
+          lineas = vivos().flatMap(p => p.lineas).filter(l => l.cantidad > (l.pagadas || 0)).map(({ pagadas, ...l }) => ({ ...l, cantidad: l.cantidad - (pagadas || 0) }));
+          vivos().forEach(p => p.lineas.forEach(l => { l.pagadas = l.cantidad; }));
+        }
       } else {
         const p = ps.find(x => x.id === pedido); if (!p || p.pagado) throw new Error('COBRO: el pedido ya está cobrado');
         localId = p.local; lineas = p.lineas;
@@ -355,7 +403,8 @@
         entregado: metodo === 'efectivo' ? (entregado ?? r.total) : null, cambio: metodo === 'efectivo' ? (entregado ?? r.total) - r.total : null,
         hash_anterior: prev ? prev.hash : null, hash, verifactu_estado: 'pendiente' };
       ts.push(t); guarda(K.tickets, ts);
-      if (cuenta) {
+      if (cuenta && vivos().some(p => p.lineas.some(l => l.cantidad > (l.pagadas || 0)))) { /* cobro parcial: la mesa sigue abierta */ }
+      else if (cuenta) {
         const c = cs.find(x => x.id === cuenta); c.estado = 'cobrada'; c.cerrada = fecha.toISOString(); guarda(K.cuentas, cs);
         ps.filter(p => p.cuenta_id === cuenta && p.estado !== 'cancelado').forEach(p => { p.pagado = true; p.pago_metodo = metodo; });
       } else { const p = ps.find(x => x.id === pedido); p.pagado = true; p.pago_metodo = metodo; }
@@ -384,10 +433,18 @@
     async carta(local) { return ok(await cliente().from('cartas').select('datos').eq('local', local).single()).datos; },
     async local(id) { return ok(await cliente().from('locales').select('*').eq('id', id).single()); },
     async agotados(local) { return new Set(ok(await cliente().from('agotados').select('producto_id').eq('local', local)).map(r => r.producto_id)); },
-    async crearPedido({ local, nombre, tel, recogida, pago, notas, lineas, email }) {
+    async crearPedido({ local, nombre, tel, recogida, pago, notas, lineas, email, marketing }) {
       return ok(await cliente().rpc('crear_pedido', { p_local: local, p_nombre: nombre, p_tel: tel,
-        p_recogida: new Date(recogida).toISOString(), p_pago: pago, p_notas: notas || '', p_lineas: lineas, p_email: email || null }));
+        p_recogida: new Date(recogida).toISOString(), p_pago: pago, p_notas: notas || '', p_lineas: lineas, p_email: email || null,
+        p_marketing: !!marketing }));
     },
+    // ── Cuenta de cliente (opcional): se entra con un código que llega al email ──
+    async clienteActual() { const { data } = await cliente().auth.getSession(); return data.session ? { email: data.session.user.email } : null; },
+    async pedirCodigo(email) { ok(await cliente().auth.signInWithOtp({ email, options: { shouldCreateUser: true, emailRedirectTo: location.href.split('#')[0] } })); },
+    async verificarCodigo(email, codigo) { ok(await cliente().auth.verifyOtp({ email, token: codigo, type: 'email' })); },
+    async miCuenta() { return ok(await cliente().rpc('mi_cuenta')); },
+    async guardarMiCuenta({ nombre, tel, marketing }) { ok(await cliente().rpc('guardar_mi_cuenta', { p_nombre: nombre || null, p_tel: tel || null, p_marketing: marketing ?? null })); },
+    async salirCliente() { await cliente().auth.signOut(); },
     // Pago online: la función del servidor crea el pago en Stripe y devuelve la página de pago.
     async iniciarPago(token, volver) {
       const r = await fetch(`${CONFIG.supabaseUrl}/functions/v1/stripe-checkout`, {
@@ -462,10 +519,28 @@
     },
     async guardarLocal(id, datos) { ok(await cliente().rpc('guardar_local', { p_local: id, p_datos: datos })); },
     async staffDelLocal(local) { return ok(await cliente().rpc('listar_staff', { p_local: local })); },
-    async anadirStaff(local, email, rol) { ok(await cliente().rpc('anadir_staff', { p_local: local, p_email: email, p_rol: rol })); },
+    // Todo el equipo (también quien aún no tiene acceso a ningún local), con sus accesos {local: rol}.
+    async usuariosEquipo() { return ok(await cliente().rpc('listar_usuarios_equipo')); },
+    // Alta completa: crea el usuario de acceso (si no existe) y le da el rol en el local.
+    async anadirStaff(local, email, rol, password) {
+      const { data } = await cliente().auth.getSession(); if (!data.session) throw new Error('PERMISO: entra de nuevo en el admin');
+      const r = await fetch(`${CONFIG.supabaseUrl}/functions/v1/alta-usuario`, { method: 'POST',
+        headers: { 'Content-Type': 'application/json', apikey: CONFIG.supabaseKey, Authorization: 'Bearer ' + data.session.access_token },
+        body: JSON.stringify({ local, email, rol, password: password || '' }) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error('USUARIO: ' + (j.error || 'no se ha podido dar de alta'));
+      return j;
+    },
     async cambiarRol(local, email, rol) { ok(await cliente().rpc('cambiar_rol', { p_local: local, p_email: email, p_rol: rol })); },
     async quitarStaff(local, email) { ok(await cliente().rpc('quitar_staff', { p_local: local, p_email: email })); },
     async ticketsEntre(local, desde, hasta) { return ok(await cliente().from('tickets').select('*').eq('local', local).gte('fecha', desde).lt('fecha', hasta).order('numero')); },
+    // ── Delivery (Uber/Glovo) y costes de escandallo (sólo encargados) ──
+    async deliveryEntre(desde, hasta) { return ok(await cliente().from('delivery_diario').select('*').gte('fecha', desde).lte('fecha', hasta).order('fecha')); },
+    async resumenesDelivery(desde, hasta) { return ok(await cliente().from('delivery_resumen').select('*').gte('fecha', desde).lte('fecha', hasta).order('fecha', { ascending: false })); },
+    async guardarDelivery(filas, resumenes, fuente) { return ok(await cliente().rpc('guardar_delivery', { p_filas: filas || [], p_resumenes: resumenes || [], p_fuente: fuente || 'manual' })); },
+    async costes(local) { return Object.fromEntries(ok(await cliente().from('costes_producto').select('producto,coste,fuente').eq('local', local)).map(r => [r.producto, r])); },
+    async guardarCostes(local, costes) { return ok(await cliente().rpc('guardar_costes', { p_local: local, p_costes: costes })); },
+    async costesEscandallo() { return ok(await cliente().rpc('costes_escandallo')); },
     async pedidosEntre(local, desde, hasta) { return ok(await cliente().from('pedidos').select('*').eq('local', local).gte('creado', desde).lt('creado', hasta).order('creado')); },
     async cuentasEntre(local, desde, hasta) { return ok(await cliente().from('cuentas').select('*').eq('local', local).gte('abierta', desde).lt('abierta', hasta).order('abierta')); },
     async ventasImportadasEntre(local, desde, hasta) { return ok(await cliente().from('ventas_importadas').select('*').eq('local', local).gte('fecha', desde).lt('fecha', hasta).order('fecha')); },
@@ -481,8 +556,22 @@
     async enviarComanda(cuenta, lineas, notas) { return ok(await cliente().rpc('enviar_comanda', { p_cuenta: cuenta, p_lineas: lineas, p_notas: notas || '' })); },
     async pedidosDeCuenta(cuenta) { return ok(await cliente().from('pedidos').select('*').eq('cuenta_id', cuenta).order('numero')); },
     async moverCuenta(cuenta, mesa) { ok(await cliente().rpc('mover_cuenta', { p_cuenta: cuenta, p_mesa_id: mesa })); },
-    async anularCuenta(cuenta, motivo) { ok(await cliente().rpc('anular_cuenta', { p_cuenta: cuenta, p_motivo: motivo })); },
-    async cobrar({ cuenta, pedido, metodo, entregado, promocion, nota }) {
+    async anularCuenta(cuenta, motivo, pin) { ok(await cliente().rpc('anular_cuenta', { p_cuenta: cuenta, p_motivo: motivo, p_pin: pin || null })); },
+    // ── Control: productos quitados, clave de encargado, pre-cuentas, cierre de caja ──
+    async anularLinea(pedido, indice, cantidad, motivo, pin) {
+      return ok(await cliente().rpc('anular_linea', { p_pedido: pedido, p_indice: indice, p_cantidad: cantidad, p_motivo: motivo, p_pin: pin || null }));
+    },
+    async apuntarPinFallido(local, accion) { try { await cliente().rpc('apuntar_pin_fallido', { p_local: local, p_accion: accion }); } catch (e) {} },
+    async fijarPin(pin) { ok(await cliente().rpc('fijar_mi_pin', { p_pin: pin })); },
+    async registrarPrecuenta(cuenta, total) { try { await cliente().rpc('registrar_precuenta', { p_cuenta: cuenta, p_total: total }); } catch (e) {} },
+    async resumenCaja(local) { return ok(await cliente().rpc('resumen_caja', { p_local: local })); },
+    async cerrarCaja(local, contado, retirado, notas) { return ok(await cliente().rpc('cerrar_caja', { p_local: local, p_contado: contado, p_retirado: retirado, p_notas: notas || '' })); },
+    async auditoria(local, desde, hasta) { return ok(await cliente().rpc('listar_auditoria', { p_local: local, p_desde: desde, p_hasta: hasta })); },
+    async cierres(local, desde, hasta) { return ok(await cliente().rpc('listar_cierres', { p_local: local, p_desde: desde, p_hasta: hasta })).map(r => r.c); },
+    // items = [{pedido, indice, cantidad}] → cobra sólo esos productos (dividir la cuenta).
+    async cobrar({ cuenta, pedido, metodo, entregado, promocion, nota, items }) {
+      if (items) return ok(await cliente().rpc('cobrar_parte', { p_cuenta: cuenta, p_items: items, p_metodo: metodo,
+        p_entregado: entregado ?? null, p_promocion: promocion || null, p_nota: nota || null }));
       return ok(await cliente().rpc('cobrar', { p_cuenta: cuenta || null, p_pedido: pedido || null, p_metodo: metodo,
         p_entregado: entregado ?? null, p_promocion: promocion || null, p_nota: nota || null }));
     },

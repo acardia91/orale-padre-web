@@ -167,3 +167,18 @@ input:user-invalid{border-color:var(--rojo)}
 .el-cta{margin-left:auto;flex:none;padding:10px 16px;border-radius:10px;background:var(--burdeos);color:#fff;font-weight:800;font-size:15px}
 .el-card.apagado{opacity:.7}
 .el-card.apagado .el-cta{background:var(--crema-2);color:var(--humo)}
+
+/* ── Mi cuenta ── */
+.btn-cuenta{flex:none;font:inherit;font-weight:800;font-size:14px;padding:8px 12px;border:1.5px solid var(--burdeos);border-radius:99px;background:var(--crema-3);color:var(--burdeos);cursor:pointer}
+.btn-cuenta.dentro{background:var(--burdeos);color:#fff}
+.lnk{font:inherit;font-weight:700;color:var(--burdeos);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
+.cuenta-linea{margin:0 0 10px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:10px 0 0;font-size:14px;color:var(--tinta-2);cursor:pointer}
+.check input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--burdeos);flex:none}
+.cu-sub{font-family:var(--texto);font-weight:800;font-size:16px;margin:22px 0 6px}
+.cu-lista{list-style:none;margin:0;padding:0;border-top:1px solid var(--linea)}
+.cu-lista li{border-bottom:1px solid var(--linea)}
+.cu-lista a{display:flex;justify-content:space-between;gap:10px;padding:10px 0;color:var(--tinta);text-decoration:none}
+.cu-lista small{display:block;color:var(--humo);font-size:13px}
+.cu-lista .vacio{padding:10px 0;color:var(--humo);font-size:14px}
+#hoja-cuenta .btn{display:block;width:100%;margin-top:14px}

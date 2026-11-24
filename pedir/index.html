@@ -24,6 +24,7 @@
     <a class="cambiar-local" id="cambiar-local" href="./">Cambiar de local</a>
   </div>
   <span class="estado-local" id="estado-local" hidden></span>
+  <button class="btn-cuenta" id="btn-cuenta" type="button">Mi cuenta</button>
 </header>
 
 <p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: los pedidos no llegan al local.</p>
@@ -101,6 +102,7 @@
 
       <fieldset class="bloque">
         <legend>Tus datos</legend>
+        <p class="ayuda cuenta-linea" id="hc-cuenta"><button type="button" class="lnk" data-abre-cuenta>Entra con tu email</button> y rellenamos tus datos, o sigue sin cuenta.</p>
         <label class="campo"><span>Nombre</span>
           <input id="hc-nombre" autocomplete="given-name" required minlength="2" maxlength="60"></label>
         <label class="campo"><span>Teléfono <em>(por si hay que avisarte)</em></span>
@@ -113,8 +115,9 @@
           <span>Pagar ahora con tarjeta <em>Tarjeta, Apple Pay o Google Pay · pago seguro con Stripe</em></span></label>
         <label class="opcion" id="op-local"><input type="radio" name="pago" value="local" checked>
           <span>Pago al recoger <em>Efectivo o tarjeta en el local</em></span></label>
-        <label class="campo" id="hc-email-l"><span>Email <em>(opcional: te mandamos la confirmación y te avisamos cuando esté listo)</em></span>
-          <input id="hc-email" type="email" autocomplete="email" maxlength="120"></label>
+        <label class="campo" id="hc-email-l"><span>Email <em>(te mandamos la confirmación y te avisamos cuando esté listo)</em></span>
+          <input id="hc-email" type="email" autocomplete="email" maxlength="120" required></label>
+        <label class="check"><input type="checkbox" id="hc-mkt"> <span>Quiero recibir ofertas y novedades de Órale Padre por email</span></label>
       </fieldset>
 
       <label class="campo"><span>Notas para la cocina <em>(opcional)</em></span>
@@ -128,6 +131,38 @@
       <button class="btn" id="hc-enviar" type="submit">Hacer pedido</button>
     </div>
   </form>
+</dialog>
+
+<!-- ── Mi cuenta (opcional) ── -->
+<dialog class="hoja" id="hoja-cuenta" aria-labelledby="cu-titulo">
+  <div class="hoja-in">
+    <button class="cerrar" type="button" id="cu-cerrar" aria-label="Cerrar">×</button>
+    <div class="hoja-cuerpo">
+      <h2 id="cu-titulo">Mi cuenta</h2>
+      <!-- Sin entrar -->
+      <form id="cu-entrar" novalidate>
+        <p class="ayuda" style="margin-top:0">No hace falta cuenta para pedir. Con cuenta guardamos tus datos para la próxima vez y ves tus pedidos y reservas. Sin contraseñas: te mandamos un código al email.</p>
+        <label class="campo"><span>Tu email</span><input id="cu-email" type="email" autocomplete="email" maxlength="120" required></label>
+        <div id="cu-paso-codigo" hidden>
+          <label class="campo"><span>Código que te hemos enviado</span><input id="cu-codigo" inputmode="numeric" autocomplete="one-time-code" maxlength="8" pattern="[0-9]*"></label>
+          <p class="ayuda">Mira también en correo no deseado. <button type="button" class="lnk" id="cu-reenviar">Reenviar</button></p>
+        </div>
+        <p class="error" id="cu-error" role="alert" hidden></p>
+        <button class="btn" type="submit" id="cu-ok">Enviarme el código</button>
+      </form>
+      <!-- Dentro -->
+      <div id="cu-dentro" hidden>
+        <p class="ayuda" style="margin-top:0">Has entrado como <b id="cu-quien"></b>. <button type="button" class="lnk" id="cu-salir">Salir</button></p>
+        <label class="campo"><span>Nombre</span><input id="cu-nombre" autocomplete="given-name" maxlength="60"></label>
+        <label class="campo"><span>Teléfono</span><input id="cu-tel" type="tel" inputmode="tel" autocomplete="tel"></label>
+        <label class="check"><input type="checkbox" id="cu-mkt"> <span>Quiero recibir ofertas y novedades por email</span></label>
+        <p class="error" id="cu-error2" role="alert" hidden></p>
+        <button class="btn btn-sec" type="button" id="cu-guardar">Guardar mis datos</button>
+        <h3 class="cu-sub">Mis pedidos</h3><ul class="cu-lista" id="cu-pedidos"></ul>
+        <h3 class="cu-sub">Mis reservas</h3><ul class="cu-lista" id="cu-reservas"></ul>
+      </div>
+    </div>
+  </div>
 </dialog>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>

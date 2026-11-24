@@ -223,6 +223,7 @@
     $('#hc-enviar').disabled = !fs.length;
   }
   function rellenaCliente() {
+    pintaCuentaEnPedido();
     try { const c = JSON.parse(localStorage.getItem(CLAVE_CLIENTE)) || {};
       if (!$('#hc-nombre').value) $('#hc-nombre').value = c.nombre || '';
       if (!$('#hc-tel').value) $('#hc-tel').value = c.tel || '';
@@ -235,12 +236,13 @@
     const nombre = $('#hc-nombre').value.trim(); const tel = $('#hc-tel').value.trim();
     if (nombre.length < 2) return muestra('Dinos tu nombre para cantarlo en barra.', '#hc-nombre');
     if (tel.replace(/[^0-9]/g, '').length < 9) return muestra('Revisa el teléfono.', '#hc-tel');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test($('#hc-email').value.trim())) return muestra('Escribe tu email: te mandamos ahí la confirmación.', '#hc-email');
     if (!$('#hc-hora').value) return muestra('Elige una hora de recogida.', '#hc-hora');
     const btn = $('#hc-enviar'); btn.disabled = true; btn.textContent = 'Enviando…';
     try {
       const pago = document.querySelector('[name=pago]:checked').value; const email = $('#hc-email').value.trim();
       const r = await api.crearPedido({ local: LOCAL, nombre, tel, recogida: $('#hc-hora').value,
-        pago, email, notas: $('#hc-notas').value.trim(), lineas: carrito });
+        pago, email, notas: $('#hc-notas').value.trim(), lineas: carrito, marketing: $('#hc-mkt').checked });
       try { localStorage.setItem(CLAVE_CLIENTE, JSON.stringify({ nombre, tel, email })); } catch (e) {}
       carrito = []; guardaCarrito();
       if (pago === 'stripe') { btn.textContent = 'Abriendo el pago…'; location.href = await api.iniciarPago(r.token, location.origin + location.pathname); return; }
@@ -300,4 +302,81 @@
     try { pinta(await api.estadoPedido(tk)); } catch (e) { pinta(null); }
     api.seguirPedido(tk, pinta);
   }
+  /* ══ Mi cuenta (opcional): se entra con un código que llega al email ══ */
+  let CUENTA = null;          // { email, nombre, telefono, acepta_marketing, pedidos, reservas }
+  const hcu = $('#hoja-cuenta');
+  async function cargaCuenta() {
+    CUENTA = null;
+    try { if (await api.clienteActual()) CUENTA = await api.miCuenta(); } catch (e) { CUENTA = null; }
+    $('#btn-cuenta').textContent = CUENTA ? (CUENTA.nombre ? CUENTA.nombre.split(' ')[0] : 'Mi cuenta') : 'Entrar';
+    $('#btn-cuenta').classList.toggle('dentro', !!CUENTA);
+    pintaCuentaEnPedido();
+  }
+  function pintaCuentaEnPedido() {
+    const linea = $('#hc-cuenta'); if (!linea || !CUENTAS_ACTIVAS) return;
+    if (CUENTA) {
+      linea.innerHTML = `Pides con tu cuenta <b>${esc(CUENTA.email)}</b>.`;
+      if (!$('#hc-nombre').value && CUENTA.nombre) $('#hc-nombre').value = CUENTA.nombre;
+      if (!$('#hc-tel').value && CUENTA.telefono) $('#hc-tel').value = CUENTA.telefono;
+      $('#hc-email').value = CUENTA.email; $('#hc-email').readOnly = true;
+      if (CUENTA.acepta_marketing) $('#hc-mkt').checked = true;
+    } else {
+      linea.innerHTML = '<button type="button" class="lnk" data-abre-cuenta>Entra con tu email</button> y rellenamos tus datos, o sigue sin cuenta.';
+      $('#hc-email').readOnly = false;
+    }
+  }
+  const est = { pedir: 'Pago pendiente', pendiente_pago: 'Pago pendiente', nuevo: 'Recibido', preparando: 'Preparando', listo: 'Listo', entregado: 'Entregado', cancelado: 'Cancelado' };
+  function abreCuenta() {
+    $('#cu-error').hidden = $('#cu-error2').hidden = true;
+    $('#cu-entrar').hidden = !!CUENTA; $('#cu-dentro').hidden = !CUENTA;
+    if (CUENTA) {
+      $('#cu-quien').textContent = CUENTA.email; $('#cu-nombre').value = CUENTA.nombre || ''; $('#cu-tel').value = CUENTA.telefono || '';
+      $('#cu-mkt').checked = !!CUENTA.acepta_marketing;
+      $('#cu-pedidos').innerHTML = (CUENTA.pedidos || []).map(p => `<li><a href="/pedir/?pedido=${esc(p.token)}"><span>#${p.numero} · ${esc(String(p.local).replace(/^Órale Padre\s*/, ''))}
+        <small>${new Date(p.creado).toLocaleString('es-ES', { timeZone: 'Europe/Madrid', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} · ${est[p.estado] || p.estado}</small></span><b>${euros(p.total)}</b></a></li>`).join('')
+        || '<li class="vacio">Aún no has pedido con esta cuenta.</li>';
+      $('#cu-reservas').innerHTML = (CUENTA.reservas || []).map(r => `<li><a href="/reservar/?reserva=${esc(r.token)}"><span>${esc(String(r.local).replace(/^Órale Padre\s*/, ''))}
+        <small>${new Date(r.fecha).toLocaleString('es-ES', { timeZone: 'Europe/Madrid', weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })} · ${r.personas} pers. · ${esc(r.estado)}</small></span></a></li>`).join('')
+        || '<li class="vacio">Sin reservas.</li>';
+    } else {
+      $('#cu-paso-codigo').hidden = true; $('#cu-ok').textContent = 'Enviarme el código';
+      if (!$('#cu-email').value) $('#cu-email').value = $('#hc-email').value || '';
+    }
+    hcu.showModal();
+  }
+  $('#btn-cuenta').onclick = abreCuenta;
+  document.addEventListener('click', e => { if (e.target.closest('[data-abre-cuenta]')) abreCuenta(); });
+  $('#cu-cerrar').onclick = () => hcu.close();
+  async function mandaCodigo() {
+    const email = $('#cu-email').value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new Error('DATOS: revisa el email');
+    await api.pedirCodigo(email);
+    $('#cu-paso-codigo').hidden = false; $('#cu-ok').textContent = 'Entrar'; $('#cu-codigo').focus();
+  }
+  $('#cu-entrar').addEventListener('submit', async e => {
+    e.preventDefault(); const err = $('#cu-error'); err.hidden = true; const btn = $('#cu-ok'); btn.disabled = true;
+    try {
+      if ($('#cu-paso-codigo').hidden) await mandaCodigo();
+      else {
+        const cod = $('#cu-codigo').value.replace(/\D/g, '');
+        if (cod.length < 6) throw new Error('DATOS: escribe el código del email');
+        await api.verificarCodigo($('#cu-email').value.trim(), cod);
+        await cargaCuenta(); abreCuenta();
+      }
+    } catch (ex) { err.textContent = /expired|invalid|token/i.test(ex.message || '') ? 'El código no es válido o ha caducado. Pide otro.' : mensajeError(ex); err.hidden = false; }
+    finally { btn.disabled = false; }
+  });
+  $('#cu-reenviar').onclick = async () => { try { await mandaCodigo(); } catch (ex) { $('#cu-error').textContent = mensajeError(ex); $('#cu-error').hidden = false; } };
+  $('#cu-guardar').onclick = async () => {
+    const err = $('#cu-error2'); err.hidden = true;
+    try {
+      await api.guardarMiCuenta({ nombre: $('#cu-nombre').value.trim(), tel: $('#cu-tel').value.trim(), marketing: $('#cu-mkt').checked });
+      await cargaCuenta(); hcu.close();
+    } catch (ex) { err.textContent = mensajeError(ex); err.hidden = false; }
+  };
+  $('#cu-salir').onclick = async () => { await api.salirCliente(); $('#hc-nombre').value = $('#hc-tel').value = $('#hc-email').value = ''; await cargaCuenta(); hcu.close(); };
+  // Cuentas de cliente: listas pero APAGADAS hasta configurar el envío de códigos (SMTP de Brevo en Supabase Auth).
+  const CUENTAS_ACTIVAS = false;
+  if (CUENTAS_ACTIVAS) cargaCuenta();
+  else { $('#btn-cuenta').hidden = true; const l = $('#hc-cuenta'); if (l) l.hidden = true; }
 })();
