@@ -49,7 +49,7 @@
     const r = document.querySelector(`[name=pago][value=${marcado}]`); if (r) r.checked = true;
     actualizaEmail();
   }
-  function actualizaEmail() { $('#hc-email-l').hidden = (document.querySelector('[name=pago]:checked') || {}).value !== 'stripe'; }
+  function actualizaEmail() { /* el email se pide siempre (opcional) para mandar la confirmación */ }
   document.addEventListener('change', e => { if (e.target.name === 'pago') { actualizaEmail(); $('#hc-enviar').textContent = e.target.value === 'stripe' ? 'Pagar y hacer pedido' : 'Hacer pedido'; } });
 
   function abierto() { return local.acepta_pedidos && franjas(local).length > 0; }
