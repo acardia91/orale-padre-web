@@ -68,9 +68,10 @@
     carta.categorias.forEach(c => c.productos.forEach(id => catDe.set(id, c)));
     return { prod, grupos, catDe };
   }
-  function precioLinea(idx, linea) {
+  // enLocal = consumo en sala: usa "precio_local" si el producto lo tiene (precio distinto por canal).
+  function precioLinea(idx, linea, enLocal = false) {
     const p = idx.prod.get(linea.producto);
-    let u = p.precio;
+    let u = enLocal && Number.isInteger(p.precio_local) ? p.precio_local : p.precio;
     (linea.opciones || []).forEach(oid => {
       p.grupos.forEach(gid => { const o = idx.grupos.get(gid).opciones.find(x => x.id === oid); if (o) u += o.precio; });
     });
@@ -96,7 +97,7 @@
         const g = idx.grupos.get(gid); const n = opciones.filter(o => o.grupo === gid).length;
         if (n < g.min || n > g.max) throw new Error(`EXTRA: revisa "${g.nombre}" en ${p.nombre}`);
       });
-      return { producto: p.id, nombre: p.nombre, cantidad: l.cantidad, unitario: precioLinea(idx, l), opciones,
+      return { producto: p.id, nombre: p.nombre, cantidad: l.cantidad, unitario: precioLinea(idx, l, !paraLlevar), opciones,
                iva: p.alcohol && paraLlevar ? 21 : 10, nota: l.nota || null };
     });
   }
@@ -247,7 +248,22 @@
     },
     async localesConPedidos() { return [{ id: 'tomares', nombre: 'Órale Padre Tomares', acepta_pedidos: true, pago_online: true, pago_local: true, acepta_reservas: true }]; },
     async crearReserva(r) { const rs = lee('op-demo-reservas', []); const x = { ...r, id: uuid(), token: uuid(), telefono: r.tel, estado: 'confirmada', origen: r.origen || 'web', creado: new Date().toISOString(), fecha: new Date(r.fecha).toISOString(), personas: +r.personas }; rs.push(x); guarda('op-demo-reservas', rs); avisa(); return { token: x.token, id: x.id }; },
-    async verReserva(token) { const r = lee('op-demo-reservas', []).find(x => x.token === token); return r ? { ...r, local: 'Órale Padre Tomares' } : null; },
+    async verReserva(token) { const r = lee('op-demo-reservas', []).find(x => x.token === token); return r ? { ...r, local: 'Órale Padre Tomares', cancelar_hasta: 60 } : null; },
+    async horasReserva(local, dia, personas) {
+      const L = await this.local(local); const c = L.reservas_config || {}; const esp = (lee('op-demo-especiales', {})[local] || {})[dia];
+      if (esp && esp.cerrado) return [];
+      const dow = ((new Date(dia + 'T12:00').getDay() + 6) % 7) + 1; const t = (esp && esp.turnos) || (c.turnos || {})[dow] || (L.horario || {})[dow] || [];
+      const out = []; const rs = lee('op-demo-reservas', []).filter(r => r.local === local && r.estado !== 'cancelada');
+      t.forEach(([a, b]) => { let [h, m] = a.split(':').map(Number); const [hf, mf] = b.split(':').map(Number);
+        while (h * 60 + m <= hf * 60 + mf - ((c.turnos || {})[dow] ? 0 : 60)) { const f = new Date(`${dia}T${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:00`);
+          if (f.getTime() > Date.now() + (c.antelacion || 60) * 60000) { const oc = rs.filter(r => Math.abs(new Date(r.fecha) - f) < (c.duracion || 90) * 60000).reduce((s, r) => s + r.personas, 0);
+            out.push({ hora: f.toTimeString().slice(0, 5), fecha: f.toISOString(), libre: oc + (+personas || 2) <= (L.reservas_aforo || 40) }); }
+          m += c.intervalo || 15; if (m >= 60) { h += Math.floor(m / 60); m %= 60; } } });
+      return out;
+    },
+    async guardarConfigReservas(local, config, aforo, maxPersonas) { await this.guardarLocal(local, { reservas_config: config, reservas_aforo: aforo, reservas_max_personas: maxPersonas }); },
+    async diasEspeciales(local) { return Object.entries(lee('op-demo-especiales', {})[local] || {}).map(([fecha, d]) => ({ fecha, ...d })).sort((a, b) => a.fecha.localeCompare(b.fecha)); },
+    async guardarDiaEspecial(local, d) { const e = lee('op-demo-especiales', {}); e[local] = e[local] || {}; if (d.borrar) delete e[local][d.fecha]; else e[local][d.fecha] = { cerrado: !!d.cerrado, turnos: d.turnos || null, aforo: d.aforo || null, nota: d.nota || null }; guarda('op-demo-especiales', e); },
     async cancelarReserva(token) { const rs = lee('op-demo-reservas', []); const r = rs.find(x => x.token === token); if (r) r.estado = 'cancelada'; guarda('op-demo-reservas', rs); avisa(); },
     async reservasEntre(local, desde, hasta) { return lee('op-demo-reservas', []).filter(r => r.local === local && r.fecha >= desde && r.fecha < hasta); },
     async actualizarReserva(id, cambios) { const rs = lee('op-demo-reservas', []); Object.assign(rs.find(x => x.id === id) || {}, cambios); guarda('op-demo-reservas', rs); avisa(); },
@@ -507,6 +523,10 @@
         p_nombre: r.nombre, p_tel: r.tel, p_email: r.email || null, p_notas: r.notas || '', p_origen: r.origen || 'web' }));
     },
     async verReserva(token) { return ok(await cliente().rpc('ver_reserva', { p_token: token })); },
+    async horasReserva(local, dia, personas) { return ok(await cliente().rpc('horas_reserva', { p_local: local, p_dia: dia, p_personas: +personas || 2 })); },
+    async guardarConfigReservas(local, config, aforo, maxPersonas) { ok(await cliente().rpc('guardar_config_reservas', { p_local: local, p_config: config, p_aforo: aforo, p_max_personas: maxPersonas })); },
+    async diasEspeciales(local) { return ok(await cliente().from('reservas_especiales').select('*').eq('local', local).gte('fecha', new Date().toISOString().slice(0, 10)).order('fecha')); },
+    async guardarDiaEspecial(local, d) { ok(await cliente().rpc('guardar_dia_especial', { p_local: local, p_fecha: d.fecha, p_cerrado: !!d.cerrado, p_turnos: d.turnos || null, p_aforo: d.aforo || null, p_nota: d.nota || null, p_borrar: !!d.borrar })); },
     async cancelarReserva(token) { ok(await cliente().rpc('cancelar_reserva', { p_token: token })); },
     // ── reservas y clientes (personal) ──
     async reservasEntre(local, desde, hasta) { return ok(await cliente().from('reservas').select('*').eq('local', local).gte('fecha', desde).lt('fecha', hasta).order('fecha')); },
