@@ -261,7 +261,8 @@
     async actualizarCliente() {},
     async estadoPedido(token) {
       const p = lee(K.pedidos, []).find(x => x.token === token); if (!p) return null;
-      return { ...p, nombre: p.cliente_nombre, local: LOCAL_DEMO.nombre, telefono: LOCAL_DEMO.telefono, direccion: LOCAL_DEMO.direccion };
+      const r = lee('op-demo-resenas', []).find(x => x.pedido_id === p.id);
+      return { ...p, nombre: p.cliente_nombre, local: LOCAL_DEMO.nombre, local_id: p.local, mi_nota: r ? r.nota : null, telefono: LOCAL_DEMO.telefono, direccion: LOCAL_DEMO.direccion };
     },
     seguirPedido(token, cb) { const f = async () => cb(await this.estadoPedido(token)); oyentes.add(f); return () => oyentes.delete(f); },
     // ── cocina ──
@@ -353,13 +354,25 @@
     async cerrarCaja(local, contado, retirado, notas) { const r = await this.resumenCaja(local); return { ...r, efectivo_contado: contado, retirado, notas, hasta: new Date().toISOString(), descuadre: contado - r.fondo_inicial - r.efectivo, fondo_siguiente: contado - retirado }; },
     async auditoria() { return []; }, async cierres() { return []; },
     // Reseñas e informes (demo: en este navegador)
-    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, origen }) {
+    async ticketParaValorar(id) { const t = lee(K.tickets, []).find(x => x.id === id); if (!t) return null;
+      const r = lee('op-demo-resenas', []).find(x => x.ticket_id === id);
+      return { local: t.local, ticket: t.serie + '-' + String(t.numero).padStart(6, '0'), fecha: t.fecha, total: t.total, mi_nota: r ? r.nota : null }; },
+    async googleFichas() { return lee('op-demo-gfichas', {}); },
+    async googleResenas(local) { return lee('op-demo-gresenas', []).filter(r => !local || r.local === local); },
+    async guardarGoogle(fichas, resenas) {
+      const f = lee('op-demo-gfichas', {}); (fichas || []).forEach(x => { f[x.local] = { ...x, actualizado: new Date().toISOString(), historial: [] }; }); guarda('op-demo-gfichas', f);
+      const rs = lee('op-demo-gresenas', []).filter(r => !(resenas || []).some(n => n.id === r.id)); guarda('op-demo-gresenas', rs.concat(resenas || []));
+      return { fichas: (fichas || []).length, resenas: (resenas || []).length };
+    },
+    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, ticket, origen }) {
       if (!(nota >= 1 && nota <= 5)) throw new Error('DATOS: elige de 1 a 5 estrellas');
-      let ped = null; if (pedido) { ped = lee(K.pedidos, []).find(p => p.token === pedido); if (!ped) throw new Error('DATOS: no encontramos ese pedido'); local = ped.local; }
+      let ped = null, tk = null; if (pedido) { ped = lee(K.pedidos, []).find(p => p.token === pedido); if (!ped) throw new Error('DATOS: no encontramos ese pedido'); local = ped.local; }
+      if (ticket) { tk = lee(K.tickets, []).find(t => t.id === ticket); if (!tk) throw new Error('DATOS: no encontramos ese ticket'); local = tk.local; }
       if (!local) throw new Error('DATOS: elige el local');
-      const rs = lee('op-demo-resenas', []).filter(r => !ped || r.pedido_id !== ped.id);
+      const rs = lee('op-demo-resenas', []).filter(r => !(ped && r.pedido_id === ped.id) && !(tk && r.ticket_id === tk.id));
       rs.push({ id: uuid(), local, creada: new Date().toISOString(), nota, comentario: comentario || null, nombre: nombre || (ped && ped.cliente_nombre) || null,
-        contacto: contacto || null, pedido_id: ped ? ped.id : null, pedido_numero: ped ? ped.numero : null, origen: origen || 'web', estado: 'nueva' });
+        contacto: contacto || null, pedido_id: ped ? ped.id : null, pedido_numero: ped ? ped.numero : null, ticket_id: tk ? tk.id : null, ticket: tk,
+        importe: tk ? tk.total : ped ? ped.total : null, origen: origen || 'web', estado: 'nueva' });
       guarda('op-demo-resenas', rs); avisa();
       return { ok: true, local, enlace: lee('op-demo-enlaces', {})[local] || null };
     },
@@ -591,10 +604,14 @@
     async cerrarCaja(local, contado, retirado, notas) { return ok(await cliente().rpc('cerrar_caja', { p_local: local, p_contado: contado, p_retirado: retirado, p_notas: notas || '' })); },
     async auditoria(local, desde, hasta) { return ok(await cliente().rpc('listar_auditoria', { p_local: local, p_desde: desde, p_hasta: hasta })); },
     async cierres(local, desde, hasta) { return ok(await cliente().rpc('listar_cierres', { p_local: local, p_desde: desde, p_hasta: hasta })).map(r => r.c); },
-    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, origen }) {
+    async dejarResena({ local, nota, comentario, nombre, contacto, pedido, ticket, origen }) {
       return ok(await cliente().rpc('dejar_resena', { p_local: local || null, p_nota: nota, p_comentario: comentario || null, p_nombre: nombre || null,
-        p_contacto: contacto || null, p_pedido: pedido || null, p_origen: origen || 'web' }));
+        p_contacto: contacto || null, p_pedido: pedido || null, p_origen: origen || 'web', p_ticket: ticket || null }));
     },
+    async ticketParaValorar(id) { return ok(await cliente().rpc('ticket_para_valorar', { p_ticket: id })); },
+    async googleFichas() { return Object.fromEntries(ok(await cliente().from('google_fichas').select('*')).map(r => [r.local, r])); },
+    async googleResenas(local) { let q = cliente().from('google_resenas').select('*').order('fecha', { ascending: false, nullsFirst: false }).limit(500); if (local) q = q.eq('local', local); return ok(await q); },
+    async guardarGoogle(fichas, resenas) { return ok(await cliente().rpc('guardar_google', { p_fichas: fichas || [], p_resenas: resenas || [] })); },
     async resenas(local, desde, hasta) { return ok(await cliente().rpc('listar_resenas', { p_local: local, p_desde: desde, p_hasta: hasta })).map(r => r.r); },
     async gestionarResena(id, estado, nota) { ok(await cliente().rpc('gestionar_resena', { p_id: id, p_estado: estado, p_nota_interna: nota || null })); },
     async enlacesResenas() { return Object.fromEntries(ok(await cliente().from('resenas_enlaces').select('local,url')).map(r => [r.local, r.url])); },

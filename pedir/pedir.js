@@ -289,6 +289,10 @@
             ${l.nota ? `<small>“${esc(l.nota)}”</small>` : ''}</span><span>${euros(l.unitario * l.cantidad)}</span></li>`).join('')}
             <li class="seg-total"><span>Total · ${pagoTxt}</span><span>${euros(p.total)}</span></li></ul>
         </div>
+        ${p.estado === 'entregado' ? `<div class="seg-caja seg-valorar">
+          <p class="seg-k">${p.mi_nota ? 'Tu valoración' : '¿Qué tal estaba?'}</p>
+          <p class="seg-estrellas">${[1, 2, 3, 4, 5].map(n => `<a href="/opinion/?p=${encodeURIComponent(tk)}&o=web&n=${n}${location.search.includes('demo') ? '&demo' : ''}" aria-label="${n} de 5" class="${p.mi_nota && n <= p.mi_nota ? 'on' : ''}">★</a>`).join('')}</p>
+          <p style="margin:0;font-size:14px;color:var(--humo)">${p.mi_nota ? '¡Gracias! Toca para cambiarla.' : 'Toca las estrellas: 10 segundos y lo leemos todo.'}</p></div>` : ''}
         <div class="seg-acciones">
           ${p.telefono ? `<a class="btn btn-sec" href="tel:${esc(p.telefono.replace(/\s/g, ''))}">Llamar al local</a>` : ''}
           <a class="btn btn-sec" href="./${DEMO && location.search.includes('demo') ? '?demo' : ''}">Hacer otro pedido</a>

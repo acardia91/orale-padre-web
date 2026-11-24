@@ -81,8 +81,18 @@
       <div class="l"><span>${{ efectivo: 'Efectivo', tarjeta: 'Tarjeta', invitacion: 'Invitación' }[t.metodo] || t.metodo}</span><span>${euros(t.metodo === 'efectivo' ? t.entregado : t.total)}</span></div>
       ${t.metodo === 'efectivo' ? `<div class="l"><span>Cambio</span><span>${euros(t.cambio)}</span></div>` : ''}
       <hr><div class="c">¡Gracias, padre! · oralepadre.com</div>
-      <div class="c peq">¿Qué tal? Cuéntanoslo en<br><b>oralepadre.com/opinion</b></div>
+      ${valorar(t)}
       <div class="c peq">Huella: ${esc(t.hash.slice(0, 16))}</div>`;
+  }
+
+  // "¿Qué tal?" con QR que lleva a valorar ESTE ticket (si la librería de QR está cargada).
+  function valorar(t) {
+    const url = 'https://www.oralepadre.com/opinion/?t=' + t.id;
+    if (window.qrcode && t.id) {
+      try { const q = window.qrcode(0, 'L'); q.addData(url); q.make();
+        return `<div class="c peq">¿Qué tal? Valóranos:</div><div class="c">${q.createSvgTag({ cellSize: 3, margin: 0 })}</div>`; } catch (e) {}
+    }
+    return '<div class="c peq">¿Qué tal? Cuéntanoslo en<br><b>oralepadre.com/opinion</b></div>';
   }
 
   Object.assign(window.OP, { imprimir, ticketComanda: comanda, ticketPrecuenta: precuenta, ticketFactura: factura });

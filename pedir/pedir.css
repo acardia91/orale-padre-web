@@ -182,3 +182,9 @@ input:user-invalid{border-color:var(--rojo)}
 .cu-lista small{display:block;color:var(--humo);font-size:13px}
 .cu-lista .vacio{padding:10px 0;color:var(--humo);font-size:14px}
 #hoja-cuenta .btn{display:block;width:100%;margin-top:14px}
+
+.seg-valorar{text-align:center}
+.seg-estrellas{margin:6px 0;display:flex;justify-content:center;gap:4px}
+.seg-estrellas a{font-size:40px;line-height:1;color:#DDD0C2;text-decoration:none;padding:2px}
+.seg-estrellas a.on,.seg-estrellas:hover a{color:#E0A100}
+.seg-estrellas a:hover~a{color:#DDD0C2}
