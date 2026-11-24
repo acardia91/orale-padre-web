@@ -55,7 +55,7 @@
         <h3>${esc(p.nombre)}</h3>
         ${p.desc ? `<p>${esc(p.desc)}</p>` : ''}
         ${extras.length ? `<p class="extras">${extras.join('<br>')}</p>` : ''}
-        <div class="precio">${euros(p.precio)}${ag ? '<span class="etq">Agotado</span>' : ''}</div>
+        <div class="precio">${euros(Number.isInteger(p.precio_local) ? p.precio_local : p.precio)}${ag ? '<span class="etq">Agotado</span>' : ''}</div>
         ${p.alergenos && p.alergenos.length ? `<small class="alerg">Alérgenos: ${esc(p.alergenos.join(', '))}</small>` : ''}
       </div>
       <div class="prod-foto ${p.foto ? '' : 'vacia'}">${p.foto ? `<img src="${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy" width="104" height="104" data-zoom>` : ''}</div>
