@@ -12,15 +12,18 @@
   if (token) verReserva(token); else arrancar();
 
   async function arrancar() {
-    let ls = [];
-    try { ls = (await api.localesConPedidos()).filter(l => l.acepta_reservas); } catch (e) {}
-    if (!ls.length) { $('#r-cerrado').hidden = false; $('#r-ok').disabled = true; return; }
-    if (!ls.some(l => l.id === LOCAL)) LOCAL = ls[0].id;
-    if (ls.length > 1) {
-      const sel = $('#sel-local'); sel.hidden = false; $('#nombre-local').hidden = true;
-      sel.innerHTML = ls.map(l => `<option value="${l.id}">${esc(l.nombre.replace(/^Órale Padre\s*/, ''))}</option>`).join('');
-      sel.value = LOCAL; sel.onchange = () => { LOCAL = sel.value; cargaLocal(); };
+    // Sin ?local, o un local que aún no reserva por aquí: pantalla "elige tu local".
+    // Sevilla Este sigue con la reserva de Last App; los demás enseñan el teléfono.
+    let propios = [];
+    try { propios = await api.localesConPedidos(); } catch (e) {}
+    if (!propios.some(l => l.id === LOCAL && l.acepta_reservas)) {
+      const d = LOCAL ? window.OPL.destino(LOCAL, 'reservar', propios) : null;
+      if (d && d.tipo === 'fuera') { location.replace(d.url); return; }
+      $('#f-reserva').hidden = true; $('#vista-elegir').hidden = false; $('#cambiar-local').hidden = true;
+      window.OPL.pintarElegir($('#elegir'), 'reservar', propios);
+      return;
     }
+    try { localStorage.setItem('op-local', LOCAL); } catch (e) {}
     await cargaLocal();
     const hoy = new Date(); const max = new Date(); max.setDate(max.getDate() + 60);
     const f = d => { const z = new Date(d); z.setMinutes(z.getMinutes() - z.getTimezoneOffset()); return z.toISOString().slice(0, 10); };

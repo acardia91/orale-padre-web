@@ -34,12 +34,13 @@
 <header class="cab">
   <a class="cab-logo" href="/" aria-label="Órale Padre, volver a la web"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
   <div class="cab-local"><span class="cab-k">Reservar mesa en</span><strong id="nombre-local">Órale Padre</strong>
-    <select id="sel-local" class="sel-local" aria-label="Elige local" hidden></select></div>
+    <a class="cambiar-local" id="cambiar-local" href="./">Cambiar de local</a></div>
 </header>
 <p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: las reservas no llegan al local.</p>
 
 <main id="vista-form">
   <section class="intro"><h1>Reserva <span>tu mesa</span></h1><p>Te esperamos con la plancha caliente. Para grupos grandes, llámanos.</p></section>
+  <div id="vista-elegir" hidden><div class="elegir" id="elegir"></div></div>
   <form class="form-reserva" id="f-reserva" novalidate>
     <p class="error" id="r-cerrado" hidden>Ahora mismo no aceptamos reservas online en ningún local. Llámanos y te buscamos hueco.</p>
     <fieldset class="bloque"><legend>¿Cuántos sois?</legend><div class="personas" id="r-personas"></div></fieldset>
@@ -63,6 +64,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="/pedir/api.js"></script>
+<script src="/pedir/locales.js"></script>
 <script src="reservar.js"></script>
 </body>
 </html>
