@@ -8,8 +8,8 @@
   const LOCALES = { tomares: 'Tomares', 'san-luis': 'San Luis', remedios: 'Los Remedios', 'sevilla-este': 'Sevilla Este' };
   const ETIQ = ['', 'Muy mal', 'Flojo', 'Normalito', 'Muy bien', '¡Órale, padre!'];
   const q = new URLSearchParams(location.search);
-  const pedido = q.get('p'); let local = LOCALES[q.get('local')] ? q.get('local') : null; let nota = 0;
-  const origen = ['qr', 'ticket', 'email', 'web'].includes(q.get('o')) ? q.get('o') : (pedido ? 'email' : 'web');
+  const pedido = q.get('p'), ticket = q.get('t'); let local = LOCALES[q.get('local')] ? q.get('local') : null; let nota = 0;
+  const origen = ['qr', 'ticket', 'email', 'web'].includes(q.get('o')) ? q.get('o') : (pedido ? 'email' : ticket ? 'ticket' : 'web');
   if (DEMO) $('#aviso-demo').hidden = false;
 
   function pintaLocal() {
@@ -17,7 +17,7 @@
     $('#o-locales').innerHTML = Object.entries(LOCALES).map(([id, n]) => `<button type="button" data-l="${id}" aria-pressed="${id === local}">${n}</button>`).join('');
   }
   $('#o-locales').onclick = e => { const b = e.target.closest('[data-l]'); if (!b) return; local = b.dataset.l; pintaLocal(); };
-  if (!local && !pedido) {
+  if (!local && !pedido && !ticket) {
     $('#o-bloque-local').hidden = false;
     try { const g = localStorage.getItem('op-local'); if (LOCALES[g]) local = g; } catch (e) {}
   }
@@ -30,6 +30,14 @@
     const n = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
     const id = Object.keys(LOCALES).find(k => n(p.local).includes(n(LOCALES[k]).replace(/^los /, '')));
     if (id) { local = id; pintaLocal(); }
+  }).catch(() => {});
+  // Desde el QR del ticket de sala: sabemos local, ticket e importe.
+  if (ticket && api.ticketParaValorar) api.ticketParaValorar(ticket).then(t => {
+    if (!t) { $('#o-saludo').textContent = 'Este ticket ya no se puede valorar, pero cuéntanos igualmente.'; $('#o-bloque-local').hidden = false; return; }
+    local = t.local; pintaLocal();
+    const f = new Date(t.fecha).toLocaleDateString('es-ES', { day: 'numeric', month: 'long' });
+    $('#o-saludo').textContent = `¿Qué tal tu visita del ${f}? (ticket ${t.ticket} · ${OP.euros(t.total)}). Lo leemos todo.`;
+    if (t.mi_nota && !nota) { nota = t.mi_nota; pintaEstrellas(); }
   }).catch(() => {});
   try { const c = JSON.parse(localStorage.getItem('op-cliente')) || {}; $('#o-nombre').value = c.nombre || ''; $('#o-contacto').value = c.email || c.tel || ''; } catch (e) {}
 
@@ -51,12 +59,12 @@
   $('#f-op').addEventListener('submit', async e => {
     e.preventDefault();
     const fallo = t => { $('#o-error').textContent = t; $('#o-error').hidden = false; };
-    if (!local && !pedido) return fallo('Elige el local.');
+    if (!local && !pedido && !ticket) return fallo('Elige el local.');
     if (!nota) return fallo('Elige de 1 a 5 estrellas.');
     $('#o-ok').disabled = true; $('#o-ok').textContent = 'Enviando…';
     try {
       const r = await api.dejarResena({ local, nota, comentario: $('#o-texto').value.trim(), nombre: $('#o-nombre').value.trim(),
-        contacto: $('#o-contacto').value.trim(), pedido, origen });
+        contacto: $('#o-contacto').value.trim(), pedido, ticket, origen });
       gracias(r || {});
     } catch (ex) { fallo(mensajeError(ex)); $('#o-ok').disabled = false; $('#o-ok').textContent = 'Enviar opinión'; }
   });
