@@ -64,6 +64,7 @@
     if (!hora) return fallo('Elige una hora.');
     if (nombre.length < 2) return fallo('Dinos tu nombre.', '#r-nombre');
     if (tel.replace(/[^0-9]/g, '').length < 9) return fallo('Revisa el teléfono.', '#r-tel');
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fallo('Escribe tu email: te mandamos ahí la confirmación.', '#r-email');
     const btn = $('#r-ok'); btn.disabled = true; btn.textContent = 'Reservando…';
     try {
       const r = await api.crearReserva({ local: LOCAL, fecha: hora.value, personas: personas.value, nombre, tel, email, notas: $('#r-notas').value.trim() });
