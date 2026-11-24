@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Qué tal, padre? · Órale Padre</title>
+<meta name="description" content="Cuéntanos qué tal ha ido en Órale Padre.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#7C2430">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/pedir/pedir.css">
+<style>
+  .op{max-width:560px;margin:0 auto;padding:8px 16px 48px}
+  .locales{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:8px}
+  .locales button{padding:16px 10px;border:1.5px solid var(--linea);border-radius:12px;background:var(--crema-3);font:inherit;font-weight:800;font-size:16px;cursor:pointer;color:var(--tinta)}
+  .locales button[aria-pressed=true]{background:var(--burdeos);border-color:var(--burdeos);color:#fff}
+  .estrellas{display:flex;gap:6px;justify-content:center;margin:6px 0 4px}
+  .estrellas button{border:0;background:none;font-size:46px;line-height:1;color:#DDD0C2;cursor:pointer;padding:4px;transition:transform .1s}
+  .estrellas button.on{color:#E0A100}
+  .estrellas button:active{transform:scale(.9)}
+  .estrellas button:focus-visible{outline:2px solid var(--burdeos);outline-offset:2px;border-radius:8px}
+  .etiqueta{text-align:center;font-weight:700;min-height:1.4em;color:var(--tinta-2)}
+  .campo input,.campo textarea{width:100%;box-sizing:border-box}
+  .btn-full{width:100%;margin-top:22px}
+  .gracias{text-align:center;padding:24px 8px}
+  .gracias h2{font-family:var(--display);font-weight:400;font-size:34px;text-transform:uppercase;color:var(--burdeos);margin:0 0 8px}
+  .gracias p{margin:0 0 14px;font-size:17px;color:var(--tinta-2)}
+  .gracias a.btn{display:inline-block;text-decoration:none;margin-top:6px}
+  .gracias .otro{display:block;margin-top:18px;color:var(--humo)}
+</style>
+</head>
+<body>
+<header class="cab">
+  <a class="cab-logo" href="/" aria-label="Órale Padre, volver a la web"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
+  <div class="cab-local"><span class="cab-k">Tu opinión sobre</span><strong id="nombre-local">Órale Padre</strong></div>
+</header>
+<p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: la opinión se guarda sólo en este navegador.</p>
+
+<main class="op" id="vista-form">
+  <section class="intro" style="padding-left:0;padding-right:0"><h1>¿Qué tal, <span>padre?</span></h1><p id="o-saludo">Cuéntanos cómo ha ido. Lo leemos todo, lo bueno y lo malo.</p></section>
+  <form id="f-op" novalidate>
+    <fieldset class="bloque" id="o-bloque-local" hidden><legend>¿En qué local?</legend><div class="locales" id="o-locales"></div></fieldset>
+    <fieldset class="bloque"><legend>Tu nota</legend>
+      <div class="estrellas" id="o-estrellas" role="radiogroup" aria-label="Nota de 1 a 5"></div>
+      <p class="etiqueta" id="o-etiqueta" aria-live="polite"></p>
+    </fieldset>
+    <fieldset class="bloque"><legend>Cuéntanos más</legend>
+      <label class="campo"><span id="o-pregunta">¿Qué es lo que más te ha gustado? <em>(opcional)</em></span><textarea id="o-texto" rows="4" maxlength="1500"></textarea></label>
+      <label class="campo"><span>Tu nombre <em>(opcional)</em></span><input id="o-nombre" autocomplete="name" maxlength="80"></label>
+      <label class="campo"><span>Email o teléfono <em id="o-contacto-ayuda">(opcional, por si queremos responderte)</em></span><input id="o-contacto" autocomplete="email" maxlength="120"></label>
+    </fieldset>
+    <p class="legal">Usamos tus datos sólo para mejorar y, si nos dejas contacto, para responderte. Responsable: La Baba Hasta El Suelo S.L. Más en el <a href="/legal.html" target="_blank" rel="noopener">aviso legal</a>.</p>
+    <p class="error" id="o-error" role="alert" hidden></p>
+    <button class="btn btn-full" type="submit" id="o-ok">Enviar opinión</button>
+  </form>
+</main>
+
+<main class="op" id="vista-gracias" hidden><section class="gracias" id="o-gracias"></section></main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/pedir/api.js?v=20261124g"></script>
+<script src="opinion.js?v=1"></script>
+</body>
+</html>
