@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pedir para recoger · Órale Padre Tomares</title>
+<meta name="description" content="Pide tus burritos, tacos y nachos de Órale Padre Tomares y recógelos en el local sin esperar.">
+<meta name="theme-color" content="#7C2430">
+<link rel="canonical" href="https://www.oralepadre.com/pedir/">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="pedir.css">
+</head>
+<body>
+
+<header class="cab">
+  <a class="cab-logo" href="/" aria-label="Órale Padre, volver a la web"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
+  <div class="cab-local">
+    <span class="cab-k">Para recoger en</span>
+    <strong id="nombre-local">Tomares</strong>
+    <select id="sel-local" class="sel-local" aria-label="Elige local" hidden></select>
+  </div>
+  <span class="estado-local" id="estado-local" hidden></span>
+</header>
+
+<p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: los pedidos no llegan al local.</p>
+
+<!-- ── Carta ── -->
+<main id="vista-carta">
+  <section class="intro">
+    <h1>Pide y <span>pasa a recoger</span></h1>
+    <p>Lo tienes listo a la hora que elijas. Pagas en el local, en efectivo o con tarjeta.</p>
+  </section>
+  <nav class="cats" id="cats" aria-label="Categorías de la carta"></nav>
+  <div id="carta" class="carta" aria-live="polite"><p class="cargando">Cargando la carta…</p></div>
+</main>
+
+<!-- ── Seguimiento del pedido ── -->
+<main id="vista-pedido" hidden>
+  <section class="seguimiento" id="seguimiento"></section>
+</main>
+
+<!-- ── Barra del carrito ── -->
+<button class="barra-carrito" id="barra-carrito" type="button" hidden>
+  <span class="bc-n" id="bc-n">0</span>
+  <span class="bc-txt">Ver pedido</span>
+  <span class="bc-total" id="bc-total">0,00 €</span>
+</button>
+
+<!-- ── Ficha de producto ── -->
+<dialog class="hoja" id="hoja-producto" aria-labelledby="hp-nombre">
+  <form method="dialog" class="hoja-in" id="form-producto">
+    <button class="cerrar" value="cancel" aria-label="Cerrar" type="submit">×</button>
+    <img class="hp-foto" id="hp-foto" alt="" hidden>
+    <div class="hoja-cuerpo">
+      <h2 id="hp-nombre"></h2>
+      <p class="hp-desc" id="hp-desc"></p>
+      <p class="hp-alerg" id="hp-alerg"></p>
+      <div id="hp-grupos"></div>
+      <label class="campo">
+        <span>¿Algo que debamos saber? <em>(opcional)</em></span>
+        <input id="hp-nota" maxlength="140" placeholder="Sin cebolla, salsa aparte…" autocomplete="off">
+      </label>
+    </div>
+    <div class="hoja-pie">
+      <div class="cantidad" role="group" aria-label="Cantidad">
+        <button type="button" id="hp-menos" aria-label="Uno menos">−</button>
+        <output id="hp-cant">1</output>
+        <button type="button" id="hp-mas" aria-label="Uno más">+</button>
+      </div>
+      <button class="btn" id="hp-anadir" type="button">Añadir · <span id="hp-precio"></span></button>
+    </div>
+  </form>
+</dialog>
+
+<!-- ── Carrito y datos ── -->
+<dialog class="hoja" id="hoja-carrito" aria-labelledby="hc-titulo">
+  <form class="hoja-in" id="form-pedido" novalidate>
+    <button class="cerrar" type="button" id="hc-cerrar" aria-label="Cerrar">×</button>
+    <div class="hoja-cuerpo">
+      <h2 id="hc-titulo">Tu pedido</h2>
+      <ul class="lineas" id="hc-lineas"></ul>
+
+      <fieldset class="bloque">
+        <legend>¿A qué hora lo recoges?</legend>
+        <select id="hc-hora" required></select>
+        <p class="ayuda" id="hc-hora-ayuda"></p>
+      </fieldset>
+
+      <fieldset class="bloque">
+        <legend>Tus datos</legend>
+        <label class="campo"><span>Nombre</span>
+          <input id="hc-nombre" autocomplete="given-name" required minlength="2" maxlength="60"></label>
+        <label class="campo"><span>Teléfono <em>(por si hay que avisarte)</em></span>
+          <input id="hc-tel" type="tel" inputmode="tel" autocomplete="tel" required pattern="[0-9 +]{9,}"></label>
+      </fieldset>
+
+      <fieldset class="bloque">
+        <legend>Pago</legend>
+        <label class="opcion" id="op-stripe" hidden><input type="radio" name="pago" value="stripe">
+          <span>Pagar ahora con tarjeta <em>Tarjeta, Apple Pay o Google Pay · pago seguro con Stripe</em></span></label>
+        <label class="opcion" id="op-local"><input type="radio" name="pago" value="local" checked>
+          <span>Pago al recoger <em>Efectivo o tarjeta en el local</em></span></label>
+        <label class="campo" id="hc-email-l" hidden><span>Email <em>(opcional, para el recibo)</em></span>
+          <input id="hc-email" type="email" autocomplete="email" maxlength="120"></label>
+      </fieldset>
+
+      <label class="campo"><span>Notas para la cocina <em>(opcional)</em></span>
+        <textarea id="hc-notas" maxlength="300" rows="2"></textarea></label>
+
+      <p class="legal">Usamos tu nombre y teléfono solo para preparar este pedido y avisarte. Responsable: La Baba Hasta El Suelo S.L. Más en el <a href="/legal.html" target="_blank" rel="noopener">aviso legal</a>.</p>
+      <p class="error" id="hc-error" role="alert" hidden></p>
+    </div>
+    <div class="hoja-pie">
+      <div class="total"><span>Total</span><strong id="hc-total"></strong></div>
+      <button class="btn" id="hc-enviar" type="submit">Hacer pedido</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="api.js"></script>
+<script src="pedir.js"></script>
+</body>
+</html>

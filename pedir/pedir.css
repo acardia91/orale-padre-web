@@ -1,0 +1,152 @@
+/* ÓRALE PADRE · pedir para recoger. Mismo papel crema y burdeos que la landing. */
+:root{
+  --crema:#F5EEE6; --crema-2:#EDE2D6; --crema-3:#FBF7F2; --linea:#DDD0C2;
+  --tinta:#241A1C; --tinta-2:#574548; --humo:#6E5C60;
+  --burdeos:#7C2430; --burdeos-d:#5E1A24; --burdeos-cl:#F2E0DF;
+  --oro:#C98A12; --nopal:#4F7A3A; --rojo:#B3261E;
+  --display:'Anton','Arial Narrow',Impact,sans-serif;
+  --texto:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --gut:16px; --max:760px;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--crema);color:var(--tinta);font:16px/1.5 var(--texto);
+  -webkit-font-smoothing:antialiased;padding-bottom:96px}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:var(--burdeos)}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:1.05;margin:0}
+
+/* ── Cabecera ── */
+.cab{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;
+  padding:10px var(--gut);background:var(--crema);border-bottom:2px solid var(--burdeos)}
+.cab-logo img{height:34px;width:auto}
+.cab-local{display:flex;flex-direction:column;line-height:1.15;margin-right:auto}
+.cab-k{font-size:12px;color:var(--humo);text-transform:uppercase;letter-spacing:.08em}
+.cab-local strong{font-family:var(--display);font-weight:400;font-size:20px;color:var(--burdeos)}
+.estado-local{font-size:13px;font-weight:700;padding:4px 10px;border-radius:99px;background:#E4EEDD;color:var(--nopal)}
+.estado-local.cerrado{background:var(--burdeos-cl);color:var(--burdeos)}
+.aviso-demo{margin:0;padding:8px var(--gut);background:var(--oro);color:#fff;font-weight:700;font-size:14px;text-align:center}
+
+main{max-width:var(--max);margin:0 auto}
+.intro{padding:24px var(--gut) 8px}
+.intro h1{font-size:clamp(34px,9vw,52px);text-transform:uppercase}
+.intro h1 span{color:var(--burdeos)}
+.intro p{margin:8px 0 0;color:var(--tinta-2)}
+
+/* ── Categorías ── */
+.cats{position:sticky;top:57px;z-index:10;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;
+  padding:12px var(--gut);background:var(--crema)}
+.cats::-webkit-scrollbar{display:none}
+.cats a{flex:none;text-decoration:none;color:var(--tinta);font-weight:700;font-size:14px;
+  padding:7px 14px;border:1.5px solid var(--linea);border-radius:99px;background:var(--crema-3)}
+.cats a.activa{background:var(--burdeos);border-color:var(--burdeos);color:#fff}
+
+/* ── Carta ── */
+.carta{padding:0 var(--gut)}
+.cargando{color:var(--humo);padding:32px 0}
+.cat{scroll-margin-top:120px;padding-top:20px}
+.cat h2{font-size:28px;text-transform:uppercase;color:var(--burdeos);border-bottom:2px solid var(--burdeos);padding-bottom:6px}
+.cat-nota{margin:8px 0 0;font-size:14px;color:var(--humo)}
+.prod{display:grid;grid-template-columns:1fr auto;gap:12px;width:100%;text-align:left;padding:16px 0;
+  border:0;border-bottom:1px solid var(--linea);background:none}
+.prod:disabled{cursor:default;opacity:.55}
+.prod h3{font-family:var(--texto);font-weight:800;font-size:17px;line-height:1.25}
+.prod p{margin:4px 0 0;font-size:14px;color:var(--tinta-2);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.prod .precio{margin-top:8px;font-weight:700}
+.prod .etq{display:inline-block;margin-left:6px;font-size:12px;font-weight:700;color:var(--burdeos);text-transform:uppercase}
+.prod-foto{position:relative;width:104px;height:104px;border-radius:12px;overflow:hidden;background:var(--crema-2)}
+.prod-foto img{width:100%;height:100%;object-fit:cover}
+.prod-mas{position:absolute;right:6px;bottom:6px;width:32px;height:32px;border-radius:50%;background:var(--burdeos);color:#fff;
+  display:grid;place-items:center;font-size:22px;line-height:1;box-shadow:0 2px 6px rgba(36,26,28,.3)}
+.prod-foto.vacia{width:44px;height:44px;background:none;align-self:center}
+.prod-foto.vacia .prod-mas{position:static}
+
+/* ── Barra del carrito ── */
+.barra-carrito{position:fixed;z-index:30;left:var(--gut);right:var(--gut);bottom:calc(14px + env(safe-area-inset-bottom));
+  max-width:calc(var(--max) - 2*var(--gut));margin:0 auto;display:flex;align-items:center;gap:12px;
+  padding:14px 18px;border:0;border-radius:14px;background:var(--burdeos);color:#fff;font-weight:700;font-size:17px;
+  box-shadow:0 8px 24px rgba(94,26,36,.35)}
+.bc-n{min-width:28px;height:28px;border-radius:99px;background:#fff;color:var(--burdeos);display:grid;place-items:center;font-size:15px}
+.bc-txt{margin-right:auto}
+
+/* ── Hojas (diálogos) ── */
+.hoja{border:0;padding:0;margin:auto auto 0;width:100%;max-width:var(--max);max-height:92dvh;
+  border-radius:18px 18px 0 0;background:var(--crema);color:var(--tinta)}
+.hoja::backdrop{background:rgba(36,26,28,.55)}
+@media (min-width:700px){.hoja{margin:auto;border-radius:18px;max-width:560px}}
+.hoja-in{display:flex;flex-direction:column;max-height:92dvh;position:relative}
+.hoja-cuerpo{overflow-y:auto;padding:20px var(--gut) 8px}
+.hoja h2{font-size:30px;text-transform:uppercase;padding-right:40px}
+.cerrar{position:absolute;top:10px;right:10px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;
+  background:var(--crema-3);font-size:26px;line-height:1;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.hp-foto{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:18px 18px 0 0}
+.hp-desc{color:var(--tinta-2);margin:8px 0 0}
+.hp-alerg{font-size:13px;color:var(--humo);margin:6px 0 0}
+.hoja-pie{display:flex;gap:12px;align-items:center;padding:12px var(--gut) calc(12px + env(safe-area-inset-bottom));
+  border-top:1px solid var(--linea);background:var(--crema)}
+.btn{flex:1;border:0;border-radius:12px;padding:15px 18px;background:var(--burdeos);color:#fff;font-weight:800;font-size:17px}
+.btn:hover{background:var(--burdeos-d)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn-sec{background:var(--crema-3);color:var(--burdeos);border:2px solid var(--burdeos)}
+
+.grupo{margin-top:20px}
+.grupo-cab{display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin-bottom:6px}
+.grupo-cab h3{font-family:var(--texto);font-weight:800;font-size:16px}
+.grupo-cab span{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--humo);white-space:nowrap}
+.grupo-cab span.oblig{color:var(--burdeos)}
+.grupo.falta .grupo-cab span{color:#fff;background:var(--rojo);padding:2px 8px;border-radius:99px}
+.opcion{display:flex;align-items:center;gap:12px;padding:11px 0;border-bottom:1px solid var(--linea);cursor:pointer}
+.opcion input{width:20px;height:20px;accent-color:var(--burdeos);flex:none}
+.opcion span{flex:1}
+.opcion em{display:block;font-style:normal;font-size:13px;color:var(--humo)}
+.opcion b{font-weight:600;color:var(--tinta-2)}
+.opcion-off{opacity:.5;cursor:not-allowed}
+
+.campo{display:block;margin-top:16px}
+.campo span{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+.campo em,.campo span em{font-style:normal;font-weight:400;color:var(--humo)}
+input:not([type=radio]):not([type=checkbox]),select,textarea{width:100%;font:inherit;font-size:16px;padding:12px;
+  border:1.5px solid var(--linea);border-radius:10px;background:var(--crema-3);color:var(--tinta)}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--burdeos);outline-offset:1px;border-color:var(--burdeos)}
+input:user-invalid{border-color:var(--rojo)}
+
+.cantidad{display:flex;align-items:center;border:1.5px solid var(--linea);border-radius:12px;background:var(--crema-3)}
+.cantidad button{width:44px;height:48px;border:0;background:none;font-size:22px;color:var(--burdeos)}
+.cantidad output{min-width:24px;text-align:center;font-weight:800}
+
+.bloque{border:0;padding:0;margin:24px 0 0}
+.bloque legend{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--burdeos);padding:0;margin-bottom:8px}
+.ayuda{font-size:13px;color:var(--humo);margin:6px 0 0}
+.lineas{list-style:none;margin:12px 0 0;padding:0}
+.linea{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;padding:12px 0;border-bottom:1px solid var(--linea)}
+.linea-cant{display:flex;flex-direction:column;align-items:center;border:1.5px solid var(--linea);border-radius:10px;background:var(--crema-3)}
+.linea-cant button{border:0;background:none;width:34px;height:28px;color:var(--burdeos);font-size:18px;line-height:1}
+.linea-cant output{font-weight:800;font-size:14px}
+.linea strong{display:block}
+.linea small{display:block;color:var(--humo);font-size:13px}
+.linea .imp{font-weight:700;white-space:nowrap}
+.total{display:flex;flex-direction:column;line-height:1.2}
+.total span{font-size:13px;color:var(--humo)}
+.total strong{font-size:20px}
+.legal{font-size:12px;color:var(--humo);margin:20px 0 0}
+.error{background:var(--burdeos-cl);color:var(--burdeos);border-left:4px solid var(--burdeos);padding:10px 12px;border-radius:6px;font-weight:600}
+
+/* ── Seguimiento ── */
+.seguimiento{padding:28px var(--gut)}
+.seg-num{font-family:var(--display);font-size:96px;line-height:1;color:var(--burdeos)}
+.seg-k{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--humo);margin:0}
+.seg-estado{font-family:var(--display);font-size:clamp(30px,8vw,44px);text-transform:uppercase;margin:16px 0 4px}
+.pasos{list-style:none;padding:0;margin:20px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+.pasos li{font-size:12px;font-weight:700;text-align:center;color:var(--humo);padding-top:10px;border-top:5px solid var(--linea)}
+.pasos li.hecho{color:var(--burdeos);border-color:var(--burdeos)}
+.seg-caja{background:var(--crema-3);border:1px solid var(--linea);border-radius:14px;padding:16px;margin-top:20px}
+.seg-caja ul{list-style:none;margin:0;padding:0}
+.seg-caja li{display:flex;justify-content:space-between;gap:10px;padding:6px 0}
+.seg-caja li small{display:block;color:var(--humo)}
+.seg-total{border-top:1px solid var(--linea);margin-top:6px;padding-top:10px!important;font-weight:800}
+.seg-acciones{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap}
+.seg-acciones .btn{text-align:center;text-decoration:none}
+
+.sel-local{font-family:var(--display);font-size:20px;color:var(--burdeos);border:0;background:transparent;padding:0 4px 0 0;cursor:pointer}
