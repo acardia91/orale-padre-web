@@ -66,13 +66,14 @@
   /* ── Carta ── */
   function pintaCarta() {
     const hoy = partesMadrid(new Date()).dow;
-    const cats = carta.categorias.filter(c => !c.oculta && c.productos.some(id => idx.prod.get(id) && !idx.prod.get(id).oculto) && (!c.dias || c.dias.includes(hoy)));
+    const web = p => p && !p.oculto && p.solo !== 'local';
+    const cats = carta.categorias.filter(c => !c.oculta && c.solo !== 'local' && c.productos.some(id => web(idx.prod.get(id))) && (!c.dias || c.dias.includes(hoy)));
     $('#cats').innerHTML = cats.map(c => `<a href="#c-${c.clave}">${esc(c.nombre)}</a>`).join('');
     $('#carta').innerHTML = cats.map(c => `
       <section class="cat" id="c-${c.clave}">
         <h2>${esc(c.nombre)}</h2>
         ${c.dias ? `<p class="cat-nota">Solo hoy y los ${diasTxt(c.dias)}.</p>` : ''}
-        ${c.productos.map(id => idx.prod.get(id)).filter(p => p && !p.oculto).map(tarjeta).join('')}
+        ${c.productos.map(id => idx.prod.get(id)).filter(web).map(tarjeta).join('')}
       </section>`).join('');
     $('#carta').addEventListener('click', e => {
       const b = e.target.closest('[data-prod]'); if (b && !b.disabled) abreProducto(b.dataset.prod);

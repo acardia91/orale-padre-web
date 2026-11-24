@@ -358,6 +358,16 @@
       const r = lee('op-demo-resenas', []).find(x => x.ticket_id === id);
       return { local: t.local, ticket: t.serie + '-' + String(t.numero).padStart(6, '0'), fecha: t.fecha, total: t.total, mi_nota: r ? r.nota : null }; },
     async googleFichas() { return lee('op-demo-gfichas', {}); },
+    // Equipo con PIN (demo: PIN en claro en este navegador)
+    async turnoActual(local) { const eq = lee('op-demo-equipo', []).filter(e => e.activo !== false && e.locales.includes(local) && e.pin);
+      if (!eq.length) return { sin_equipo: true }; const t = lee('op-demo-turno', {})[local]; const e = t && eq.find(x => x.id === t); return e ? { id: e.id, nombre: e.nombre, rol: e.rol } : null; },
+    async entrarPin(local, pin) { const e = lee('op-demo-equipo', []).find(x => x.activo !== false && x.locales.includes(local) && x.pin === pin); if (!e) return null;
+      const t = lee('op-demo-turno', {}); t[local] = e.id; guarda('op-demo-turno', t); return { id: e.id, nombre: e.nombre, rol: e.rol }; },
+    async salirTurno(local) { const t = lee('op-demo-turno', {}); delete t[local]; guarda('op-demo-turno', t); },
+    async equipo() { return lee('op-demo-equipo', []).map(e => ({ ...e, pin: undefined, tiene_pin: !!e.pin, activo: e.activo !== false, con_usuario: false })); },
+    async guardarEquipo(filas) { const eq = lee('op-demo-equipo', []);
+      filas.forEach(f => { const i = eq.findIndex(e => e.id === f.id); const n = { ...(eq[i] || {}), ...f, pin: f.pin || (eq[i] || {}).pin }; if (i >= 0) eq[i] = n; else eq.push(n); });
+      guarda('op-demo-equipo', eq); return { guardados: filas.length }; },
     async googleResenas(local) { return lee('op-demo-gresenas', []).filter(r => !local || r.local === local); },
     async guardarGoogle(fichas, resenas) {
       const f = lee('op-demo-gfichas', {}); (fichas || []).forEach(x => { f[x.local] = { ...x, actualizado: new Date().toISOString(), historial: [] }; }); guarda('op-demo-gfichas', f);
@@ -609,6 +619,12 @@
         p_contacto: contacto || null, p_pedido: pedido || null, p_origen: origen || 'web', p_ticket: ticket || null }));
     },
     async ticketParaValorar(id) { return ok(await cliente().rpc('ticket_para_valorar', { p_ticket: id })); },
+    // Equipo con PIN
+    async turnoActual(local) { return ok(await cliente().rpc('turno_actual', { p_local: local })); },
+    async entrarPin(local, pin) { return ok(await cliente().rpc('entrar_pin', { p_local: local, p_pin: pin })); },
+    async salirTurno(local) { ok(await cliente().rpc('salir_turno', { p_local: local })); },
+    async equipo() { return ok(await cliente().rpc('listar_equipo')); },
+    async guardarEquipo(filas) { return ok(await cliente().rpc('guardar_equipo', { p_filas: filas })); },
     async googleFichas() { return Object.fromEntries(ok(await cliente().from('google_fichas').select('*')).map(r => [r.local, r])); },
     async googleResenas(local) { let q = cliente().from('google_resenas').select('*').order('fecha', { ascending: false, nullsFirst: false }).limit(500); if (local) q = q.eq('local', local); return ok(await q); },
     async guardarGoogle(fichas, resenas) { return ok(await cliente().rpc('guardar_google', { p_fichas: fichas || [], p_resenas: resenas || [] })); },
