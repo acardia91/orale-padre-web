@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Carta · Órale Padre</title>
+<meta name="description" content="La carta de Órale Padre: burritos, tacos, bowls y más.">
+<meta name="theme-color" content="#7C2430">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/pedir/pedir.css">
+<style>
+  .prod{cursor:default}
+  .prod p{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible}
+  .prod:has(.prod-foto.vacia){grid-template-columns:1fr}
+  .prod-foto.vacia{display:none}
+  .prod-foto img{cursor:zoom-in}
+  .alerg{display:block;margin-top:4px;font-size:12.5px;color:var(--humo)}
+  .extras{margin:4px 0 0;font-size:13px;color:var(--tinta-2)}
+  .pie-carta{max-width:720px;margin:28px auto 0;padding:0 var(--gut) 48px;text-align:center;color:var(--humo);font-size:14px}
+  .pie-carta .btn{display:inline-block;text-decoration:none;margin:6px 4px;flex:none}
+  .foto-grande{border:0;padding:0;background:none;max-width:min(92vw,560px)}
+  .foto-grande::backdrop{background:rgba(0,0,0,.75)}
+  .foto-grande img{display:block;width:100%;height:auto;border-radius:12px}
+</style>
+</head>
+<body>
+<header class="cab">
+  <a class="cab-logo" href="/" aria-label="Órale Padre, web principal"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
+  <div class="cab-local"><span class="cab-k">Carta de</span><strong id="nombre-local">Órale Padre</strong></div>
+</header>
+
+<main id="vista-elegir" hidden>
+  <section class="intro"><h1>Nuestra <span>carta</span></h1><p>Elige tu local.</p></section>
+  <div class="elegir" id="elegir" style="padding:0 var(--gut)"></div>
+</main>
+
+<main id="vista-carta">
+  <nav class="cats" id="cats" aria-label="Categorías de la carta"></nav>
+  <div id="carta" class="carta" aria-live="polite"><p class="cargando">Cargando la carta…</p></div>
+  <div class="pie-carta" id="pie"></div>
+</main>
+
+<dialog class="foto-grande" id="foto-grande"><form method="dialog"><button style="all:unset;cursor:zoom-out;display:block"><img id="foto-img" alt=""></button></form></dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/pedir/api.js?v=20261124h"></script>
+<script src="carta.js?v=1"></script>
+</body>
+</html>
