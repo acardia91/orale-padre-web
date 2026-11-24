@@ -216,8 +216,8 @@
 <!-- ══════════ MARQUEE ══════════ -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Tomares coming soon ✦</span>
-    <span>Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Tomares coming soon ✦</span>
+    <span>Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Tomares ✦ </span>
+    <span>Órale Padre ✦ San Luis ✦ Los Remedios ✦ Sevilla Este ✦ Tomares ✦ </span>
   </div>
 </div>
 
@@ -320,6 +320,7 @@
         <button type="button" data-local="0">San Luis</button>
         <button type="button" data-local="1">Los Remedios</button>
         <button type="button" data-local="2">Sevilla Este</button>
+        <button type="button" data-local="3">Tomares</button>
       </div>
 
       <p class="ubi-estado" id="ubi-estado" role="status" aria-live="polite"></p>
@@ -340,10 +341,10 @@
         </p>
 
         <div class="acc-grid">
-          <a class="acc-card acc-destacada" id="acc-recoger" href="#" target="_blank" rel="noopener">
+          <a class="acc-card acc-destacada" id="acc-recoger" href="..//pedir/">
             <span class="acc-badge">No fees</span>
             <h3>Pick-up</h3>
-            <p class="acc-desc">Order on Last App, it goes straight to the restaurant kitchen and it's ready in 15–25 minutes.</p>
+            <p class="acc-desc">Order online, it goes straight to the kitchen and it's ready at the time you choose.</p>
             <ul class="acc-porque mono">
               <li>Your first two tacos, free</li>
               <li>No delivery fees</li>
@@ -1830,13 +1831,14 @@
 <section class="tomares" id="tomares" aria-labelledby="tomares-t">
   <div class="tomares-in tick">
     <div class="tomares-copy">
-      <p class="eyebrow">Coming soon <em class="pronto">Aljarafe</em></p>
+      <p class="eyebrow">New · <em class="pronto">Aljarafe</em></p>
       <h2 class="big" id="tomares-t">Number four,<br>in Tomares</h2>
-      <p class="tomares-lede">If you live in the Aljarafe, stop crossing the river for a burrito. We're getting the place ready: sign up and we'll tell you the day we open, with your two welcome tacos saved in your name.</p>
+      <p class="tomares-lede">If you live in the Aljarafe, stop crossing the river for a burrito. Order online and pick it up at the time you choose, or book a table in a minute.</p>
     </div>
     <div class="tomares-acc">
-      <a class="btn btn-p" href="mailto:orale.padre.food@gmail.com?subject=Avisadme%20cuando%20abra%20Tomares&body=Hola%2C%20avisadme%20cuando%20abra%20el%20local%20de%20Tomares.%0A%0ANombre%3A%0ATel%C3%A9fono%3A">Tell me when it opens</a>
-      <p class="mono tomares-nota">Your email opens with the message already written. Just send it.</p>
+      <a class="btn btn-p" href="..//pedir/?local=tomares">Order for pick-up</a>
+      <a class="btn btn-ghost" href="..//reservar/?local=tomares">Book a table</a>
+      <p class="mono tomares-nota">Pay when you pick up, cash or card. Bookings are confirmed instantly.</p>
     </div>
   </div>
 </section>
@@ -1856,7 +1858,7 @@
     <div class="res-copy">
       <p class="eyebrow">Book a table</p>
       <h2 class="big">Tell us when<br>and how many</h2>
-      <p>Fill this in and your booking reaches the restaurant. We'll confirm as soon as they see it.</p>
+      <p>Pick a location and book in a minute. In Tomares your booking is confirmed instantly and sent to you by email.</p>
       <ul class="res-tel mono" aria-label="Book by phone">
         <li><span>Los Remedios</span><a href="tel:+34658869341">658 86 93 41</a></li>
         <li><span>Sevilla Este</span><a href="tel:+34672989917">672 98 99 17</a></li>
@@ -1864,57 +1866,13 @@
       <p class="res-note">More than 10 of you? Birthday, company lunch, stag or hen do? Write to <a href="mailto:orale.padre.food@gmail.com?subject=Catering">orale.padre.food@gmail.com</a> and we'll tailor it.</p>
     </div>
 
-    <form class="res-form" id="res-form" novalidate>
-      <div class="f-row">
-        <label class="field">
-          <span>Name</span>
-          <input type="text" name="nombre" required autocomplete="name" placeholder="Your name">
-          <em class="err">Tell us your name</em>
-        </label>
-        <label class="field">
-          <span>Phone</span>
-          <input type="tel" name="tel" required autocomplete="tel" placeholder="600 000 000">
-          <em class="err">We need a phone number to confirm</em>
-        </label>
-      </div>
-
-      <label class="field">
-        <span>Location</span>
-        <select name="local" required>
-          <option value="">Choose a location</option>
-          <option>Los Remedios</option>
-          <option>Sevilla Este</option>
-        </select>
-        <em class="err">Choose a location</em>
-        <small class="field-nota mono">San Luis is pick-up only: there are no tables there.</small>
-      </label>
-
-      <div class="f-row f-row-3">
-        <label class="field">
-          <span>Day</span>
-          <input type="date" name="dia" required>
-          <em class="err">Pick a day</em>
-        </label>
-        <label class="field">
-          <span>Time</span>
-          <input type="time" name="hora" required step="900">
-          <em class="err">Pick a time</em>
-        </label>
-        <label class="field">
-          <span>People</span>
-          <input type="number" name="pax" min="1" max="30" value="2" required>
-          <em class="err">How many of you?</em>
-        </label>
-      </div>
-
-      <label class="field">
-        <span>Anything we should know <i>(optional)</i></span>
-        <textarea name="notas" rows="3" placeholder="Allergies, a high chair, a table outside…"></textarea>
-      </label>
-
-      <button class="btn btn-p btn-block" type="submit" id="res-enviar">Send booking</button>
-      <p class="f-foot" id="res-foot">If the restaurant has online booking, it opens with your details. If not, we leave the message ready to send.</p>
-    </form>
+    <div class="res-form res-locales">
+      <p class="paso-k">Choose a location</p>
+      <a class="btn btn-p btn-block" href="..//reservar/?local=tomares">Tomares · instant booking</a>
+      <a class="btn btn-ghost btn-block" href="..//reservar/?local=sevilla-este">Sevilla Este</a>
+      <a class="btn btn-ghost btn-block" href="tel:+34658869341">Los Remedios · 658 86 93 41</a>
+      <p class="f-foot">San Luis is pickup and takeaway only: there are no tables there.</p>
+    </div>
   </div>
 </section>
 
@@ -1943,7 +1901,7 @@
       </details>
       <details class="faq-item">
         <summary>Can I book a table?</summary>
-        <p>In Los Remedios and Sevilla Este, yes, <a href="#reservar">right here</a> or by calling the restaurant. San Luis is pick-up and take-away only, no tables. For groups over ten, write to us and we'll tailor it.</p>
+        <p>In Tomares, Los Remedios and Sevilla Este, yes: <a href="#reservar">from here</a> or by calling the restaurant. San Luis is pickup and takeaway only, no tables. For groups of more than ten, write to us and we'll set it up.</p>
       </details>
       <details class="faq-item">
         <summary>Where are you?</summary>
@@ -2146,6 +2104,6 @@
   <a class="bp-sec" href="#carta">Menu</a>
 </div>
 
-<script src="../script.js?v=f022a896"></script>
+<script src="../script.js?v=5dcea8f6"></script>
 </body>
 </html>
