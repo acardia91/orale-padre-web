@@ -78,4 +78,51 @@
         <a class="btn" href="${esc(r.enlace)}" target="_blank" rel="noopener">Opinar en Google</a>` : ''}
       <a class="otro" href="/">Volver a oralepadre.com</a>`;
   }
+
+  /* ══ Factura con datos (desde el QR del ticket) ══ */
+  if (ticket && OP.facturas) {
+    let fac = null;
+    const ver = v => { ['vista-form', 'vista-gracias', 'vista-factura'].forEach(id => { $('#' + id).hidden = id !== v; }); window.scrollTo(0, 0); };
+    const muestra = f => {
+      ver('vista-factura'); $('#f-fac').hidden = true; $('#fac-doc').hidden = false;
+      $('#fac-saludo').textContent = f.ya === false ? '¡Lista! Ya tienes tu factura. Guárdala en PDF o imprímela.' : 'Esta es la factura de tu ticket.';
+      $('#fac-doc').innerHTML = OP.facturaHTML(f) + `<div class="fac-botones"><button class="btn" type="button" id="fac-imp">Guardar PDF / imprimir</button>
+        <button class="btn btn-sec" type="button" id="fac-opinar">Dejar mi opinión</button></div>`;
+      $('#fac-imp').onclick = () => OP.imprimirFactura($('#fac-doc'));
+      $('#fac-opinar').onclick = () => ver('vista-form');
+    };
+    OP.facturas.deTicket(ticket).then(f => {
+      if (!f) return; fac = f;
+      $('#fac-aviso').hidden = false;
+      if (f.numero) { $('#fac-aviso-txt').innerHTML = `Ya tienes factura de este ticket<small>${esc(f.numero)} · ${esc(f.cliente && f.cliente.nombre)}</small>`; $('#fac-abrir').textContent = 'Ver factura'; }
+      else if (!f.puede) { $('#fac-aviso-txt').innerHTML = '¿Necesitas factura con tus datos?<small>Este ticket ya no se puede facturar desde aquí: pídela en el local.</small>'; $('#fac-abrir').hidden = true; }
+      if (q.get('f') === '1') $('#fac-abrir').click();
+    }).catch(() => {});
+    $('#fac-abrir').onclick = () => {
+      if (fac && fac.numero) return muestra(fac);
+      ver('vista-factura'); $('#f-fac').hidden = false; $('#fac-doc').hidden = true;
+      if (fac) $('#fac-saludo').textContent = `Ticket ${fac.ticket} · ${OP.euros(fac.total)}. Rellena tus datos fiscales y te la damos al momento.`;
+      try { const g = JSON.parse(localStorage.getItem('op-factura-datos')) || {}; ['nif', 'nombre', 'dir', 'cp', 'pob', 'email'].forEach(k => { if (g[k] && !$('#fac-' + k).value) $('#fac-' + k).value = g[k]; }); } catch (e) {}
+      $('#fac-nif').focus();
+    };
+    $('#fac-volver').onclick = () => ver('vista-form');
+    $('#fac-nif').addEventListener('blur', () => { const v = $('#fac-nif').value.trim(); if (v && !OP.nifValido(v)) { $('#fac-error').textContent = 'Ese NIF/CIF no parece correcto: revisa letras y números.'; $('#fac-error').hidden = false; } else $('#fac-error').hidden = true; });
+    $('#f-fac').addEventListener('submit', async e => {
+      e.preventDefault();
+      const fallo = t => { $('#fac-error').textContent = t; $('#fac-error').hidden = false; };
+      const d = { nif: $('#fac-nif').value.trim(), nombre: $('#fac-nombre').value.trim(), direccion: $('#fac-dir').value.trim(),
+        cp: $('#fac-cp').value.trim(), poblacion: $('#fac-pob').value.trim(), email: $('#fac-email').value.trim() };
+      if (!OP.nifValido(d.nif)) return fallo('Ese NIF/CIF no parece correcto: revisa letras y números. Si es extranjero, pídela en el local.');
+      if (d.nombre.length < 2) return fallo('Falta el nombre o razón social.');
+      if (d.direccion.length < 2 || d.cp.length < 4 || d.poblacion.length < 2) return fallo('Falta la dirección completa (calle, C. P. y población).');
+      $('#fac-ok').disabled = true; $('#fac-ok').textContent = 'Emitiendo…';
+      try {
+        const f = await OP.facturas.pedir(ticket, d); fac = f;
+        try { localStorage.setItem('op-factura-datos', JSON.stringify({ nif: d.nif, nombre: d.nombre, dir: d.direccion, cp: d.cp, pob: d.poblacion, email: d.email })); } catch (x) {}
+        muestra(f);
+        $('#fac-aviso-txt').innerHTML = `Ya tienes factura de este ticket<small>${esc(f.numero)}</small>`; $('#fac-abrir').textContent = 'Ver factura';
+      } catch (ex) { fallo(mensajeError(ex)); }
+      finally { $('#fac-ok').disabled = false; $('#fac-ok').textContent = 'Emitir mi factura'; }
+    });
+  }
 })();

@@ -31,6 +31,13 @@
   .gracias p{margin:0 0 14px;font-size:17px;color:var(--tinta-2)}
   .gracias a.btn{display:inline-block;text-decoration:none;margin-top:6px}
   .gracias .otro{display:block;margin-top:18px;color:var(--humo)}
+  .fac-aviso{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;background:var(--crema-3);border:1.5px solid var(--linea);border-radius:14px;padding:14px 16px;margin:4px 0 14px}
+  .fac-aviso p{margin:0;font-weight:700}.fac-aviso small{display:block;font-weight:400;color:var(--humo)}
+  .fac-aviso .btn{padding:10px 16px;font-size:15px}
+  .dos{display:grid;grid-template-columns:1fr 2fr;gap:10px}
+  .fac-botones{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+  .fac-botones .btn,.fac-botones button{flex:1 1 200px}
+  .btn-sec{background:var(--crema-3)!important;color:var(--tinta)!important;border:1.5px solid var(--linea)!important}
 </style>
 </head>
 <body>
@@ -42,6 +49,8 @@
 
 <main class="op" id="vista-form">
   <section class="intro" style="padding-left:0;padding-right:0"><h1>¿Qué tal, <span>padre?</span></h1><p id="o-saludo">Cuéntanos cómo ha ido. Lo leemos todo, lo bueno y lo malo.</p></section>
+  <div class="fac-aviso" id="fac-aviso" hidden><p id="fac-aviso-txt">¿Necesitas factura con tus datos?<small>Para empresa o autónomo: con tu NIF, al momento.</small></p>
+    <button class="btn" type="button" id="fac-abrir">Pedir factura</button></div>
   <form id="f-op" novalidate>
     <fieldset class="bloque" id="o-bloque-local" hidden><legend>¿En qué local?</legend><div class="locales" id="o-locales"></div></fieldset>
     <fieldset class="bloque"><legend>Tu nota</legend>
@@ -61,8 +70,28 @@
 
 <main class="op" id="vista-gracias" hidden><section class="gracias" id="o-gracias"></section></main>
 
+<main class="op" id="vista-factura" hidden>
+  <section class="intro" style="padding-left:0;padding-right:0"><h1>Tu <span>factura</span></h1><p id="fac-saludo">Rellena tus datos fiscales y te la damos al momento.</p></section>
+  <form id="f-fac" novalidate>
+    <fieldset class="bloque"><legend>Datos para la factura</legend>
+      <label class="campo"><span>NIF / CIF</span><input id="fac-nif" autocomplete="off" autocapitalize="characters" maxlength="12" placeholder="B12345678 o 12345678Z"></label>
+      <label class="campo"><span>Nombre o razón social</span><input id="fac-nombre" autocomplete="organization" maxlength="120"></label>
+      <label class="campo"><span>Dirección</span><input id="fac-dir" autocomplete="street-address" maxlength="160"></label>
+      <div class="dos"><label class="campo"><span>C. P.</span><input id="fac-cp" autocomplete="postal-code" inputmode="numeric" maxlength="10"></label>
+        <label class="campo"><span>Población</span><input id="fac-pob" autocomplete="address-level2" maxlength="80"></label></div>
+      <label class="campo"><span>Email <em>(opcional)</em></span><input id="fac-email" type="email" autocomplete="email" maxlength="120"></label>
+    </fieldset>
+    <p class="legal">Revisa los datos: una vez emitida, la factura no se puede cambiar. Los usamos sólo para emitirla (obligación legal). Responsable: La Baba Hasta El Suelo S.L. Más en el <a href="/legal.html" target="_blank" rel="noopener">aviso legal</a>.</p>
+    <p class="error" id="fac-error" role="alert" hidden></p>
+    <button class="btn btn-full" type="submit" id="fac-ok">Emitir mi factura</button>
+    <button class="btn btn-full btn-sec" type="button" id="fac-volver">Volver</button>
+  </form>
+  <div id="fac-doc" hidden></div>
+</main>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="/pedir/api.js?v=20261124g"></script>
-<script src="opinion.js?v=1"></script>
+<script src="/pedir/factura.js?v=1"></script>
+<script src="opinion.js?v=2"></script>
 </body>
 </html>
