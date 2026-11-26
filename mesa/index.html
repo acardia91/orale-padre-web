@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tu mesa · Órale Padre</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#7C2430">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/pedir/pedir.css">
+<style>
+  .pestanas{position:sticky;top:0;z-index:20;display:flex;gap:6px;padding:10px var(--gut,16px);background:var(--crema,#FBF5EC);border-bottom:1px solid #e6dbcf}
+  .pestanas button{flex:1;font:inherit;font-weight:800;font-size:15px;padding:11px;border-radius:12px;border:1.5px solid var(--burdeos);background:#fff;color:var(--burdeos);cursor:pointer}
+  .pestanas button.activa{background:var(--burdeos);color:#fff}
+  .mesa-acc{display:flex;gap:8px;flex-wrap:wrap;padding:12px var(--gut,16px) 0}
+  .mesa-acc button{flex:1 1 140px;font:inherit;font-weight:800;font-size:14px;padding:10px 8px;border-radius:12px;border:1.5px solid var(--tinta,#241A1C);background:#fff;cursor:pointer}
+  .mesa-acc button.pagar{background:#2F6B3A;border-color:#2F6B3A;color:#fff}
+  .mesa-acc button:disabled{opacity:.5}
+  .cuenta-mesa{padding:6px var(--gut,16px) 120px}
+  .cuenta-mesa h2{font-family:var(--display,Anton);font-weight:400;text-transform:uppercase;color:var(--burdeos);font-size:26px;margin:16px 0 8px}
+  .cuenta-mesa ul{list-style:none;margin:0;padding:0}
+  .cuenta-mesa li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed #e0d5c9}
+  .cuenta-mesa li small{display:block;color:var(--humo,#6E5C60)}
+  .cuenta-mesa .tot{display:flex;justify-content:space-between;font-size:22px;font-weight:800;margin-top:12px}
+  .comandas-est{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0}
+  .comandas-est span{font-size:13px;font-weight:700;padding:4px 10px;border-radius:99px;background:#efe6da}
+  .comandas-est span.listo{background:#E4EEDD;color:#2F6B3A}
+  .nota-mesa{margin:12px var(--gut,16px) 0;padding:10px 12px;border-radius:12px;background:#efe6da;font-size:14px}
+  .ok-mesa{margin:12px var(--gut,16px) 0;padding:12px;border-radius:12px;background:#E4EEDD;color:#2F6B3A;font-weight:700}
+  .propinas{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+  .propinas button{font:inherit;font-weight:700;padding:10px 14px;border-radius:99px;border:1.5px solid #d9cfc4;background:#fff;cursor:pointer}
+  .propinas button.sel{background:var(--burdeos);border-color:var(--burdeos);color:#fff}
+  .prod[aria-disabled="true"]{cursor:default}
+</style>
+</head>
+<body>
+
+<header class="cab">
+  <a class="cab-logo" href="/" aria-label="Órale Padre"><img src="/img/logo-tinta.png" alt="Órale Padre" width="120" height="40"></a>
+  <div class="cab-local">
+    <span class="cab-k" id="m-local">Órale Padre</span>
+    <strong id="m-mesa">Tu mesa</strong>
+  </div>
+</header>
+<p class="aviso-demo" id="aviso-demo" hidden>Modo de prueba: los pedidos no llegan al local.</p>
+
+<main id="m-error" hidden><section class="intro"><h1>Ups</h1><p id="m-error-txt"></p></section></main>
+
+<div id="m-app" hidden>
+  <nav class="pestanas" aria-label="Secciones">
+    <button type="button" data-tab="carta" class="activa">Carta</button>
+    <button type="button" data-tab="cuenta" id="t-cuenta">Mi cuenta</button>
+  </nav>
+  <div class="mesa-acc">
+    <button type="button" id="b-camarero">🙋 Llamar al camarero</button>
+    <button type="button" id="b-cuenta">🧾 Pedir la cuenta</button>
+  </div>
+  <p class="ok-mesa" id="m-ok" role="status" hidden></p>
+  <p class="nota-mesa" id="m-nota" hidden></p>
+
+  <main id="v-carta">
+    <nav class="cats" id="cats" aria-label="Categorías de la carta"></nav>
+    <div id="carta" class="carta" aria-live="polite"><p class="cargando">Cargando la carta…</p></div>
+  </main>
+
+  <main id="v-cuenta" class="cuenta-mesa" hidden>
+    <h2>Lo que lleváis</h2>
+    <div class="comandas-est" id="c-comandas"></div>
+    <ul id="c-lineas"></ul>
+    <div class="tot"><span>Total</span><span id="c-total">0,00 €</span></div>
+    <div class="mesa-acc" style="padding:16px 0 0"><button type="button" class="pagar" id="b-pagar" hidden>💳 Pagar con el móvil</button></div>
+  </main>
+</div>
+
+<button class="barra-carrito" id="barra-carrito" type="button" hidden>
+  <span class="bc-n" id="bc-n">0</span>
+  <span class="bc-txt">Ver pedido</span>
+  <span class="bc-total" id="bc-total">0,00 €</span>
+</button>
+
+<!-- Ficha de producto -->
+<dialog class="hoja" id="hoja-producto" aria-labelledby="hp-nombre">
+  <form method="dialog" class="hoja-in">
+    <button class="cerrar" value="cancel" aria-label="Cerrar" type="submit">×</button>
+    <img class="hp-foto" id="hp-foto" alt="" hidden>
+    <div class="hoja-cuerpo">
+      <h2 id="hp-nombre"></h2>
+      <p class="hp-desc" id="hp-desc"></p>
+      <p class="hp-alerg" id="hp-alerg"></p>
+      <div id="hp-grupos"></div>
+      <label class="campo"><span>¿Algo que debamos saber? <em>(opcional)</em></span>
+        <input id="hp-nota" maxlength="140" placeholder="Sin cebolla, salsa aparte…" autocomplete="off"></label>
+    </div>
+    <div class="hoja-pie">
+      <div class="cantidad" role="group" aria-label="Cantidad">
+        <button type="button" id="hp-menos" aria-label="Uno menos">−</button>
+        <output id="hp-cant">1</output>
+        <button type="button" id="hp-mas" aria-label="Uno más">+</button>
+      </div>
+      <button class="btn" id="hp-anadir" type="button">Añadir · <span id="hp-precio"></span></button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Pedido -->
+<dialog class="hoja" id="hoja-carrito" aria-labelledby="hc-titulo">
+  <form class="hoja-in" novalidate onsubmit="return false">
+    <button class="cerrar" type="button" id="hc-cerrar" aria-label="Cerrar">×</button>
+    <div class="hoja-cuerpo">
+      <h2 id="hc-titulo">Tu pedido</h2>
+      <ul class="lineas" id="hc-lineas"></ul>
+      <label class="campo"><span>Tu nombre <em>(opcional, para saber de quién es)</em></span><input id="hc-nombre" maxlength="40" autocomplete="given-name"></label>
+      <label class="campo"><span>Notas para la cocina <em>(opcional)</em></span><textarea id="hc-notas" maxlength="250" rows="2"></textarea></label>
+      <p class="ayuda">Va directo a cocina y se suma a la cuenta de tu mesa. Pagas al final, con el camarero o desde aquí.</p>
+      <p class="error" id="hc-error" role="alert" hidden></p>
+    </div>
+    <div class="hoja-pie">
+      <div class="total"><span>Total</span><strong id="hc-total"></strong></div>
+      <button class="btn" id="hc-enviar" type="button">Pedir a cocina</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Pagar -->
+<dialog class="hoja" id="hoja-pagar" aria-labelledby="hg-titulo">
+  <form class="hoja-in" novalidate onsubmit="return false">
+    <button class="cerrar" type="button" id="hg-cerrar" aria-label="Cerrar">×</button>
+    <div class="hoja-cuerpo">
+      <h2 id="hg-titulo">Pagar la mesa</h2>
+      <p>Pagas todo lo que queda de la mesa: <b id="hg-importe"></b>.</p>
+      <p style="margin:12px 0 0;font-weight:800">¿Dejas propina?</p>
+      <div class="propinas" id="hg-propinas"></div>
+      <label class="campo"><span>Email para el ticket <em>(opcional)</em></span><input id="hg-email" type="email" autocomplete="email" maxlength="120"></label>
+      <p class="ayuda">Pago seguro con Stripe: tarjeta, Apple Pay o Google Pay.</p>
+      <p class="error" id="hg-error" role="alert" hidden></p>
+    </div>
+    <div class="hoja-pie">
+      <div class="total"><span>Total</span><strong id="hg-total"></strong></div>
+      <button class="btn" id="hg-ok" type="button">Pagar</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="/pedir/api.js"></script>
+<script src="mesa.js"></script>
+</body>
+</html>
