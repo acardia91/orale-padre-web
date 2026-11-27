@@ -25,6 +25,19 @@
   .foto-grande{border:0;padding:0;background:none;max-width:min(92vw,560px)}
   .foto-grande::backdrop{background:rgba(0,0,0,.75)}
   .foto-grande img{display:block;width:100%;height:auto;border-radius:12px}
+  /* Categoría destacada (p. ej. Tacos en Tomares) */
+  .cats a.dest{background:var(--burdeos);color:#fff;border-color:var(--burdeos)}
+  .cat.destacada{background:linear-gradient(180deg,#FBEFE6,rgba(251,239,230,0));border-radius:18px;padding-top:14px;padding-bottom:10px}
+  .dest-etq{margin:0 0 2px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--burdeos)}
+  .cat.destacada h2{font-size:clamp(34px,9vw,52px)}
+  .dest-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+  .dest-prod{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(36,26,28,.08);display:flex;flex-direction:column}
+  .dest-prod img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;cursor:zoom-in}
+  .dest-sin{aspect-ratio:1/1;background:#F1E6DA}
+  .dest-txt{padding:10px 12px 12px}
+  .dest-txt h3{margin:0 0 4px;font-size:16px;line-height:1.2}
+  .dest-txt p{margin:0 0 6px;font-size:13px;color:var(--tinta-2)}
+  .dest-txt .precio{font-weight:800;font-size:17px;color:var(--burdeos)}
 </style>
 </head>
 <body>
@@ -48,6 +61,6 @@
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
 <script src="/pedir/api.js?v=20261124h"></script>
-<script src="carta.js?v=1"></script>
+<script src="carta.js?v=2"></script>
 </body>
 </html>

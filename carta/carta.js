@@ -33,10 +33,15 @@
     $('#nombre-local').textContent = nombre; document.title = `Carta · Órale Padre ${nombre}`;
     const idx = indexar(carta); const hoy = partesMadrid(new Date()).dow;
     const vale = p => p && !p.oculto && p.solo !== 'recoger';
-    const cats = carta.categorias.filter(c => !c.oculta && c.solo !== 'recoger' && c.productos.some(id => vale(idx.prod.get(id))));
-    $('#cats').innerHTML = cats.map(c => `<a href="#c-${esc(c.clave)}">${esc(c.nombre)}</a>`).join('');
+    // Las categorías "destacadas" (admin → Carta → ★ Destacada) van primero, en grande y con fotos.
+    const cats = carta.categorias.filter(c => !c.oculta && c.solo !== 'recoger' && c.productos.some(id => vale(idx.prod.get(id))))
+      .map((c, i) => ({ c, i })).sort((a, b) => (b.c.destacada ? 1 : 0) - (a.c.destacada ? 1 : 0) || a.i - b.i).map(x => x.c);
+    $('#cats').innerHTML = cats.map(c => `<a href="#c-${esc(c.clave)}" class="${c.destacada ? 'dest' : ''}">${c.destacada ? '★ ' : ''}${esc(c.nombre)}</a>`).join('');
     $('#carta').innerHTML = cats.map(c => {
       const noHoy = c.dias && !c.dias.includes(hoy);
+      if (c.destacada) return `<section class="cat destacada" id="c-${esc(c.clave)}"><p class="dest-etq">★ La especialidad de ${esc(nombre)}</p><h2>${esc(c.nombre)}</h2>
+        ${c.dias ? `<p class="cat-nota">${noHoy ? 'Sólo' : 'Hoy sí: sólo'} los ${c.dias.map(d => DIAS[d - 1]).join(', ').replace(/, ([^,]*)$/, ' y $1')}.</p>` : ''}
+        <div class="dest-grid">${c.productos.map(id => idx.prod.get(id)).filter(vale).map(p => grande(p, agotados.has(p.id) || p.agotado)).join('')}</div></section>`;
       return `<section class="cat" id="c-${esc(c.clave)}"><h2>${esc(c.nombre)}</h2>
         ${c.dias ? `<p class="cat-nota">${noHoy ? 'Sólo' : 'Hoy sí: sólo'} los ${c.dias.map(d => DIAS[d - 1]).join(', ').replace(/, ([^,]*)$/, ' y $1')}.</p>` : ''}
         ${c.productos.map(id => idx.prod.get(id)).filter(vale).map(p => tarjeta(p, idx, agotados.has(p.id) || p.agotado)).join('')}</section>`;
@@ -47,6 +52,14 @@
     vigila();
   }
 
+  // Tarjeta grande (categoría destacada): foto arriba, nombre y precio bien visibles.
+  function grande(p, ag) {
+    return `<div class="dest-prod" ${ag ? 'style="opacity:.55"' : ''}>
+      ${p.foto ? `<img src="${esc(p.foto)}" alt="${esc(p.nombre)}" loading="lazy" data-zoom>` : '<div class="dest-sin"></div>'}
+      <div class="dest-txt"><h3>${esc(p.nombre)}</h3>${p.desc ? `<p>${esc(p.desc)}</p>` : ''}
+        <div class="precio">${euros(Number.isInteger(p.precio_local) ? p.precio_local : p.precio)}${ag ? '<span class="etq">Agotado</span>' : ''}</div></div>
+    </div>`;
+  }
   function tarjeta(p, idx, ag) {
     const extras = p.grupos.map(g => idx.grupos.get(g)).filter(Boolean).filter(g => g.opciones && g.opciones.length)
       .map(g => `${esc(g.nombre)}: ${g.opciones.slice(0, 6).map(o => esc(o.nombre) + (o.precio ? ' (+' + euros(o.precio) + ')' : '')).join(', ')}${g.opciones.length > 6 ? '…' : ''}`);
